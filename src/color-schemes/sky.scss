@@ -1,0 +1,41 @@
+/* Sky color scheme, inspired by Notion */
+
+.theme-light.minimal-notion-light {
+  --background-secondary: #f7f6f4;
+  --background-modifier-hover: #e8e7e4;
+
+  --background-modifier-border: #ededec;
+  --background-modifier-border-hover: #dbdbda;
+  --ui3: #aaa9a5;
+
+  --text-normal: #37352f;
+  --text-muted: #72706c;
+  --text-faint: #aaa9a5;
+
+  --text-selection: rgba(131, 201, 229, 0.3);
+}
+.theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-notion-light.minimal-light-contrast .theme-dark,
+.theme-dark.minimal-notion-dark {
+  --background-primary: #2f3437;
+  --background-secondary: #373c3f;
+  --background-modifier-hover: #4b5053;
+
+  --background-modifier-border: #3e4245;
+  --background-modifier-border-hover: #585d5f;
+  --ui3: #585d5f;
+
+  --text-normal: #ebebeb;
+  --text-muted: #909295;
+  --text-faint: #585d5f;
+
+  --text-selection: rgba(57, 134, 164, 0.3);
+}
+.theme-dark.minimal-notion-dark.minimal-dark-black {
+  --background-modifier-hover: #232729;
+  --background-modifier-border: #2f3437;
+}

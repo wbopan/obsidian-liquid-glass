@@ -1,0 +1,7 @@
+/* Colorful active states */
+.colorful-active {
+  .nav-files-container {
+    --nav-item-background-active: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%));
+    --nav-item-color-active: var(--color-base-100);
+  }
+}

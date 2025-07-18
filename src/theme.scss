@@ -1,19 +1,55 @@
 @use "app/app.scss";
+@use "app/fonts.scss";
 @use "app/input.scss";
 @use "app/tabs.scss";
 @use "app/sidedock.scss";
 @use "app/dialog.scss";
 @use "app/settings.scss";
 @use "app/status-bar.scss";
+@use "app/empty-state.scss";
 
 @use "editor/editor.scss";
 @use "editor/blockquote.scss";
 @use "editor/callout.scss";
 @use "editor/codeblock.scss";
+@use "editor/embed.scss";
+@use "editor/highlight.scss";
 @use "editor/image.scss";
 @use "editor/table.scss";
 
 @use "features/alternative-checkboxes.scss";
 @use "features/callout-icon.scss";
 @use "features/compact-actions.scss";
+@use "features/image-zoom.scss";
 @use "features/labeled-nav.scss";
+
+@use "minimal/borders.scss";
+@use "minimal/cards.scss";
+@use "minimal/colorful-active-states.scss";
+@use "minimal/colorful-frame.scss";
+@use "minimal/colorful-headings.scss";
+@use "minimal/focus-mode.scss";
+@use "minimal/full-width-media.scss";
+@use "minimal/helpers-tables.scss";
+@use "minimal/helpers.scss";
+@use "minimal/image-filters.scss";
+@use "minimal/image-grid.scss";
+@use "minimal/minimal-status-bar.scss";
+@use "minimal/link-underline.scss";
+@use "minimal/trim-file-names.scss";
+
+@use "color-schemes/contrast.scss";
+@use "color-schemes/atom.scss";
+@use "color-schemes/ayu.scss";
+@use "color-schemes/catppuccin.scss";
+@use "color-schemes/dracula.scss";
+@use "color-schemes/eink.scss";
+@use "color-schemes/everforest.scss";
+@use "color-schemes/flexoki.scss";
+@use "color-schemes/gruvbox.scss";
+@use "color-schemes/macos.scss";
+@use "color-schemes/nord.scss";
+@use "color-schemes/rose-pine.scss";
+@use "color-schemes/sky.scss";
+@use "color-schemes/solarized.scss";
+@use "color-schemes/things.scss";

@@ -1,5 +1,6 @@
 @media screen, print {
-  .workspace-leaf-content[data-type="markdown"] img {
+  .workspace-leaf-content[data-type="markdown"] video,
+  .workspace-leaf-content[data-type="markdown"] img:not(.emoji) {
     border-radius: var(--radius-s);
   }
 

@@ -19,7 +19,7 @@
       background-color: var(--background-modifier-hover);
     }
     .nav-action-button.clickable-icon[aria-disabled="true"] {
-      opacity: 1;
+      opacity: var(--icon-opacity);
     }
 
     svg.svg-icon {

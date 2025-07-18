@@ -2,4 +2,8 @@
   body {
     --code-border-width: 1px;
   }
+
+  .markdown-rendered code {
+    padding: 2px 4px;
+  }
 }

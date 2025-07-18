@@ -1,0 +1,213 @@
+/* Eink */
+
+.theme-light.minimal-eink-light,
+.theme-dark.minimal-eink-dark {
+  --collapse-icon-color: var(--text-normal);
+  --icon-color-active: var(--background-primary);
+  --icon-color-hover: var(--background-primary);
+  --icon-color-focused: var(--background-primary);
+  --icon-opacity: 1;
+  --indentation-guide-color: var(--text-normal);
+  --indentation-guide-color-active: var(--text-normal);
+  --indentation-guide-width-active: 3px;
+  --interactive-normal: var(--background-primary);
+  --input-shadow: 0 0 0 1px var(--text-normal);
+  --link-unresolved-opacity: 1;
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: var(--text-normal);
+  --metadata-label-background-active: var(--background-primary);
+  --metadata-input-background-active: var(--background-primary);
+  --modal-border-color: var(--text-normal);
+  --modal-border-width: 2px;
+  --prompt-border-color: var(--text-normal);
+  --prompt-border-width: 2px;
+  --calendar-dot-active: var(--background-primary);
+  --calendar-dot-today: var(--background-primary);
+  --calendar-text-active: var(--background-primary);
+  --tag-border-width: 1.25px;
+  --tag-background: transparent;
+  --tag-background-hover: transparent;
+  --tag-border-color: var(--text-normal);
+  --tag-border-color-hover: var(--text-normal);
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
+  --text-selection: var(--text-normal);
+  --vault-profile-color: var(--text-normal);
+  --nav-item-color-hover: var(--background-primary);
+
+  button:hover,
+  ::selection {
+    color: var(--background-primary);
+  }
+
+  .nav-files-container {
+    --nav-item-color-active: var(--background-primary);
+  }
+  .tree-item-self:hover {
+    --nav-collapse-icon-color: var(--background-primary);
+  }
+
+  &.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+  &.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,
+  &.tabs-modern {
+    --minimal-tab-text-color-active: var(--background-primary);
+    --tab-text-color-focused: var(--background-primary);
+    --tab-text-color-focused-active-current: var(--background-primary);
+  }
+  .setting-hotkey {
+    background-color: transparent;
+    border: 1px solid var(--text-normal);
+  }
+  .suggestion-container {
+    border-width: 3px;
+  }
+  .markdown-rendered code,
+  .cm-s-obsidian span.cm-inline-code {
+    font-weight: 600;
+  }
+  .tree-item-self:hover,
+  .tree-item-self.is-active {
+    --icon-color: var(--background-primary);
+  }
+  .metadata-property-icon {
+    --icon-color-focused: var(--text-normal);
+  }
+  .checkbox-container {
+    background-color: var(--background-primary);
+    box-shadow: 0 0 0 1px var(--text-normal);
+    --toggle-thumb-color: var(--text-normal);
+    &.is-enabled {
+      background-color: var(--text-normal);
+      --toggle-thumb-color: var(--background-primary);
+    }
+  }
+  &.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active,
+  &.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
+    background-color: var(--text-normal);
+  }
+  &.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,
+  &.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover,
+  &.is-focused.tabs-modern .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+  #calendar-container .reset-button:hover,
+  .status-bar .plugin-sync:hover .sync-status-icon.mod-success,
+  .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
+  .status-bar-item.mod-clickable:hover,
+  .text-icon-button:hover,
+  .community-item .suggestion-highlight,
+  .cm-s-obsidian span.cm-formatting-highlight,
+  .cm-s-obsidian span.cm-highlight,
+  .markdown-rendered mark,
+  .suggestion-item.is-selected,
+  .horizontal-tab-nav-item:hover,
+  .search-result-file-matched-text,
+  .vertical-tab-nav-item:hover,
+  .mod-root .workspace-tab-header-status-icon,
+  .mod-root .workspace-tab-header:hover,
+  &:not(.colorful-active) .horizontal-tab-nav-item.is-active,
+  &:not(.colorful-active) .vertical-tab-nav-item.is-active,
+  button.mod-cta,
+  .search-result-file-match:hover,
+  select:hover,
+  .dropdown:hover {
+    color: var(--background-primary);
+  }
+
+  .is-flashing {
+    --text-highlight-bg: #999;
+  }
+
+  #calendar-container .day:hover {
+    --color-dot: var(--background-primary);
+  }
+}
+
+.theme-light.minimal-eink-light {
+  --ax3: #000;
+
+  --background-primary: #fff;
+  --background-secondary: #fff;
+  --background-modifier-hover: #000;
+
+  --background-modifier-border: #000;
+  --background-modifier-border-hover: #000;
+  --ui3: #000;
+
+  --text-normal: #000;
+  --text-muted: #000;
+  --text-faint: #000;
+
+  --text-selection: #000;
+  --text-highlight-bg: #000;
+
+  --text-on-accent: #fff;
+
+  --background-modifier-cover: rgba(235, 235, 235, 1);
+}
+
+.theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-eink-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-eink-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-eink-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-eink-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-eink-light.minimal-light-contrast .theme-dark,
+.theme-dark.minimal-eink-dark {
+  --ax3: #fff;
+
+  --background-primary: #000;
+  --background-secondary: #000;
+  --background-modifier-hover: #fff;
+
+  --background-modifier-border: #fff;
+  --background-modifier-border-hover: #fff;
+  --ui3: #fff;
+
+  --text-normal: #fff;
+  --text-muted: #fff;
+  --text-faint: #fff;
+
+  --text-selection: #fff;
+  --text-highlight-bg: #fff;
+
+  --background-modifier-cover: rgba(20, 20, 20, 1);
+
+  --vault-profile-color: var(--text-normal);
+  --vault-profile-color-hover: var(--background-primary);
+  --nav-item-color-hover: var(--background-primary);
+  --nav-item-color-active: var(--background-primary);
+}
+.theme-light.minimal-eink-light.minimal-light-tonal {
+  --background-modifier-hover: #bbb;
+  --background-modifier-border: #bbb;
+  --text-faint: #999;
+}
+.theme-dark.minimal-eink-dark.minimal-dark-tonal {
+  --background-modifier-hover: #444;
+  --background-modifier-border: #444;
+  --text-faint: #999;
+}
+.theme-light.minimal-eink-light.minimal-light-tonal,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal {
+  --text-highlight-bg: var(--background-modifier-hover);
+
+  --modal-border-color: var(--background-modifier-border);
+  --prompt-border-color: var(--background-modifier-border);
+  --tag-border-color: var(--background-modifier-border);
+  --text-selection: var(--background-modifier-hover);
+  --icon-color-active: var(--text-normal);
+  --icon-color-focused: var(--text-normal);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-color-hover: var(--text-normal);
+  --minimal-tab-text-color-active: var(--text-normal);
+
+  .is-flashing,
+  .search-result-file-matched-text {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-normal);
+  }
+  ::selection,
+  #calendar-container .reset-button:hover,
+  &:not(.colorful-active) .vertical-tab-nav-item:hover,
+  &:not(.colorful-active) .vertical-tab-nav-item.is-active {
+    color: var(--text-normal);
+  }
+}

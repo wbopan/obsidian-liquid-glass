@@ -1,0 +1,86 @@
+/* Atom */
+
+.theme-dark.minimal-atom-dark {
+  --color-red-rgb: 225, 109, 118;
+  --color-orange-rgb: 209, 154, 102;
+  --color-yellow-rgb: 206, 193, 103;
+  --color-green-rgb: 152, 195, 121;
+  --color-cyan-rgb: 88, 182, 194;
+  --color-blue-rgb: 98, 175, 239;
+  --color-purple-rgb: 198, 120, 222;
+  --color-pink-rgb: 225, 109, 118;
+
+  --color-red: #e16d76;
+  --color-orange: #d19a66;
+  --color-yellow: #cec167;
+  --color-green: #98c379;
+  --color-cyan: #58b6c2;
+  --color-blue: #62afef;
+  --color-purple: #c678de;
+  --color-pink: #e16d76;
+}
+.theme-light.minimal-atom-light {
+  --color-red-rgb: 228, 87, 73;
+  --color-orange-rgb: 183, 107, 2;
+  --color-yellow-rgb: 193, 131, 2;
+  --color-green-rgb: 80, 161, 80;
+  --color-cyan-rgb: 13, 151, 179;
+  --color-blue-rgb: 98, 175, 239;
+  --color-purple-rgb: 166, 38, 164;
+  --color-pink-rgb: 228, 87, 73;
+
+  --color-red: #e45749;
+  --color-orange: #b76b02;
+  --color-yellow: #c18302;
+  --color-green: #50a150;
+  --color-cyan: #0d97b3;
+  --color-blue: #62afef;
+  --color-purple: #a626a4;
+  --color-pink: #e45749;
+}
+
+.theme-light.minimal-atom-light {
+  --background-primary: #fafafa;
+  --background-secondary: #eaeaeb;
+  --background-modifier-hover: rgba(0, 0, 0, 0.1);
+
+  --background-modifier-border: #dbdbdc;
+  --background-modifier-border-hover: #d8d8d9;
+
+  --text-normal: #232324;
+  --text-muted: #8e8e90;
+  --text-faint: #a0a1a8;
+
+  --text-selection: rgba(180, 180, 183, 0.3);
+  --text-highlight-bg: rgba(209, 154, 102, 0.35);
+}
+.theme-light.minimal-atom-light.minimal-light-white {
+  --background-modifier-hover: #eaeaeb;
+}
+.theme-light.minimal-atom-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-atom-light.minimal-light-contrast .theme-dark,
+.theme-dark.minimal-atom-dark {
+  --background-primary: #282c34;
+  --background-secondary: #21252c;
+  --background-modifier-hover: #3a3f4b;
+
+  --divider-color: #181a1f;
+  --tab-outline-color: #181a1f;
+
+  --text-normal: #d8dae1;
+  --text-muted: #898f9d;
+  --text-faint: #5d6370;
+
+  --text-selection: rgba(114, 123, 141, 0.3);
+  --text-highlight-bg: rgba(209, 154, 102, 0.3);
+}
+
+.theme-dark.minimal-atom-dark.minimal-dark-black {
+  --background-modifier-hover: #282c34;
+  --divider-color: #282c34;
+  --tab-outline-color: #282c34;
+}

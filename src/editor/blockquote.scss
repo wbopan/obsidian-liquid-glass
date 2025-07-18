@@ -2,7 +2,11 @@
   body {
     --blockquote-background-color: var(--background-secondary);
     --blockquote-border-color: var(--color-base-50);
-    --blockquote-border-thickness: 1px;
+    --blockquote-border-thickness: 2px;
+  }
+
+  .el-blockquote + .el-blockquote {
+    margin-top: 3em;
   }
 
   .markdown-rendered blockquote {

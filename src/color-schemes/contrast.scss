@@ -1,0 +1,20 @@
+body.theme-light.minimal-light-white {
+  --background-primary: white;
+  --background-primary-alt: var(--color-base-05);
+  --background-secondary: white;
+}
+
+body.theme-light.minimal-light-tonal {
+  --background-primary: var(--background-secondary);
+}
+
+body.theme-dark.minimal-dark-tonal {
+  --background-secondary: var(--background-primary);
+}
+
+body.theme-dark.minimal-dark-black {
+  --background-primary: black;
+  --background-primary-alt: var(--color-base-05);
+  --background-secondary: black;
+  --background-modifier-hover: rgba(var(--mono-rgb-100), 0.2);
+}

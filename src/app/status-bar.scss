@@ -3,6 +3,8 @@
   border: none;
   transform-origin: bottom right;
   background-color: transparent;
+  min-height: 8px;
+  height: calc-size(auto, size);
 }
 .status-bar::before {
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
@@ -14,7 +16,7 @@
   height: 200%;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(farthest-side at right bottom, rgb(var(--mono-rgb-0)), rgba(var(--mono-rgb-0), 0));
+  background: radial-gradient(farthest-side at right bottom, var(--background-primary), rgba(var(--mono-rgb-0), 0));
 }
 .status-bar:not(:hover) {
   transform: scale(0.8);
@@ -22,4 +24,7 @@
 }
 .status-bar:not(:hover)::before {
   opacity: 0;
+}
+.status-bar-item {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 }

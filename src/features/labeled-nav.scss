@@ -1,4 +1,5 @@
-.mod-sidedock.mod-left-split .mod-top-left-space {
+body:not(.minimal-theme) .mod-sidedock.mod-left-split .mod-top-left-space,
+body.minimal-theme.labeled-nav .mod-sidedock.mod-left-split .mod-top-left-space {
   --sidebar-tab-text-display: flex;
 
   .workspace-tab-header-container {
@@ -25,4 +26,8 @@
     order: -1;
     margin-left: auto;
   }
+}
+
+body.minimal-theme:not(.labeled-nav) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
+  padding-left: 0;
 }

@@ -1,0 +1,11 @@
+body.minimal-status-off .status-bar {
+  position: relative;
+  transform: none;
+  background-color: var(--background-secondary);
+  opacity: 1;
+  font-size: var(--font-ui-smaller);
+
+  &::before {
+    display: none;
+  }
+}

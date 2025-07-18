@@ -9,6 +9,10 @@ body {
   --tab-text-color-focused-active: var(--color-base-100);
 }
 
+body.is-mobile {
+  --header-height: 56px;
+}
+
 // All panels
 .workspace-tab-header-container {
   padding-top: 8px;
@@ -139,5 +143,13 @@ body.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace {
   .sidebar-toggle-button.mod-right {
     position: relative;
     padding-right: 0;
+  }
+}
+
+body.is-tablet {
+  .workspace-tab-header-tab-list .clickable-icon,
+  .workspace-tab-header-new-tab .clickable-icon {
+    --icon-size: var(--icon-l);
+    --icon-stroke: var(--icon-l-stroke-width);
   }
 }
