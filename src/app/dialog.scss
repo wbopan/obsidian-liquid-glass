@@ -1,0 +1,140 @@
+body {
+  --modal-background: var(--background-secondary);
+  --modal-border-color: var(--background-modifier-border);
+
+  --prompt-border-color: var(--divider-color);
+  --prompt-input-height: 64px;
+}
+
+.modal-bg {
+  opacity: 0 !important;
+}
+
+.modal-container {
+  perspective: 240px;
+}
+
+.modal,
+.prompt {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+
+  @starting-style {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.95) rotateX(-1deg);
+  }
+}
+
+// Modal
+.modal {
+  .modal-title {
+    font-size: var(--h1-size);
+    font-family: var(--h1-font);
+  }
+
+  .modal-content .setting-item {
+    padding: 8px 0;
+  }
+
+  .modal-close-button {
+    position: absolute;
+    top: 8px;
+    inset-inline-end: 8px;
+    height: 36px;
+    width: 36px;
+    padding: 8px;
+    color: var(--text-faint);
+    display: flex;
+    justify-content: center;
+    line-height: 18px;
+  }
+}
+
+// Menu & suggestion
+.menu,
+.suggestion-container {
+  @starting-style {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(-8px);
+  }
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+  padding: 0;
+
+  .menu-scroll,
+  .suggestion {
+    padding: 4px;
+  }
+
+  .menu-item,
+  .suggestion-item {
+    padding: 6px 8px;
+    border-radius: calc(var(--radius-m) - 4px);
+  }
+
+  .menu-item-icon .svg-icon {
+    --icon-size: var(--icon-xs);
+  }
+
+  .suggestion-item,
+  .suggestion-empty {
+    font-size: var(--font-ui-small);
+  }
+}
+
+// Prompt
+.prompt {
+  background-color: var(--modal-background);
+
+  .prompt-input,
+  .prompt-input:hover,
+  .prompt-input:focus,
+  .prompt-input:focus-visible {
+    background-color: transparent;
+    border-bottom-color: var(--prompt-border-color);
+  }
+
+  .prompt-results {
+    flex: 1;
+  }
+  .suggestion-item {
+    padding: 12px;
+  }
+}
+
+// Settings
+.modal.mod-sidebar-layout {
+  .vertical-tab-header {
+    border-inline-end: none;
+  }
+  .vertical-tab-header {
+    background-color: unset;
+  }
+  .horizontal-tab-nav-item,
+  .vertical-tab-nav-item,
+  .vertical-tab-header-group-title {
+    padding: 8px 16px;
+  }
+  .horizontal-tab-content,
+  .vertical-tab-content {
+    background-color: transparent;
+  }
+
+  .setting-item {
+    padding: 16px 0;
+  }
+}
+
+// Community {
+.modal.mod-sidebar-layout.mod-community-modal {
+  .modal-sidebar {
+    padding: 0;
+  }
+  .modal-sidebar .setting-item {
+    padding: 12px;
+  }
+  .modal-sidebar .setting-item:first-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

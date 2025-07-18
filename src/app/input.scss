@@ -1,0 +1,46 @@
+body {
+  --input-height: 32px;
+
+  --input-radius: var(--radius-s);
+  --radius-s: 8px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+  --radius-xl: 24px;
+  --button-radius: 100vw;
+  --checkbox-radius: 4px;
+}
+
+body.theme-light {
+  --input-shadow: 0 0 0 var(--input-border-width) var(--background-modifier-border);
+  --input-shadow-hover: 0 0 0 var(--input-border-width) var(--background-modifier-border-hover);
+}
+
+// Button
+button,
+select,
+.dropdown {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+}
+
+button:not(.clickable-icon) {
+  padding: 16px;
+  display: flex;
+}
+
+.clickable-icon {
+  padding: 8px;
+}
+
+// Toggle
+.checkbox-container {
+  --interactive-accent: var(--color-green);
+  box-shadow: none;
+}
+.checkbox-container:after {
+  box-shadow: none;
+}
+
+// Slider
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: none;
+}

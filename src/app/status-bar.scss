@@ -1,0 +1,25 @@
+.status-bar {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+  border: none;
+  transform-origin: bottom right;
+  background-color: transparent;
+}
+.status-bar::before {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150%;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(farthest-side at right bottom, rgb(var(--mono-rgb-0)), rgba(var(--mono-rgb-0), 0));
+}
+.status-bar:not(:hover) {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+.status-bar:not(:hover)::before {
+  opacity: 0;
+}

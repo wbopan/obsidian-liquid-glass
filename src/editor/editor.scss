@@ -1,0 +1,50 @@
+@media screen, print {
+  body {
+    --inline-title-margin-bottom: 1em;
+    --heading-spacing: 2em;
+    --p-spacing: 1.75rem;
+
+    // --h1-size: 1.25em;
+    // --h2-size: 1.125em;
+    // --h3-size: 1em;
+    // --h4-size: 0.9375em;
+    // --h5-size: 0.875em;
+    // --h6-size: 0.875em;
+
+    --h1-weight: 600;
+    --h6-weight: 400;
+
+    --h1-font: "Instrument Serif";
+    --h2-font: "Instrument Serif";
+    --h3-font: "Instrument Serif";
+    --h4-font: "Instrument Serif";
+    --h5-font: "Instrument Serif";
+    --h6-font: "Instrument Serif";
+
+    --anim-motion-baseline: cubic-bezier(0.1, 0, 0.1, 1.25);
+    --anim-duration-superfast: 80ms;
+    --anim-duration-fast: 160ms;
+    --anim-duration-moderate: 320ms;
+    --anim-duration-slow: 640ms;
+  }
+}
+
+.workspace-split.mod-root {
+  background-color: var(--background-secondary);
+}
+.workspace-split.mod-root .workspace-tabs .workspace-leaf {
+  background-color: transparent;
+}
+.workspace-split.mod-root .workspace-tabs .workspace-tab-container {
+  border-radius: var(--radius-s);
+}
+
+.view-header {
+  padding: 0 8px;
+  flex-shrink: 0;
+
+  .view-header-nav-buttons,
+  .view-actions {
+    --icon-size: var(--icon-m);
+  }
+}

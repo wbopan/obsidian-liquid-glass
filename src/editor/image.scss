@@ -1,0 +1,9 @@
+@media screen, print {
+  .workspace-leaf-content[data-type="markdown"] img {
+    border-radius: var(--radius-s);
+  }
+
+  .workspace-leaf-content[data-type="markdown"] .image-embed:not(.canvas-node-content) {
+    border-radius: var(--radius-s);
+  }
+}

@@ -1,0 +1,29 @@
+.mod-sidedock .workspace-leaf-content > .nav-header,
+.mod-sidedock .workspace-leaf-content > .view-content > .nav-header {
+  .nav-action-button,
+  svg.svg-icon {
+    transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+  }
+
+  &:not(:hover) .nav-buttons-container {
+    gap: 4px;
+    padding: 0;
+    background-color: transparent;
+
+    .nav-action-button {
+      padding: 2px;
+      flex: 0;
+      background-color: var(--background-modifier-hover);
+    }
+    .nav-action-button.is-active {
+      background-color: var(--background-modifier-hover);
+    }
+    .nav-action-button.clickable-icon[aria-disabled="true"] {
+      opacity: 1;
+    }
+
+    svg.svg-icon {
+      --icon-size: 0px;
+    }
+  }
+}

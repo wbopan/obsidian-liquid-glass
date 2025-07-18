@@ -1,0 +1,37 @@
+@media screen, print {
+  body {
+    --blockquote-background-color: var(--background-secondary);
+    --blockquote-border-color: var(--color-base-50);
+    --blockquote-border-thickness: 1px;
+  }
+
+  .markdown-rendered blockquote {
+    padding-inline-start: 16px;
+    position: relative;
+    margin: 32px 16px;
+  }
+  .markdown-rendered blockquote::before {
+    border-width: 16px;
+    border-style: solid;
+    border-color: var(--blockquote-background-color);
+    inset: -16px -16px -16px calc(-16px - var(--blockquote-border-thickness));
+    content: "";
+    position: absolute;
+    border-radius: var(--radius-s);
+    pointer-events: none;
+  }
+
+  .HyperMD-quote {
+    background-color: var(--blockquote-background-color);
+    border: solid var(--blockquote-background-color);
+    border-width: 0 16px 0 16px;
+  }
+  .cm-line:not(.HyperMD-quote) + .HyperMD-quote {
+    border-top-width: 16px;
+    border-radius: var(--radius-s) var(--radius-s) 0 0;
+  }
+  .cm-line.HyperMD-quote:has(+ .cm-line:not(.HyperMD-quote)) {
+    border-bottom-width: 16px;
+    border-radius: 0 0 var(--radius-s) var(--radius-s);
+  }
+}
