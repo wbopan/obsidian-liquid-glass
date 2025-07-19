@@ -10,6 +10,7 @@ body.theme-light.minimal-light-tonal {
 
 .theme-light.minimal-light-contrast .theme-dark {
   --tab-container-background: var(--background-secondary);
+  --ribbon-background: var(--background-secondary);
   --icon-color-hover: var(--text-muted);
   --tab-text-color-active: var(--text-normal);
   --tab-text-color-focused: var(--text-faint);
@@ -22,6 +23,7 @@ body.theme-light.minimal-light-tonal {
   --nav-item-color-active: var(--text-normal);
   --vault-profile-color: var(--text-muted);
   --vault-profile-color-hover: var(--text-normal);
+  --search-result-background: var(--background-primary);
 
   .workspace-tab-header.is-active .workspace-tab-header-inner-title,
   .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
