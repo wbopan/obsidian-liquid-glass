@@ -39,7 +39,7 @@ body.is-mobile {
   transition: font-weight var(--anim-duration-superfast);
   align-items: center;
 }
-.tree-item-self.is-active::before {
+.nav-files-container .tree-item-self.is-active::before {
   content: "";
   position: absolute;
   margin-left: -12px;

@@ -4,6 +4,7 @@ body.minimal-status-off .status-bar {
   background-color: var(--background-secondary);
   opacity: 1;
   font-size: var(--font-ui-smaller);
+  border-radius: 0;
 
   &::before {
     display: none;

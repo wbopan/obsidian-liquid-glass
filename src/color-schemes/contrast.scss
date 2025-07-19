@@ -8,6 +8,38 @@ body.theme-light.minimal-light-tonal {
   --background-primary: var(--background-secondary);
 }
 
+.theme-light.minimal-light-contrast .theme-dark {
+  --tab-container-background: var(--background-secondary);
+  --icon-color-hover: var(--text-muted);
+  --tab-text-color-active: var(--text-normal);
+  --tab-text-color-focused: var(--text-faint);
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-text-color-focused-active-current: var(--text-normal);
+
+  --nav-heading-color: var(--text-normal);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-hover: var(--text-muted);
+  --nav-item-color-active: var(--text-normal);
+  --vault-profile-color: var(--text-muted);
+  --vault-profile-color-hover: var(--text-normal);
+
+  .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+  .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+  .tree-item-self.is-active {
+    color: var(--text-normal);
+  }
+
+  // Default color scheme
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-10);
+  --background-secondary: var(--color-base-20);
+  --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
+  --background-modifier-border: var(--color-base-30);
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-70);
+  --text-faint: var(--color-base-50);
+}
+
 body.theme-dark.minimal-dark-tonal {
   --background-secondary: var(--background-primary);
 }

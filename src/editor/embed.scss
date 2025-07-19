@@ -1,4 +1,17 @@
-body {
-  --embed-padding: 0 0 0 16px;
-  --embed-border-start: 2px solid var(--color-base-50);
+@media screen, print {
+  body {
+    --embed-padding: 0 0 0 16px;
+    --embed-border-start: 2px solid var(--color-base-50);
+  }
+
+  iframe.external-embed {
+    width: -webkit-fill-available;
+    border-radius: var(--radius-s);
+    aspect-ratio: 16/9;
+    height: auto;
+  }
+
+  .block-language-chart {
+    width: 100% !important;
+  }
 }

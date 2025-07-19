@@ -1,6 +1,6 @@
 body {
   --modal-background: var(--background-secondary);
-  --modal-border-color: var(--background-modifier-border);
+  --modal-border-color: var(--background-modifier-border-hover);
 
   --prompt-border-color: var(--divider-color);
   --prompt-input-height: 64px;
@@ -95,7 +95,7 @@ body.is-tablet {
 
 body.is-tablet .menu,
 body.is-tablet .suggestion-container {
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid var(--background-modifier-border-hover);
 
   .menu-item {
     padding: 8px 12px;

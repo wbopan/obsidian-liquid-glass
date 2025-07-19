@@ -1,4 +1,6 @@
 @media screen, print {
+  .markdown-reading-view mark,
+  .markdown-source-view mark,
   .markdown-rendered mark {
     box-decoration-break: clone;
     border-radius: var(--radius-s);

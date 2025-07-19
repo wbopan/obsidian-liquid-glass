@@ -1,43 +1,7 @@
 /* Dark mode images  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
-:root {
-  --image-mix: normal;
-}
-.image-blend-light {
-  --image-mix: multiply;
-}
-
-.theme-dark .markdown-source-view img,
-.theme-dark .markdown-preview-view img {
-  opacity: var(--image-muted);
-  transition: opacity 0.25s linear;
-}
-
-@media print {
-  body {
-    --image-muted: 1;
-  }
-}
-
-.theme-dark .print-preview img,
-.theme-dark .markdown-source-view img:hover,
-.theme-dark .markdown-preview-view img:hover {
-  opacity: 1;
-  transition: opacity 0.25s linear;
-}
-
-.theme-light img {
-  mix-blend-mode: var(--image-mix);
-}
-
 /* Invert  */
-
-// Necessary to set background for screen/multiply to work
-div[src$="#blend"],
-div[src$="#invert"] {
-  background-color: var(--background-primary);
-}
 
 .theme-dark {
   img[src$="#invert"],
@@ -76,8 +40,9 @@ div[src$="#invert"] {
 img[src$="#circle"]:not(.emoji),
 span[src$="#circle"] img:not(.emoji),
 span[src$="#round"] img:not(.emoji) {
-  border-radius: 50%;
+  border-radius: 50% !important;
   aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 /* Outline */
@@ -91,8 +56,6 @@ span[src$="#outline"] img {
 img[src$="#interface"],
 span[src$="#interface"] img {
   border: 1px solid var(--background-modifier-border);
-  box-shadow: 0px 0.5px 0.9px rgba(0, 0, 0, 0.021), 0px 1.3px 2.5px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.039), 0px 10px 20px rgba(0, 0, 0, 0.06);
-  margin-top: 10px;
-  margin-bottom: 15px;
+  box-shadow: var(--shadow-l);
   border-radius: var(--radius-m);
 }

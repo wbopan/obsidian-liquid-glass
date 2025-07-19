@@ -4,9 +4,10 @@ body {
   --tab-curve: 12px;
   --tab-outline-width: 0px;
 
-  --tab-text-color-active: var(--color-base-100);
-  --tab-text-color-focused: var(--color-base-50);
-  --tab-text-color-focused-active: var(--color-base-100);
+  --tab-text-color-active: var(--text-normal);
+  --tab-text-color-focused: var(--text-faint);
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-text-color-focused-active-current: var(--text-normal);
 }
 
 body.is-mobile {
@@ -101,13 +102,13 @@ body.is-mobile {
     height: calc-size(auto, size);
   }
   .workspace-tab-header.is-active {
-    --icon-color: var(--text-normal);
     background-color: inherit;
   }
   .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
     background-color: inherit;
   }
-  .workspace-tab-header-inner-icon {
+  .workspace-tab-header-inner-icon,
+  .workspace-tab-header-inner-title {
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   }
 

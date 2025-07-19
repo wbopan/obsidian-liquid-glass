@@ -14,12 +14,7 @@ https://github.com/sponsors/kepano
 body {
   --image-grid-fit: cover;
   --image-grid-background: transparent;
-  --img-grid-gap: 8px;
-}
-@media (max-width: 400pt) {
-  body {
-    --img-grid-gap: 8px;
-  }
+  --img-grid-gap: 4px;
 }
 
 .img-grid-ratio {

@@ -32,10 +32,12 @@
   }
   .cm-line:not(.HyperMD-quote) + .HyperMD-quote {
     border-top-width: 16px;
-    border-radius: var(--radius-s) var(--radius-s) 0 0;
+    border-top-left-radius: var(--radius-s);
+    border-top-right-radius: var(--radius-s);
   }
   .cm-line.HyperMD-quote:has(+ .cm-line:not(.HyperMD-quote)) {
     border-bottom-width: 16px;
-    border-radius: 0 0 var(--radius-s) var(--radius-s);
+    border-bottom-left-radius: var(--radius-s);
+    border-bottom-right-radius: var(--radius-s);
   }
 }

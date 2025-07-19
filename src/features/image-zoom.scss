@@ -27,7 +27,7 @@ body:not(.is-mobile):not(.image-zoom-off) .markdown-source-view {
     position: fixed;
     z-index: 1000;
     cursor: zoom-out;
-    inset: var(--view-header-height) 0 0;
+    inset: var(--header-height) 0 0;
     background-color: var(--background-primary);
   }
 
@@ -46,7 +46,7 @@ body:not(.is-mobile):not(.image-zoom-off) .markdown-source-view {
 
   .cm-content > img:active {
     width: 100%;
-    height: calc(100% - var(--view-header-height));
+    height: calc(100% - var(--header-height));
     max-height: unset;
     object-fit: contain;
   }
