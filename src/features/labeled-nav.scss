@@ -29,5 +29,5 @@ body.minimal-theme.labeled-nav .mod-sidedock.mod-left-split .mod-top-left-space 
 }
 
 body.minimal-theme:not(.labeled-nav) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
-  padding-left: 0;
+  padding-left: var(--frame-left-space);
 }
