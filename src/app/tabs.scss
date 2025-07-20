@@ -4,10 +4,7 @@ body {
   --tab-curve: 12px;
   --tab-outline-width: 0px;
 
-  --tab-text-color-active: var(--text-normal);
-  --tab-text-color-focused: var(--text-faint);
-  --tab-text-color-focused-active: var(--text-normal);
-  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-text-color-focused: var(--tab-text-color);
 }
 
 body.is-mobile {
