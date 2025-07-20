@@ -151,3 +151,35 @@ body:not(.is-mobile) .mod-sidedock {
     }
   }
 }
+
+// Mobile drawer
+body.is-mobile .workspace-drawer {
+  .workspace-drawer-header-name-text {
+    font-family: var(--h1-font);
+  }
+  .workspace-drawer-active-tab-header {
+    padding-inline-start: 0;
+    background-color: transparent;
+    margin: 0 20px;
+  }
+  .workspace-drawer-active-tab-header select {
+    width: auto;
+  }
+  .workspace-drawer-active-tab-title {
+    flex-grow: 0;
+  }
+  .workspace-drawer-active-tab-chevron {
+    margin-inline-start: 0;
+  }
+}
+
+// Tablet drawer
+body.is-tablet .workspace-drawer:not(.is-pinned) {
+  margin: var(--safe-area-inset-top) 16px var(--safe-area-inset-bottom);
+  padding-top: 8px;
+  border-radius: var(--mobile-sidebar-radius);
+
+  .nav-header {
+    padding-bottom: 8px;
+  }
+}

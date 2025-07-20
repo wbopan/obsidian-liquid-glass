@@ -6,13 +6,23 @@ body {
   --prompt-input-height: 64px;
 }
 
+body.is-mobile {
+  --interactive-normal: var(--background-primary);
+
+  --input-border-width: 1px;
+}
+
 body.is-tablet {
   --interactive-normal: var(--background-primary);
 
   --input-border-width: var(--divider-width);
 }
 
-.modal-bg {
+body.is-phone {
+  --prompt-input-height: 64px;
+}
+
+body:not(.is-phone) .modal-bg {
   opacity: 0 !important;
 }
 
@@ -100,6 +110,9 @@ body.is-tablet .suggestion-container {
   .menu-item {
     padding: 8px 12px;
   }
+  .menu-item-icon .svg-icon {
+    --icon-size: var(--icon-s);
+  }
   .menu-item-title {
     max-width: 240px;
   }
@@ -131,7 +144,7 @@ body.is-phone .suggestion-container {
     padding: 32px 16px;
   }
   .menu-item {
-    padding: 12px 16px;
+    padding: 16px;
     font-size: var(--nav-item-size);
     gap: 16px;
   }
@@ -169,6 +182,11 @@ body.is-tablet .prompt {
 
 body.is-phone .prompt {
   transition: none;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+
+  .suggestion-item {
+    padding: 16px;
+  }
 }
 
 // Settings
@@ -191,6 +209,30 @@ body.is-phone .prompt {
 
   .setting-item {
     padding: 16px 0;
+  }
+}
+
+body.is-phone .modal.mod-sidebar-layout {
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-setting-back-button-icon {
+    margin-inline-end: 0;
+  }
+  .modal-title {
+    font-size: var(--font-ui-large);
+  }
+  .modal-close-button {
+    width: 44px;
+    height: 44px;
+    inset-inline-end: 0;
+    line-height: 1;
+    color: var(--text-normal);
+  }
+
+  .vertical-tab-header,
+  .vertical-tab-content {
+    background-color: var(--background-secondary);
   }
 }
 

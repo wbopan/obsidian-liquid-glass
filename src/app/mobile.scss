@@ -1,0 +1,73 @@
+body.is-mobile {
+  --radius-s: 8px;
+  --radius-m: 16px;
+  --radius-l: 24px;
+  --radius-xl: 32px;
+}
+
+body.is-phone {
+  .app-container,
+  .workspace {
+    background-color: var(--background-secondary);
+    overflow: hidden;
+  }
+
+  // Animation
+  .app-container:has(> .horizontal-main-container > .workspace > .workspace-drawer:not([style*="display: none;"])),
+  .app-container:has(~ .menu),
+  .app-container:has(~ .mod-dim) {
+    .mod-root {
+      transform: scale(0.95);
+    }
+    .mobile-navbar {
+      transform: translateY(80px);
+    }
+  }
+
+  // Editor panel
+  .mod-root {
+    background-color: var(--background-secondary);
+    transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+
+    .view-header {
+      background-color: transparent !important;
+    }
+    .view-header-title-container {
+      opacity: 1;
+    }
+    .view-content {
+      border-radius: var(--radius-xl);
+    }
+  }
+
+  // Mode Switcher
+
+  .mod-root .view-header {
+    z-index: 3;
+  }
+  .mod-root .workspace-leaf-content .view-actions button:nth-last-child(2) {
+    position: fixed;
+    right: 16px;
+    bottom: 0;
+    margin-bottom: 16px;
+    border-radius: var(--button-radius);
+    padding: 16px;
+    width: auto;
+    height: auto;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--background-modifier-border);
+  }
+
+  &.mod-toolbar-open .mod-root .workspace-leaf-content[data-mode="source"] .view-actions button:nth-last-child(2) {
+    right: var(--side-padding);
+    margin-bottom: var(--side-padding);
+  }
+
+  // Navbar
+  .mobile-navbar {
+    background-color: var(--background-secondary);
+    transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+    padding-right: max(var(--safe-area-inset-right), 24px);
+    padding-left: max(var(--safe-area-inset-right), 24px);
+  }
+}
