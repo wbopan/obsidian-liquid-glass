@@ -4,6 +4,14 @@
     --embed-border-start: 2px solid var(--color-base-50);
   }
 
+  .embed-strict {
+    --embed-border-start: none;
+    --embed-padding: 0;
+  }
+  .embed-hide-title .embed-title {
+    display: none;
+  }
+
   iframe.external-embed {
     width: -webkit-fill-available;
     border-radius: var(--radius-s);

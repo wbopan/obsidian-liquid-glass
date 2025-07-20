@@ -12,10 +12,9 @@ body.theme-dark {
 }
 
 body.colorful-frame {
-  .app-container {
-    background-color: hsl(var(--frame-background-h), var(--frame-background-s), var(--frame-background-l));
-  }
+  background-color: hsl(var(--frame-background-h), var(--frame-background-s), var(--frame-background-l));
 
+  .titlebar,
   .workspace,
   .workspace-split,
   .workspace-leaf,

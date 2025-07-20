@@ -3,6 +3,7 @@ body {
 
   --tab-curve: 12px;
   --tab-outline-width: 0px;
+  --tab-radius-active: var(--tab-radius) var(--tab-radius) 0 0;
 
   --tab-text-color-focused: var(--tab-text-color);
 }
@@ -20,7 +21,6 @@ body.is-mobile {
   display: block;
 }
 .sidebar-toggle-button .clickable-icon {
-  height: unset;
   width: fit-content;
 }
 
@@ -52,7 +52,10 @@ body.is-mobile {
   }
 
   .sidebar-toggle-button {
-    padding: 0;
+    padding: 0 0 8px;
+  }
+  .sidebar-toggle-button .clickable-icon {
+    height: 100%;
   }
 
   .workspace-tab-header-new-tab {
@@ -65,16 +68,75 @@ body.is-mobile {
   .workspace-tab-header-new-tab,
   .workspace-tab-header-tab-list {
     display: block;
-    padding: 0;
+    padding: 0 0 8px;
   }
   .workspace-tab-header-new-tab .clickable-icon,
   .workspace-tab-header-tab-list .clickable-icon {
     padding: 8px;
+    height: 100%;
   }
 }
 
-// Side panels
+// Editor panel: Cupertino
+body.tabs-cupertino .workspace .mod-root {
+  --tab-radius-active: var(--tab-radius);
+  --tab-curve: 0;
 
+  .workspace-tab-header-container-inner {
+    padding: 0 0 8px 8px;
+    gap: 4px;
+  }
+  .workspace-tab-header {
+    padding: 0;
+  }
+}
+
+// Editor panel: Underline
+body.tabs-underline .workspace .mod-root {
+  --tab-background-active: transparent;
+  --tab-curve: 12px;
+
+  .workspace-tab-header-container-inner {
+    padding: 0 0 0 8px;
+    gap: 0;
+  }
+  .workspace-tab-header.is-active {
+    border-bottom: 2px solid var(--color-accent);
+    padding-top: 1px;
+  }
+  .workspace-tab-header:not(.is-active):hover {
+    border-bottom: 2px solid var(--background-modifier-border-hover);
+    padding-top: 1px;
+
+    .workspace-tab-header-inner {
+      background-color: transparent;
+    }
+  }
+}
+
+// Editor panel: Stacks
+.tab-stack-top-flipped {
+  --tab-stacked-text-transform: rotate(180deg);
+  --tab-stacked-text-align: right;
+}
+.tab-stack-center {
+  --tab-stacked-text-align: center;
+}
+.tab-stack-center-flipped {
+  --tab-stacked-text-transform: rotate(180deg);
+  --tab-stacked-text-align: center;
+}
+.tab-stack-bottom {
+  --tab-stacked-text-transform: rotate(180deg);
+}
+.tab-stack-bottom-flipped {
+  --tab-stacked-text-align: right;
+}
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+  flex-direction: var(--tab-stacked-spine-order);
+}
+
+// Side panels
 .workspace .mod-sidedock {
   .workspace-tab-header-container {
     padding-left: 0;
@@ -104,12 +166,17 @@ body.is-mobile {
   .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
     background-color: inherit;
   }
+  .workspace-tab-header-inner {
+    gap: 4px;
+  }
   .workspace-tab-header-inner-icon,
   .workspace-tab-header-inner-title {
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   }
+}
 
-  // Compact tabs
+// Side panels: Compact tabs
+body:not(.compact-tabs-off) .workspace .mod-sidedock {
   .workspace-tabs:not(.mod-top) .workspace-tab-header-container:not(:hover) {
     height: calc-size(auto, size);
 
@@ -118,10 +185,19 @@ body.is-mobile {
       height: 4px;
     }
 
-    .workspace-tab-header-inner-icon {
+    .workspace-tab-header-inner-icon,
+    .workspace-tab-header-inner-title {
       opacity: 0;
     }
   }
+}
+
+// Side panels: Tab names
+body.tab-names-on {
+  --sidebar-tab-text-display: flex;
+}
+body.tab-names-single .workspace-tab-header:only-child {
+  --sidebar-tab-text-display: flex;
 }
 
 // Side panels: Platforms

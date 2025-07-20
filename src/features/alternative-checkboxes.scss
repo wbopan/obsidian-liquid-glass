@@ -12,8 +12,8 @@ input[type="checkbox"]:checked::after,
   -webkit-mask-size: 100% 100%;
 }
 
-li[data-task]:not([data-task="x"]):not([data-task="X"]):not([data-task="-"]):not([data-task="?"]):not([data-task="!"]):not([data-task="i"]):not([data-task="+"]) > input[type="checkbox"]:checked,
-input[type="checkbox"][data-task]:checked:not([data-task="x"]):not([data-task="X"]):not([data-task="-"]):not([data-task="?"]):not([data-task="!"]):not([data-task="i"]):not([data-task="+"]) {
+li[data-task]:not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"]):not([data-task="?"]):not([data-task="!"]):not([data-task="i"]):not([data-task="+"]) > input[type="checkbox"]:checked,
+input[type="checkbox"][data-task]:checked:not([data-task="x"]):not([data-task="X"]):not([data-task="/"]):not([data-task="-"]):not([data-task="?"]):not([data-task="!"]):not([data-task="i"]):not([data-task="+"]) {
   --checkbox-color: transparent;
 
   &:hover {
@@ -29,8 +29,8 @@ input[type="checkbox"][data-task]:checked:not([data-task="x"]):not([data-task="X
 input[data-task="/"]:checked,
 li[data-task="/"] > input:checked,
 li[data-task="/"] > p > input:checked {
-  border: 1px solid var(--interactive-accent);
-  background: linear-gradient(to right, var(--interactive-accent) 50%, transparent 50%);
+  border: 1px solid var(--checkbox-color);
+  background: linear-gradient(to right, var(--checkbox-color) 50%, transparent 50%);
   &::after {
     display: none;
   }

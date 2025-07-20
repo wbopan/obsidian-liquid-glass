@@ -1,5 +1,8 @@
 body {
-  --file-line-width: 40rem;
+  --file-line-width: var(--line-width);
+  --line-width: 40rem;
+  --line-width-wide: 50rem;
+  --max-width: 88%;
 }
 .markdown-source-view {
   --file-line-width: 40rem !important;
@@ -10,7 +13,7 @@ body {
 .iframe-wide,
 .map-wide,
 .chart-wide {
-  --file-line-width: 50rem;
+  --file-line-width: var(--line-width-wide);
 }
 .max,
 .table-max,
@@ -18,7 +21,8 @@ body {
 .iframe-max,
 .map-max,
 .chart-max {
-  --file-line-width: 100%;
+  --file-line-width: var(--max-width);
+  --file-margins: 32px 0;
 }
 .table-100,
 .img-100,
@@ -31,10 +35,10 @@ body {
 
 // Table
 .table-wide {
-  --table-line-width: 50em;
+  --table-line-width: var(--line-width-wide);
 }
 .table-max {
-  --table-line-width: calc(100% - (32px * 2));
+  --table-line-width: var(--max-width);
 }
 .table-100 {
   --table-line-width: 100%;
@@ -55,10 +59,10 @@ body {
 
 // Image
 .img-wide {
-  --img-line-width: 50em;
+  --img-line-width: var(--line-width-wide);
 }
 .img-max {
-  --img-line-width: calc(100% - (32px * 2));
+  --img-line-width: var(--max-width);
 }
 .img-100 {
   --img-line-width: 100%;
@@ -79,10 +83,10 @@ body {
 
 // iframe
 .iframe-wide {
-  --iframe-line-width: 50em;
+  --iframe-line-width: var(--line-width-wide);
 }
 .iframe-max {
-  --iframe-line-width: calc(100% - (32px * 2));
+  --iframe-line-width: var(--max-width);
 }
 .iframe-100 {
   --iframe-line-width: 100%;
@@ -103,10 +107,10 @@ body {
 
 // Map
 .map-wide {
-  --map-line-width: 50em;
+  --map-line-width: var(--line-width-wide);
 }
 .map-max {
-  --map-line-width: calc(100% - (32px * 2));
+  --map-line-width: var(--max-width);
 }
 .map-100 {
   --map-line-width: 100%;
@@ -127,10 +131,10 @@ body {
 
 // Chart
 .chart-wide {
-  --chart-line-width: 50em;
+  --chart-line-width: var(--line-width-wide);
 }
 .chart-max {
-  --chart-line-width: calc(100% - (32px * 2));
+  --chart-line-width: var(--max-width);
 }
 .chart-100 {
   --chart-line-width: 100%;
@@ -158,33 +162,4 @@ body {
 // Fix image width
 .cm-contentContainer > .cm-content > img {
   width: revert-layer !important;
-}
-
-// Fix table padding
-.table-100 {
-  .cm-contentContainer > .cm-content > div:is(.cm-table-widget) {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-.img-wide,
-.iframe-wide,
-.map-wide,
-.chart-wide {
-  .cm-contentContainer > .cm-content > div:is(.cm-table-widget) {
-    margin-left: calc(5rem - var(--table-drag-handle-size)) !important;
-    margin-right: calc(5rem - var(--table-drag-handle-size)) !important;
-  }
-}
-.img-max,
-.img-100,
-.iframe-max,
-.iframe-100,
-.map-max,
-.map-100,
-.chart-max,
-.chart-100 {
-  .cm-contentContainer > .cm-content > div:is(.cm-table-widget) {
-    max-width: calc(40em + (var(--table-drag-handle-size) * 2)) !important;
-  }
 }

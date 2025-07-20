@@ -3,6 +3,8 @@
     --blockquote-background-color: var(--background-secondary);
     --blockquote-border-color: var(--color-base-50);
     --blockquote-border-thickness: 2px;
+
+    --blockquote-size: var(--font-text-size);
   }
 
   .el-blockquote + .el-blockquote {
@@ -13,6 +15,7 @@
     padding-inline-start: 16px;
     position: relative;
     margin: 32px 16px;
+    font-size: var(--blockquote-size);
   }
   .markdown-rendered blockquote::before {
     border-width: 16px;

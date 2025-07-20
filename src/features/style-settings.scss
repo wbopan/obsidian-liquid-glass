@@ -1,0 +1,1509 @@
+/* @settings
+
+name: Baseline
+id: baseline-style
+settings:
+	-
+		id: instructions
+		title: Documentation
+		type: info-text
+		level: 2
+		collapsed: true
+		description: Use the Minimal Theme Settings plugin to set hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Go to https://minimal.guide for documentation.
+	-
+		id: interface
+		title: Interface colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: background-primary
+		title: Primary background
+		description: Background color for the main window
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-secondary
+		title: Secondary background
+		description: Background color for left sidebar and menus
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-modifier-hover
+		title: Active background
+		description: Background color for hovered buttons and currently selected file
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-modifier-border
+		title: Border color
+		type: variable-themed-color
+		description: For buttons, divider lines, and outlined elements
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-modifier-border-hover
+		title: Highlighted border color
+		description: Used when hovering over buttons, dividers, and outlined elements
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-modifier-border-focus
+		title: Active border color
+		description: Used when clicking buttons and outlined elements
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: extended-palette
+		title: Extended colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: color-red
+		title: Red
+		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-orange
+		title: Orange
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-yellow
+		title: Yellow
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-green
+		title: Green
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-cyan
+		title: Cyan
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-blue
+		title: Blue
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-purple
+		title: Purple
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: color-pink
+		title: Pink
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: active-line
+		title: Active line
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-on
+		title: Highlight active line
+		description: Adds a background to current line in editor
+		type: class-toggle
+		default: false
+	-
+		id: blockquotes
+		title: Blockquotes
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: blockquote-color
+		title: Blockquote text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-background-color
+		title: Blockquote background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-border-color
+		title: Blockquote border color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-border-thickness
+		title: Blockquote border thickness
+		type: variable-number-slider
+		format: px
+		default: 2
+		min: 0
+		max: 5
+		step: 1
+	-
+		id: blockquote-size
+		title: Blockquote font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: blockquote-font-style
+		title: Blockquote font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: callouts
+		title: Callouts
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: callouts-style
+		title: Callout style
+		type: class-select
+		allowEmpty: false
+		default: callouts-default
+		options:
+			-
+				label: Filled
+				value: callouts-default
+			-
+				label: Outlined
+				value: callouts-outlined
+	-
+		id: callout-blend-mode
+		title: Color blending
+		description: Blend the color of nested callouts
+		type: variable-select
+		allowEmpty: false
+		default: var(--highlight-mix-blend-mode)
+		options:
+			-
+				label: On
+				value: var(--highlight-mix-blend-mode)
+			-
+				label: Off
+				value: normal
+	-
+		id: canvas
+		title: Canvas
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: canvas-dot-pattern
+		title: Canvas dot pattern
+		description: Color for background dot pattern
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-blocks
+		title: Code blocks
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: code-size
+		title: Code font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: code-scroll
+		title: Scroll long lines
+		description: Turns off line wrap for code
+		type: class-toggle
+		default: false
+	-
+		id: code-background
+		title: Code background color
+		description: Background for code blocks
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-normal
+		title: Code text color
+		description: Color of code when syntax highlighting is not present
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: syntax-highlighting
+		title: Syntax highlighting
+		type: heading
+		level: 3
+		collapsed: false
+	-
+		id: code-comment
+		title: "Syntax: comments"
+		description: Syntax highlighting for comments
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-function
+		title: "Syntax: functions"
+		description: Syntax highlighting for functions
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-keyword
+		title: "Syntax: keywords"
+		description: Syntax highlighting for keywords
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-important
+		title: "Syntax: important"
+		description: Syntax highlighting for important text
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-operator
+		title: "Syntax: operators"
+		description: Syntax highlighting for operators
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-property
+		title: "Syntax: properties"
+		description: Syntax highlighting for properties
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-punctuation
+		title: "Syntax: punctuation"
+		description: Syntax highlighting for punctuation
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-string
+		title: "Syntax: strings"
+		description: Syntax highlighting for strings
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-tag
+		title: "Syntax: tags"
+		description: Syntax highlighting for tags
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-value
+		title: "Syntax: values"
+		description: Syntax highlighting for values
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: embed-blocks
+		title: Embeds
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: embed-strict
+		title: Use strict embed style globally
+		description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+		type: class-toggle
+		default: false
+	-
+		id: embed-hide-title
+		title: Hide embed titles
+		description: Hide title of the transcluded file
+		type: class-toggle
+		default: false
+	-
+		id: embed-background
+		title: Embed background
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: graphs
+		title: Graphs
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: graph-line
+		title: Line color
+		description: Changing graph colors requires closing and reopening graph panes or restarting Obsidian
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: graph-node
+		title: Node color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: graph-node-focused
+		title: Active node color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: graph-node-tag
+		title: Tag node color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: graph-node-attachment
+		title: Attachment node color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: graph-node-unresolved
+		title: Unresolved node color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: headings
+		title: Headings
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: level-1-headings
+		title: Level 1 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h1-font
+		title: H1 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h1-size
+		title: H1 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: h1-weight
+		title: H1 font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h1-color
+		title: H1 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h1-variant
+		title: H1 font variant
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps 
+	-
+		id: h1-style
+		title: H1 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h1-l
+		title: H1 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false
+	-
+		id: level-2-headings
+		title: Level 2 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h2-font
+		title: H2 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h2-size
+		title: H2 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: h2-weight
+		title: H2 font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h2-color
+		title: H2 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h2-variant
+		title: H2 font variant
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps
+	-
+		id: h2-style
+		title: H2 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h2-l
+		title: H2 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false
+	-
+		id: level-3-headings
+		title: Level 3 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h3-font
+		title: H3 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h3-size
+		title: H3 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: h3-weight
+		title: H3 font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h3-color
+		title: H3 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h3-variant
+		title: H3 font variant
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps
+	-
+		id: h3-style
+		title: H3 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h3-l
+		title: H3 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false
+	-
+		id: level-4-headings
+		title: Level 4 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h4-font
+		title: H4 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h4-size
+		title: H4 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: h4-weight
+		title: H4 font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h4-color
+		title: H4 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h4-variant
+		title: H4 font variant
+		type: variable-select
+		allowEmpty: false
+		default: small-caps
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps 
+	-
+		id: h4-style
+		title: H4 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h4-l
+		title: H4 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false   
+	-
+		id: level-5-headings
+		title: Level 5 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h5-font
+		title: H5 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	- 
+		id: h5-size
+		title: H5 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: h5-weight
+		title: H5 font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h5-color
+		title: H5 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h5-variant
+		title: H5 font variant
+		type: variable-select
+		allowEmpty: false
+		default: small-caps
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps 
+	-
+		id: h5-style
+		title: H5 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h5-l
+		title: H5 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false
+	-
+		id: level-6-headings
+		title: Level 6 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h6-font
+		title: H6 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h6-size
+		title: H6 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: h6-weight
+		title: H6 font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h6-color
+		title: H6 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h6-variant
+		title: H6 font variant
+		type: variable-select
+		allowEmpty: false
+		default: small-caps
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps
+	-
+		id: h6-style
+		title: H6 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h6-l
+		title: H6 divider line
+		type: class-toggle
+		description: Adds a border below the heading
+		default: false
+	-
+		id: icons
+		title: Icons
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: icon-color
+		title: Icon color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: icon-color-hover
+		title: Icon color (hover)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: icon-color-active
+		title: Icon color (active)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: icon-color-focused
+		title: Icon color (focused)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: images
+		title: Images
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: zoom-off
+		title: Disable image zoom
+		description: Turns off click + hold to zoom images
+		type: class-toggle
+	-
+		id: links
+		title: Links
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: links-internal
+		title: Internal links
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: link-color
+		title: Internal link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-color-hover
+		title: Internal link color (hover)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: links-external
+		title: External links
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: link-external-color
+		title: External link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-external-color-hover
+		title: External link color (hover)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: pdf
+		title: PDFs
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: pdf-page-style
+		title: PDF page style
+		description: Borders and shadows around pages
+		type: class-select
+		allowEmpty: false
+		default: pdf-seamless-on
+		options:
+			-
+				label: Seamless
+				value: pdf-seamless-on
+			-
+				label: Shadows
+				value: pdf-shadows-on
+	-
+		id: pdf-invert-dark
+		title: Invert PDFs in dark mode
+		description: Best for working with black text on white pages
+		type: class-toggle
+		default: false
+	-
+		id: properties
+		title: Properties
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: metadata-heading-off
+		title: Hide properties heading
+		description: Hide "Properties" heading above properties
+		type: class-toggle
+		default: false
+	-
+		id: metadata-add-property-off
+		title: Hide "Add property" button
+		description: Hide "Add property" button below properties
+		type: class-toggle
+		default: false
+	-
+		id: metadata-icons-off
+		title: Hide property icons
+		description: Hide icons next to property names
+		type: class-toggle
+		default: false
+	-
+		id: metadata-label-width
+		title: Property name width
+		description: Width for the name of the property
+		type: variable-number-slider
+		default: 9
+		format: em
+		min: 4
+		max: 20
+		step: 0.5
+	-
+		id: sidebars
+		title: Sidebars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: sidebar-tabs-names
+		title: Sidebar tab names
+		type: class-select
+		allowEmpty: false
+		default: tab-names-off
+		options:
+			-
+				label: Hidden
+				value: tab-names-off
+			-
+				label: Visible
+				value: tab-names-on
+			-
+				label: Single tab only
+				value: tab-names-single
+	-
+		id: sidebar-compact-tabs
+		title: Sidebar compact tabs
+		type: class-select
+		allowEmpty: false
+		default: compact-tabs-default
+		options:
+			-
+				label: Non-top panels only
+				value: compact-tabs-default
+			-
+				label: Disabled
+				value: compact-tabs-off
+	-
+		id: hide-help
+		title: Hide help button
+		type: class-toggle
+		default: false
+	-
+		id: tabs
+		title: Tabs
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: header-height
+		title: Tab bar height
+		type: variable-text
+		default: 52px
+	-
+		id: tabs-style
+		title: Tab style
+		type: class-select
+		allowEmpty: false
+		default: tabs-default
+		options:
+			-
+				label: Baseline
+				value: tabs-default
+			-
+				label: Cupertino
+				value: tabs-cupertino
+			-
+				label: Underline
+				value: tabs-underline
+	-
+		id: tab-stacks
+		title: Tab stacks
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: tab-stacked-pane-width
+		title: Stacked width
+		type: variable-number
+		description: Width of a stacked tab in pixels
+		default: 700
+		format: px
+	-
+		id: tab-stacked-header-width
+		title: Spine width
+		type: variable-number
+		description: Width of the spine in pixels
+		default: 40
+		format: px
+	-
+		id: tab-stacked-spine-orientation
+		title: Spine text orientation
+		type: class-select
+		default: tab-stack-top
+		options:
+			-
+				label: Top
+				value: tab-stack-top
+			-
+				label: Top flipped
+				value: tab-stack-top-flipped
+			-
+				label: Bottom
+				value: tab-stack-bottom
+			-
+				label: Bottom flipped
+				value: tab-stack-bottom-flipped
+			-
+				label: Center
+				value: tab-stack-center
+			-
+				label: Center flipped
+				value: tab-stack-center-flipped
+	-
+		id: tab-stacked-spine-order
+		title: Spine element order
+		type: variable-select
+		default: row
+		options:
+			-
+				label: Default
+				value: row
+			-
+				label: Reversed
+				value: row-reverse
+	-
+		id: tags
+		title: Tags
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: unstyled-tags
+		title: Plain tags
+		description: Tags will render as normal text, overrides settings below
+		type: class-toggle
+		default: false
+	-
+		id: tag-radius
+		title: Tag shape
+		type: variable-select
+		default: 14px
+		options:
+			-
+				label: Pill
+				value: 14px
+			-
+				label: Rounded
+				value: 4px
+			-
+				label: Square
+				value: 0px
+	-
+		id: tag-border-width
+		title: Tag border width
+		type: variable-select
+		default: 0
+		options:
+			-
+				label: None
+				value: 0
+			-
+				label: Thin
+				value: 1px
+			-
+				label: Thick
+				value: 2px
+	-
+		id: tag-color
+		title: Tag text color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tag-background
+		title: Tag background color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tag-background-hover
+		title: Tag background color (hover)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tasks
+		title: Tasks
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: checkbox-color
+		title: Checkbox color
+		description: Background color for completed tasks
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: checkbox-radius
+		title: Checkbox shape
+		type: variable-select
+		allowEmpty: false
+		default: 4px
+		options:
+			-
+				label: Rounded
+				value: 4px
+			-
+				label: Circle
+				value: 100px
+	-
+		id: text
+		title: Text
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: text-normal
+		title: Normal text color
+		type: variable-themed-color
+		description: Primary text color used by default across all elements
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-selection
+		title: Selected text background
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-highlight-bg
+		title: Highlighted text background
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-muted
+		title: Muted text color
+		description: Secondary text such as sidebar note titles and table headings
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-faint
+		title: Faint text color
+		description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-formatting
+		title: Markdown syntax color
+		description: Markdown formatting syntax text color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: italic-color
+		title: Italic text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: bold-color
+		title: Bold text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: bold-modifier
+		title: Bold text weight
+		type: variable-number-slider
+		default: 200
+		min: 100
+		max: 500
+		step: 100
+	-
+		id: p-spacing
+		title: Paragraph spacing
+		description: Space between paragraphs in reading mode (Obsidian 1.3.7+)
+		type: variable-text
+		default: 1.75rem
+	-
+		id: heading-spacing
+		title: Heading spacing
+		description: Space between paragraphs and headings in reading mode (Obsidian 1.3.7+)
+		type: variable-text
+		default: 2em
+	-
+		id: titles
+		title: Titles
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: tab-title-bar
+		title: Tab title bar
+		description: Tab title bar must be turned on in Appearance settings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: file-header-visibility
+		title: Tab title visibility
+		description: Visibility of the tab title text
+		type: class-select
+		default: view-header-title-hover
+		options:
+			-
+				label: Hover only
+				value: view-header-title-hover
+			-
+				label: Hidden
+				value: view-header-title-hidden
+			-
+				label: Visible
+				value: view-header-title-visible
+	-
+		id: file-header-font-size
+		title: Tab title font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: file-header-font-weight
+		title: Tab title font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: file-header-justify
+		title: Tab title alignment
+		type: variable-select
+		default: center
+		options:
+			-
+				label: Center
+				value: center
+			-
+				label: Left
+				value: left
+	-
+		id: inline-title
+		title: Inline title
+		description: Inline titles must be turned on in Appearance settings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: inline-title-font
+		title: Inline title font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: inline-title-size
+		title: Inline title font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: inline-title-weight
+		title: Inline title font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: inline-title-color
+		title: Inline title text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: window-frame
+		title: Window frame
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: window-title-off
+		title: Hide window frame title
+		description: Hide title in the custom title bar
+		type: class-toggle
+	-
+		id: frame-background
+		title: Frame background
+		description: Requires colorful window frame
+		type: variable-themed-color
+		opacity: true
+		format: hsl-split
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-color-focused
+		title: Frame title color (focused)
+		description: Requires custom title bar
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-color
+		title: Frame title color (inactive)
+		description: Requires custom title bar
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-weight
+		title: Frame title font weight
+		description: Requires custom title bar
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
+*/
+
+/* @settings
+name: Baseline Cards
+id: baseline-cards-style
+settings:
+	-
+		id: cards-min-width
+		title: Card minimum width
+		type: variable-text
+		default: 160px
+	-
+		id: cards-max-width
+		title: Card maximum width
+		description: Default fills the available width, accepts valid CSS units
+		type: variable-text
+		default: 1fr
+	-
+		id: cards-mobile-width
+		title: Card minimum width on mobile
+		type: variable-text
+		default: 120px
+	-
+		id: cards-padding
+		title: Card padding
+		type: variable-text
+		default: 4px
+	-
+		id: cards-image-height
+		title: Card maximum image height
+		type: variable-text
+		default: 400px
+	- 
+		id: cards-background
+		title: Card background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: cards-background-hover
+		title: Card background color (hover)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+
+*/

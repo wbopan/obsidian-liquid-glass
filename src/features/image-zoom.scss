@@ -1,4 +1,4 @@
-body:not(.is-mobile):not(.image-zoom-off) .workspace-leaf-content[data-type="markdown"] {
+body:not(.is-mobile):not(.zoom-off) .workspace-leaf-content[data-type="markdown"] {
   .image-embed:not(.canvas-node-content),
   img[referrerpolicy="no-referrer"],
   .cm-content > img {
@@ -6,7 +6,7 @@ body:not(.is-mobile):not(.image-zoom-off) .workspace-leaf-content[data-type="mar
   }
 }
 
-body:not(.is-mobile):not(.image-zoom-off) .markdown-preview-view {
+body:not(.is-mobile):not(.zoom-off) .markdown-preview-view {
   .image-embed:not(.canvas-node-content):active img,
   img[referrerpolicy="no-referrer"]:active {
     position: fixed;
@@ -21,7 +21,7 @@ body:not(.is-mobile):not(.image-zoom-off) .markdown-preview-view {
   }
 }
 
-body:not(.is-mobile):not(.image-zoom-off) .markdown-source-view {
+body:not(.is-mobile):not(.zoom-off) .markdown-source-view {
   .image-embed:not(.canvas-node-content):active,
   .cm-content > img:active {
     position: fixed;

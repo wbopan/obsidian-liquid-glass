@@ -6,7 +6,7 @@ body {
   --nav-item-background-hover: transparent;
   --nav-item-background-active: transparent;
   --nav-item-weight-hover: var(--font-medium);
-  --nav-item-weight-active: var(--font-bold);
+  --nav-item-weight-active: calc(var(--font-weight) + var(--bold-modifier));
 
   --ribbon-width: 52px;
   --ribbon-background-collapsed: var(--ribbon-background);
@@ -150,6 +150,11 @@ body:not(.is-mobile) .mod-sidedock {
       transform: translateY(16px);
     }
   }
+}
+
+// Desktop sidedock: Style Settings
+body.hide-help .workspace-drawer-vault-actions .clickable-icon:first-child {
+  display: none;
 }
 
 // Mobile drawer

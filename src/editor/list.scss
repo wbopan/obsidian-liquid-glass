@@ -1,0 +1,7 @@
+body.strike-lists {
+  --checklist-done-decoration: line-through;
+}
+body:not(.strike-lists) {
+  --checklist-done-decoration: none;
+  --checklist-done-color: var(--text-normal);
+}

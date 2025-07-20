@@ -3,6 +3,8 @@
     --inline-title-margin-bottom: 1em;
     --heading-spacing: 2em;
     --p-spacing: 1.75rem;
+    --line-height-normal: calc(var(--line-height) * 1.1);
+    --line-height-tight: calc(var(--line-height) * 0.85);
 
     --h1-weight: 600;
     --h6-weight: 400;
@@ -45,6 +47,30 @@
 }
 .view-header-title-container:not(:hover) {
   opacity: 0;
+}
+body.view-header-title-hidden .view-header-title-container {
+  visibility: hidden;
+}
+body.view-header-title-visible .view-header-title-container {
+  opacity: 1;
+}
+
+// Active line
+body.active-line-on .markdown-source-view .cm-active:not(:has(.cm-fold-indicator):hover) {
+  &::after {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -12px;
+    border-left: 4px solid var(--background-modifier-border-hover);
+    border-radius: var(--input-radius);
+    content: "";
+  }
+
+  &[dir="rtl"]::after {
+    right: -12px;
+    left: unset;
+  }
 }
 
 body.is-mobile .view-actions {
