@@ -205,6 +205,9 @@ button {
 .unsupported-item:not(:last-child) {
   margin-bottom: 8px;
 }
+.unsupported-item::marker {
+  color: var(--text-faint);
+}
 
 /* Settings Replica */
 .setting-container {

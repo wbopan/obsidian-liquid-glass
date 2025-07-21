@@ -58,7 +58,7 @@
     </div>
 
     <div class="panels-container">
-      <p>Export your existing Minimal preferences, then paste here to migrate to Baseline-compatible settings.</p>
+      <p>Export your existing Minimal style settings, then paste here to migrate to Baseline-compatible settings.</p>
 
       <div class="input-panel">
         <textarea
@@ -83,158 +83,116 @@
     </div>
 
     <script>
-      // Helper: fetch mapping.json once and cache
-      let mappingCache = null;
-      function getMapping() {
-        if (mappingCache) return Promise.resolve(mappingCache);
-        return fetch("mapping.json")
-          .then((response) => (response.ok ? response.json() : Promise.reject(`Status: ${response.status}`)))
-          .then((data) => {
-            mappingCache = data;
-            return data;
-          });
-      }
+      // --- Concise Baseline Migration Script ---
+      const $ = (s) => document.querySelector(s);
+      const prefsInput = $(".prefs-input"),
+        newPrefsOutput = $(".prefs-output"),
+        copyBtn = $(".copy-btn"),
+        downloadLink = $(".download-link"),
+        unsupportedItemsDiv = $(".unsupported-container"),
+        clearBtn = $(".clear-btn");
 
-      // DOM elements (all by class)
-      const prefsInput = document.querySelector(".prefs-input");
-      const newPrefsOutput = document.querySelector(".prefs-output");
-      const copyBtn = document.querySelector(".copy-btn");
-      const downloadLink = document.querySelector(".download-link");
-      const unsupportedItemsDiv = document.querySelector(".unsupported-container");
+      let mappingCache;
+      const getMapping = () =>
+        mappingCache
+          ? Promise.resolve(mappingCache)
+          : fetch("mapping.json")
+              .then((r) => (r.ok ? r.json() : Promise.reject(`Status: ${r.status}`)))
+              .then((d) => (mappingCache = d));
 
-      function migratePrefs(mapping, oldPrefs) {
-        const newPrefs = {};
-        const unsupportedItems = [];
-
-        for (const fullKey in oldPrefs) {
-          if (!Object.hasOwnProperty.call(oldPrefs, fullKey)) continue;
-          const segments = fullKey.split("@@");
-          if (segments.length < 2) {
-            // Not a minimal-style key, keep as-is
-            newPrefs[fullKey] = oldPrefs[fullKey];
+      const migratePrefs = (mapping, oldPrefs) => {
+        const newPrefs = {},
+          unsupported = [];
+        for (const k in oldPrefs) {
+          if (!Object.hasOwnProperty.call(oldPrefs, k)) continue;
+          const seg = k.split("@@");
+          if (seg.length < 2 || !seg[0].startsWith("minimal-")) {
+            newPrefs[k] = oldPrefs[k];
             continue;
           }
-          const baseId = segments[0];
-          if (!baseId.startsWith("minimal-")) {
-            // Not a minimal-style key, keep as-is
-            newPrefs[fullKey] = oldPrefs[fullKey];
-            continue;
-          }
-          const newBaseId = baseId.replace(/^minimal-/, "baseline-");
-          const oldId = segments[1];
-          const extraSegments = segments.slice(2);
-          const rule = mapping[oldId];
-          const oldValue = oldPrefs[fullKey];
+          const newBase = seg[0].replace(/^minimal-/, "baseline-"),
+            oldId = seg[1],
+            extra = seg.slice(2),
+            rule = mapping[oldId],
+            val = oldPrefs[k];
           if (!rule) {
-            const newFullKey = [newBaseId, oldId, ...extraSegments].join("@@");
-            newPrefs[newFullKey] = oldValue;
+            newPrefs[[newBase, oldId, ...extra].join("@@")] = val;
             continue;
           }
           if (rule.unsupported) {
-            unsupportedItems.push({
-              name: rule.name || `Key '${oldId}'`,
-              category: rule.category || "General",
-              oldValue,
-            });
+            unsupported.push({ name: rule.name || `Key '${oldId}'`, category: rule.category || "General", oldValue: val });
             continue;
           }
-          const newKeyId = rule.newId || oldId;
-          const newFullKey = [newBaseId, newKeyId, ...extraSegments].join("@@");
-          let newValue = oldValue;
+          let newVal = val,
+            newKey = rule.newId || oldId;
           if (rule.valueMapping) {
-            const valueRule = rule.valueMapping[oldValue];
-            if (valueRule === undefined) {
-              unsupportedItems.push({
-                name: `Value '${oldValue}' for setting '${oldId}'`,
-                category: rule.category || "Unsupported Options",
-              });
+            const vRule = rule.valueMapping[val];
+            if (vRule === undefined) {
+              unsupported.push({ name: `Value '${val}' for setting '${oldId}'`, category: rule.category || "Unsupported Options" });
               continue;
-            } else if (valueRule.unsupported) {
-              unsupportedItems.push({
-                name: valueRule.name || `Option '${oldValue}'`,
-                category: valueRule.category || "General",
-              });
-              continue;
-            } else {
-              newValue = valueRule;
             }
+            if (vRule.unsupported) {
+              unsupported.push({ name: vRule.name || `Option '${val}'`, category: vRule.category || "General" });
+              continue;
+            }
+            newVal = vRule;
           }
-          newPrefs[newFullKey] = newValue;
+          newPrefs[[newBase, newKey, ...extra].join("@@")] = newVal;
         }
-        return { newPrefs, unsupportedItems };
-      }
+        return { newPrefs, unsupportedItems: unsupported };
+      };
 
-      function showResults(newPrefs, unsupportedItems) {
-        const newPrefsString = Object.keys(newPrefs).length > 0 ? JSON.stringify(newPrefs, null, 2) : "";
-        newPrefsOutput.value = newPrefsString;
-        // Download link
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(newPrefsString);
-        downloadLink.href = dataStr;
-        // Unsupported items
-        if (unsupportedItems.length > 0) {
+      const showResults = (prefs, unsupported) => {
+        const str = Object.keys(prefs).length ? JSON.stringify(prefs, null, 2) : "";
+        newPrefsOutput.value = str;
+        downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(str);
+        if (unsupported.length) {
           let html = "<h2>Unsupported style settings</h2>";
-          const grouped = unsupportedItems.reduce((acc, item) => {
-            (acc[item.category] = acc[item.category] || []).push(item);
-            return acc;
-          }, {});
-          for (const category in grouped) {
-            html += `<div class=\"unsupported-category\"><div class=\"unsupported-category-name\">${category}</div><ul class=\"unsupported-list\">`;
-            grouped[category].forEach((item) => {
-              html += `<li class=\"unsupported-item\">${item.name}</li>`;
-            });
+          const grouped = unsupported.reduce((a, i) => ((a[i.category] = a[i.category] || []).push(i), a), {});
+          for (const cat in grouped) {
+            html += `<div class="unsupported-category"><div class="unsupported-category-name">${cat}</div><ul class="unsupported-list">`;
+            grouped[cat].forEach((i) => (html += `<li class="unsupported-item">${i.name}</li>`));
             html += `</ul></div>`;
           }
           unsupportedItemsDiv.innerHTML = html;
-        } else {
-          unsupportedItemsDiv.innerHTML = "";
-        }
-      }
+        } else unsupportedItemsDiv.innerHTML = "";
+      };
 
-      // Copy button
-      copyBtn.addEventListener("click", () => {
+      copyBtn.onclick = () => {
         navigator.clipboard.writeText(newPrefsOutput.value).then(() => {
           copyBtn.textContent = "Copied!";
           setTimeout(() => (copyBtn.textContent = "Copy to Clipboard"), 2000);
         });
-      });
+      };
+      clearBtn.onclick = () => {
+        prefsInput.value = "";
+        showResults({}, []);
+      };
 
-      // Add functionality to the clear button
-      const clearBtn = document.querySelector(".clear-btn");
-      clearBtn.addEventListener("click", () => {
-        prefsInput.value = ""; // Clear the input textarea
-        showResults({}, []); // Reset the output and unsupported items display
-      });
-
-      // Auto-migrate on input
       let lastInput = "";
       prefsInput.addEventListener("input", () => {
-        const inputVal = prefsInput.value;
-        if (inputVal === lastInput) return;
-        lastInput = inputVal;
-        if (!inputVal.trim()) {
-          showResults({}, []);
-          return;
-        }
+        const val = prefsInput.value;
+        if (val === lastInput) return;
+        lastInput = val;
+        if (!val.trim()) return showResults({}, []);
         getMapping()
-          .then((mappingData) => {
+          .then((mapping) => {
             let oldPrefs;
             try {
-              oldPrefs = JSON.parse(inputVal);
-            } catch (error) {
+              oldPrefs = JSON.parse(val);
+            } catch (e) {
               showResults({}, []);
-              newPrefsOutput.value = `Error parsing preferences: ${error.message}`;
+              newPrefsOutput.value = `Error parsing preferences: ${e.message}`;
               return;
             }
-            const { newPrefs, unsupportedItems } = migratePrefs(mappingData, oldPrefs);
+            const { newPrefs, unsupportedItems } = migratePrefs(mapping, oldPrefs);
             showResults(newPrefs, unsupportedItems);
           })
-          .catch((error) => {
+          .catch((e) => {
             showResults({}, []);
-            newPrefsOutput.value = `Error loading mapping file: ${error}`;
+            newPrefsOutput.value = `Error loading mapping file: ${e}`;
           });
       });
-
-      // Initial clear
       showResults({}, []);
     </script>
 
