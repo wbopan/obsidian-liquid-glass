@@ -228,6 +228,7 @@ body.is-phone .modal.mod-sidebar-layout {
     inset-inline-end: 0;
     line-height: 1;
     color: var(--text-normal);
+    top: var(--safe-area-inset-top);
   }
 
   .vertical-tab-header,
