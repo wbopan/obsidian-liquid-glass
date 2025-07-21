@@ -47,7 +47,7 @@ https://github.com/sainnhe/everforest
 .theme-light.minimal-everforest-light {
   --background-primary: #fdf6e3;
   --background-secondary: #efebd4;
-  --background-modifier-hover: rgba(226, 222, 198, 0.5);
+  --interactive-normal: rgba(226, 222, 198, 0.5);
 
   --background-modifier-border: #e0dcc7;
   --background-modifier-border-hover: #bec5b2;
@@ -65,7 +65,7 @@ https://github.com/sainnhe/everforest
   --background-secondary: #fdf6e3;
 }
 .theme-light.minimal-everforest-light.minimal-light-white {
-  --background-modifier-hover: #f3efda;
+  --interactive-normal: #f3efda;
   --background-modifier-border: #edead5;
 }
 .theme-light.minimal-everforest-light.minimal-light-contrast .titlebar,
@@ -77,7 +77,7 @@ https://github.com/sainnhe/everforest
 .theme-dark.minimal-everforest-dark {
   --background-primary: #2d353b;
   --background-secondary: #232a2e;
-  --background-modifier-hover: rgba(71, 82, 88, 0.5);
+  --interactive-normal: rgba(71, 82, 88, 0.5);
 
   --background-modifier-border: #475258;
   --background-modifier-border-hover: #4f585e;

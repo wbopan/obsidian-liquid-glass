@@ -48,7 +48,7 @@ https://github.com/ayu-theme/ayu-colors
 .theme-light.minimal-ayu-light {
   --background-primary: #fff;
   --background-secondary: #f8f9fa;
-  --background-modifier-hover: rgba(209, 218, 224, 0.5);
+  --interactive-normal: rgba(209, 218, 224, 0.5);
 
   --background-modifier-border: #e6eaed;
 
@@ -67,7 +67,7 @@ https://github.com/ayu-theme/ayu-colors
 .theme-dark.minimal-ayu-dark {
   --background-primary: #232937;
   --background-secondary: #1e2431;
-  --background-modifier-hover: rgba(51, 61, 80, 0.5);
+  --interactive-normal: rgba(51, 61, 80, 0.5);
 
   --background-modifier-border: #333c4a;
   --background-modifier-border-hover: #333c4a;
@@ -80,7 +80,7 @@ https://github.com/ayu-theme/ayu-colors
   --text-selection: rgba(64, 159, 255, 0.25);
 }
 .theme-dark.minimal-ayu-dark.minimal-dark-black {
-  --background-modifier-hover: #0e1017;
+  --interactive-normal: #0e1017;
 
   --text-normal: #bfbdb6;
 

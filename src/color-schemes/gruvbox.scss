@@ -28,7 +28,7 @@ https://github.com/morhetz/gruvbox
 .theme-light.minimal-gruvbox-light {
   --background-primary: #fcf2c7;
   --background-secondary: #f2e6bd;
-  --background-modifier-hover: #ebd9b3;
+  --interactive-normal: #ebd9b3;
 
   --background-modifier-border: #ebdbb2;
   --background-modifier-border-hover: #d5c4a1;
@@ -46,7 +46,7 @@ https://github.com/morhetz/gruvbox
   --background-secondary: #fcf2c7;
 }
 .theme-light.minimal-gruvbox-light.minimal-light-white {
-  --background-modifier-hover: #faf5d7;
+  --interactive-normal: #faf5d7;
   --background-modifier-border: #f2e6bd;
 }
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
@@ -58,8 +58,8 @@ https://github.com/morhetz/gruvbox
 .theme-dark.minimal-gruvbox-dark {
   --background-primary: #282828;
   --background-secondary: #1e2021;
-  --background-modifier-hover: #3d3836;
-  --background-modifier-hover: rgba(62, 57, 55, 0.5);
+  --interactive-normal: #3d3836;
+  --interactive-normal: rgba(62, 57, 55, 0.5);
 
   --background-modifier-border: #3c3836;
   --background-modifier-border-hover: #504945;

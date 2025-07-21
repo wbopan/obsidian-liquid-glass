@@ -126,7 +126,7 @@
 
   --background-primary: #fff;
   --background-secondary: #fff;
-  --background-modifier-hover: #000;
+  --interactive-normal: #000;
 
   --background-modifier-border: #000;
   --background-modifier-border-hover: #000;
@@ -155,7 +155,7 @@
 
   --background-primary: #000;
   --background-secondary: #000;
-  --background-modifier-hover: #fff;
+  --interactive-normal: #fff;
 
   --background-modifier-border: #fff;
   --background-modifier-border-hover: #fff;
@@ -176,23 +176,23 @@
   --nav-item-color-active: var(--background-primary);
 }
 .theme-light.minimal-eink-light.minimal-light-tonal {
-  --background-modifier-hover: #bbb;
+  --interactive-normal: #bbb;
   --background-modifier-border: #bbb;
   --text-faint: #999;
 }
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
-  --background-modifier-hover: #444;
+  --interactive-normal: #444;
   --background-modifier-border: #444;
   --text-faint: #999;
 }
 .theme-light.minimal-eink-light.minimal-light-tonal,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
-  --text-highlight-bg: var(--background-modifier-hover);
+  --text-highlight-bg: var(--interactive-normal);
 
   --modal-border-color: var(--background-modifier-border);
   --prompt-border-color: var(--background-modifier-border);
   --tag-border-color: var(--background-modifier-border);
-  --text-selection: var(--background-modifier-hover);
+  --text-selection: var(--interactive-normal);
   --icon-color-active: var(--text-normal);
   --icon-color-focused: var(--text-normal);
   --nav-item-color-active: var(--text-normal);
@@ -201,7 +201,7 @@
 
   .is-flashing,
   .search-result-file-matched-text {
-    background-color: var(--background-modifier-hover);
+    background-color: var(--interactive-normal);
     color: var(--text-normal);
   }
   ::selection,

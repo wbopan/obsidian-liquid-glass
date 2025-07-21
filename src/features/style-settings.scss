@@ -33,9 +33,9 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: background-modifier-hover
-		title: Active background
-		description: Background color for hovered buttons and currently selected file
+		id: interactive-normal
+		title: Interactive background
+		description: Background color for buttons and dropdowns
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -391,6 +391,12 @@ settings:
 		description: Hide title of the transcluded file
 		type: class-toggle
 		default: false
+	-
+		id: embed-max-height
+		title: Maximum height of embeds
+		type: variable-text
+		description: For transcluded text, accepts valid CSS units
+		default: ''
 	-
 		id: embed-background
 		title: Embed background
@@ -1053,6 +1059,19 @@ settings:
 				label: Disabled
 				value: compact-tabs-off
 	-
+		id: sidebar-compact-actions
+		title: Sidebar compact actions
+		type: class-select
+		allowEmpty: false
+		default: compact-actions-default
+		options:
+			-
+				label: Enabled
+				value: compact-actions-default
+			-
+				label: Disabled
+				value: compact-actions-off
+	-
 		id: hide-help
 		title: Hide help button
 		type: class-toggle
@@ -1277,15 +1296,6 @@ settings:
 		id: text-faint
 		title: Faint text color
 		description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: text-formatting
-		title: Markdown syntax color
-		description: Markdown formatting syntax text color
 		type: variable-themed-color
 		opacity: true
 		format: hex

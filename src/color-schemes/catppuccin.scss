@@ -47,7 +47,7 @@ https://github.com/catppuccin/catppuccin
 .theme-light.minimal-catppuccin-light {
   --background-primary: #f0f1f5;
   --background-secondary: #dce0e8;
-  --background-modifier-hover: hsla(228, 11%, 65%, 0.25);
+  --interactive-normal: hsla(228, 11%, 65%, 0.25);
 
   --background-modifier-border: #ccd0da;
   --background-modifier-border-hover: #bcc0cc;
@@ -65,7 +65,7 @@ https://github.com/catppuccin/catppuccin
   --background-secondary: #dce0e8;
 }
 .theme-light.minimal-catppuccin-light.minimal-light-white {
-  --background-modifier-hover: #f0f1f5;
+  --interactive-normal: #f0f1f5;
   --background-modifier-border: #dce0e8;
 }
 .theme-light.minimal-catppuccin-light.minimal-light-contrast .titlebar,
@@ -77,7 +77,7 @@ https://github.com/catppuccin/catppuccin
 .theme-dark.minimal-catppuccin-dark {
   --background-primary: #303446;
   --background-secondary: #242634;
-  --background-modifier-hover: hsla(229, 13%, 52%, 0.25);
+  --interactive-normal: hsla(229, 13%, 52%, 0.25);
 
   --background-modifier-border: #41455a;
   --background-modifier-border-hover: #51576d;

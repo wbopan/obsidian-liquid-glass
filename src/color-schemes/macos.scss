@@ -24,7 +24,7 @@
 .theme-light.minimal-macos-light {
   --background-primary: #fff;
   --background-secondary: #f0f0f0;
-  --background-modifier-hover: rgba(0, 0, 0, 0.1);
+  --interactive-normal: rgba(0, 0, 0, 0.1);
 
   --background-modifier-border: #e7e7e7;
 
@@ -47,7 +47,7 @@
 .theme-dark.minimal-macos-dark {
   --background-primary: #1e1e1e;
   --background-secondary: #282828;
-  --background-modifier-hover: rgba(255, 255, 255, 0.11);
+  --interactive-normal: rgba(255, 255, 255, 0.11);
 
   --divider-color: #000;
   --tab-outline-color: #000;
