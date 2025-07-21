@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Settings Migration Tool for Baseline</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38V3HD97K9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-38V3HD97K9");
+    </script>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>Style Settings Migration Tool for Baseline</h1>
+      <a href="https://github.com/aaaaalexis/obsidian-baseline">View Baseline on GitHub</a>
+    </div>
+    <div class="setting-container">
+      <div class="setting">
+        <div class="setting-sidebar">
+          <div class="sidebar-section">
+            <div class="sidebar-title">Community plugins</div>
+            <div class="sidebar-link">Minimal Theme Settings</div>
+            <div class="sidebar-link is-active">Style Settings</div>
+          </div>
+        </div>
+        <div class="setting-content">
+          <div class="setting-header">
+            <div class="setting-search">
+              <i data-lucide="search"></i>
+              Search Style Settings...
+            </div>
+            <div class="setting-actions">
+              <button>Import</button>
+              <button>Export</button>
+            </div>
+          </div>
+          <div class="setting-list">
+            <div class="setting-item">
+              <i data-lucide="chevron-right"></i>
+              <div class="setting-item-name">Minimal</div>
+              <div class="setting-item-actions"><i data-lucide="rotate-ccw"></i><i data-lucide="cloud-download"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <p>Export your existing Minimal preferences, then paste here to migrate to Baseline-compatible settings.</p>
+
+      <div class="input-panel">
+        <textarea
+          class="prefs-input"
+          placeholder='{
+  "minimal-style@@bg1@@light": "#FFFFFF",
+  "minimal-style@@tabs-style": "tabs-modern"
+}'
+        ></textarea>
+        <div class="panel-actions">
+          <button class="clear-btn">Clear</button>
+        </div>
+      </div>
+      <div class="output-panel">
+        <textarea class="prefs-output" disabled readonly></textarea>
+        <div class="panel-actions">
+          <button class="copy-btn">Copy to Clipboard</button>
+          <a class="download-link" href="#" download="baseline-style-settings.json"><button class="download-btn">Download</button></a>
+        </div>
+        <div class="unsupported-container"></div>
+      </div>
+    </div>
+
+    <script>
+      // Helper: fetch mapping.json once and cache
+      let mappingCache = null;
+      function getMapping() {
+        if (mappingCache) return Promise.resolve(mappingCache);
+        return fetch("mapping.json")
+          .then((response) => (response.ok ? response.json() : Promise.reject(`Status: ${response.status}`)))
+          .then((data) => {
+            mappingCache = data;
+            return data;
+          });
+      }
+
+      // DOM elements (all by class)
+      const prefsInput = document.querySelector(".prefs-input");
+      const newPrefsOutput = document.querySelector(".prefs-output");
+      const copyBtn = document.querySelector(".copy-btn");
+      const downloadLink = document.querySelector(".download-link");
+      const unsupportedItemsDiv = document.querySelector(".unsupported-container");
+
+      function migratePrefs(mapping, oldPrefs) {
+        const newPrefs = {};
+        const unsupportedItems = [];
+
+        for (const fullKey in oldPrefs) {
+          if (!Object.hasOwnProperty.call(oldPrefs, fullKey)) continue;
+          const segments = fullKey.split("@@");
+          if (segments.length < 2) {
+            // Not a minimal-style key, keep as-is
+            newPrefs[fullKey] = oldPrefs[fullKey];
+            continue;
+          }
+          const baseId = segments[0];
+          if (!baseId.startsWith("minimal-")) {
+            // Not a minimal-style key, keep as-is
+            newPrefs[fullKey] = oldPrefs[fullKey];
+            continue;
+          }
+          const newBaseId = baseId.replace(/^minimal-/, "baseline-");
+          const oldId = segments[1];
+          const extraSegments = segments.slice(2);
+          const rule = mapping[oldId];
+          const oldValue = oldPrefs[fullKey];
+          if (!rule) {
+            const newFullKey = [newBaseId, oldId, ...extraSegments].join("@@");
+            newPrefs[newFullKey] = oldValue;
+            continue;
+          }
+          if (rule.unsupported) {
+            unsupportedItems.push({
+              name: rule.name || `Key '${oldId}'`,
+              category: rule.category || "General",
+              oldValue,
+            });
+            continue;
+          }
+          const newKeyId = rule.newId || oldId;
+          const newFullKey = [newBaseId, newKeyId, ...extraSegments].join("@@");
+          let newValue = oldValue;
+          if (rule.valueMapping) {
+            const valueRule = rule.valueMapping[oldValue];
+            if (valueRule === undefined) {
+              unsupportedItems.push({
+                name: `Value '${oldValue}' for setting '${oldId}'`,
+                category: rule.category || "Unsupported Options",
+              });
+              continue;
+            } else if (valueRule.unsupported) {
+              unsupportedItems.push({
+                name: valueRule.name || `Option '${oldValue}'`,
+                category: valueRule.category || "General",
+              });
+              continue;
+            } else {
+              newValue = valueRule;
+            }
+          }
+          newPrefs[newFullKey] = newValue;
+        }
+        return { newPrefs, unsupportedItems };
+      }
+
+      function showResults(newPrefs, unsupportedItems) {
+        const newPrefsString = Object.keys(newPrefs).length > 0 ? JSON.stringify(newPrefs, null, 2) : "";
+        newPrefsOutput.value = newPrefsString;
+        // Download link
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(newPrefsString);
+        downloadLink.href = dataStr;
+        // Unsupported items
+        if (unsupportedItems.length > 0) {
+          let html = "<h2>Unsupported style settings</h2>";
+          const grouped = unsupportedItems.reduce((acc, item) => {
+            (acc[item.category] = acc[item.category] || []).push(item);
+            return acc;
+          }, {});
+          for (const category in grouped) {
+            html += `<div class=\"unsupported-category\"><div class=\"unsupported-category-name\">${category}</div><ul class=\"unsupported-list\">`;
+            grouped[category].forEach((item) => {
+              html += `<li class=\"unsupported-item\">${item.name}</li>`;
+            });
+            html += `</ul></div>`;
+          }
+          unsupportedItemsDiv.innerHTML = html;
+        } else {
+          unsupportedItemsDiv.innerHTML = "";
+        }
+      }
+
+      // Copy button
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(newPrefsOutput.value).then(() => {
+          copyBtn.textContent = "Copied!";
+          setTimeout(() => (copyBtn.textContent = "Copy to Clipboard"), 2000);
+        });
+      });
+
+      // Add functionality to the clear button
+      const clearBtn = document.querySelector(".clear-btn");
+      clearBtn.addEventListener("click", () => {
+        prefsInput.value = ""; // Clear the input textarea
+        showResults({}, []); // Reset the output and unsupported items display
+      });
+
+      // Auto-migrate on input
+      let lastInput = "";
+      prefsInput.addEventListener("input", () => {
+        const inputVal = prefsInput.value;
+        if (inputVal === lastInput) return;
+        lastInput = inputVal;
+        if (!inputVal.trim()) {
+          showResults({}, []);
+          return;
+        }
+        getMapping()
+          .then((mappingData) => {
+            let oldPrefs;
+            try {
+              oldPrefs = JSON.parse(inputVal);
+            } catch (error) {
+              showResults({}, []);
+              newPrefsOutput.value = `Error parsing preferences: ${error.message}`;
+              return;
+            }
+            const { newPrefs, unsupportedItems } = migratePrefs(mappingData, oldPrefs);
+            showResults(newPrefs, unsupportedItems);
+          })
+          .catch((error) => {
+            showResults({}, []);
+            newPrefsOutput.value = `Error loading mapping file: ${error}`;
+          });
+      });
+
+      // Initial clear
+      showResults({}, []);
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

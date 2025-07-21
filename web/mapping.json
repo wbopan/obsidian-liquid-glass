@@ -1,0 +1,379 @@
+{
+  "base": {
+    "unsupported": true,
+    "category": "Interface colors",
+    "name": "Base color"
+  },
+  "bg1": { "newId": "background-primary" },
+  "bg2": { "newId": "background-secondary" },
+  "bg3": { "newId": "interactive-normal" },
+  "ui1": { "newId": "background-modifier-border" },
+  "ui2": { "newId": "background-modifier-border-hover" },
+  "ui3": { "newId": "background-modifier-border-focus" },
+  "ax1": {
+    "unsupported": true,
+    "category": "Interface colors",
+    "name": "Accent color"
+  },
+  "ax2": {
+    "unsupported": true,
+    "category": "Interface colors",
+    "name": "Accent color (hover)"
+  },
+  "ax3": {
+    "unsupported": true,
+    "category": "Interface colors",
+    "name": "Accent color interactive"
+  },
+  "sp1": {
+    "unsupported": true,
+    "category": "Interface colors",
+    "name": "Text on accent"
+  },
+  "bases-toolbar-opacity": {
+    "unsupported": true,
+    "category": "Bases",
+    "name": "Toolbar opacity"
+  },
+  "bases-table-header-icon-display": {
+    "unsupported": true,
+    "category": "Bases",
+    "name": "Table header icons"
+  },
+  "bases-table-row-height": {
+    "unsupported": true,
+    "category": "Bases",
+    "name": "Table row height"
+  },
+  "minimal-code-scroll": { "newId": "minimal-code-scroll" },
+  "trim-cols": {
+    "unsupported": true,
+    "category": "Dataview",
+    "name": "Trim Dataview columns"
+  },
+  "dataview-inline-lists": {
+    "unsupported": true,
+    "category": "Dataview",
+    "name": "Force tables lists inline"
+  },
+  "max-col-width": {
+    "unsupported": true,
+    "category": "Dataview",
+    "name": "Dataview maximum column width"
+  },
+  "embed-underline": {
+    "unsupported": true,
+    "category": "Embedded",
+    "name": "Underline embedded text"
+  },
+  "embed-decoration-style": {
+    "unsupported": true,
+    "category": "Embedded",
+    "name": "Embedded text underline style"
+  },
+  "embed-decoration-color": {
+    "unsupported": true,
+    "category": "Embedded",
+    "name": "Embedded text underline color"
+  },
+  "icon-muted": {
+    "unsupported": true,
+    "category": "Icons",
+    "name": "Icon opacity (inactive)"
+  },
+  "image-muted": {
+    "unsupported": true,
+    "category": "Images",
+    "name": "Image opacity in dark mode"
+  },
+  "image-radius": {
+    "unsupported": true,
+    "category": "Images",
+    "name": "Image radius"
+  },
+  "image-blend-light": {
+    "unsupported": true,
+    "category": "Images",
+    "name": "Blend images in light mode"
+  },
+  "image-grid-fit": {
+    "unsupported": true,
+    "category": "Images",
+    "name": "Image grid crop"
+  },
+  "image-grid-background": {
+    "unsupported": true,
+    "category": "Images",
+    "name": "Image grid background"
+  },
+  "indentation-guide-color": {
+    "unsupported": true,
+    "category": "Indentation guides",
+    "name": "Indentation guide color"
+  },
+  "indentation-guide-color-active": {
+    "unsupported": true,
+    "category": "Indentation guides",
+    "name": "Indentation guide color (active)"
+  },
+  "folding-offset": {
+    "unsupported": true,
+    "category": "Line numbers",
+    "name": "Gutter offset"
+  },
+  "gutter-background": {
+    "unsupported": true,
+    "category": "Line numbers",
+    "name": "Gutter background"
+  },
+  "line-number-color": {
+    "unsupported": true,
+    "category": "Line numbers",
+    "name": "Line number color"
+  },
+  "line-number-color-active": {
+    "unsupported": true,
+    "category": "Line numbers",
+    "name": "Active line number color"
+  },
+  "active-line-bg": {
+    "unsupported": true,
+    "category": "Line numbers",
+    "name": "Active line background"
+  },
+  "checkbox-shape": { "newId": "checkbox-radius" },
+  "minimal-strike-lists": {
+    "unsupported": true,
+    "category": "Lists and tasks",
+    "name": "Strike completed tasks"
+  },
+  "list-spacing": {
+    "unsupported": true,
+    "category": "Lists and tasks",
+    "name": "List item spacing"
+  },
+  "list-indent": {
+    "unsupported": true,
+    "category": "Lists and tasks",
+    "name": "Nested list indentation"
+  },
+  "pdf-blend-light": {
+    "unsupported": true,
+    "category": "PDFs",
+    "name": "Blend PDFs in light mode"
+  },
+  "pdf-dark-opacity": {
+    "unsupported": true,
+    "category": "PDFs",
+    "name": "PDF opacity in dark mode"
+  },
+  "progress-complete": {
+    "unsupported": true,
+    "category": "Progress bars",
+    "name": "Completed progress bar color"
+  },
+  "metadata-dividers": {
+    "unsupported": true,
+    "category": "Properties",
+    "name": "Property row lines"
+  },
+  "metadata-label-width-multiplier": { "newId": "metadata-label-width" },
+  "sidebar-tabs-style": {
+    "unsupported": true,
+    "category": "Sidebars",
+    "name": "Sidebar tab style"
+  },
+  "vault-profile-display": {
+    "unsupported": true,
+    "category": "Sidebars",
+    "name": "Vault profile position"
+  },
+  "hide-settings": {
+    "unsupported": true,
+    "category": "Sidebars",
+    "name": "Hide settings button"
+  },
+  "mobile-left-sidebar-width": {
+    "unsupported": true,
+    "category": "Sidebars",
+    "name": "Mobile left sidebar width"
+  },
+  "mobile-right-sidebar-width": {
+    "unsupported": true,
+    "category": "Sidebars",
+    "name": "Mobile right sidebar width"
+  },
+  "ribbon-style": {
+    "unsupported": true,
+    "category": "Ribbon",
+    "name": "Ribbon style"
+  },
+  "table-text-size": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Table font size"
+  },
+  "table-column-min-width": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Minimum column width"
+  },
+  "table-column-max-width": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Maximum column width"
+  },
+  "maximize-tables-off": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Maximize table width"
+  },
+  "row-lines": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Row lines"
+  },
+  "col-lines": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Column lines"
+  },
+  "table-lines": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Cell lines"
+  },
+  "row-alt": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Striped rows"
+  },
+  "col-alt": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Striped columns"
+  },
+  "table-tabular": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Tabular figures"
+  },
+  "table-numbers": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Row numbers"
+  },
+  "table-center": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Center small tables"
+  },
+  "table-nowrap": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Disable line wrap"
+  },
+  "row-hover": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Highlight active row"
+  },
+  "table-row-background-hover": {
+    "unsupported": true,
+    "category": "Tables",
+    "name": "Active row background"
+  },
+  "tabs-style": {
+    "valueMapping": {
+      "tabs-default": "tabs-default",
+      "tabs-square": "tabs-default",
+      "tabs-modern": "tabs-cupertino",
+      "tabs-plain-square": "tabs-cupertino",
+      "tabs-underline": "tabs-underline"
+    }
+  },
+  "minimal-tab-text-color": {
+    "unsupported": true,
+    "category": "Tabs",
+    "name": "Tab text color"
+  },
+  "minimal-tab-text-color-active": {
+    "unsupported": true,
+    "category": "Tabs",
+    "name": "Tab text color (active)"
+  },
+  "minimal-unstyled-tags": { "newId": "unstyled-tags" },
+  "tx1": { "newId": "text-normal" },
+  "hl1": { "newId": "text-selection" },
+  "hl2": { "newId": "text-highlight-bg" },
+  "tx2": { "newId": "text-muted" },
+  "tx3": { "newId": "text-faint" },
+  "text-formatting": { "newId": "Markdown syntax color" },
+  "file-header-visibility": {
+    "valueMapping": {
+      "minimal-tab-title-hover": "view-header-title-hover",
+      "minimal-tab-title-hidden": "view-header-title-hidden",
+      "minimal-tab-title-visible": "view-header-title-visible"
+    }
+  },
+  "title-color": {
+    "unsupported": true,
+    "category": "Titles",
+    "name": "Tab title text color (active)"
+  },
+  "title-color-inactive": {
+    "unsupported": true,
+    "category": "Titles",
+    "name": "Tab title text color (inactive)"
+  },
+  "workspace-background-translucent": {
+    "unsupported": true,
+    "category": "Translucency",
+    "name": "Translucent background color"
+  },
+  "frame-icon-color": {
+    "unsupported": true,
+    "category": "Window frame",
+    "name": "Frame icon color"
+  },
+  "cards-border-width": {
+    "unsupported": true,
+    "category": "Cards",
+    "name": "Card border width"
+  },
+  "hide-markdown": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Hide Markdown syntax"
+  },
+  "hide-settings-desc": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Hide setting descriptions"
+  },
+  "animations": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Animation speed"
+  },
+  "cursor": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Cursor style"
+  },
+  "font-ui-small": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Small font size"
+  },
+  "font-ui-smaller": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Smaller font size"
+  },
+  "mobile-toolbar-off": {
+    "unsupported": true,
+    "category": "Advanced Settings",
+    "name": "Disable mobile toolbar"
+  }
+}
