@@ -107,7 +107,6 @@
           if (!Object.hasOwnProperty.call(oldPrefs, k)) continue;
           const seg = k.split("@@");
           if (seg.length < 2 || !seg[0].startsWith("minimal-")) {
-            newPrefs[k] = oldPrefs[k];
             continue;
           }
           const newBase = seg[0].replace(/^minimal-/, "baseline-"),
