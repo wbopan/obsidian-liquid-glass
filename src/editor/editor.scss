@@ -3,8 +3,9 @@
     --inline-title-margin-bottom: 1em;
     --heading-spacing: 2em;
     --p-spacing: 1.75rem;
+    --list-spacing: 0.2em;
     --line-height: 1.5;
-    --line-height-normal: var(--line-height);
+    --line-height-normal: calc(var(--line-height) * 1.05);
     --line-height-tight: calc(var(--line-height) * 0.85);
 
     --h1-weight: 600;
