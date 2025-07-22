@@ -27,6 +27,9 @@
     border-radius: var(--radius-s);
     pointer-events: none;
   }
+  .markdown-rendered blockquote:has(p:dir(rtl))::before {
+    inset: -16px calc(-16px - var(--blockquote-border-thickness)) -16px -16px;
+  }
 
   .HyperMD-quote {
     background-color: var(--blockquote-background-color);
