@@ -86,11 +86,7 @@
     "category": "Images",
     "name": "Image opacity in dark mode"
   },
-  "image-radius": {
-    "unsupported": true,
-    "category": "Images",
-    "name": "Image radius"
-  },
+  "image-radius": { "newId": "media-radius" },
   "image-blend-light": {
     "unsupported": true,
     "category": "Images",
@@ -143,9 +139,11 @@
   },
   "checkbox-shape": { "newId": "checkbox-radius" },
   "minimal-strike-lists": {
-    "unsupported": true,
-    "category": "Lists and tasks",
-    "name": "Strike completed tasks"
+    "newId": "strike-lists-off",
+    "valueMapping": {
+      "true": false,
+      "false": true
+    }
   },
   "list-spacing": {
     "unsupported": true,
@@ -208,11 +206,6 @@
     "category": "Ribbon",
     "name": "Ribbon style"
   },
-  "table-text-size": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Table font size"
-  },
   "table-column-min-width": {
     "unsupported": true,
     "category": "Tables",
@@ -228,55 +221,10 @@
     "category": "Tables",
     "name": "Maximize table width"
   },
-  "row-lines": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Row lines"
-  },
-  "col-lines": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Column lines"
-  },
-  "table-lines": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Cell lines"
-  },
-  "row-alt": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Striped rows"
-  },
-  "col-alt": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Striped columns"
-  },
-  "table-tabular": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Tabular figures"
-  },
-  "table-numbers": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Row numbers"
-  },
   "table-center": {
     "unsupported": true,
     "category": "Tables",
     "name": "Center small tables"
-  },
-  "table-nowrap": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Disable line wrap"
-  },
-  "row-hover": {
-    "unsupported": true,
-    "category": "Tables",
-    "name": "Highlight active row"
   },
   "table-row-background-hover": {
     "unsupported": true,

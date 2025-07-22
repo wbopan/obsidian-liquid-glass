@@ -1,8 +1,0 @@
-@media screen, print {
-  body.pdf-seamless-on {
-    --pdf-shadow: none;
-  }
-  body.theme-dark.pdf-invert-dark .pdf-container .pdfViewer .page {
-    filter: invert(1) hue-rotate(180deg) contrast(0.75);
-  }
-}

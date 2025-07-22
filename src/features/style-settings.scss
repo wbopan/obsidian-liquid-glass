@@ -907,17 +907,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: images
-		title: Images
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: zoom-off
-		title: Disable image zoom
-		description: Turns off click + hold to zoom images
-		type: class-toggle
-	-
 		id: links
 		title: Links
 		type: heading
@@ -963,6 +952,27 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+	-
+		id: media
+		title: Media
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: media-radius
+		title: Media radius
+		description: Rounded corners for images and videos.
+		type: variable-number-slider
+		default: 4
+		min: 0
+		max: 16
+		step: 1
+		format: px
+	-
+		id: zoom-off
+		title: Disable image zoom
+		description: Turns off click + hold to zoom images
+		type: class-toggle
 	-
 		id: pdf
 		title: PDFs
@@ -1074,6 +1084,72 @@ settings:
 	-
 		id: hide-help
 		title: Hide help button
+		type: class-toggle
+		default: false
+	-
+		id: tables
+		title: Tables
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: table-text-size
+		title: Table font size
+		description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
+		type: variable-text
+		default: 1em
+	-
+		id: row-lines
+		title: Row lines
+		description: Display borders between table rows globally
+		type: class-toggle
+		default: false
+	-
+		id: col-lines
+		title: Column lines
+		description: Display borders between table columns globally
+		type: class-toggle
+		default: false
+	-
+		id: table-lines
+		title: Cell lines
+		description: Display borders around all table cells globally
+		type: class-toggle
+		default: false 
+	-
+		id: row-alt
+		title: Striped rows
+		description: Display striped background in alternating table rows globally
+		type: class-toggle
+		default: false
+	-
+		id: col-alt
+		title: Striped columns
+		description: Display striped background in alternating table columns globally
+		type: class-toggle
+		default: false
+	-
+		id: table-tabular
+		title: Tabular figures
+		description: Use fixed width numbers in tables globally
+		type: class-toggle
+		default: false
+	-
+		id: table-numbers
+		title: Row numbers
+		description: Display row numbers in tables globally
+		type: class-toggle
+		default: false
+	-
+		id: table-nowrap
+		title: Disable line wrap
+		description: Turn off line wrapping in table cells globally
+		type: class-toggle
+		default: false
+	-
+		id: row-hover
+		title: Highlight active row
+		description: Highlight rows on hover
 		type: class-toggle
 		default: false
 	-
@@ -1252,6 +1328,12 @@ settings:
 			-
 				label: Circle
 				value: 100px
+	-
+		id: strike-lists-off
+		title: Disable strike completed tasks
+		description: Removes strikethrough line for completed tasks
+		type: class-toggle
+		default: false
 	-
 		id: text
 		title: Text
@@ -1517,3 +1599,23 @@ settings:
 		default-dark: '#'
 
 */
+.theme-light .style-settings-container .themed-color-wrapper .theme-dark button {
+  color: var(--color-base-100);
+}
+.theme-light .style-settings-container .themed-color-wrapper .theme-dark,
+.theme-dark .style-settings-container .themed-color-wrapper .theme-light {
+  background-color: var(--color-base-30);
+}
+
+.style-settings-container .pickr .pcr-button {
+  box-shadow: none;
+
+  &::before {
+    background: var(--color-base-50);
+    border-radius: var(--button-radius);
+  }
+
+  &::after {
+    border-radius: var(--button-radius);
+  }
+}

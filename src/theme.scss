@@ -1,4 +1,4 @@
-@use "app/app.scss";
+@use "app/root.scss";
 @use "app/fonts.scss";
 @use "app/input.scss";
 @use "app/tabs.scss";
@@ -12,15 +12,7 @@
 @use "editor/editor.scss";
 @use "editor/blockquote.scss";
 @use "editor/callout.scss";
-@use "editor/codeblock.scss";
-@use "editor/embed.scss";
-@use "editor/frontmatter.scss";
-@use "editor/highlight.scss";
-@use "editor/image.scss";
-@use "editor/list.scss";
 @use "editor/table.scss";
-@use "editor/tag.scss";
-@use "editor/pdf-viewer.scss";
 
 @use "features/alternative-checkboxes.scss";
 @use "features/block-width.scss";
@@ -30,20 +22,11 @@
 @use "features/labeled-nav.scss";
 @use "features/style-settings.scss";
 
-@use "minimal/borders.scss";
+@use "minimal/minimal-settings.scss";
 @use "minimal/cards.scss";
-@use "minimal/colorful-active-states.scss";
-@use "minimal/colorful-frame.scss";
-@use "minimal/colorful-headings.scss";
-@use "minimal/focus-mode.scss";
-@use "minimal/full-width-media.scss";
 @use "minimal/helpers-tables.scss";
-@use "minimal/helpers.scss";
 @use "minimal/image-filters.scss";
 @use "minimal/image-grid.scss";
-@use "minimal/minimal-status-bar.scss";
-@use "minimal/link-underline.scss";
-@use "minimal/trim-file-names.scss";
 @use "minimal/underline-headings.scss";
 
 @use "color-schemes/contrast.scss";

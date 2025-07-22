@@ -1,38 +1,17 @@
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
-.table-small {
-  .bases-view {
-    --bases-table-text-size: 85%;
-  }
-  table:not(.calendar) {
-    --table-text-size: 85%;
-  }
-}
-.table-tiny {
-  .bases-view {
-    --bases-table-text-size: 75%;
-  }
-  table:not(.calendar) {
-    --table-text-size: 75%;
-  }
-}
-
 .row-hover {
-  --table-edge-cell-padding-first: 8px;
-  --table-edge-cell-padding-last: 8px;
-  --table-row-background-hover: var(--text-selection);
-  --table-row-alt-background-hover: var(--text-selection);
+  --table-row-background-hover: var(--background-modifier-hover);
+  --table-row-alt-background-hover: var(--background-modifier-hover);
 }
 
 .row-alt {
-  --table-row-alt-background: var(--background-table-rows);
-  --table-row-alt-background-hover: var(--background-table-rows);
-  --table-edge-cell-padding-first: 8px;
-  --table-edge-cell-padding-last: 8px;
+  --table-row-alt-background: var(--background-primary);
+  --table-row-alt-background-hover: var(--background-primary);
 }
 .col-alt .markdown-rendered:not(.cards) {
-  --table-column-alt-background: var(--background-table-rows);
+  --table-column-alt-background: var(--background-primary);
 }
 
 .table-tabular table:not(.calendar) {
@@ -99,74 +78,41 @@
         text-align: center;
         padding-right: var(--table-numbers-padding-right);
         display: inline-block;
-        min-width: 16px;
         color: var(--text-faint);
         font-variant-numeric: tabular-nums;
       }
-      .cm-s-obsidian {
-        display: inline-block;
-        min-width: 10px;
-      }
     }
-  }
-
-  .bases-table {
-    counter-reset: section;
-    .bases-tr > .bases-td:first-child {
-      white-space: nowrap;
-      .bases-table-header-label,
-      .bases-table-header-name {
-        padding-inline-start: 0;
-      }
-      &::before {
-        content: " ";
-        padding-right: var(--table-numbers-padding-right);
-        display: inline-block;
-        min-width: 16px;
-      }
-    }
-    .bases-tbody .bases-tr > .bases-td:first-child {
-      &::before {
-        counter-increment: section;
-        content: counter(section) " ";
-        text-align: center;
-        color: var(--text-faint);
-        font-variant-numeric: tabular-nums;
-        font-size: var(--bases-table-text-size);
-      }
-    }
-  }
-  .table-editor {
-    --table-numbers-padding-right: 0;
   }
 }
 
-.row-lines-off {
-  --table-row-last-border-width: 0;
-  --bases-table-row-border-width: 0;
-
-  table:not(.calendar) tbody > tr > td,
-  .table-view-table > tbody > tr > td,
-  table:not(.calendar) tbody > tr:last-child > td {
+.row-lines div:not(.el-table):not(.table-wrapper) > table {
+  > tbody > tr > td {
+    border-bottom: var(--table-border-width) solid var(--table-border-color);
+  }
+  > tbody > tr:last-child > td {
     border-bottom: none;
   }
 }
 
-.row-lines:not(.table-lines) .markdown-source-view:not(.cards),
-.row-lines:not(.table-lines) .markdown-preview-view:not(.cards) {
-  --table-row-last-border-width: 0;
-
-  table:not(.calendar) tbody > tr:not(:last-child) > td,
-  .table-view-table > tbody > tr:not(:last-child) > td {
-    border-bottom: var(--table-border-width) solid var(--table-border-color);
+.col-lines div:not(.el-table):not(.table-wrapper) > table {
+  > tbody > tr > td {
+    border-right: var(--table-border-width) solid var(--table-border-color);
+  }
+  > tbody > tr > td:last-child {
+    border-right: none;
   }
 }
 
-.col-lines {
-  --bases-table-column-border-width: var(--table-border-width);
-  table:not(.calendar) tbody > tr > td:not(:last-child),
-  .table-view-table thead > tr > th:not(:last-child),
-  .table-view-table > tbody > tr > td:not(:last-child) {
-    border-right: var(--table-border-width) solid var(--background-modifier-border);
+.table-lines div:not(.el-table):not(.table-wrapper) > table {
+  > tbody > tr > td {
+    border: var(--table-border-width) solid var(--table-border-color);
+  }
+
+  > tbody > tr:not(:last-child) > td {
+    border-bottom: none;
+  }
+
+  > tbody > tr > td:not(:last-child) {
+    border-right: none;
   }
 }
