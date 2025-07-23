@@ -3,6 +3,10 @@ body.is-mobile {
   --radius-m: 16px;
   --radius-l: 24px;
   --radius-xl: 32px;
+
+  --system-status-background: var(--background-secondary);
+  --tab-switcher-menubar-background: var(--background-secondary);
+  --tab-switcher-preview-radius: var(--radius-m);
 }
 
 body.is-phone {
@@ -65,9 +69,14 @@ body.is-phone {
 
   // Navbar
   .mobile-navbar {
-    background-color: var(--background-secondary);
+    background-color: transparent;
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
     padding-right: max(var(--safe-area-inset-right), 24px);
     padding-left: max(var(--safe-area-inset-right), 24px);
+  }
+
+  // Tab switcher
+  .mobile-tab-switcher-menubar {
+    border-top: none;
   }
 }
