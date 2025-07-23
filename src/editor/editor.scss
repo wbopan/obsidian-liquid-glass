@@ -105,6 +105,17 @@ body.code-scroll {
   }
 }
 
+// Dataview
+.dataview .inline-field-standalone-value,
+body .dataview.inline-field-key,
+body .dataview.inline-field-value {
+  font-family: var(--font-text);
+  font-size: var(--font-smaller);
+  background: transparent;
+  color: var(--text-faint);
+  padding: 0;
+}
+
 // Embeds
 .embed-strict {
   --embed-border-start: none;
@@ -121,7 +132,6 @@ body.code-scroll {
 
 iframe.external-embed {
   width: -webkit-fill-available;
-  border-radius: var(--media-radius);
   aspect-ratio: 16/9;
   height: auto;
 }
@@ -171,8 +181,10 @@ body.metadata-icons-off .metadata-property-icon {
 .workspace-leaf-content[data-type="markdown"] {
   video,
   img:not(.emoji),
-  .image-embed:not(.canvas-node-content) {
+  .image-embed:not(.canvas-node-content),
+  iframe.external-embed {
     border-radius: var(--media-radius);
+    max-width: 100%;
   }
 }
 // Tags
