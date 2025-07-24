@@ -87,6 +87,24 @@ body.active-line-on .markdown-source-view .cm-active:not(:has(.cm-fold-indicator
   }
 }
 
+// Aside
+s.aside-left {
+  position: absolute;
+  left: 2em;
+  max-width: calc(calc(100% - var(--file-line-width)) / 2 - 3em);
+  font-size: var(--font-smallest);
+  color: var(--text-muted);
+  text-decoration: none;
+}
+s.aside-right {
+  position: absolute;
+  right: 2em;
+  max-width: calc(calc(100% - var(--file-line-width)) / 2 - 3em);
+  font-size: var(--font-smallest);
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
 // Codeblocks
 .markdown-rendered code {
   padding: 2px 4px;

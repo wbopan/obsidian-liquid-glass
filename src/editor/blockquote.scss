@@ -48,4 +48,15 @@
     border-bottom-left-radius: var(--radius-s);
     border-bottom-right-radius: var(--radius-s);
   }
+
+  // Citation
+
+  cite {
+    font-style: normal;
+    color: var(--text-muted);
+    font-size: var(--font-smaller);
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+  }
 }
