@@ -202,10 +202,10 @@ body.tab-names-single .workspace-tab-header:only-child {
 
 // Side panels: Platforms
 
-body.is-hidden-frameless:not(.is-fullscreen) .mod-sidedock .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-  padding-left: 8px;
+body .mod-sidedock .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: 8px !important;
 }
-body.is-hidden-frameless:not(.is-fullscreen) .mod-sidedock .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+body .mod-sidedock .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
   padding-right: var(--frame-right-space);
 }
 
