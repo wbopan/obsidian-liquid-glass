@@ -49,7 +49,7 @@ body.is-phone {
   .mod-root .view-header {
     z-index: 3;
   }
-  .mod-root .workspace-leaf-content .view-actions button:nth-last-child(2) {
+  &:not(.mode-switcher-off) .mod-root .workspace-leaf-content .view-actions button:nth-last-child(2) {
     position: fixed;
     right: 16px;
     bottom: 0;
@@ -62,7 +62,7 @@ body.is-phone {
     border: 1px solid var(--background-modifier-border);
   }
 
-  &.mod-toolbar-open .mod-root .workspace-leaf-content[data-mode="source"] .view-actions button:nth-last-child(2) {
+  &.mod-toolbar-open:not(.mode-switcher-off) .mod-root .workspace-leaf-content[data-mode="source"] .view-actions button:nth-last-child(2) {
     right: var(--side-padding);
     margin-bottom: var(--side-padding);
   }

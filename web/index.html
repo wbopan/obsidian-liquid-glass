@@ -93,6 +93,7 @@
         clearBtn = $(".clear-btn");
 
       let mappingCache;
+
       const getMapping = () =>
         mappingCache
           ? Promise.resolve(mappingCache)
@@ -100,26 +101,49 @@
               .then((r) => (r.ok ? r.json() : Promise.reject(`Status: ${r.status}`)))
               .then((d) => (mappingCache = d));
 
+      // Multi-theme migration logic
       const migratePrefs = (mapping, oldPrefs) => {
         const newPrefs = {},
           unsupported = [];
+        // Find all theme base names and their readable names
+        const themeBases = {};
+        for (const themeKey in mapping) {
+          if (mapping[themeKey] && mapping[themeKey].__name) {
+            themeBases[themeKey] = mapping[themeKey].__name;
+          }
+        }
         for (const k in oldPrefs) {
           if (!Object.hasOwnProperty.call(oldPrefs, k)) continue;
           const seg = k.split("@@");
-          if (seg.length < 2 || !seg[0].startsWith("minimal-")) {
-            continue;
+          if (seg.length < 2) continue;
+          // Detect theme base (e.g. minimal-style, things-style, sanctum-style, etc.)
+          const base = seg[0];
+          // Find theme key (e.g. minimal, things, sanctum)
+          let themeKey = null;
+          for (const t in themeBases) {
+            if (base.startsWith(t)) {
+              themeKey = t;
+              break;
+            }
           }
-          const newBase = seg[0].replace(/^minimal-/, "baseline-"),
-            oldId = seg[1],
+          if (!themeKey) continue;
+          const newBase = base.replace(new RegExp(`^${themeKey}`), "baseline");
+          const oldId = seg[1],
             extra = seg.slice(2),
-            rule = mapping[oldId],
+            themeMapping = mapping[themeKey],
+            rule = themeMapping[oldId],
             val = oldPrefs[k];
           if (!rule) {
             newPrefs[[newBase, oldId, ...extra].join("@@")] = val;
             continue;
           }
           if (rule.unsupported) {
-            unsupported.push({ name: rule.name || `Key '${oldId}'`, category: rule.category || "General", oldValue: val });
+            unsupported.push({
+              name: rule.name || `Key '${oldId}'`,
+              category: rule.category || "General",
+              oldValue: val,
+              theme: themeKey,
+            });
             continue;
           }
           let newVal = val,
@@ -127,31 +151,52 @@
           if (rule.valueMapping) {
             const vRule = rule.valueMapping[val];
             if (vRule === undefined) {
-              unsupported.push({ name: `Value '${val}' for setting '${oldId}'`, category: rule.category || "Unsupported Options" });
+              unsupported.push({
+                name: `Value '${val}' for setting '${oldId}'`,
+                category: rule.category || "Unsupported Options",
+                theme: themeKey,
+              });
               continue;
             }
             if (vRule.unsupported) {
-              unsupported.push({ name: vRule.name || `Option '${val}'`, category: vRule.category || "General" });
+              unsupported.push({
+                name: vRule.name || `Option '${val}'`,
+                category: vRule.category || "General",
+                theme: themeKey,
+              });
               continue;
             }
             newVal = vRule;
           }
           newPrefs[[newBase, newKey, ...extra].join("@@")] = newVal;
         }
-        return { newPrefs, unsupportedItems: unsupported };
+        return { newPrefs, unsupportedItems: unsupported, themeBases };
       };
 
-      const showResults = (prefs, unsupported) => {
+      const showResults = (prefs, unsupported, themeBases) => {
         const str = Object.keys(prefs).length ? JSON.stringify(prefs, null, 2) : "";
         newPrefsOutput.value = str;
         downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(str);
         if (unsupported.length) {
           let html = "<h2>Unsupported style settings</h2>";
-          const grouped = unsupported.reduce((a, i) => ((a[i.category] = a[i.category] || []).push(i), a), {});
-          for (const cat in grouped) {
-            html += `<div class="unsupported-category"><div class="unsupported-category-name">${cat}</div><ul class="unsupported-list">`;
-            grouped[cat].forEach((i) => (html += `<li class="unsupported-item">${i.name}</li>`));
-            html += `</ul></div>`;
+          // Group by theme, then by category
+          const groupedByTheme = {};
+          unsupported.forEach((i) => {
+            const theme = i.theme || "unknown";
+            if (!groupedByTheme[theme]) groupedByTheme[theme] = [];
+            groupedByTheme[theme].push(i);
+          });
+          for (const theme in groupedByTheme) {
+            const readable = (themeBases && themeBases[theme]) || theme;
+            html += `<div class="unsupported-theme"><div class="unsupported-theme-name">${readable}</div>`;
+            // Group by category within theme
+            const grouped = groupedByTheme[theme].reduce((a, i) => ((a[i.category] = a[i.category] || []).push(i), a), {});
+            for (const cat in grouped) {
+              html += `<div class="unsupported-category"><div class="unsupported-category-name">${cat}</div><ul class="unsupported-list">`;
+              grouped[cat].forEach((i) => (html += `<li class="unsupported-item">${i.name}</li>`));
+              html += `</ul></div>`;
+            }
+            html += `</div>`;
           }
           unsupportedItemsDiv.innerHTML = html;
         } else unsupportedItemsDiv.innerHTML = "";
@@ -173,26 +218,26 @@
         const val = prefsInput.value;
         if (val === lastInput) return;
         lastInput = val;
-        if (!val.trim()) return showResults({}, []);
+        if (!val.trim()) return showResults({}, [], {});
         getMapping()
           .then((mapping) => {
             let oldPrefs;
             try {
               oldPrefs = JSON.parse(val);
             } catch (e) {
-              showResults({}, []);
+              showResults({}, [], {});
               newPrefsOutput.value = `Error parsing preferences: ${e.message}`;
               return;
             }
-            const { newPrefs, unsupportedItems } = migratePrefs(mapping, oldPrefs);
-            showResults(newPrefs, unsupportedItems);
+            const { newPrefs, unsupportedItems, themeBases } = migratePrefs(mapping, oldPrefs);
+            showResults(newPrefs, unsupportedItems, themeBases);
           })
           .catch((e) => {
-            showResults({}, []);
+            showResults({}, [], {});
             newPrefsOutput.value = `Error loading mapping file: ${e}`;
           });
       });
-      showResults({}, []);
+      showResults({}, [], {});
     </script>
 
     <script src="https://unpkg.com/lucide@latest"></script>

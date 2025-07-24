@@ -16,7 +16,7 @@ body.theme-dark.minimal-dark-black {
   --background-primary: black;
   --background-primary-alt: var(--color-base-05);
   --background-secondary: black;
-  --interactive-normal: rgba(var(--mono-rgb-100), 0.2);
+  --system-status-background: var(--background-primary);
 }
 
 option[value="minimal-light-contrast"] {

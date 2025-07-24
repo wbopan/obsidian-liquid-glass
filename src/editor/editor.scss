@@ -123,6 +123,18 @@ body.code-scroll {
   }
 }
 
+body.code-line-numbers .HyperMD-codeblock-begin {
+  counter-reset: codeblock-line-numbers;
+}
+body.code-line-numbers .HyperMD-codeblock:not(.HyperMD-codeblock-begin, .HyperMD-codeblock-end)::before {
+  counter-increment: codeblock-line-numbers;
+  content: counter(codeblock-line-numbers);
+  font-size: var(--font-smallest);
+  text-align: right;
+  color: var(--text-muted);
+  padding-right: 1em;
+}
+
 // Dataview
 .dataview .inline-field-standalone-value,
 body .dataview.inline-field-key,
@@ -167,6 +179,38 @@ body.metadata-add-property-off .metadata-add-button {
 }
 body.metadata-icons-off .metadata-property-icon {
   display: none;
+}
+
+// Headings
+.HyperMD-header-1,
+.inline-title h1,
+.HyperMD-list-line .cm-header-1 {
+  text-transform: var(--h1-transform);
+}
+.HyperMD-header-2,
+.inline-title h2,
+.HyperMD-list-line .cm-header-2 {
+  text-transform: var(--h2-transform);
+}
+.HyperMD-header-3,
+.inline-title h3,
+.HyperMD-list-line .cm-header-3 {
+  text-transform: var(--h3-transform);
+}
+.HyperMD-header-4,
+.inline-title h4,
+.HyperMD-list-line .cm-header-4 {
+  text-transform: var(--h4-transform);
+}
+.HyperMD-header-5,
+.inline-title h5,
+.HyperMD-list-line .cm-header-5 {
+  text-transform: var(--h5-transform);
+}
+.HyperMD-header-6,
+.inline-title h6,
+.HyperMD-list-line .cm-header-6 {
+  text-transform: var(--h6-transform);
 }
 
 // Highlights

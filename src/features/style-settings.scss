@@ -266,9 +266,15 @@ settings:
 		type: variable-text
 		default: ''
 	-
+		id: code-line-numbers
+		title: Code line numbers
+		description: Line numbers for code blocks
+		type: class-toggle
+		default: false
+	-
 		id: code-scroll
 		title: Scroll long lines
-		description: Turns off line wrap for code
+		description: Turns off line wrap for code blocks
 		type: class-toggle
 		default: false
 	-
@@ -523,6 +529,25 @@ settings:
 				label: Italic
 				value: italic
 	-
+		id: h1-transform
+		title: H1 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: None
+				value: none
+			-
+				label: Capitalize
+				value: capitalize
+			-
+				label: Uppercase
+				value: uppercase
+			-
+				label: Lowercase
+				value: lowercase
+	-
 		id: h1-l
 		title: H1 divider line
 		description: Adds a border below the heading
@@ -590,6 +615,25 @@ settings:
 			-
 				label: Italic
 				value: italic
+	-
+		id: h2-transform
+		title: H2 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: None
+				value: none
+			-
+				label: Capitalize
+				value: capitalize
+			-
+				label: Uppercase
+				value: uppercase
+			-
+				label: Lowercase
+				value: lowercase
 	-
 		id: h2-l
 		title: H2 divider line
@@ -659,6 +703,25 @@ settings:
 				label: Italic
 				value: italic
 	-
+		id: h3-transform
+		title: H3 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: None
+				value: none
+			-
+				label: Capitalize
+				value: capitalize
+			-
+				label: Uppercase
+				value: uppercase
+			-
+				label: Lowercase
+				value: lowercase
+	-
 		id: h3-l
 		title: H3 divider line
 		description: Adds a border below the heading
@@ -726,6 +789,25 @@ settings:
 			-
 				label: Italic
 				value: italic
+	-
+		id: h4-transform
+		title: H4 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: None
+				value: none
+			-
+				label: Capitalize
+				value: capitalize
+			-
+				label: Uppercase
+				value: uppercase
+			-
+				label: Lowercase
+				value: lowercase
 	-
 		id: h4-l
 		title: H4 divider line
@@ -795,6 +877,25 @@ settings:
 				label: Italic
 				value: italic
 	-
+		id: h5-transform
+		title: H5 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: None
+				value: none
+			-
+				label: Capitalize
+				value: capitalize
+			-
+				label: Uppercase
+				value: uppercase
+			-
+				label: Lowercase
+				value: lowercase
+	-
 		id: h5-l
 		title: H5 divider line
 		description: Adds a border below the heading
@@ -863,6 +964,25 @@ settings:
 				label: Italic
 				value: italic
 	-
+		id: h6-transform
+		title: H6 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: None
+				value: none
+			-
+				label: Capitalize
+				value: capitalize
+			-
+				label: Uppercase
+				value: uppercase
+			-
+				label: Lowercase
+				value: lowercase
+	-
 		id: h6-l
 		title: H6 divider line
 		type: class-toggle
@@ -874,6 +994,12 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: mode-switcher-off
+		title: Disable quick mode switcher
+		type: class-toggle
+		description: Turns off mobile mode switcher quick access
+		default: false
 	-
 		id: icon-color
 		title: Icon color
