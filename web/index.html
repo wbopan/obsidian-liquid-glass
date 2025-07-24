@@ -101,7 +101,7 @@
               .then((r) => (r.ok ? r.json() : Promise.reject(`Status: ${r.status}`)))
               .then((d) => (mappingCache = d));
 
-      // Multi-theme migration logic
+      // Fix for ensuring all migrated keys use 'baseline-style' as the base
       const migratePrefs = (mapping, oldPrefs) => {
         const newPrefs = {},
           unsupported = [];
@@ -127,7 +127,8 @@
             }
           }
           if (!themeKey) continue;
-          const newBase = base.replace(new RegExp(`^${themeKey}`), "baseline");
+          // Ensure all migrated keys use 'baseline-style' as the base
+          const newBase = "baseline-style";
           const oldId = seg[1],
             extra = seg.slice(2),
             themeMapping = mapping[themeKey],
@@ -151,22 +152,26 @@
           if (rule.valueMapping) {
             const vRule = rule.valueMapping[val];
             if (vRule === undefined) {
-              unsupported.push({
-                name: `Value '${val}' for setting '${oldId}'`,
-                category: rule.category || "Unsupported Options",
-                theme: themeKey,
-              });
-              continue;
-            }
-            if (vRule.unsupported) {
+              if (rule.valueMapping.__fallback !== undefined) {
+                newVal = rule.valueMapping.__fallback;
+              } else {
+                unsupported.push({
+                  name: `Value '${val}' for setting '${oldId}'`,
+                  category: rule.category || "Unsupported Options",
+                  theme: themeKey,
+                });
+                continue;
+              }
+            } else if (vRule.unsupported) {
               unsupported.push({
                 name: vRule.name || `Option '${val}'`,
                 category: vRule.category || "General",
                 theme: themeKey,
               });
               continue;
+            } else {
+              newVal = vRule;
             }
-            newVal = vRule;
           }
           newPrefs[[newBase, newKey, ...extra].join("@@")] = newVal;
         }

@@ -143,6 +143,7 @@
     "minimal-strike-lists": {
       "newId": "strike-lists-off",
       "valueMapping": {
+        "__fallback": false,
         "true": false,
         "false": true
       }
@@ -235,6 +236,7 @@
     },
     "tabs-style": {
       "valueMapping": {
+        "__fallback": "tabs-default",
         "tabs-default": "tabs-default",
         "tabs-square": "tabs-default",
         "tabs-modern": "tabs-cupertino",
@@ -261,6 +263,7 @@
     "text-formatting": { "newId": "Markdown syntax color" },
     "file-header-visibility": {
       "valueMapping": {
+        "__fallback": "view-header-title-hover",
         "minimal-tab-title-hover": "view-header-title-hover",
         "minimal-tab-title-hidden": "view-header-title-hidden",
         "minimal-tab-title-visible": "view-header-title-visible"
@@ -360,16 +363,17 @@
       "category": "Features",
       "name": "Underline external links"
     },
-    "text-highlight-bg-l": { "newId": "text-highlight-bg" },
-    "text-highlight-bg-d": { "newId": "text-highlight-bg" },
+    "text-highlight-bg-l": { "newId": "text-highlight-bg@@light" },
+    "text-highlight-bg-d": { "newId": "text-highlight-bg@@dark" },
     "strong-color": { "newId": "bold-color" },
     "em-color": { "newId": "italic-color" },
     "quote-color": { "newId": "blockquote-color" },
-    "code-color-d": { "newId": "code-normal" },
-    "tag-background-color-l": { "newId": "tag-background" },
-    "tag-font-color-l": { "newId": "tag-color" },
-    "tag-background-color-d": { "newId": "tag-color" },
-    "tag-font-color-d": { "newId": "tag-color" },
+    "code-color": { "newId": "code-normal@@light" },
+    "code-color-d": { "newId": "code-normal@@dark" },
+    "tag-background-color-l": { "newId": "tag-background@@light" },
+    "tag-font-color-l": { "newId": "tag-color@@light" },
+    "tag-background-color-d": { "newId": "tag-color@@dark" },
+    "tag-font-color-d": { "newId": "tag-color@@dark" },
     "progress-color": {
       "unsupported": true,
       "category": "Typography",
