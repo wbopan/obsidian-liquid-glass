@@ -84,255 +84,211 @@
     </div>
 
     <script>
-      // --- Concise Baseline Migration Script ---
-      const $ = (s) => document.querySelector(s);
-      const prefsInput = $(".prefs-input"),
-        newPrefsOutput = $(".prefs-output"),
-        copyBtn = $(".copy-btn"),
-        downloadLink = $(".download-link"),
-        unsupportedItemsDiv = $(".unsupported-container"),
-        conflictItemsDiv = $(".conflict-container"),
-        clearBtn = $(".clear-btn");
+      (() => {
+        // DOM helpers
+        const $ = (s) => document.querySelector(s);
+        const prefsInput = $(".prefs-input");
+        const newPrefsOutput = $(".prefs-output");
+        const copyBtn = $(".copy-btn");
+        const downloadLink = $(".download-link");
+        const unsupportedDiv = $(".unsupported-container");
+        const conflictDiv = $(".conflict-container");
+        const clearBtn = $(".clear-btn");
 
-      let mappingCache;
+        let mappingCache = null;
 
-      const getMapping = () =>
-        mappingCache
-          ? Promise.resolve(mappingCache)
-          : fetch("mapping.json")
-              .then((r) => (r.ok ? r.json() : Promise.reject(`Status: ${r.status}`)))
-              .then((d) => (mappingCache = d));
-
-      // Fix for ensuring all migrated keys use 'baseline-style' as the base
-      const migratePrefs = (mapping, oldPrefs) => {
-        const newPrefs = {},
-          unsupported = [],
-          conflicts = {};
-
-        // Find all theme base names and their readable names
-        const themeBases = {};
-        for (const themeKey in mapping) {
-          if (mapping[themeKey] && mapping[themeKey].__name) {
-            themeBases[themeKey] = mapping[themeKey].__name;
-          }
+        async function getMapping() {
+          if (mappingCache) return mappingCache;
+          const res = await fetch("mapping.json");
+          if (!res.ok) throw new Error(`Status: ${res.status}`);
+          mappingCache = await res.json();
+          return mappingCache;
         }
-        for (const k in oldPrefs) {
-          if (!Object.hasOwnProperty.call(oldPrefs, k)) continue;
-          const seg = k.split("@@");
-          if (seg.length < 2) continue;
-          // Detect theme base (e.g. minimal-style, things-style, sanctum-style, etc.)
-          const base = seg[0];
-          // Find theme key (e.g. minimal, things, sanctum)
-          let themeKey = null;
-          for (const t in themeBases) {
-            if (base.startsWith(t)) {
-              themeKey = t;
-              break;
-            }
+
+        function migratePrefs(mapping, oldPrefs) {
+          const newPrefs = {},
+            unsupported = [],
+            conflicts = {},
+            themeBases = {};
+          for (const themeKey in mapping) {
+            if (mapping[themeKey]?.__name) themeBases[themeKey] = mapping[themeKey].__name;
           }
-          if (!themeKey) continue;
-          // Ensure all migrated keys use 'baseline-style' as the base
-          const newBase = "baseline-style";
-          const oldId = seg[1],
-            extra = seg.slice(2),
-            themeMapping = mapping[themeKey],
-            rule = themeMapping[oldId],
-            val = oldPrefs[k];
-          if (!rule) {
-            const newKey = [newBase, oldId, ...extra].join("@@");
-            if (newPrefs[newKey] !== undefined) {
-              if (!conflicts[newKey]) conflicts[newKey] = [newPrefs[newKey]];
-              conflicts[newKey].push(val);
-            } else {
-              newPrefs[newKey] = val;
-            }
-            continue;
-          }
-          if (rule.unsupported) {
-            unsupported.push({
-              name: rule.name || `Key '${oldId}'`,
-              category: rule.category || "General",
-              oldValue: val,
-              theme: themeKey,
-            });
-            continue;
-          }
-          let newVal = val,
-            newKey = rule.newId || oldId;
-          if (rule.valueMapping) {
-            const vRule = rule.valueMapping[val];
-            if (vRule === undefined) {
-              if (rule.valueMapping.__fallback !== undefined) {
-                newVal = rule.valueMapping.__fallback;
+          for (const k in oldPrefs) {
+            if (!Object.hasOwnProperty.call(oldPrefs, k)) continue;
+            const seg = k.split("@@");
+            if (seg.length < 2) continue;
+            const base = seg[0];
+            let themeKey = Object.keys(themeBases).find((t) => base.startsWith(t));
+            if (!themeKey) continue;
+            const newBase = "baseline-style";
+            const oldId = seg[1],
+              extra = seg.slice(2);
+            const themeMapping = mapping[themeKey];
+            const rule = themeMapping[oldId];
+            const val = oldPrefs[k];
+            if (!rule) {
+              const newKey = [newBase, oldId, ...extra].join("@@");
+              if (newPrefs[newKey] !== undefined) {
+                (conflicts[newKey] ??= [newPrefs[newKey]]).push(val);
               } else {
-                unsupported.push({
-                  name: `Value '${val}' for setting '${oldId}'`,
-                  category: rule.category || "Unsupported Options",
-                  theme: themeKey,
-                });
-                continue;
+                newPrefs[newKey] = val;
               }
-            } else if (vRule.unsupported) {
+              continue;
+            }
+            if (rule.unsupported) {
               unsupported.push({
-                name: vRule.name || `Option '${val}'`,
-                category: vRule.category || "General",
+                name: rule.name || `Key '${oldId}'`,
+                category: rule.category || "General",
+                oldValue: val,
                 theme: themeKey,
               });
               continue;
+            }
+            let newVal = val,
+              newKey = rule.newId || oldId;
+            if (rule.valueMapping) {
+              const vRule = rule.valueMapping[val];
+              if (vRule === undefined) {
+                if (rule.valueMapping.__fallback !== undefined) {
+                  newVal = rule.valueMapping.__fallback;
+                } else {
+                  unsupported.push({
+                    name: `Value '${val}' for setting '${oldId}'`,
+                    category: rule.category || "Unsupported Options",
+                    theme: themeKey,
+                  });
+                  continue;
+                }
+              } else if (vRule.unsupported) {
+                unsupported.push({
+                  name: vRule.name || `Option '${val}'`,
+                  category: vRule.category || "General",
+                  theme: themeKey,
+                });
+                continue;
+              } else {
+                newVal = vRule;
+              }
+            }
+            const finalKey = [newBase, newKey, ...extra].join("@@");
+            if (newPrefs[finalKey] !== undefined) {
+              (conflicts[finalKey] ??= [newPrefs[finalKey]]).push(newVal);
             } else {
-              newVal = vRule;
+              newPrefs[finalKey] = newVal;
             }
           }
-          const finalKey = [newBase, newKey, ...extra].join("@@");
-          if (newPrefs[finalKey] !== undefined) {
-            if (!conflicts[finalKey]) conflicts[finalKey] = [newPrefs[finalKey]];
-            conflicts[finalKey].push(newVal);
-          } else {
-            newPrefs[finalKey] = newVal;
-          }
+          return { newPrefs, unsupported, themeBases, conflicts };
         }
-        return { newPrefs, unsupportedItems: unsupported, themeBases, conflicts };
-      };
 
-      // Ensure boolean values are not wrapped in double quotes in the output
-      const showResults = (prefs, unsupported, themeBases, conflicts) => {
-        const str = Object.keys(prefs).length ? JSON.stringify(prefs, (key, value) => (typeof value === "boolean" ? value : value), 2) : "";
-        newPrefsOutput.value = str;
-        downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(str);
-        if (unsupported.length) {
-          let html = "<h2>Unsupported style settings</h2>";
-          const groupedByTheme = {};
-          unsupported.forEach((i) => {
-            const theme = i.theme || "unknown";
-            if (!groupedByTheme[theme]) groupedByTheme[theme] = [];
-            groupedByTheme[theme].push(i);
-          });
-          for (const theme in groupedByTheme) {
-            const readable = (themeBases && themeBases[theme]) || theme;
+        function renderUnsupported(unsupported, themeBases) {
+          if (!unsupported.length) return (unsupportedDiv.innerHTML = "");
+          let html = `<h2>Unsupported style settings</h2>`;
+          const byTheme = {};
+          for (const i of unsupported) (byTheme[i.theme || "unknown"] ??= []).push(i);
+          for (const theme in byTheme) {
+            const readable = themeBases?.[theme] || theme;
             html += `<div class="unsupported-theme"><div class="unsupported-theme-name">${readable}</div>`;
-            const grouped = groupedByTheme[theme].reduce((a, i) => ((a[i.category] = a[i.category] || []).push(i), a), {});
-            for (const cat in grouped) {
+            const byCat = {};
+            for (const i of byTheme[theme]) (byCat[i.category] ??= []).push(i);
+            for (const cat in byCat) {
               html += `<div class="unsupported-category"><div class="unsupported-category-name">${cat}</div><ul class="unsupported-list">`;
-              grouped[cat].forEach((i) => (html += `<li class="unsupported-item">${i.name}</li>`));
+              for (const i of byCat[cat]) html += `<li class="unsupported-item">${i.name}</li>`;
               html += `</ul></div>`;
             }
             html += `</div>`;
           }
-          unsupportedItemsDiv.innerHTML = html;
-        } else unsupportedItemsDiv.innerHTML = "";
+          unsupportedDiv.innerHTML = html;
+        }
 
-        if (Object.keys(conflicts).length) {
-          let conflictHtml = "<h2>Conflicts</h2>";
+        function renderConflicts(conflicts, prefs) {
+          if (!Object.keys(conflicts).length) return (conflictDiv.innerHTML = "");
+          let html = `<h2>Conflicts</h2>`;
           for (const key in conflicts) {
             const strippedKey = key.replace(/^baseline-style@@/, "");
             const themeType = strippedKey.includes("@@light") ? "Light Theme" : strippedKey.includes("@@dark") ? "Dark Theme" : "";
             const displayKey = strippedKey.replace(/@@(light|dark)$/, "");
-
-            conflictHtml += `<div class="conflict-item">`;
-            conflictHtml += `<div class="conflict-key">${displayKey}</div>`;
-            if (themeType) {
-              conflictHtml += `<div class="conflict-theme">${themeType}</div>`;
-            }
-            conflictHtml += `<div class="conflict-actions">`;
-
+            html += `<div class="conflict-item"><div class="conflict-key">${displayKey}</div>`;
+            if (themeType) html += `<div class="conflict-theme">${themeType}</div>`;
+            html += `<div class="conflict-actions">`;
             conflicts[key].forEach((val, idx) => {
-              const isColor = /^#[0-9A-Fa-f]{6}$/.test(val); // Check if the value is a valid hex color
-              conflictHtml += `<label data-conflict-key="${key}" data-conflict-value="${val}" class="conflict-label ${idx === 0 ? "selected" : ""}">${val}`;
-              if (isColor) {
-                conflictHtml += `<span class="color-preview" style="background-color: ${val};"></span>`;
-              }
-              conflictHtml += `</label>`;
+              const isColor = /^#[0-9A-Fa-f]{6}$/.test(val);
+              html += `<label data-conflict-key="${key}" data-conflict-value="${val}" class="conflict-label${idx === 0 ? " selected" : ""}">${val}`;
+              if (isColor) html += `<span class="color-preview" style="background-color: ${val};"></span>`;
+              html += `</label>`;
             });
-            conflictHtml += `</div></div>`;
+            html += `</div></div>`;
           }
-          conflictItemsDiv.innerHTML = conflictHtml;
-
-          // Add event listeners for live updates
-          document.querySelectorAll(".conflict-label").forEach((label) => {
-            label.addEventListener("click", () => {
+          conflictDiv.innerHTML = html;
+          // Add listeners for conflict selection
+          conflictDiv.querySelectorAll(".conflict-label").forEach((label) => {
+            label.onclick = () => {
               const key = label.dataset.conflictKey;
-              const value = label.dataset.conflictValue;
-
-              // Update selected class
-              document.querySelectorAll(`[data-conflict-key='${key}']`).forEach((l) => l.classList.remove("selected"));
+              conflictDiv.querySelectorAll(`[data-conflict-key='${key}']`).forEach((l) => l.classList.remove("selected"));
               label.classList.add("selected");
-
-              // Update preferences
+              // Update output with selected values
               const selectedPrefs = { ...prefs };
-              document.querySelectorAll(".conflict-label.selected").forEach((selectedLabel) => {
-                const conflictKey = selectedLabel.dataset.conflictKey;
-                const conflictValue = selectedLabel.dataset.conflictValue;
-                selectedPrefs[conflictKey] = conflictValue === "true" ? true : conflictValue === "false" ? false : conflictValue;
+              conflictDiv.querySelectorAll(".conflict-label.selected").forEach((sel) => {
+                const k = sel.dataset.conflictKey;
+                let v = sel.dataset.conflictValue;
+                if (v === "true") v = true;
+                else if (v === "false") v = false;
+                selectedPrefs[k] = v;
               });
-              newPrefsOutput.value = JSON.stringify(selectedPrefs, (key, value) => (typeof value === "boolean" ? value : value), 2);
-              downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(newPrefsOutput.value);
-            });
+              updateOutput(selectedPrefs);
+            };
           });
-        } else {
-          conflictItemsDiv.innerHTML = "";
         }
-      };
 
-      copyBtn.onclick = () => {
-        navigator.clipboard.writeText(newPrefsOutput.value).then(() => {
-          copyBtn.textContent = "Copied!";
-          setTimeout(() => (copyBtn.textContent = "Copy to Clipboard"), 2000);
-        });
-      };
-      clearBtn.onclick = () => {
-        prefsInput.value = "";
-        showResults({}, []);
-      };
+        function updateOutput(prefs) {
+          const str = Object.keys(prefs).length ? JSON.stringify(prefs, (k, v) => (typeof v === "boolean" ? v : v), 2) : "";
+          newPrefsOutput.value = str;
+          downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(str);
+        }
 
-      let lastInput = "";
-      prefsInput.addEventListener("input", () => {
-        const val = prefsInput.value;
-        if (val === lastInput) return;
-        lastInput = val;
-        if (!val.trim()) return showResults({}, [], {}, {});
-        getMapping()
-          .then((mapping) => {
-            let oldPrefs;
-            try {
-              oldPrefs = JSON.parse(val);
-            } catch (e) {
+        function showResults(prefs, unsupported, themeBases, conflicts) {
+          updateOutput(prefs);
+          renderUnsupported(unsupported, themeBases);
+          renderConflicts(conflicts, prefs);
+        }
+
+        copyBtn.onclick = () => {
+          navigator.clipboard.writeText(newPrefsOutput.value).then(() => {
+            copyBtn.textContent = "Copied!";
+            setTimeout(() => (copyBtn.textContent = "Copy to Clipboard"), 2000);
+          });
+        };
+        clearBtn.onclick = () => {
+          prefsInput.value = "";
+          showResults({}, [], {}, {});
+        };
+
+        let lastInput = "";
+        prefsInput.addEventListener("input", () => {
+          const val = prefsInput.value;
+          if (val === lastInput) return;
+          lastInput = val;
+          if (!val.trim()) return showResults({}, [], {}, {});
+          getMapping()
+            .then((mapping) => {
+              let oldPrefs;
+              try {
+                oldPrefs = JSON.parse(val);
+              } catch (e) {
+                showResults({}, [], {}, {});
+                newPrefsOutput.value = `Error parsing preferences: ${e.message}`;
+                return;
+              }
+              const { newPrefs, unsupported, themeBases, conflicts } = migratePrefs(mapping, oldPrefs);
+              showResults(newPrefs, unsupported, themeBases, conflicts);
+            })
+            .catch((e) => {
               showResults({}, [], {}, {});
-              newPrefsOutput.value = `Error parsing preferences: ${e.message}`;
-              return;
-            }
-            const { newPrefs, unsupportedItems, themeBases, conflicts } = migratePrefs(mapping, oldPrefs);
-            showResults(newPrefs, unsupportedItems, themeBases, conflicts);
-          })
-          .catch((e) => {
-            showResults({}, [], {}, {});
-            newPrefsOutput.value = `Error loading mapping file: ${e}`;
-          });
-      });
-      showResults({}, [], {}, {});
+              newPrefsOutput.value = `Error loading mapping file: ${e.message || e}`;
+            });
+        });
+        showResults({}, [], {}, {});
+      })();
     </script>
-
-    <script>
-      // Temporary script to fill input with predefined JSON
-      const tempPrefs = {
-        "minimal-style@@text-highlight-bg@@light": "#ffffff",
-        "things-style@@text-highlight-bg-l": "#000000",
-        "minimal-style@@text-highlight-bg@@dark": "#00ffff",
-        "things-style@@text-highlight-bg-d": "#ff0000",
-        "minimal-style@@active-line-on": true,
-        "things-style@@active-line-on": false,
-        "things-style@@link-decoration": true,
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const prefsInput = document.querySelector(".prefs-input");
-        if (prefsInput) {
-          prefsInput.value = JSON.stringify(tempPrefs, null, 2);
-          // Trigger the input event to start the migration process
-          prefsInput.dispatchEvent(new Event("input"));
-        }
-      });
-    </script>
-
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
