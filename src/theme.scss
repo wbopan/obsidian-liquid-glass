@@ -21,13 +21,12 @@
 @use "features/image-zoom.scss";
 @use "features/labeled-nav.scss";
 @use "features/style-settings.scss";
-
-@use "minimal/minimal-settings.scss";
-@use "minimal/cards.scss";
-@use "minimal/helpers-tables.scss";
-@use "minimal/image-filters.scss";
-@use "minimal/image-grid.scss";
-@use "minimal/underline-headings.scss";
+@use "features/minimal-settings.scss";
+@use "features/cards.scss";
+@use "features/helpers-tables.scss";
+@use "features/image-filters.scss";
+@use "features/image-grid.scss";
+@use "features/underline-headings.scss";
 
 @use "color-schemes/contrast.scss";
 @use "color-schemes/atom.scss";
