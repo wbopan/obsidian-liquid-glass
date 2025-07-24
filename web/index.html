@@ -78,6 +78,7 @@
           <button class="copy-btn">Copy to Clipboard</button>
           <a class="download-link" href="#" download="baseline-style-settings.json"><button class="download-btn">Download</button></a>
         </div>
+        <div class="conflict-container"></div>
         <div class="unsupported-container"></div>
       </div>
     </div>
@@ -90,6 +91,7 @@
         copyBtn = $(".copy-btn"),
         downloadLink = $(".download-link"),
         unsupportedItemsDiv = $(".unsupported-container"),
+        conflictItemsDiv = $(".conflict-container"),
         clearBtn = $(".clear-btn");
 
       let mappingCache;
@@ -104,7 +106,9 @@
       // Fix for ensuring all migrated keys use 'baseline-style' as the base
       const migratePrefs = (mapping, oldPrefs) => {
         const newPrefs = {},
-          unsupported = [];
+          unsupported = [],
+          conflicts = {};
+
         // Find all theme base names and their readable names
         const themeBases = {};
         for (const themeKey in mapping) {
@@ -135,7 +139,13 @@
             rule = themeMapping[oldId],
             val = oldPrefs[k];
           if (!rule) {
-            newPrefs[[newBase, oldId, ...extra].join("@@")] = val;
+            const newKey = [newBase, oldId, ...extra].join("@@");
+            if (newPrefs[newKey] !== undefined) {
+              if (!conflicts[newKey]) conflicts[newKey] = [newPrefs[newKey]];
+              conflicts[newKey].push(val);
+            } else {
+              newPrefs[newKey] = val;
+            }
             continue;
           }
           if (rule.unsupported) {
@@ -173,18 +183,24 @@
               newVal = vRule;
             }
           }
-          newPrefs[[newBase, newKey, ...extra].join("@@")] = newVal;
+          const finalKey = [newBase, newKey, ...extra].join("@@");
+          if (newPrefs[finalKey] !== undefined) {
+            if (!conflicts[finalKey]) conflicts[finalKey] = [newPrefs[finalKey]];
+            conflicts[finalKey].push(newVal);
+          } else {
+            newPrefs[finalKey] = newVal;
+          }
         }
-        return { newPrefs, unsupportedItems: unsupported, themeBases };
+        return { newPrefs, unsupportedItems: unsupported, themeBases, conflicts };
       };
 
-      const showResults = (prefs, unsupported, themeBases) => {
-        const str = Object.keys(prefs).length ? JSON.stringify(prefs, null, 2) : "";
+      // Ensure boolean values are not wrapped in double quotes in the output
+      const showResults = (prefs, unsupported, themeBases, conflicts) => {
+        const str = Object.keys(prefs).length ? JSON.stringify(prefs, (key, value) => (typeof value === "boolean" ? value : value), 2) : "";
         newPrefsOutput.value = str;
         downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(str);
         if (unsupported.length) {
           let html = "<h2>Unsupported style settings</h2>";
-          // Group by theme, then by category
           const groupedByTheme = {};
           unsupported.forEach((i) => {
             const theme = i.theme || "unknown";
@@ -194,7 +210,6 @@
           for (const theme in groupedByTheme) {
             const readable = (themeBases && themeBases[theme]) || theme;
             html += `<div class="unsupported-theme"><div class="unsupported-theme-name">${readable}</div>`;
-            // Group by category within theme
             const grouped = groupedByTheme[theme].reduce((a, i) => ((a[i.category] = a[i.category] || []).push(i), a), {});
             for (const cat in grouped) {
               html += `<div class="unsupported-category"><div class="unsupported-category-name">${cat}</div><ul class="unsupported-list">`;
@@ -205,6 +220,57 @@
           }
           unsupportedItemsDiv.innerHTML = html;
         } else unsupportedItemsDiv.innerHTML = "";
+
+        if (Object.keys(conflicts).length) {
+          let conflictHtml = "<h2>Conflicts</h2>";
+          for (const key in conflicts) {
+            const strippedKey = key.replace(/^baseline-style@@/, "");
+            const themeType = strippedKey.includes("@@light") ? "Light Theme" : strippedKey.includes("@@dark") ? "Dark Theme" : "";
+            const displayKey = strippedKey.replace(/@@(light|dark)$/, "");
+
+            conflictHtml += `<div class="conflict-item">`;
+            conflictHtml += `<div class="conflict-key">${displayKey}</div>`;
+            if (themeType) {
+              conflictHtml += `<div class="conflict-theme">${themeType}</div>`;
+            }
+            conflictHtml += `<div class="conflict-actions">`;
+
+            conflicts[key].forEach((val, idx) => {
+              const isColor = /^#[0-9A-Fa-f]{6}$/.test(val); // Check if the value is a valid hex color
+              conflictHtml += `<label data-conflict-key="${key}" data-conflict-value="${val}" class="conflict-label ${idx === 0 ? "selected" : ""}">${val}`;
+              if (isColor) {
+                conflictHtml += `<span class="color-preview" style="background-color: ${val};"></span>`;
+              }
+              conflictHtml += `</label>`;
+            });
+            conflictHtml += `</div></div>`;
+          }
+          conflictItemsDiv.innerHTML = conflictHtml;
+
+          // Add event listeners for live updates
+          document.querySelectorAll(".conflict-label").forEach((label) => {
+            label.addEventListener("click", () => {
+              const key = label.dataset.conflictKey;
+              const value = label.dataset.conflictValue;
+
+              // Update selected class
+              document.querySelectorAll(`[data-conflict-key='${key}']`).forEach((l) => l.classList.remove("selected"));
+              label.classList.add("selected");
+
+              // Update preferences
+              const selectedPrefs = { ...prefs };
+              document.querySelectorAll(".conflict-label.selected").forEach((selectedLabel) => {
+                const conflictKey = selectedLabel.dataset.conflictKey;
+                const conflictValue = selectedLabel.dataset.conflictValue;
+                selectedPrefs[conflictKey] = conflictValue === "true" ? true : conflictValue === "false" ? false : conflictValue;
+              });
+              newPrefsOutput.value = JSON.stringify(selectedPrefs, (key, value) => (typeof value === "boolean" ? value : value), 2);
+              downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(newPrefsOutput.value);
+            });
+          });
+        } else {
+          conflictItemsDiv.innerHTML = "";
+        }
       };
 
       copyBtn.onclick = () => {
@@ -223,26 +289,48 @@
         const val = prefsInput.value;
         if (val === lastInput) return;
         lastInput = val;
-        if (!val.trim()) return showResults({}, [], {});
+        if (!val.trim()) return showResults({}, [], {}, {});
         getMapping()
           .then((mapping) => {
             let oldPrefs;
             try {
               oldPrefs = JSON.parse(val);
             } catch (e) {
-              showResults({}, [], {});
+              showResults({}, [], {}, {});
               newPrefsOutput.value = `Error parsing preferences: ${e.message}`;
               return;
             }
-            const { newPrefs, unsupportedItems, themeBases } = migratePrefs(mapping, oldPrefs);
-            showResults(newPrefs, unsupportedItems, themeBases);
+            const { newPrefs, unsupportedItems, themeBases, conflicts } = migratePrefs(mapping, oldPrefs);
+            showResults(newPrefs, unsupportedItems, themeBases, conflicts);
           })
           .catch((e) => {
-            showResults({}, [], {});
+            showResults({}, [], {}, {});
             newPrefsOutput.value = `Error loading mapping file: ${e}`;
           });
       });
-      showResults({}, [], {});
+      showResults({}, [], {}, {});
+    </script>
+
+    <script>
+      // Temporary script to fill input with predefined JSON
+      const tempPrefs = {
+        "minimal-style@@text-highlight-bg@@light": "#ffffff",
+        "things-style@@text-highlight-bg-l": "#000000",
+        "minimal-style@@text-highlight-bg@@dark": "#00ffff",
+        "things-style@@text-highlight-bg-d": "#ff0000",
+        "minimal-style@@active-line-on": true,
+        "things-style@@active-line-on": false,
+        "things-style@@link-decoration": true,
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const prefsInput = document.querySelector(".prefs-input");
+        if (prefsInput) {
+          prefsInput.value = JSON.stringify(tempPrefs, null, 2);
+          // Trigger the input event to start the migration process
+          prefsInput.dispatchEvent(new Event("input"));
+        }
+      });
     </script>
 
     <script src="https://unpkg.com/lucide@latest"></script>
