@@ -4,6 +4,13 @@
     --callout-padding: 16px;
   }
 
+  body.callouts-tactile {
+    .callout {
+      box-shadow: var(--shadow-tactile);
+      background: linear-gradient(rgba(var(--callout-color), 0.1), rgba(var(--callout-color), 0.15));
+    }
+  }
+
   body.callouts-outlined {
     --callout-border-width: 2px;
 
