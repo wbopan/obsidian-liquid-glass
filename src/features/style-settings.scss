@@ -11,6 +11,141 @@ settings:
 		collapsed: true
 		description: Use the Minimal Theme Settings plugin to set hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Go to https://minimal.guide for documentation.
 	-
+		id: color-scheme
+		title: Color schemes
+		type: heading
+		description: To create a custom color scheme use Interface colors and Extended colors settings below.
+		level: 2
+		collapsed: true
+	-
+		id: color-scheme-light
+		title: Light mode color scheme
+		description: Preset color options for light mode.
+		type: class-select
+		allowEmpty: false
+		default: minimal-default-light
+		options:
+			-
+				label: Default
+				value: minimal-default-light
+			-
+				label: Atom
+				value: minimal-atom-light
+			-
+				label: Ayu
+				value: minimal-ayu-light
+			-
+				label: Catppuccin
+				value: minimal-catppuccin-light
+			-
+				label: Everforest
+				value: minimal-everforest-light
+			-
+				label: Flexoki
+				value: minimal-flexoki-light
+			-
+				label: Gruvbox
+				value: minimal-gruvbox-light
+			-
+				label: macOS
+				value: minimal-macos-light
+			-
+				label: Nord
+				value: minimal-nord-light
+			-
+				label: Rosé Pine
+				value: minimal-rose-pine-light
+			-
+				label: Sky
+				value: minimal-sky-light
+			-
+				label: Solarized
+				value: minimal-solarized-light
+			-
+				label: Things
+				value: minimal-things-light
+	-
+		id: background-contrast-light
+		title: Light mode background contrast
+		description: Level of contrast between sidebar and main content.
+		type: class-select
+		allowEmpty: false
+		default: minimal-light
+		options:
+			-
+				label: Default
+				value: minimal-light
+			-
+				label: Low contrast
+				value: minimal-light-tonal
+			-
+				label: All white
+				value: minimal-light-white
+	-
+		id: color-scheme-dark
+		title: Dark mode color scheme
+		description: Preset color options for dark mode.
+		type: class-select
+		allowEmpty: false
+		default: minimal-default-dark
+		options:
+			-
+				label: Default
+				value: minimal-default-dark
+			-
+				label: Atom
+				value: minimal-atom-dark
+			-
+				label: Ayu
+				value: minimal-ayu-dark
+			-
+				label: Catppuccin
+				value: minimal-catppuccin-dark
+			-
+				label: Everforest
+				value: minimal-everforest-dark
+			-
+				label: Flexoki
+				value: minimal-flexoki-dark
+			-
+				label: Gruvbox
+				value: minimal-gruvbox-dark
+			-
+				label: macOS
+				value: minimal-macos-dark
+			-
+				label: Nord
+				value: minimal-nord-dark
+			-
+				label: Rosé Pine
+				value: minimal-rose-pine-dark
+			-
+				label: Sky
+				value: minimal-sky-dark
+			-
+				label: Solarized
+				value: minimal-solarized-dark
+			-
+				label: Things
+				value: minimal-things-dark
+	-
+		id: background-contrast-dark
+		title: Dark mode background contrast
+		description: Level of contrast between sidebar and main content.
+		type: class-select
+		allowEmpty: false
+		default: minimal-dark
+		options:
+			-
+				label: Default
+				value: minimal-dark
+			-
+				label: Low contrast
+				value: minimal-dark-tonal
+			-
+				label: True black
+				value: minimal-dark-black
+	-
 		id: interface
 		title: Interface colors
 		type: heading
@@ -206,6 +341,133 @@ settings:
 			-
 				label: Italic
 				value: italic
+	-
+		id: blockwidth
+		title: Block width
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: line-width
+		title: Normal line width
+		description: Number of characters per line
+		type: variable-text
+		default: '40'
+		format: rem
+	-
+		id: line-width-wide
+		title: Wide line width
+		description: Number of characters per line for wide elements
+		type: variable-text
+		default: '50'
+		format: rem
+	-
+		id: max-width
+		title: Maximum line width %
+		description: Number of characters per line
+		type: variable-text
+		default: '90'
+		format: '%'
+	-
+		id: chart-width
+		title: Chart width
+		description: Default width for chart blocks
+		type: class-select
+		allowEmpty: false
+		default: chart-default-width
+		options:
+			-
+				label: Default
+				value: chart-default-width
+			-
+				label: Wide line width
+				value: chart-wide
+			-
+				label: Maximum line width
+				value: chart-max
+			-
+				label: 100% pane width
+				value: chart-100
+	-
+		id: iframe-width
+		title: Iframe width
+		description: Default width for iframe blocks
+		type: class-select
+		allowEmpty: false
+		default: iframe-default-width
+		options:
+			-
+				label: Default
+				value: iframe-default-width
+			-
+				label: Wide line width
+				value: iframe-wide
+			-
+				label: Maximum line width
+				value: iframe-max
+			-
+				label: 100% pane width
+				value: iframe-100
+	-
+		id: image-width
+		title: Image width
+		description: Default width for image blocks
+		type: class-select
+		allowEmpty: false
+		default: image-default-width
+		options:
+			-
+				label: Default
+				value: image-default-width
+			-
+				label: Wide line width
+				value: image-wide
+			-
+				label: Maximum line width
+				value: image-max
+			-
+				label: 100% pane width
+				value: image-100
+	-
+		id: map-width
+		title: Map width
+		description: Default width for map blocks
+		type: class-select
+		allowEmpty: false
+		default: map-default-width
+		options:
+			-
+				label: Default
+				value: map-default-width
+			-
+				label: Wide line width
+				value: map-wide
+			-
+				label: Maximum line width
+				value: map-max
+			-
+				label: 100% pane width
+				value: map-100
+	-
+		id: table-width
+		title: Table width
+		description: Default width for table blocks
+		type: class-select
+		allowEmpty: false
+		default: table-default-width
+		options:
+			-
+				label: Default
+				value: table-default-width
+			-
+				label: Wide line width
+				value: table-wide
+			-
+				label: Maximum line width
+				value: table-max
+			-
+				label: 100% pane width
+				value: table-100
 	-
 		id: callouts
 		title: Callouts
@@ -466,6 +728,11 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: colorful-headings
+		title: Colorful headings
+		description: Headings use a different color for each size
+		type: class-toggle
 	-
 		id: level-1-headings
 		title: Level 1 Headings
@@ -1085,15 +1352,25 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: img-grid
+		title: Image grids
+		description: Turn consecutive images into columns — to make a new row, add an extra line break between images
+		type: class-toggle
+	-
 		id: media-radius
 		title: Media radius
-		description: Rounded corners for images and videos.
+		description: Rounded corners for images and videos
 		type: variable-number-slider
 		default: 4
 		min: 0
 		max: 16
 		step: 1
 		format: px
+	-
+		id: full-width-media-off
+		title: Disable maximized media
+		description: Turns off images and videos fill the width of the line
+		type: class-toggle
 	-
 		id: zoom-off
 		title: Disable image zoom
@@ -1165,6 +1442,11 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: labeled-nav-off
+		title: Disable text labels for primary navigation
+		description: Turn off text labels on navigation items in the left sidebar 
+		type: class-toggle
 	-
 		id: sidebar-tabs-names
 		title: Sidebar tab names
@@ -1644,6 +1926,11 @@ settings:
 		description: Hide title in the custom title bar
 		type: class-toggle
 	-
+		id: colorful-frame
+		title: Colorful window frame
+		description: The top area of the app uses your accent color
+		type: class-toggle
+	-
 		id: frame-background
 		title: Frame background
 		description: Requires colorful window frame
@@ -1743,5 +2030,13 @@ settings:
 
   &::after {
     border-radius: var(--button-radius);
+  }
+}
+
+// Overridden by Minimal Theme Settings
+body.minimal-theme .style-settings-container {
+  .setting-item[data-id="color-scheme"],
+  .setting-item[data-id="labeled-nav-off"] {
+    display: none;
   }
 }

@@ -354,14 +354,20 @@
       "name": "Disable Kanban board styles"
     },
     "link-decoration": {
-      "unsupported": true,
-      "category": "Features",
-      "name": "Underline internal links"
+      "newId": "links-int-off",
+      "valueMapping": {
+        "__fallback": "false",
+        "Underline": "false",
+        "None": "true"
+      }
     },
     "link-external-decoration": {
-      "unsupported": true,
-      "category": "Features",
-      "name": "Underline external links"
+      "newId": "links-ext-off",
+      "valueMapping": {
+        "__fallback": "false",
+        "Underline": "false",
+        "None": "true"
+      }
     },
     "text-highlight-bg-l": { "newId": "text-highlight-bg@@light" },
     "text-highlight-bg-d": { "newId": "text-highlight-bg@@dark" },
