@@ -51,19 +51,18 @@ body:not(.is-phone) .modal-bg {
   .modal-content .setting-item {
     padding: 8px 0;
   }
-
-  .modal-close-button {
-    position: absolute;
-    top: 8px;
-    inset-inline-end: 8px;
-    height: 36px;
-    width: 36px;
-    padding: 8px;
-    color: var(--text-faint);
-    display: flex;
-    justify-content: center;
-    line-height: 18px;
-  }
+}
+body:not(.native-scrollbars) .modal-close-button {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+  color: var(--text-faint);
+  display: flex;
+  justify-content: center;
+  line-height: 12px;
 }
 
 // Menu & suggestion
@@ -242,11 +241,29 @@ body.is-phone .modal.mod-sidebar-layout {
   .modal-sidebar {
     padding: 0;
   }
-  .modal-sidebar .setting-item {
-    padding: 12px;
-  }
-  .modal-sidebar .setting-item:first-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
+
+  .community-modal-controls {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    gap: 16px;
+
+    .setting-item {
+      padding: 0;
+      margin: 0;
+    }
+    .setting-item:first-child {
+      margin-right: auto;
+
+      .setting-item-info {
+        display: none;
+      }
+    }
+    .setting-item:nth-last-child(2) {
+      margin-right: 40px;
+    }
+    .community-modal-search-summary {
+      display: none;
+    }
   }
 }
