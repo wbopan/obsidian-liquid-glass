@@ -31,7 +31,6 @@
         <div class="setting-sidebar">
           <div class="sidebar-section">
             <div class="sidebar-title">Community plugins</div>
-            <div class="sidebar-link">Minimal Theme Settings</div>
             <div class="sidebar-link is-active">Style Settings</div>
           </div>
         </div>
@@ -124,9 +123,9 @@
             const oldId = seg[1],
               extra = seg.slice(2);
             const themeMapping = mapping[themeKey];
-            const rule = themeMapping[oldId];
+            const rules = Array.isArray(themeMapping[oldId]) ? themeMapping[oldId] : [themeMapping[oldId]];
             const val = oldPrefs[k];
-            if (!rule) {
+            if (!rules[0]) {
               const newKey = [newBase, oldId, ...extra].join("@@");
               if (newPrefs[newKey] !== undefined) {
                 (conflicts[newKey] ??= [newPrefs[newKey]]).push(val);
@@ -135,46 +134,61 @@
               }
               continue;
             }
-            if (rule.unsupported) {
-              unsupported.push({
-                name: rule.name || `Key '${oldId}'`,
-                category: rule.category || "General",
-                oldValue: val,
-                theme: themeKey,
-              });
-              continue;
-            }
-            let newVal = val,
-              newKey = rule.newId || oldId;
-            if (rule.valueMapping) {
-              const vRule = rule.valueMapping[val];
-              if (vRule === undefined) {
-                if (rule.valueMapping.__fallback !== undefined) {
-                  newVal = rule.valueMapping.__fallback;
-                } else {
-                  unsupported.push({
-                    name: `Value '${val}' for setting '${oldId}'`,
-                    category: rule.category || "Unsupported Options",
-                    theme: themeKey,
-                  });
-                  continue;
-                }
-              } else if (vRule.unsupported) {
+            for (const rule of rules) {
+              if (!rule) continue;
+              if (rule.unsupported) {
                 unsupported.push({
-                  name: vRule.name || `Option '${val}'`,
-                  category: vRule.category || "General",
+                  name: rule.name || `Key '${oldId}'`,
+                  category: rule.category || "General",
+                  oldValue: val,
                   theme: themeKey,
                 });
                 continue;
-              } else {
-                newVal = vRule;
               }
-            }
-            const finalKey = [newBase, newKey, ...extra].join("@@");
-            if (newPrefs[finalKey] !== undefined) {
-              (conflicts[finalKey] ??= [newPrefs[finalKey]]).push(newVal);
-            } else {
-              newPrefs[finalKey] = newVal;
+              let newVal = val,
+                newKey = rule.newId || oldId;
+              if (rule.valueMapping) {
+                const vRule = rule.valueMapping[val];
+                if (vRule === undefined) {
+                  if (rule.valueMapping.__fallback !== undefined) {
+                    newVal = rule.valueMapping.__fallback;
+                  } else {
+                    unsupported.push({
+                      name: `Value '${val}' for setting '${oldId}'`,
+                      category: rule.category || "Unsupported Options",
+                      theme: themeKey,
+                    });
+                    continue;
+                  }
+                } else if (vRule.unsupported) {
+                  unsupported.push({
+                    name: vRule.name || `Option '${val}'`,
+                    category: vRule.category || "General",
+                    theme: themeKey,
+                  });
+                  continue;
+                } else {
+                  newVal = vRule;
+                }
+              }
+              // Support multiple newIds as array
+              if (Array.isArray(newKey)) {
+                for (const nk of newKey) {
+                  const finalKey = [newBase, nk, ...extra].join("@@");
+                  if (newPrefs[finalKey] !== undefined) {
+                    (conflicts[finalKey] ??= [newPrefs[finalKey]]).push(newVal);
+                  } else {
+                    newPrefs[finalKey] = newVal;
+                  }
+                }
+              } else {
+                const finalKey = [newBase, newKey, ...extra].join("@@");
+                if (newPrefs[finalKey] !== undefined) {
+                  (conflicts[finalKey] ??= [newPrefs[finalKey]]).push(newVal);
+                } else {
+                  newPrefs[finalKey] = newVal;
+                }
+              }
             }
           }
           return { newPrefs, unsupported, themeBases, conflicts };

@@ -7,8 +7,6 @@
   --color-cyan: #99d1db;
   --color-blue: #8caaee;
   --color-purple: #babbf1;
-  --text-normal: #c6ceef;
-  --text-faint: #a5acc9;
   --color-base-100: #c6ceef;
   --color-base-70: #a5acc9;
   --color-base-60: #949bb7;
@@ -20,9 +18,7 @@
   --color-base-20: #303446;
   --color-base-10: #292c3c;
   --color-base-00: #232634;
-  --text-muted: #949bb7;
-  --background-primary: #303446;
-  --background-primary-alt: #292c3c;
-  --background-secondary: #292c3c;
-  --background-secondary-alt: #232634;
+  --text-normal: var(--color-base-100);
+  --background-secondary: var(--color-base-10);
+  --background-secondary-alt: var(--color-base-20);
 }

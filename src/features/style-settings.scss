@@ -172,9 +172,24 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: background-primary-alt
+		title: Primary background (Alternative)
+		description: Background color for blockquotes and tables
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: background-secondary
 		title: Secondary background
 		description: Background color for left sidebar and menus
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-secondary-alt
+		title: Secondary background (Alternative)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -508,6 +523,15 @@ settings:
 			-
 				label: Outlined
 				value: callouts-outlined
+	-
+		id: callout-radius
+		title: Callout Radius
+		type: variable-number-slider
+		default: 4
+		min: 0
+		max: 16
+		step: 1
+		format: px
 	-
 		id: callout-blend-mode
 		title: Color blending
@@ -1367,6 +1391,88 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: lists
+		title: Lists
+		type: heading
+		level: 2
+		collapsed: true
+    -
+        id: list-spacing
+        title: List Spacing
+        type: variable-number
+        default: 0.075
+        format: em
+    -
+        id: list-marker-color
+        title: Unordered list bullet color
+        type: variable-themed-color
+        default-light: '#'
+        default-dark: '#'
+        format: hex
+    -
+        id: list-numbered-style
+        title: Ordered list style
+        type: variable-select
+        default: decimal
+        options:
+            -
+                label: Decimal
+                value: decimal
+            -
+                label: Decimal with leading zeroes
+                value: decimal-leading-zero
+            -
+                label: Lowercase alphabetical
+                value: lower-alpha
+            -
+                label: Uppercase alphabetical
+                value: upper-alpha
+            -
+                label: Lowercase Roman Numerals
+                value: lower-roman
+            -
+                label: Uppercase Roman Numerals
+                value: upper-roman
+            -
+                label: Lowercase Latin
+                value: lower-latin
+            -
+                label: Uppercase Latin
+                value: upper-latin
+            -
+                label: Lowercase Greek
+                value: lower-greek
+            -
+                label: Uppercase Greek
+                value: upper-greek
+            -
+                label: Hiragana
+                value: hiragana
+            -
+                label: Hiragana Iroha
+                value: hiragana-iroha
+            -
+                label: Katakana
+                value: armenian
+            -
+                label: Katakana Iroha
+                value: katakana-iroha
+            -
+                label: Armenian
+                value: armenian
+            -
+                label: CJK Ideographic
+                value: cjk-ideographic
+            -
+                label: Hebrew
+                value: hebrew
+	-
+		id: strike-lists-off
+		title: Disable strike completed tasks
+		description: Removes strikethrough line for completed tasks
+		type: class-toggle
+		default: false
+	-
 		id: media
 		title: Media
 		type: heading
@@ -1469,6 +1575,18 @@ settings:
 		description: Turn off text labels on navigation items in the left sidebar 
 		type: class-toggle
 	-
+		id: rainbow-folders
+		title: Rainbow folders
+		type: class-toggle
+	-
+		id: rainbow-folders-opacity
+		title: Rainbow folders background opacity
+		type: variable-number-slider
+		default: 25
+		min: 0
+		max: 100
+		step: 1
+	-
 		id: sidebar-tabs-names
 		title: Sidebar tab names
 		type: class-select
@@ -1510,6 +1628,11 @@ settings:
 			-
 				label: Disabled
 				value: compact-actions-off
+	-
+		id: compact-status-bar-off
+		title: Disable compact status bar
+		type: class-toggle
+		default: false
 	-
 		id: hide-help
 		title: Hide help button
@@ -1575,6 +1698,38 @@ settings:
 		description: Turn off line wrapping in table cells globally
 		type: class-toggle
 		default: false
+	-
+		id: table-text-align-header
+		title: Table header text alignment
+		type: variable-select
+		allowEmpty: false
+		default: start
+		options:
+			-
+				label: Start
+				value: start
+			-
+				label: Center
+				value: center
+			-
+				label: End
+				value: end
+	-
+		id: table-text-align-body
+		title: Table body text alignment
+		type: variable-select
+		allowEmpty: false
+		default: start
+		options:
+			-
+				label: Start
+				value: start
+			-
+				label: Center
+				value: center
+			-
+				label: End
+				value: end
 	-
 		id: row-hover
 		title: Highlight active row
@@ -1680,32 +1835,26 @@ settings:
 		id: tag-radius
 		title: Tag shape
 		type: variable-select
-		default: 14px
+		default: 8px
 		options:
 			-
 				label: Pill
-				value: 14px
+				value: 16px
 			-
 				label: Rounded
-				value: 4px
+				value: 8px
 			-
 				label: Square
 				value: 0px
 	-
 		id: tag-border-width
 		title: Tag border width
-		type: variable-select
+		type: variable-number-slider
 		default: 0
-		options:
-			-
-				label: None
-				value: 0
-			-
-				label: Thin
-				value: 1px
-			-
-				label: Thick
-				value: 2px
+		min: 0
+		max: 2
+		step: 1
+		format: px
 	-
 		id: tag-color
 		title: Tag text color
@@ -1757,12 +1906,6 @@ settings:
 			-
 				label: Circle
 				value: 100px
-	-
-		id: strike-lists-off
-		title: Disable strike completed tasks
-		description: Removes strikethrough line for completed tasks
-		type: class-toggle
-		default: false
 	-
 		id: text
 		title: Text
@@ -1946,20 +2089,6 @@ settings:
 		title: Hide window frame title
 		description: Hide title in the custom title bar
 		type: class-toggle
-	-
-		id: colorful-frame
-		title: Colorful window frame
-		description: The top area of the app uses your accent color
-		type: class-toggle
-	-
-		id: frame-background
-		title: Frame background
-		description: Requires colorful window frame
-		type: variable-themed-color
-		opacity: true
-		format: hsl-split
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: titlebar-text-color-focused
 		title: Frame title color (focused)

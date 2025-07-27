@@ -98,6 +98,14 @@
   .markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
     padding: 8px;
   }
+  .cm-html-embed th,
+  .markdown-rendered th {
+    text-align: var(--table-text-align-header);
+  }
+  .cm-html-embed td,
+  .markdown-rendered td {
+    text-align: var(--table-text-align-body);
+  }
 }
 
 .dataview {

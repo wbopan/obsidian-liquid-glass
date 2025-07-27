@@ -1,0 +1,33 @@
+body.rainbow-folders {
+  --collapse-icon-color: var(--text-normal);
+  --rainbow-folders-opacity: 25;
+
+  .nav-files-container > div > .nav-folder {
+    border-radius: var(--radius-s);
+  }
+
+  .nav-files-container > div > .nav-folder:nth-child(8n + 2) {
+    background-color: rgba(var(--color-red-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 3) {
+    background-color: rgba(var(--color-orange-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 4) {
+    background-color: rgba(var(--color-yellow-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 5) {
+    background-color: rgba(var(--color-green-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 6) {
+    background-color: rgba(var(--color-cyan-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 7) {
+    background-color: rgba(var(--color-blue-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 8) {
+    background-color: rgba(var(--color-purple-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+  .nav-files-container > div > .nav-folder:nth-child(8n + 9) {
+    background-color: rgba(var(--color-pink-rgb), calc(var(--rainbow-folders-opacity) * 0.01));
+  }
+}

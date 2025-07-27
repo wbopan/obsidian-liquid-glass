@@ -47,7 +47,7 @@
       "category": "Bases",
       "name": "Table row height"
     },
-    "minimal-code-scroll": { "newId": "minimal-code-scroll" },
+    "minimal-code-scroll": { "newId": "code-scroll" },
     "trim-cols": {
       "unsupported": true,
       "category": "Dataview",
@@ -409,6 +409,803 @@
       "unsupported": true,
       "category": "Typography",
       "name": "Progress 100% color"
+    }
+  },
+  "anuppuccin-theme-settings": {
+    "__name": "AnuPpuccin",
+    "anuppuccin-theme-light": {
+      "newId": "color-scheme-light",
+      "valueMapping": {
+        "__fallback": "default-light",
+        "ctp-latte": "latte-light",
+        "ctp-rosepine-light": "rose-pine-light"
+      }
+    },
+    "anuppuccin-theme-dark": {
+      "newId": "color-scheme-dark",
+      "valueMapping": {
+        "__fallback": "default-dark",
+        "ctp-frappe": "frappe-dark",
+        "ctp-macchiato": "macchiato-dark",
+        "ctp-mocha": "mocha-dark"
+      }
+    },
+    "anuppuccin-light-theme-accents": {
+      "unsupported": true,
+      "category": "Colors",
+      "name": "Light Theme Accent"
+    },
+    "anuppuccin-theme-accents": {
+      "unsupported": true,
+      "category": "Colors",
+      "name": "Dark Theme Accent"
+    },
+    "anuppuccin-accent-toggle": {
+      "unsupported": true,
+      "category": "Colors",
+      "name": "Force Custom Accents"
+    },
+    "ctp-custom-rosewater": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Rosewater"
+    },
+    "ctp-custom-flamingo": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Flamingo"
+    },
+    "ctp-custom-pink": { "newId": "color-pink" },
+    "ctp-custom-mauve": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Mauve"
+    },
+    "ctp-custom-red": { "newId": "color-red" },
+    "ctp-custom-maroon": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Maroon"
+    },
+    "ctp-custom-peach": { "newId": "color-orange" },
+    "ctp-custom-yellow": { "newId": "color-yellow" },
+    "ctp-custom-green": { "newId": "color-green" },
+    "ctp-custom-teal": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Teal"
+    },
+    "ctp-custom-sky": { "newId": "color-cyan" },
+    "ctp-custom-sapphire": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Sapphire"
+    },
+    "ctp-custom-blue": { "newId": "color-blue" },
+    "ctp-custom-lavender": { "newId": "color-purple" },
+    "ctp-custom-subtext1": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Subtext 1"
+    },
+    "ctp-custom-overlay2": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Overlay 2"
+    },
+    "ctp-custom-overlay1": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Overlay 1"
+    },
+    "ctp-custom-overlay0": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Overlay 0"
+    },
+    "ctp-custom-surface2": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Surface 2"
+    },
+    "ctp-custom-surface1": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Surface 1"
+    },
+    "ctp-custom-surface0": {
+      "unsupported": true,
+      "category": "Color Overrides",
+      "name": "Surface 0"
+    },
+    "ctp-custom-base": { "newId": "background-primary" },
+    "ctp-custom-mantle": { "newId": ["background-primary-alt", "background-secondary"] },
+    "ctp-custom-crust": { "newId": "background-secondary-alt" },
+    "anp-active-line": {
+      "newId": "active-line-on",
+      "valueMapping": {
+        "__fallback": false,
+        "anp-no-highlight": false,
+        "anp-current-line": true,
+        "anp-current-line-border": true,
+        "anp-current-line-border-only": true
+      }
+    },
+    "anp-callout-select": {
+      "newId": "callouts-style",
+      "valueMapping": {
+        "__fallback": "callouts-default",
+        "none": "callouts-default",
+        "anp-callout-sleek": "callouts-outlined",
+        "anp-callout-block": "callouts-tactile",
+        "anp-callout-vanilla-normal": "callouts-tactile",
+        "anp-callout-vanilla-plus": "callouts-tactile"
+      }
+    },
+    "callout-padding": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout Padding"
+    },
+    "callout-title-padding": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout Title Padding"
+    },
+    "callout-title-opacity": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout Title Background Opacity"
+    },
+    "callout-content-padding": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout Content Padding"
+    },
+    "anp-callout-fold-position": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout Fold Position"
+    },
+    "anp-custom-checkboxes": {
+      "unsupported": true,
+      "category": "Checkboxes",
+      "name": "Enable Custom Checkboxes"
+    },
+    "anp-speech-bubble": {
+      "unsupported": true,
+      "category": "Checkboxes",
+      "name": "Enable Speech Bubbles"
+    },
+    "anp-codeblock-numbers": { "newId": "code-line-numbers" },
+    "anp-codeblock-wrap-edit": {
+      "newId": "code-scroll",
+      "valueMapping": {
+        "__fallback": false,
+        "none": false,
+        "anp-codeblock-preview-nowrap": true
+      }
+    },
+    "anp-codeblock-wrap-preview": {
+      "newId": "code-scroll",
+      "valueMapping": {
+        "__fallback": false,
+        "none": false,
+        "anp-codeblock-preview-nowrap": true
+      }
+    },
+    "anp-codeblock-wrap-hl-preview": {
+      "newId": "code-scroll",
+      "valueMapping": {
+        "__fallback": false,
+        "none": false,
+        "anp-codeblock-preview-nowrap": true
+      }
+    },
+    "anp-code-bg-color": { "newId": "code-background" },
+    "anp-code-text-color": { "newId": "code-normal" },
+    "embed-corner-radius": {
+      "unsupported": true,
+      "category": "Embeds",
+      "name": "Embed Corner Radius"
+    },
+    "anp-latex-inline-color": {
+      "unsupported": true,
+      "category": "LaTex",
+      "name": "LaTeX Inline Color"
+    },
+    "anp-latex-block-color": {
+      "unsupported": true,
+      "category": "LaTex",
+      "name": "LaTeX Block Color"
+    },
+    "anp-latex-block-font-size": {
+      "unsupported": true,
+      "category": "LaTex",
+      "name": "LaTeX Block Font Size"
+    },
+    "anp-list-toggle": {
+      "unsupported": true,
+      "category": "Lists",
+      "name": "Enable List Styling"
+    },
+    "list-indent": {
+      "unsupported": true,
+      "category": "Lists",
+      "name": "List Indent"
+    },
+    "anp-table-toggle": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Enable Custom Table Width"
+    },
+    "anp-table-width": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "anp-table-toggle"
+    },
+    "anp-table-auto": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Center Tables"
+    },
+    "anp-table-th-highlight": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "<th> Highlight"
+    },
+    "anp-td-highlight": [
+      {
+        "newId": "row-alt",
+        "valueMapping": {
+          "__fallback": false,
+          "anp-table-row-alt": true,
+          "anp-table-col-alt": false,
+          "anp-table-checkered": true,
+          "anp-table-full": false
+        }
+      },
+      {
+        "newId": "col-alt",
+        "valueMapping": {
+          "__fallback": false,
+          "anp-table-row-alt": false,
+          "anp-table-col-alt": true,
+          "anp-table-checkered": true,
+          "anp-table-full": false
+        }
+      }
+    ],
+    "anp-table-highlight-opacity": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Highlight Opacity"
+    },
+    "anp-table-thickness": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Custom Table Border Width"
+    },
+    "anp-table-width-pct": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Custom Table Width"
+    },
+    "anp-toggle-preview": {
+      "unsupported": true,
+      "category": "File Preview",
+      "name": "Enable Custom Preview Margins"
+    },
+    "file-margins": {
+      "unsupported": true,
+      "category": "File Preview",
+      "name": "File Margins"
+    },
+    "anp-preview-width-pct": {
+      "unsupported": true,
+      "category": "File Preview",
+      "name": "Preview Width"
+    },
+    "file-line-width": {
+      "unsupported": true,
+      "category": "File Preview",
+      "name": "Maximum Preview Width"
+    },
+    "anp-kanban-hide-card-menus": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Hide the Card Menu Button"
+    },
+    "anp-kanban-hide-archive-btn": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Hide the Archive Card Button"
+    },
+    "anp-kanban-hide-card-border": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Disable Card Borders"
+    },
+    "anp-kanban-card-opacity": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Card Opacity"
+    },
+    "anp-kanban-card-radius": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Card Radius"
+    },
+    "anp-kanban-lanes": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Enable Full Height Lanes"
+    },
+    "anp-kanban-hide-lane-border": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Disable Lane Borders"
+    },
+    "anp-kanban-lane-opacity": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Lane Opacity"
+    },
+    "anp-kanban-lane-radius": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Lane Radius"
+    },
+    "anp-kanban-lane-spacing": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Lane Spacing"
+    },
+    "anp-kanban-search-full": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Enable Full Width Search Bar"
+    },
+    "anp-kanban-collapse-lanes": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Collapse Lanes With No Search Results"
+    },
+    "anp-kanban-hide-cards": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Hide Cards That Don't Contain the Search Query"
+    },
+    "anp-kanban-hide-mark": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Hide Search Result Highlight in Cards"
+    },
+    "anp-kanban-uncollapse-lanes": {
+      "unsupported": true,
+      "category": "Kanban",
+      "name": "Uncollapse Lanes and Unhide Cards When Sorting"
+    },
+    "anp-inline-title-vis": {
+      "unsupported": true,
+      "category": "MAKE.md",
+      "name": "Inline Title Visibility"
+    },
+    "anp-color-transition-toggle": {
+      "unsupported": true,
+      "category": "Miscellaneous",
+      "name": "Enable Color Transition"
+    },
+    "anp-button-metadata-toggle": {
+      "unsupported": true,
+      "category": "Miscellaneous",
+      "name": "Enable Custom Metadata Button"
+    },
+    "anp-print": {
+      "unsupported": true,
+      "category": "Miscellaneous",
+      "name": "Enable Print Styling"
+    },
+    "anp-autohide-titlebar": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Autohide Title Bar"
+    },
+    "anp-cursor": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Pointer cursor"
+    },
+    "anp-toggle-metadata": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Hide Metadata"
+    },
+    "anp-toggle-scrollbars": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Hide Scrollbars"
+    },
+    "anp-hide-status-bar": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Hide Status Bar"
+    },
+    "anp-tooltip-toggle": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Hide Tooltips"
+    },
+    "anp-hide-external-link-icon": {
+      "unsupported": true,
+      "category": "Show/Hide UI Elements",
+      "name": "Hide External Link Icon"
+    },
+    "anp-editor-font-source": {
+      "unsupported": true,
+      "category": "Font Families",
+      "name": "Source Editor Font"
+    },
+    "anp-editor-font-lp": {
+      "unsupported": true,
+      "category": "Font Families",
+      "name": "Live Preview Editor Font"
+    },
+    "anp-editor-font-rv": {
+      "unsupported": true,
+      "category": "Font Families",
+      "name": "Reading View Editor Font"
+    },
+    "anp-font-live-preview-wt": {
+      "unsupported": true,
+      "category": "Font Weights",
+      "name": "Live Preview Mode Weight"
+    },
+    "anp-font-preview-wt": {
+      "unsupported": true,
+      "category": "Font Weights",
+      "name": "Reading Mode Weight"
+    },
+    "anp-font-editor-wt": {
+      "unsupported": true,
+      "category": "Font Weights",
+      "name": "Source Mode Weight"
+    },
+    "anp-header-color-toggle": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "Enable Custom Heading Colors"
+    },
+    "anp-header-margin-toggle": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "Enable Custom Heading Margin"
+    },
+    "anp-header-divider-color-toggle": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "Inherit Divider Color from Heading Color"
+    },
+    "anp-header-margin-value": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "Heading margin value"
+    },
+    "anp-h1-color-custom": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "H1 Color"
+    },
+    "anp-h1-divider": { "newId": "h1-l" },
+    "anp-h2-color-custom": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "H2 Color"
+    },
+    "anp-h2-divider": { "newId": "h2-l" },
+    "anp-h3-color-custom": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "H3 Color"
+    },
+    "anp-h3-divider": { "newId": "h3-l" },
+    "anp-h4-color-custom": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "H4 Color"
+    },
+    "anp-h4-divider": { "newId": "h4-l" },
+    "anp-h5-color-custom": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "H5 Color"
+    },
+    "anp-h5-divider": { "newId": "h5-l" },
+    "anp-h6-color-custom": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "H6 Color"
+    },
+    "anp-h6-divider": { "newId": "h6-l" },
+    "hide-comments": {
+      "unsupported": true,
+      "category": "Comments",
+      "name": "Hide Comments"
+    },
+    "hide-comment-indicators": {
+      "unsupported": true,
+      "category": "Comments",
+      "name": "Hide Comment Indicators"
+    },
+    "anp-decoration-toggle": {
+      "unsupported": true,
+      "category": "Text Decoration",
+      "name": "Enable Decoration Colors"
+    },
+    "anp-bold-custom": {
+      "unsupported": true,
+      "category": "Text Decoration",
+      "name": "Bold Color"
+    },
+    "anp-italic-custom": {
+      "unsupported": true,
+      "category": "Text Decoration",
+      "name": "Italic Color"
+    },
+    "anp-highlight-custom": {
+      "unsupported": true,
+      "category": "Text Decoration",
+      "name": "Highlight Color"
+    },
+    "anp-canvas-dark-bg": {
+      "unsupported": true,
+      "category": "Canvas",
+      "name": "Darker Canvas Background"
+    },
+    "anp-colorful-frame": {
+      "unsupported": true,
+      "category": "Colorful Frame",
+      "name": "Enable Colorful Frame"
+    },
+    "anp-colorful-frame-icon-toggle-light": {
+      "unsupported": true,
+      "category": "Colorful Frame",
+      "name": "Invert Icon Colors - Light"
+    },
+    "anp-colorful-frame-icon-toggle-dark": {
+      "unsupported": true,
+      "category": "Colorful Frame",
+      "name": "Invert Icon Colors - Dark"
+    },
+    "anp-colorful-frame-opacity": {
+      "unsupported": true,
+      "category": "Colorful Frame",
+      "name": "Colorful Frame Opacity"
+    },
+    "anp-colorful-frame-color": {
+      "unsupported": true,
+      "category": "Colorful Frame",
+      "name": "Custom Colorful Frame Color"
+    },
+    "anp-custom-vault-toggle": {
+      "unsupported": true,
+      "category": "File Browser",
+      "name": "Enable custom vault title"
+    },
+    "anp-file-icons": {
+      "unsupported": true,
+      "category": "File Browser",
+      "name": "Enable file icons"
+    },
+    "anp-floating-header": {
+      "unsupported": true,
+      "category": "File Browser",
+      "name": "Enable floating vault title"
+    },
+    "anp-collapse-folders": {
+      "unsupported": true,
+      "category": "File Browser",
+      "name": "Enable folder icons for collapse indicators"
+    },
+    "anp-file-label-align": {
+      "unsupported": true,
+      "category": "File Browser",
+      "name": "File label alignment"
+    },
+    "anp-pdf-blend-toggle-dark": {
+      "unsupported": true,
+      "category": "PDF Viewer",
+      "name": "Toggle PDF background blending - Dark Mode"
+    },
+    "anp-pdf-blend-toggle-light": {
+      "unsupported": true,
+      "category": "PDF Viewer",
+      "name": "Toggle PDF background blending - Light Mode"
+    },
+    "anp-alt-rainbow-style": {
+      "newId": "rainbow-folder",
+      "valueMapping": {
+        "__fallback": true,
+        "anp-default-rainbow": true,
+        "anp-full-rainbow-color-toggle": true,
+        "anp-simple-rainbow-color-toggle": true
+      }
+    },
+    "anp-rainbow-file-toggle": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "File recolor toggle"
+    },
+    "anp-full-rainbow-text-color-toggle-light": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Invert title colors (Light Mode)"
+    },
+    "anp-full-rainbow-text-color-toggle-dark": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Invert title colors (Dark Mode)"
+    },
+    "anp-rainbow-folder-bg-opacity": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Folder background color opacity"
+    },
+    "anp-simple-rainbow-title-toggle": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Enable title recolor"
+    },
+    "anp-simple-rainbow-collapse-icon-toggle": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Enable collapse icon recolor"
+    },
+    "anp-simple-rainbow-indentation-toggle": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Enable collapse indent recolor"
+    },
+    "anp-simple-rainbow-icon-toggle": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Enable circular file"
+    },
+    "anp-rainbow-subfolder-color-toggle": {
+      "unsupported": true,
+      "category": "Rainbow Folders",
+      "name": "Enable subfolder color inheritance"
+    },
+    "anp-stacked-header-width": { "newId": "tab-stacked-header-width" },
+    "anp-tab-stacked-pane-width": {
+      "unsupported": true,
+      "category": "Stacked Tabs",
+      "name": "Stacked tabs pane width multiplier"
+    },
+    "anp-status-bar-select": {
+      "newId": "compact-status-bar-off",
+      "valueMapping": {
+        "__fallback": false,
+        "none": false,
+        "anp-floating-status-bar": false,
+        "anp-fixed-status-bar": true
+      }
+    },
+    "anp-alt-tab-style": {
+      "newId": "compact-status-bar-off",
+      "valueMapping": {
+        "__fallback": "tabs-default",
+        "anp-default-tab": "tabs-default",
+        "anp-depth-tab-toggle": "tabs-default",
+        "anp-mini-tab-toggle": "tabs-underline",
+        "anp-alternate-tab-toggle": "tabs-cupertino",
+        "anp-safari-tab-toggle": "tabs-cupertino"
+      }
+    },
+    "anp-alt-tab-custom-height": {
+      "unsupported": true,
+      "category": "Tabs",
+      "name": "Custom tab height"
+    },
+    "anp-disable-newtab-align": {
+      "unsupported": true,
+      "category": "Tabs",
+      "name": "Disable new tab button right alignment"
+    },
+    "anp-depth-tab-text-invert": {
+      "unsupported": true,
+      "category": "Depth Tab Settings",
+      "name": "Invert tab text color"
+    },
+    "anp-depth-tab-opacity": {
+      "unsupported": true,
+      "category": "Depth Tab Settings",
+      "name": "Tab opacity"
+    },
+    "anp-depth-tab-gap": {
+      "unsupported": true,
+      "category": "Depth Tab Settings",
+      "name": "Tab gap"
+    },
+    "anp-safari-tab-radius": {
+      "unsupported": true,
+      "category": "Animated Safari-style Tab Settings",
+      "name": "Tab radius"
+    },
+    "anp-safari-tab-gap": {
+      "unsupported": true,
+      "category": "Animated Safari-style Tab Settings",
+      "name": "Tab gap"
+    },
+    "anp-safari-border-width": {
+      "unsupported": true,
+      "category": "Animated Safari-style Tab Settings",
+      "name": "Tab border width"
+    },
+    "anp-safari-tab-animated": {
+      "unsupported": true,
+      "category": "Vanilla Safari-style Tab Settings",
+      "name": "Enable animated safari tabs"
+    },
+    "anp-translucency-opacity": {
+      "unsupported": true,
+      "category": "Workspace Layout",
+      "name": "Window opacity"
+    },
+    "anp-layout-select": {
+      "unsupported": true,
+      "category": "Workspace Layout",
+      "name": "Workspace Layout variant"
+    },
+    "anp-bg-fix": {
+      "unsupported": true,
+      "category": "Workspace Layout",
+      "name": "Background fix for applying colors"
+    },
+    "anp-hide-borders": {
+      "unsupported": true,
+      "category": "Workspace Layout",
+      "name": "Hide borders"
+    },
+    "anp-card-radius": {
+      "unsupported": true,
+      "category": "Card Layout Settings",
+      "name": "Card radius"
+    },
+    "anp-card-layout-padding": {
+      "unsupported": true,
+      "category": "Card Layout Settings",
+      "name": "Card padding"
+    },
+    "anp-card-header-left-padding": {
+      "unsupported": true,
+      "category": "Card Layout Settings",
+      "name": "Tab left padding"
+    },
+    "anp-card-shadows": {
+      "unsupported": true,
+      "category": "Card Layout Settings",
+      "name": "Enable shadows"
+    },
+    "anp-card-layout-actions": {
+      "unsupported": true,
+      "category": "Card Layout Settings",
+      "name": "Enable card format for actions"
+    },
+    "anp-card-layout-filebrowser": {
+      "unsupported": true,
+      "category": "Card Layout Settings",
+      "name": "Enable card format for file browser"
+    },
+    "anp-border-radius": {
+      "unsupported": true,
+      "category": "Border Layout Settings",
+      "name": "Border Layout Radius"
+    },
+    "anp-border-padding": {
+      "unsupported": true,
+      "category": "Border Layout Settings",
+      "name": "Border Layout Padding"
     }
   }
 }

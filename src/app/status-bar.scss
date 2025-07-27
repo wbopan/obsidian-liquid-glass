@@ -1,4 +1,4 @@
-.status-bar {
+body:not(.compact-status-bar-off) .status-bar {
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   border: none;
   transform-origin: bottom right;
@@ -6,7 +6,7 @@
   min-height: 8px;
   height: calc-size(auto, size);
 }
-.status-bar::before {
+body:not(.compact-status-bar-off) .status-bar::before {
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   content: "";
   position: absolute;
@@ -18,13 +18,10 @@
   pointer-events: none;
   background: radial-gradient(farthest-side at right bottom, var(--background-primary), rgba(var(--mono-rgb-0), 0));
 }
-.status-bar:not(:hover) {
+body:not(.compact-status-bar-off) .status-bar:not(:hover) {
   transform: scale(0.8);
   opacity: 0.5;
 }
-.status-bar:not(:hover)::before {
+body:not(.compact-status-bar-off) .status-bar:not(:hover)::before {
   opacity: 0;
-}
-.status-bar-item {
-  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 }
