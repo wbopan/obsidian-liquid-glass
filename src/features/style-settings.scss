@@ -210,6 +210,12 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: accented-interface
+		title: Interface accent
+		description: Use accent color for buttons, links, and highlighted text
+		type: class-toggle
+		default: false
+	-
 		id: color-red
 		title: Red
 		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes

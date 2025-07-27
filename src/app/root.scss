@@ -9,10 +9,7 @@ body.theme-dark {
   --titlebar-background-focused: transparent;
   --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.5);
 
-  --interactive-accent: rgb(var(--mono-rgb-100));
-  --interactive-accent-hover: rgba(var(--mono-rgb-100), 0.8);
   --text-normal: var(--color-base-90);
-  --text-on-accent: var(--color-base-00);
   --divider-color-hover: var(--color-base-50);
 
   --icon-opacity: 1;
@@ -31,6 +28,12 @@ body.theme-light {
 body.theme-dark {
   --color-base-80: #c0c0c0;
   --color-base-90: #cdcdcd;
+}
+
+body:not(.accented-interface) {
+  --interactive-accent: rgb(var(--mono-rgb-100));
+  --interactive-accent-hover: rgba(var(--mono-rgb-100), 0.8);
+  --text-on-accent: var(--color-base-00);
 }
 
 body.window-title-off .titlebar-text {
