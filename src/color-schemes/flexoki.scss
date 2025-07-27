@@ -5,7 +5,7 @@ Copyright (c) 2023 Steph Ango
 https://stephango.com/flexoki
 */
 
-.theme-light.minimal-flexoki-light {
+.theme-light.flexoki-light {
   --color-red-rgb: 175, 48, 41;
   --color-orange-rgb: 188, 82, 21;
   --color-yellow-rgb: 173, 131, 1;
@@ -24,7 +24,7 @@ https://stephango.com/flexoki
   --color-purple: #5e409d;
   --color-pink: #a02f6f;
 }
-.theme-dark.minimal-flexoki-dark {
+.theme-dark.flexoki-dark {
   --color-red-rgb: 209, 77, 65;
   --color-orange-rgb: 218, 112, 44;
   --color-yellow-rgb: 208, 162, 21;
@@ -43,7 +43,7 @@ https://stephango.com/flexoki
   --color-purple: #8b7ec8;
   --color-pink: #ce5d97;
 }
-.theme-light.minimal-flexoki-light {
+.theme-light.flexoki-light {
   --background-primary: #fffcf0;
   --background-secondary: #f2f0e5;
   --interactive-normal: rgba(16, 15, 15, 0.05);
@@ -59,10 +59,10 @@ https://stephango.com/flexoki
   --text-selection: rgba(187, 220, 206, 0.3);
   --text-highlight-bg: rgba(247, 209, 61, 0.3);
 }
-.theme-light.minimal-flexoki-light.minimal-light-tonal {
+.theme-light.flexoki-light.contrast-light-tonal {
   --background-secondary: #fffcf0;
 }
-.theme-dark.minimal-flexoki-dark {
+.theme-dark.flexoki-dark {
   --background-primary: #100f0f;
   --background-secondary: #1c1b1a;
   --interactive-normal: rgba(254, 252, 240, 0.05);
@@ -78,6 +78,6 @@ https://stephango.com/flexoki
   --text-selection: rgba(30, 95, 91, 0.3);
   --text-highlight-bg: rgba(213, 159, 17, 0.3);
 }
-.theme-dark.minimal-flexoki-dark.minimal-dark-black {
+.theme-dark.flexoki-dark.contrast-dark-black {
   --background-modifier-border: #1c1b1a;
 }

@@ -1,6 +1,6 @@
 /* Sky color scheme, inspired by Notion */
 
-.theme-light.minimal-notion-light {
+.theme-light.notion-light {
   --background-secondary: #f7f6f4;
   --interactive-normal: #e8e7e4;
 
@@ -14,7 +14,7 @@
 
   --text-selection: rgba(131, 201, 229, 0.3);
 }
-.theme-dark.minimal-notion-dark {
+.theme-dark.notion-dark {
   --background-primary: #2f3437;
   --background-secondary: #373c3f;
   --interactive-normal: #4b5053;
@@ -29,7 +29,7 @@
 
   --text-selection: rgba(57, 134, 164, 0.3);
 }
-.theme-dark.minimal-notion-dark.minimal-dark-black {
+.theme-dark.notion-dark.contrast-dark-black {
   --interactive-normal: #232729;
   --background-modifier-border: #2f3437;
 }

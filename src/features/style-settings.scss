@@ -23,128 +23,140 @@ settings:
 		description: Preset color options for light mode.
 		type: class-select
 		allowEmpty: false
-		default: minimal-default-light
+		default: default-light
 		options:
 			-
-				label: Default
-				value: minimal-default-light
+				label: Obsidian
+				value: default-light
 			-
 				label: Atom
-				value: minimal-atom-light
+				value: atom-light
 			-
 				label: Ayu
-				value: minimal-ayu-light
+				value: ayu-light
 			-
 				label: Catppuccin
-				value: minimal-catppuccin-light
+				value: catppuccin-light
 			-
 				label: Everforest
-				value: minimal-everforest-light
+				value: everforest-light
 			-
 				label: Flexoki
-				value: minimal-flexoki-light
+				value: flexoki-light
 			-
 				label: Gruvbox
-				value: minimal-gruvbox-light
+				value: gruvbox-light
+			-
+				label: Latte
+				value: latte-light
 			-
 				label: macOS
-				value: minimal-macos-light
+				value: macos-light
 			-
 				label: Nord
-				value: minimal-nord-light
+				value: nord-light
 			-
 				label: Rosé Pine
-				value: minimal-rose-pine-light
+				value: rose-pine-light
 			-
 				label: Sky
-				value: minimal-sky-light
+				value: sky-light
 			-
 				label: Solarized
-				value: minimal-solarized-light
+				value: solarized-light
 			-
 				label: Things
-				value: minimal-things-light
+				value: things-light
 	-
 		id: background-contrast-light
 		title: Light mode background contrast
 		description: Level of contrast between sidebar and main content.
 		type: class-select
 		allowEmpty: false
-		default: minimal-light
+		default: contrast-light
 		options:
 			-
-				label: Default
-				value: minimal-light
+				label: Normal
+				value: contrast-light
 			-
 				label: Low contrast
-				value: minimal-light-tonal
+				value: contrast-light-tonal
 			-
-				label: All white
-				value: minimal-light-white
+				label: White
+				value: contrast-light-white
 	-
 		id: color-scheme-dark
 		title: Dark mode color scheme
 		description: Preset color options for dark mode.
 		type: class-select
 		allowEmpty: false
-		default: minimal-default-dark
+		default: default-dark
 		options:
 			-
-				label: Default
-				value: minimal-default-dark
+				label: Obsidian
+				value: default-dark
 			-
 				label: Atom
-				value: minimal-atom-dark
+				value: atom-dark
 			-
 				label: Ayu
-				value: minimal-ayu-dark
+				value: ayu-dark
 			-
 				label: Catppuccin
-				value: minimal-catppuccin-dark
+				value: catppuccin-dark
 			-
 				label: Everforest
-				value: minimal-everforest-dark
+				value: everforest-dark
 			-
 				label: Flexoki
-				value: minimal-flexoki-dark
+				value: flexoki-dark
+			-
+				label: Frappe
+				value: frappe-dark
 			-
 				label: Gruvbox
-				value: minimal-gruvbox-dark
+				value: gruvbox-dark
+			-
+				label: Macchiato
+				value: macchiato-dark
 			-
 				label: macOS
-				value: minimal-macos-dark
+				value: macos-dark
+			-
+				label: Mocha
+				value: mocha-dark
 			-
 				label: Nord
-				value: minimal-nord-dark
+				value: nord-dark
 			-
 				label: Rosé Pine
-				value: minimal-rose-pine-dark
+				value: rose-pine-dark
 			-
 				label: Sky
-				value: minimal-sky-dark
+				value: sky-dark
 			-
 				label: Solarized
-				value: minimal-solarized-dark
+				value: solarized-dark
 			-
 				label: Things
-				value: minimal-things-dark
+				value: things-dark
 	-
 		id: background-contrast-dark
 		title: Dark mode background contrast
 		description: Level of contrast between sidebar and main content.
 		type: class-select
 		allowEmpty: false
-		default: minimal-dark
+		default: contrast-dark
 		options:
 			-
-				label: Default
-				value: minimal-dark
+				label: Normal
+				value: contrast-dark
 			-
 				label: Low contrast
-				value: minimal-dark-tonal
+				value: contrast-dark-tonal
 			-
-				label: True black
-				value: minimal-dark-black
+				label: Black
+				value: contrast-dark-black
 	-
 		id: interface
 		title: Interface colors
@@ -2039,13 +2051,5 @@ settings:
 
   &::after {
     border-radius: var(--button-radius);
-  }
-}
-
-// Overridden by Minimal Theme Settings
-body.minimal-theme .style-settings-container {
-  .setting-item[data-id="color-scheme"],
-  .setting-item[data-id="labeled-nav-off"] {
-    display: none;
   }
 }

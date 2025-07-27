@@ -1,24 +1,24 @@
-body.theme-light.minimal-light-white {
+body.theme-light.contrast-light-white {
   --background-primary: white;
   --background-primary-alt: var(--color-base-05);
   --background-secondary: white;
 }
 
-body.theme-light.minimal-light-tonal {
+body.theme-light.contrast-light-tonal {
   --background-primary: var(--background-secondary);
 }
 
-body.theme-dark.minimal-dark-tonal {
+body.theme-dark.contrast-dark-tonal {
   --background-secondary: var(--background-primary);
 }
 
-body.theme-dark.minimal-dark-black {
+body.theme-dark.contrast-dark-black {
   --background-primary: black;
   --background-primary-alt: var(--color-base-05);
   --background-secondary: black;
   --system-status-background: var(--background-primary);
 }
 
-option[value="minimal-light-contrast"] {
+option[value="contrast-light-contrast"] {
   display: none;
 }

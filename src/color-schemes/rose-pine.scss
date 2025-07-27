@@ -5,7 +5,7 @@ Copyright (c) 2023 Rosé Pine
 https://github.com/rose-pine/rose-pine-theme
 */
 
-.theme-light.minimal-rose-pine-light {
+.theme-light.rose-pine-light {
   --color-red-rgb: 180, 99, 122;
   --color-orange-rgb: 215, 130, 125;
   --color-yellow-rgb: 234, 157, 53;
@@ -25,7 +25,7 @@ https://github.com/rose-pine/rose-pine-theme
   --color-pink: #907aa9;
 }
 
-.theme-dark.minimal-rose-pine-dark {
+.theme-dark.rose-pine-dark {
   --color-red-rgb: 234, 111, 146;
   --color-orange-rgb: 233, 155, 151;
   --color-yellow-rgb: 246, 193, 119;
@@ -45,7 +45,7 @@ https://github.com/rose-pine/rose-pine-theme
   --color-pink: #c4a7e7;
 }
 
-.theme-light.minimal-rose-pine-light {
+.theme-light.rose-pine-light {
   --background-primary: #fffaf3;
   --background-secondary: #faf4ed;
   --interactive-normal: rgba(233, 223, 218, 0.5);
@@ -60,7 +60,7 @@ https://github.com/rose-pine/rose-pine-theme
 
   --text-selection: rgba(191, 180, 181, 0.35);
 }
-.theme-dark.minimal-rose-pine-dark {
+.theme-dark.rose-pine-dark {
   --background-primary: #1f1d2e;
   --background-secondary: #191724;
   --interactive-normal: rgba(68, 66, 86, 0.5);
@@ -75,6 +75,6 @@ https://github.com/rose-pine/rose-pine-theme
 
   --text-selection: rgba(126, 121, 155, 0.35);
 }
-.theme-dark.minimal-rose-pine-dark.minimal-dark-black {
+.theme-dark.rose-pine-dark.contrast-dark-black {
   --background-modifier-border: #21202e;
 }

@@ -5,7 +5,7 @@ Copyright (c) 2019 sainnhe
 https://github.com/sainnhe/everforest
 */
 
-.theme-light.minimal-everforest-light {
+.theme-light.everforest-light {
   --color-red-rgb: 248, 85, 82;
   --color-orange-rgb: 245, 125, 38;
   --color-yellow-rgb: 223, 160, 0;
@@ -24,7 +24,7 @@ https://github.com/sainnhe/everforest
   --color-purple: #df69ba;
   --color-pink: #df69ba;
 }
-.theme-dark.minimal-everforest-dark {
+.theme-dark.everforest-dark {
   --color-red-rgb: 230, 126, 128;
   --color-orange-rgb: 230, 152, 117;
   --color-yellow-rgb: 219, 188, 127;
@@ -44,7 +44,7 @@ https://github.com/sainnhe/everforest
   --color-pink: #d699b6;
 }
 
-.theme-light.minimal-everforest-light {
+.theme-light.everforest-light {
   --background-primary: #fdf6e3;
   --background-secondary: #efebd4;
   --interactive-normal: rgba(226, 222, 198, 0.5);
@@ -61,14 +61,14 @@ https://github.com/sainnhe/everforest
   --text-highlight-bg: rgba(222, 179, 51, 0.3);
 }
 
-.theme-light.minimal-everforest-light.minimal-light-tonal {
+.theme-light.everforest-light.contrast-light-tonal {
   --background-secondary: #fdf6e3;
 }
-.theme-light.minimal-everforest-light.minimal-light-white {
+.theme-light.everforest-light.contrast-light-white {
   --interactive-normal: #f3efda;
   --background-modifier-border: #edead5;
 }
-.theme-dark.minimal-everforest-dark {
+.theme-dark.everforest-dark {
   --background-primary: #2d353b;
   --background-secondary: #232a2e;
   --interactive-normal: rgba(71, 82, 88, 0.5);
@@ -84,7 +84,7 @@ https://github.com/sainnhe/everforest
   --text-selection: rgba(134, 70, 93, 0.5);
   --text-highlight-bg: rgba(147, 185, 96, 0.3);
 }
-.theme-dark.minimal-everforest-dark.minimal-dark-black {
+.theme-dark.everforest-dark.contrast-dark-black {
   --text-selection: rgba(134, 70, 93, 0.4);
   --background-modifier-border: #2b3339;
 }

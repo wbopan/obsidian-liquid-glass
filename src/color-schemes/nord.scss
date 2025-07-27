@@ -5,8 +5,8 @@ Copyright (c) 2016-present Sven Greb <development@svengreb.de> (https://www.sven
 https://github.com/nordtheme/nord
 */
 
-.theme-dark.minimal-nord-dark,
-.theme-light.minimal-nord-light {
+.theme-dark.nord-dark,
+.theme-light.nord-light {
   --color-red-rgb: 191, 97, 106;
   --color-orange-rgb: 208, 138, 112;
   --color-yellow-rgb: 235, 203, 139;
@@ -26,7 +26,7 @@ https://github.com/nordtheme/nord
   --color-pink: #b48ead;
 }
 
-.theme-light.minimal-nord-light {
+.theme-light.nord-light {
   --background-primary: #fff;
   --background-secondary: #eceff4;
   --interactive-normal: rgba(157, 174, 206, 0.25);
@@ -42,7 +42,7 @@ https://github.com/nordtheme/nord
   --text-highlight-bg: rgba(208, 135, 112, 0.35);
 }
 
-.theme-dark.minimal-nord-dark {
+.theme-dark.nord-dark {
   --background-primary: #2e3440;
   --background-secondary: #3b4252;
   --interactive-normal: rgba(135, 152, 190, 0.15);
@@ -58,6 +58,6 @@ https://github.com/nordtheme/nord
   --text-selection: rgba(129, 142, 180, 0.3);
   --text-highlight-bg: rgba(208, 135, 112, 0.35);
 }
-.theme-dark.minimal-nord-dark.minimal-dark-black {
+.theme-dark.nord-dark.contrast-dark-black {
   --background-modifier-border: #2e3440;
 }

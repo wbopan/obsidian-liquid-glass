@@ -5,8 +5,8 @@ Copyright (c) 2011 Ethan Schoonover
 https://ethanschoonover.com/solarized/
 */
 
-.theme-dark.minimal-solarized-dark,
-.theme-light.minimal-solarized-light {
+.theme-dark.solarized-dark,
+.theme-light.solarized-light {
   --color-red-rgb: 220, 50, 47;
   --color-orange-rgb: 203, 77, 22;
   --color-yellow-rgb: 181, 137, 0;
@@ -26,7 +26,7 @@ https://ethanschoonover.com/solarized/
   --color-pink: #d33682;
 }
 
-.theme-light.minimal-solarized-light {
+.theme-light.solarized-light {
   --background-primary: #fdf6e3;
   --background-secondary: #eee8d5;
   --interactive-normal: rgba(0, 0, 0, 0.062);
@@ -43,10 +43,10 @@ https://ethanschoonover.com/solarized/
   --text-selection: rgba(202, 197, 182, 0.3);
   --text-highlight-bg: rgba(203, 75, 22, 0.3);
 }
-.theme-light.minimal-solarized-light.minimal-light-tonal {
+.theme-light.solarized-light.contrast-light-tonal {
   --background-secondary: #fdf6e3;
 }
-.theme-dark.minimal-solarized-dark {
+.theme-dark.solarized-dark {
   --background-primary: #002b36;
   --background-secondary: #073642;
   --interactive-normal: rgba(255, 255, 255, 0.062);
@@ -63,7 +63,7 @@ https://ethanschoonover.com/solarized/
   --text-selection: rgba(15, 81, 98, 0.3);
   --text-highlight-bg: rgba(203, 75, 22, 0.35);
 }
-.theme-dark.minimal-solarized-dark.minimal-dark-black {
+.theme-dark.solarized-dark.contrast-dark-black {
   --text-selection: rgba(15, 81, 98, 0.55);
   --background-modifier-border: #002b36;
 }

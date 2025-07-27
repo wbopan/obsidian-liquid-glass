@@ -4,8 +4,8 @@ MIT License
 https://github.com/morhetz/gruvbox
 */
 
-.theme-dark.minimal-gruvbox-dark,
-.theme-light.minimal-gruvbox-light {
+.theme-dark.gruvbox-dark,
+.theme-light.gruvbox-light {
   --color-red-rgb: 204, 36, 29;
   --color-orange-rgb: 214, 93, 14;
   --color-yellow-rgb: 215, 153, 33;
@@ -25,7 +25,7 @@ https://github.com/morhetz/gruvbox
   --color-pink: #b16286;
 }
 
-.theme-light.minimal-gruvbox-light {
+.theme-light.gruvbox-light {
   --background-primary: #fcf2c7;
   --background-secondary: #f2e6bd;
   --interactive-normal: #ebd9b3;
@@ -42,14 +42,14 @@ https://github.com/morhetz/gruvbox
   --text-highlight-bg: rgba(215, 153, 33, 0.4);
 }
 
-.theme-light.minimal-gruvbox-light.minimal-light-tonal {
+.theme-light.gruvbox-light.contrast-light-tonal {
   --background-secondary: #fcf2c7;
 }
-.theme-light.minimal-gruvbox-light.minimal-light-white {
+.theme-light.gruvbox-light.contrast-light-white {
   --interactive-normal: #faf5d7;
   --background-modifier-border: #f2e6bd;
 }
-.theme-dark.minimal-gruvbox-dark {
+.theme-dark.gruvbox-dark {
   --background-primary: #282828;
   --background-secondary: #1e2021;
   --interactive-normal: #3d3836;
@@ -66,7 +66,7 @@ https://github.com/morhetz/gruvbox
   --text-selection: rgba(173, 149, 139, 0.3);
   --text-highlight-bg: rgba(215, 153, 33, 0.4);
 }
-.theme-dark.minimal-gruvbox-dark.minimal-dark-black {
+.theme-dark.gruvbox-dark.contrast-dark-black {
   --text-selection: rgba(173, 149, 139, 0.4);
   --background-modifier-border: #282828;
 }

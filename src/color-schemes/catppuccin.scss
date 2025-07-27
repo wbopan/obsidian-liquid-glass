@@ -5,7 +5,7 @@ Copyright (c) 2021 Catppuccin
 https://github.com/catppuccin/catppuccin
 */
 
-.theme-light.minimal-catppuccin-light {
+.theme-light.catppuccin-light {
   --color-red-rgb: 230, 69, 83;
   --color-orange-rgb: 254, 100, 12;
   --color-yellow-rgb: 223, 142, 29;
@@ -24,7 +24,7 @@ https://github.com/catppuccin/catppuccin
   --color-purple: #8938ef;
   --color-pink: #ea77cb;
 }
-.theme-dark.minimal-catppuccin-dark {
+.theme-dark.catppuccin-dark {
   --color-red-rgb: 235, 153, 156;
   --color-orange-rgb: 239, 160, 118;
   --color-yellow-rgb: 229, 200, 144;
@@ -44,7 +44,7 @@ https://github.com/catppuccin/catppuccin
   --color-pink: #f4b9e5;
 }
 
-.theme-light.minimal-catppuccin-light {
+.theme-light.catppuccin-light {
   --background-primary: #f0f1f5;
   --background-secondary: #dce0e8;
   --interactive-normal: hsla(228, 11%, 65%, 0.25);
@@ -61,14 +61,14 @@ https://github.com/catppuccin/catppuccin
   --text-highlight-bg: rgba(223, 142, 29, 0.3);
 }
 
-.theme-light.minimal-catppuccin-light.minimal-light-tonal {
+.theme-light.catppuccin-light.contrast-light-tonal {
   --background-secondary: #dce0e8;
 }
-.theme-light.minimal-catppuccin-light.minimal-light-white {
+.theme-light.catppuccin-light.contrast-light-white {
   --interactive-normal: #f0f1f5;
   --background-modifier-border: #dce0e8;
 }
-.theme-dark.minimal-catppuccin-dark {
+.theme-dark.catppuccin-dark {
   --background-primary: #303446;
   --background-secondary: #242634;
   --interactive-normal: hsla(229, 13%, 52%, 0.25);
@@ -84,7 +84,7 @@ https://github.com/catppuccin/catppuccin
   --text-selection: rgba(98, 104, 128, 0.5);
   --text-highlight-bg: rgba(223, 142, 29, 0.4);
 }
-.theme-dark.minimal-catppuccin-dark.minimal-dark-black {
+.theme-dark.catppuccin-dark.contrast-dark-black {
   --background-modifier-border: #303446;
   --text-highlight-bg: rgba(223, 142, 29, 0.5);
 }
