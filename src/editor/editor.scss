@@ -30,6 +30,12 @@
     --embed-max-height: none;
 
     --media-radius: var(--radius-s);
+
+    --metadata-gap: 8px;
+
+    --tag-padding-x: 8px;
+    --tag-padding-y: 4px;
+    --tag-radius: 8px;
   }
 }
 
@@ -177,6 +183,14 @@ body.metadata-add-property-off .metadata-add-button {
 }
 body.metadata-icons-off .metadata-property-icon {
   display: none;
+}
+.metadata-container .metadata-show-source-button,
+.metadata-container .metadata-add-button {
+  gap: 8px;
+  text-transform: lowercase;
+  padding-inline-start: 8px;
+  margin-left: -4px;
+  margin-top: var(--metadata-gap);
 }
 
 // Headings
