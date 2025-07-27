@@ -55,7 +55,7 @@ body:not(.is-phone) .modal-bg {
 .modal-close-button {
   position: absolute;
   top: 8px;
-  inset-inline-end: 8px;
+  inset-inline-end: 8px !important;
   height: 32px;
   width: 32px;
   padding: 8px;
@@ -247,6 +247,7 @@ body.is-phone .modal.mod-sidebar-layout {
     flex-wrap: wrap;
     padding: 8px;
     gap: 16px;
+    margin-right: 40px;
 
     .setting-item {
       padding: 0;
@@ -259,11 +260,18 @@ body.is-phone .modal.mod-sidebar-layout {
         display: none;
       }
     }
-    .setting-item:nth-last-child(2) {
-      margin-right: 40px;
-    }
     .community-modal-search-summary {
       display: none;
     }
+  }
+  .community-item-name {
+    display: flex;
+  }
+  .community-item .flair {
+    margin-left: auto;
+    top: 0;
+    line-height: normal;
+    border-radius: var(--button-radius);
+    padding: 4px 8px;
   }
 }
