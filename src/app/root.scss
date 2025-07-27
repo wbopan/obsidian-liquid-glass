@@ -33,10 +33,6 @@ body.theme-dark {
   --color-base-90: #cdcdcd;
 }
 
-body:not(.is-mobile) svg.svg-icon {
-  margin: -1px;
-}
-
 body.window-title-off .titlebar-text {
   display: none;
 }

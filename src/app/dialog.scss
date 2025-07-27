@@ -52,7 +52,7 @@ body:not(.is-phone) .modal-bg {
     padding: 8px 0;
   }
 }
-body:not(.native-scrollbars) .modal-close-button {
+.modal-close-button {
   position: absolute;
   top: 8px;
   inset-inline-end: 8px;

@@ -23,6 +23,9 @@ body.is-mobile {
 .sidebar-toggle-button .clickable-icon {
   width: fit-content;
 }
+svg.svg-icon {
+  margin: -1px;
+}
 
 // Editor panel
 .workspace .mod-root {
@@ -147,7 +150,7 @@ body.tabs-underline .workspace .mod-root {
     -webkit-app-region: no-drag;
     padding: 0 8px;
     margin: 0;
-    gap: 2px;
+    gap: 8px;
   }
 
   .sidebar-toggle-button {
@@ -159,6 +162,7 @@ body.tabs-underline .workspace .mod-root {
     --icon-color: var(--text-faint);
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
     height: calc-size(auto, size);
+    line-height: normal;
   }
   .workspace-tab-header.is-active {
     background-color: inherit;
@@ -202,9 +206,6 @@ body.tab-names-single .workspace-tab-header:only-child {
 
 // Side panels: Platforms
 
-body .mod-sidedock .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-  padding-left: 8px !important;
-}
 body .mod-sidedock .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
   padding-right: var(--frame-right-space);
 }
