@@ -2162,12 +2162,22 @@ settings:
 		default-dark: '#'
 
 */
-.theme-light .style-settings-container .themed-color-wrapper .theme-dark button {
+.style-settings-container .themed-color-wrapper > div {
+  background-color: transparent;
   color: var(--color-base-100);
+  gap: 8px;
+
+  .pickr-reset > button {
+    color: var(--color-base-100);
+    background-color: var(--color-base-10);
+    margin: 0;
+  }
 }
-.theme-light .style-settings-container .themed-color-wrapper .theme-dark,
-.theme-dark .style-settings-container .themed-color-wrapper .theme-light {
-  background-color: var(--color-base-30);
+.themed-color-wrapper {
+  display: flex;
+}
+.themed-color-wrapper > div + div {
+  margin-top: 0;
 }
 
 .style-settings-container .pickr .pcr-button {
