@@ -5,6 +5,7 @@ body:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
     height: fit-content;
     flex-direction: column;
     padding-left: 8px;
+    gap: 4px;
   }
   .workspace-tab-header-container-inner {
     flex-direction: column;
@@ -21,6 +22,9 @@ body:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
   }
   .workspace-tab-header-inner:hover {
     color: var(--icon-color-hover);
+  }
+  .workspace-tab-header-spacer {
+    display: none;
   }
 
   .sidebar-toggle-button {
