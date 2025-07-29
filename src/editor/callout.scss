@@ -67,7 +67,7 @@
     }
 
     .callout-content {
-      margin-left: 28px;
+      margin-left: calc(var(--icon-size) + 8px);
     }
   }
 

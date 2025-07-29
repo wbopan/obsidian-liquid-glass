@@ -23,7 +23,8 @@ body.is-mobile {
 .sidebar-toggle-button .clickable-icon {
   width: fit-content;
 }
-svg.svg-icon {
+.workspace-tab-header-container svg.svg-icon,
+.workspace .mod-root .view-header svg.svg-icon {
   margin: -1px;
 }
 
