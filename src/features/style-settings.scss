@@ -1394,6 +1394,19 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: link-decoration
+		title: Internal link underline
+		type: variable-select
+		allowEmpty: false
+		default: none
+		options:
+			-
+				label: Underline
+				value: underline
+			-
+				label: None
+				value: none
+	-
 		id: links-external
 		title: External links
 		type: heading
@@ -1413,6 +1426,19 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+	-
+		id: link-external-decoration
+		title: Internal link underline
+		type: variable-select
+		allowEmpty: false
+		default: none
+		options:
+			-
+				label: Underline
+				value: underline
+			-
+				label: None
+				value: none
 	-
 		id: lists
 		title: Lists
@@ -1597,6 +1623,19 @@ settings:
 		title: Disable text labels for primary navigation
 		description: Turn off text labels on navigation items in the left sidebar 
 		type: class-toggle
+	-
+		id: nav-item-white-space
+		title: Trim file names in sidebars
+		type: variable-select
+		allowEmpty: false
+		default: pre
+		options:
+			-
+				label: Trim
+				value: pre
+			-
+				label: Full
+				value: none
 	-
 		id: rainbow-folders
 		title: Rainbow folders

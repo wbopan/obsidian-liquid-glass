@@ -36,6 +36,9 @@
     --tag-padding-x: 8px;
     --tag-padding-y: 4px;
     --tag-radius: 8px;
+
+    --link-decoration: none;
+    --link-external-decoration: none;
   }
 }
 
@@ -290,14 +293,6 @@ body:not(.full-width-media-off) {
     border-radius: var(--media-radius);
     max-width: 100%;
   }
-}
-
-// Links
-body.links-int-off {
-  --link-decoration: none;
-}
-body.links-ext-off {
-  --link-external-decoration: none;
 }
 
 // Tags
