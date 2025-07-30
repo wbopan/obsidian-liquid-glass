@@ -1345,6 +1345,29 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: layout
+		title: Layout
+		type: heading
+		level: 2
+		collapsed: true
+
+	-
+		id: layout-style
+		title: Layout style
+		type: class-select
+		allowEmpty: false
+		default: layout-baseline
+		options:
+			-
+				label: Baseline
+				value: layout-baseline
+			-
+				label: Cards
+				value: layout-cards
+			-
+				label: Border
+				value: layout-border
+	-
 		id: links
 		title: Links
 		type: heading
