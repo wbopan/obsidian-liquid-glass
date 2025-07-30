@@ -12,7 +12,7 @@ body.rainbow-folders {
     height: -webkit-fill-available;
     top: 2px;
     bottom: 2px;
-    border-radius: 4px;
+    border-radius: var(--radius-s);
   }
 
   .nav-files-container > div > .nav-folder:nth-child(8n + 2)::before {
