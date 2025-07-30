@@ -1579,14 +1579,6 @@ settings:
 		title: Rainbow folders
 		type: class-toggle
 	-
-		id: rainbow-folders-opacity
-		title: Rainbow folders background opacity
-		type: variable-number-slider
-		default: 25
-		min: 0
-		max: 100
-		step: 1
-	-
 		id: sidebar-tabs-names
 		title: Sidebar tab names
 		type: class-select
