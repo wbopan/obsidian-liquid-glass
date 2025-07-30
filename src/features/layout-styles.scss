@@ -21,6 +21,13 @@ body.layout-cards:not(.is-mobile) {
     }
   }
 
+  .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
+    padding-left: 8px;
+  }
+  .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root {
+    padding-right: 8px;
+  }
+
   .workspace-split.mod-sidedock {
     .workspace-tabs {
       overflow: visible;
@@ -71,6 +78,23 @@ body.layout-border:not(.is-mobile) {
     }
     &.workspace-tabs .workspace-leaf {
       border-top-left-radius: 0;
+    }
+  }
+
+  .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
+    padding-left: 8px;
+
+    .workspace-tab-container {
+      border-top-left-radius: var(--radius-l);
+      border-bottom-left-radius: var(--radius-l);
+    }
+  }
+  .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root {
+    padding-right: 8px;
+
+    .workspace-tab-container {
+      border-top-right-radius: var(--radius-l);
+      border-bottom-right-radius: var(--radius-l);
     }
   }
 
