@@ -247,7 +247,6 @@ body.is-phone .modal.mod-sidebar-layout {
     flex-wrap: wrap;
     padding: 8px;
     gap: 16px;
-    margin-right: 40px;
 
     .setting-item {
       padding: 0;
@@ -259,6 +258,9 @@ body.is-phone .modal.mod-sidebar-layout {
       .setting-item-info {
         display: none;
       }
+    }
+    .setting-item:nth-last-child(2) {
+      margin-right: 40px;
     }
     .community-modal-search-summary {
       display: none;
