@@ -22,7 +22,6 @@ body.layout-cards:not(.is-mobile) {
       padding: 8px;
       background-color: var(--background-primary);
       border-radius: var(--radius-l);
-      box-shadow: var(--shadow-tactile);
     }
   }
 
@@ -41,7 +40,6 @@ body.layout-cards:not(.is-mobile) {
       margin: 0 8px;
       background-color: var(--background-primary);
       border-radius: var(--radius-l);
-      box-shadow: var(--shadow-tactile);
     }
     .workspace-tabs .workspace-leaf {
       background-color: transparent;
