@@ -11,6 +11,11 @@ body.layout-cards:not(.is-mobile) {
     border-radius: var(--radius-l);
   }
 
+  &:not(.compact-status-bar-off) .status-bar {
+    bottom: 8px;
+    right: 8px;
+  }
+
   &:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
     .workspace-tab-header-container-inner {
       margin-top: 4px;
@@ -63,6 +68,11 @@ body.layout-border:not(.is-mobile) {
 
   .workspace-split.mod-root .workspace-tabs .workspace-tab-container {
     border-radius: 0;
+  }
+
+  &:not(.compact-status-bar-off) .status-bar {
+    bottom: 8px;
+    right: 8px;
   }
 
   &:not(.labeled-nav-off) .workspace-split.mod-sidedock.mod-left-split .mod-top-left-space {
