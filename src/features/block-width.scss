@@ -22,7 +22,11 @@ body {
 .map-max,
 .chart-max {
   --file-line-width: var(--max-width);
-  --file-margins: 32px 0;
+
+  &.markdown-preview-view,
+  .markdown-preview-view {
+    padding: var(--file-margins) 0;
+  }
 }
 .table-100,
 .img-100,
@@ -30,7 +34,11 @@ body {
 .map-100,
 .chart-100 {
   --file-line-width: 100%;
-  --file-margins: 32px 0;
+
+  &.markdown-preview-view,
+  .markdown-preview-view {
+    padding: var(--file-margins) 0;
+  }
 }
 
 // Table
@@ -79,7 +87,7 @@ body {
     max-width: 40rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
+    width: calc(100% - var(--file-margins) * 2);
   }
 }
 
@@ -103,7 +111,7 @@ body {
     max-width: 40rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
+    width: calc(100% - var(--file-margins) * 2);
   }
 }
 
@@ -127,7 +135,7 @@ body {
     max-width: 40rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
+    width: calc(100% - var(--file-margins) * 2);
   }
 }
 
@@ -151,7 +159,7 @@ body {
     max-width: 40rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
+    width: calc(100% - var(--file-margins) * 2);
   }
 }
 
@@ -175,7 +183,7 @@ body {
     max-width: 40rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
+    width: calc(100% - var(--file-margins) * 2);
   }
 }
 

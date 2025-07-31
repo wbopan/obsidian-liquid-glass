@@ -14,6 +14,7 @@ body.is-mobile {
 
 // All panels
 .workspace-tab-header-container {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   padding-top: 8px;
   background-color: transparent;
 }

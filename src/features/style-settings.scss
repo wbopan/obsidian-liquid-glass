@@ -1368,6 +1368,12 @@ settings:
 				label: Border
 				value: layout-border
 	-
+		id: focus-view
+		title: Focus view
+		description: Hide tabs and tab title bar when both sidebars are closed — hover over the top to see tab title bar
+		type: class-toggle
+		default: false
+	-
 		id: links
 		title: Links
 		type: heading
