@@ -204,6 +204,10 @@ body.is-phone .prompt {
   .vertical-tab-nav-item,
   .vertical-tab-header-group-title {
     padding: 8px 16px;
+    font-size: var(--nav-item-size);
+  }
+  .vertical-tab-nav-item.is-active {
+    font-weight: var(--nav-item-weight-active);
   }
   .horizontal-tab-content,
   .vertical-tab-content {
@@ -218,9 +222,10 @@ body.is-phone .prompt {
 body.is-phone .modal.mod-sidebar-layout {
   .modal-header {
     border-bottom: none;
+    padding-top: calc(var(--safe-area-inset-top) + 10px);
   }
-  .modal-setting-back-button-icon {
-    margin-inline-end: 0;
+  .modal-setting-back-button {
+    inset-inline-start: 8px;
   }
   .modal-title {
     font-size: var(--font-ui-large);
@@ -228,7 +233,6 @@ body.is-phone .modal.mod-sidebar-layout {
   .modal-close-button {
     width: 44px;
     height: 44px;
-    inset-inline-end: 0;
     line-height: 1;
     color: var(--text-normal);
     top: var(--safe-area-inset-top);
