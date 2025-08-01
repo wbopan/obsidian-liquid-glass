@@ -1630,6 +1630,22 @@ settings:
 		description: Turn off text labels on navigation items in the left sidebar 
 		type: class-toggle
 	-
+		id: nav-item-active-style
+		title: Active file style
+		type: class-select
+		allowEmpty: false
+		default: nav-item-baseline
+		options:
+			-
+				label: Baseline
+				value: nav-item-baseline
+			-
+				label: Subtle
+				value: nav-item-subtle
+			-
+				label: Strong
+				value: nav-item-strong
+	-
 		id: nav-item-white-space
 		title: Trim file names in sidebars
 		type: variable-select
