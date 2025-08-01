@@ -3,18 +3,16 @@ body.is-mobile {
   --radius-m: 16px;
   --radius-l: 24px;
   --radius-xl: 32px;
+  --mobile-sidebar-width: 100%;
 
-  --system-status-background: var(--background-secondary);
   --tab-switcher-menubar-background: var(--background-secondary);
   --tab-switcher-preview-radius: var(--radius-m);
+
+  --metadata-divider-width: 0;
 }
 
 body.is-phone {
-  .app-container,
-  .workspace {
-    background-color: var(--background-secondary);
-    overflow: hidden;
-  }
+  --mobile-sidebar-radius: 0;
 
   // Animation
   .app-container:has(> .horizontal-main-container > .workspace > .workspace-drawer:not([style*="display: none;"])),
@@ -30,17 +28,10 @@ body.is-phone {
 
   // Editor panel
   .mod-root {
-    background-color: var(--background-secondary);
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 
-    .view-header {
-      background-color: transparent !important;
-    }
     .view-header-title-container {
       opacity: 1;
-    }
-    .view-content {
-      border-radius: var(--radius-xl);
     }
   }
 
@@ -69,7 +60,7 @@ body.is-phone {
 
   // Navbar
   .mobile-navbar {
-    background-color: transparent;
+    border-top: var(--border-width) solid var(--background-modifier-border);
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
     padding-right: max(var(--safe-area-inset-right), 24px);
     padding-left: max(var(--safe-area-inset-right), 24px);

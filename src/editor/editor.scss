@@ -66,7 +66,7 @@
 .view-header-title-container.webviewer-address-container {
   padding: 0;
 }
-.view-header:not(.view-header-always-show) .view-header-title-container:not(:hover) {
+body:not(.is-mobile) .view-header:not(.view-header-always-show) .view-header-title-container:not(:hover) {
   opacity: 0;
 }
 body.view-header-title-hidden .view-header-title-container {
