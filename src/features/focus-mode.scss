@@ -1,4 +1,4 @@
-body.focus-view .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root {
+body.focus-view:not(.is-popout-window) .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root {
   .workspace-tab-header-container {
     height: 0px;
     opacity: 0;
