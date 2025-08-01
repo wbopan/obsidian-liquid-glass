@@ -48,7 +48,7 @@ body.layout-cards:not(.is-mobile) {
       opacity: 0;
     }
     .workspace-leaf-content > .nav-header,
-    .workspace-leaf-content > .view-content > div:not(.nav-buttons-container) {
+    .workspace-leaf-content > .view-content > div:not(.nav-buttons-container):not(.graph-controls) {
       padding-top: 8px;
       padding-bottom: 0;
     }
