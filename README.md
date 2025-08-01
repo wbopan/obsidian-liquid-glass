@@ -19,27 +19,29 @@ Baseline provides a comprehensive [Style Settings Migration Tool](https://aaaaal
 
 ## Overview
 
-- **Minimal interface** — Clean, organized look and feel, with playful animations and effects.
-
-  ![Screenshot of Baseline theme for Obsidian in different color schemes.](img/minimal.png)
-
 - **Beautifully yours** — Customize your own experience to your heart's content with [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
 
-  ![Screenshot of Baseline theme for Obsidian, showcasing different styles provided with Style Settings plugin.](img/customizable.png)
+  ![Screenshot of Baseline theme for Obsidian, showcasing various interface elements.](img/colors.png)
 
-- **Optimized for mobile** — Redesigned modals, menu, editor, search, and more, with comfortable spacing for usability.
+- **Minimal interface** — Clean, organized look and feel, with playful animations and effects.
 
-  ![Screenshot of Baseline theme for Obsidian on mobile.](img/mobile.png)
+  ![Screenshot of Baseline theme for Obsidian in different color schemes.](img/elements.png)
+
+- **Optimized for mobile** — Enhanced navigation, menu, editor, and more, with comfortable spacing for usability.
+
+  ![Screenshots of Baseline theme for Obsidian on mobile, on the left is a screenshot of the file navigation, on the right is a screenshot of the text editor.](img/mobile.png)
 
 ## Features
 
 ### Helper Class
 
-Cupertino supports **all** helper classes (e.g. block width, cards, etc.) from [Minimal](https://github.com/kepano/obsidian-minimal). Please refer to [minimal.guide](https://minimal.guide) for all available features.
+Baseline supports all helper classes (e.g. block width, cards, etc.) from [Minimal](https://github.com/kepano/obsidian-minimal).
+
+Please refer to [minimal.guide](https://minimal.guide) for all available features.
 
 ### Customization
 
-Most features are enable by default, [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
+Select features are enable by default, [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
 is **_not_** required.
 
 However, if you prefer to customize your own experience, Baseline provides most options from [Minimal](https://github.com/kepano/obsidian-minimal/), [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/), and [Things 2](https://github.com/colineckert/obsidian-things/), with more to come.
