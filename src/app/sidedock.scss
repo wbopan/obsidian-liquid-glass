@@ -91,11 +91,15 @@ body:not(.is-mobile) .mod-sidedock {
   .workspace-leaf-content > .node-insert-event,
   .workspace-leaf-content > .view-content,
   .workspace-leaf-content > .nav-header {
-    padding: 0 16px 8px;
+    padding: 0 16px;
 
     > div:not(.nav-buttons-container) {
       padding: 0;
     }
+  }
+
+  .workspace-leaf-content > .nav-header {
+    padding-bottom: 8px;
   }
 
   // Panel actions style
