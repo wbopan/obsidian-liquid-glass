@@ -89,6 +89,12 @@ body.layout-border:not(.is-mobile) {
     }
   }
 
+  &.show-ribbon:not(.labeled-nav-off) .workspace-split.mod-sidedock.mod-left-split .mod-top-left-space {
+    .workspace-tab-header-container-inner {
+      margin-top: calc(var(--header-height) - 8px);
+    }
+  }
+
   .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
     padding-left: 8px;
 
