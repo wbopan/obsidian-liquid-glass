@@ -2,15 +2,15 @@
 
 ### From the creator of [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino/)
 
-Baseline sets a new standard for your Obsidian vault experience. Sleek, familiar, and effortlessly minimal, with endless ways to make it yours, where less becomes so much more.
+Baseline sets a new standard for your Obsidian vault experience — sleek, familiar, and effortlessly minimal, offering endless ways to make it yours.
 
-[Support me and my work](https://www.buymeacoffee.com/sevenaxis) so I can keep regular updates and fixes. You’re also welcomed to submit pull requests.
+[Support me and my work](https://www.buymeacoffee.com/sevenaxis) so I can keep providing regular updates and fixes. You’re also welcome to submit pull requests.
 
 <a href="https://www.buymeacoffee.com/sevenaxis" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Coming from other themes?
 
-Baseline provides a comprehensive [Style Settings Migration Tool](https://aaaaalexis.github.io/obsidian-baseline/), allowing you to seamlessly copy your settings from other themes over. As of now, following themes are supported:
+Baseline provides a [Style Settings Migration Tool](https://aaaaalexis.github.io/obsidian-baseline/), allowing you to seamlessly copy your settings from other themes. For now, the following themes are supported:
 
 - [Minimal](https://github.com/kepano/obsidian-minimal/) by kepano
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/) by AnubisNekhet
@@ -19,15 +19,15 @@ Baseline provides a comprehensive [Style Settings Migration Tool](https://aaaaal
 
 ## Overview
 
-- **Beautifully yours** — Customize your own experience to your heart's content with [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
+- **Beautifully yours** — Customize your experience to your heart's content with [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
 
-  ![Screenshot of Baseline theme for Obsidian, showcasing various interface elements.](img/colors.png)
+  ![Screenshot of Baseline theme for Obsidian in 6 different color schemes.](img/colors.png)
 
 - **Minimal interface** — Clean, organized look and feel, with playful animations and effects.
 
-  ![Screenshot of Baseline theme for Obsidian in different color schemes.](img/elements.png)
+  ![Composite image of various interface elements from Baseline theme for Obsidian.](img/elements.png)
 
-- **Optimized for mobile** — Enhanced navigation, menu, editor, and more, with comfortable spacing for usability.
+- **Optimized for mobile** — Enhanced navigation, menus, editor, and more, with comfortable spacing for better usability.
 
   ![Screenshots of Baseline theme for Obsidian on mobile, on the left is a screenshot of the file navigation, on the right is a screenshot of the text editor.](img/mobile.png)
 
@@ -41,18 +41,17 @@ Please refer to [minimal.guide](https://minimal.guide) for all available feature
 
 ### Customization
 
-Select features are enable by default, [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
-is **_not_** required.
+Selected features are enabled by default. [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is **_not_** required.
 
-However, if you prefer to customize your own experience, Baseline provides most options from [Minimal](https://github.com/kepano/obsidian-minimal/), [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/), and [Things 2](https://github.com/colineckert/obsidian-things/), with more to come.
+However, if you prefer to customize your own experience, Baseline provides extensive customization options.
 
 ## Philosophy
 
 ### Less _and_ more
 
-As software design continues to evolve, Obsidian's interface is starting to show its age. A lot of the highly customizable themes stick to Obsidian's default style, while opinionated ones compromise on customizability.
+As software design continues to evolve, Obsidian's interface is starting to show its age. Many highly customizable themes stick to Obsidian's default style, while more opinionated ones compromise on customizability.
 
-A simple and modern customizable theme is created to fill the gap, with tools designed to make your transition more seamless, **Baseline** strives to become the baseline for Obsidian experience moving forward.
+This simple and modern customizable theme fills the gap, with tools designed to make your transition seamless. **Baseline** strives to become the baseline for everyone's Obsidian experience moving forward.
 
 ## Credits
 
