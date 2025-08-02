@@ -83,8 +83,8 @@ body.is-mobile {
   }
 }
 
-// Editor panel: Cupertino
-body.tabs-cupertino .workspace .mod-root {
+// Editor panel: Floating
+body.tabs-floating .workspace .mod-root {
   --tab-radius-active: var(--tab-radius);
   --tab-curve: 0;
 

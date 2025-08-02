@@ -31,6 +31,9 @@ body:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
     order: -1;
     margin-left: auto;
   }
+  .sidebar-toggle-button .clickable-icon {
+    height: calc(var(--header-height) - 16px);
+  }
 }
 
 body.labeled-nav-off .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
