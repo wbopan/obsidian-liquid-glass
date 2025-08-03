@@ -167,6 +167,25 @@ body:not(.is-mobile) .mod-sidedock {
 body.hide-help .workspace-drawer-vault-actions .clickable-icon:first-child {
   display: none;
 }
+body.large-new-note .workspace-split.mod-sidedock .workspace-leaf-content[data-type="file-explorer"] {
+  .nav-header:hover {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .nav-action-button:first-child {
+      flex: 1;
+      box-shadow: 0 0 0 1px var(--background-modifier-border);
+    }
+  }
+
+  .nav-header .nav-action-button:first-child::after {
+    content: attr(aria-label);
+    font-size: var(--font-ui-smaller);
+    color: var(--icon-color);
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+}
 
 // Mobile drawer
 body.is-mobile .workspace-drawer {

@@ -10,7 +10,7 @@ settings:
 		level: 1
 		collapsed: true
 		markdown: true
-		description: For **Minimal**, **AnuPpuccin** or **Things 2** user, use [Style Settings migration tool](https://aaaaalexis.github.io/obsidian-baseline/) to seamlessly copy your settings.
+		description: For **Minimal**, **AnuPpuccin**, **Border** or **Things 2** user, use [Style Settings migration tool](https://aaaaalexis.github.io/obsidian-baseline/) to seamlessly copy your settings.
 	-
 		id: colors
 		title: Colors
@@ -591,14 +591,14 @@ settings:
 				value: italic
 	-
 		id: h1-transform
-		title: H1 font style
+		title: H1 text case
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
 			-
-				label: None
-				value: none
+				label: Normal
+				value: normal
 			-
 				label: Capitalize
 				value: capitalize
@@ -678,14 +678,14 @@ settings:
 				value: italic
 	-
 		id: h2-transform
-		title: H2 font style
+		title: H2 text case
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
 			-
-				label: None
-				value: none
+				label: Normal
+				value: normal
 			-
 				label: Capitalize
 				value: capitalize
@@ -765,14 +765,14 @@ settings:
 				value: italic
 	-
 		id: h3-transform
-		title: H3 font style
+		title: H3 text case
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
 			-
-				label: None
-				value: none
+				label: Normal
+				value: normal
 			-
 				label: Capitalize
 				value: capitalize
@@ -852,14 +852,14 @@ settings:
 				value: italic
 	-
 		id: h4-transform
-		title: H4 font style
+		title: H4 text case
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
 			-
-				label: None
-				value: none
+				label: Normal
+				value: normal
 			-
 				label: Capitalize
 				value: capitalize
@@ -939,14 +939,14 @@ settings:
 				value: italic
 	-
 		id: h5-transform
-		title: H5 font style
+		title: H5 text case
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
 			-
-				label: None
-				value: none
+				label: Normal
+				value: normal
 			-
 				label: Capitalize
 				value: capitalize
@@ -1026,14 +1026,14 @@ settings:
 				value: italic
 	-
 		id: h6-transform
-		title: H6 font style
+		title: H6 text case
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
 			-
-				label: None
-				value: none
+				label: Normal
+				value: normal
 			-
 				label: Capitalize
 				value: capitalize
@@ -1284,6 +1284,13 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: canvas-background
+		title: Canvas background
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: canvas-dot-pattern
 		title: Canvas dot pattern
 		description: Color for background dot pattern
@@ -1426,20 +1433,20 @@ settings:
 	-
 		id: embed-strict
 		title: Use strict embed style globally
-		description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+		description: Embeds appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
 		type: class-toggle
 		default: false
 	-
 		id: embed-hide-title
 		title: Hide embed titles
-		description: Hide title of the transcluded file
+		description: Hide title of the embed file
 		type: class-toggle
 		default: false
 	-
 		id: embed-max-height
 		title: Maximum height of embeds
 		type: variable-text
-		description: For transcluded text, accepts valid CSS units
+		description: Accepts valid CSS units
 		default: ''
 	-
 		id: embed-background
@@ -2009,6 +2016,11 @@ settings:
 		id: labeled-nav-off
 		title: Disable text labels for primary navigation
 		description: Turns off text labels on navigation items in the left sidebar 
+		type: class-toggle
+	-
+		id: large-new-note
+		title: Large new note button
+		description: Adds text label and background on new note button in the left sidebar
 		type: class-toggle
 	-
 		id: rainbow-folders
