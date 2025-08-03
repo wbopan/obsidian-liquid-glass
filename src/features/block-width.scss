@@ -4,9 +4,6 @@ body {
   --line-width-wide: 50rem;
   --max-width: 90%;
 }
-.markdown-source-view {
-  --file-line-width: 40rem !important;
-}
 .wide,
 .table-wide,
 .img-wide,
@@ -84,7 +81,7 @@ body {
     max-width: var(--table-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-table) {
-    max-width: 40rem !important;
+    max-width: var(--line-width) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: calc(100% - var(--file-margins) * 2);
@@ -108,7 +105,7 @@ body {
     max-width: var(--img-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-p:has(img)) {
-    max-width: 40rem !important;
+    max-width: var(--line-width) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: calc(100% - var(--file-margins) * 2);
@@ -132,7 +129,7 @@ body {
     max-width: var(--iframe-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-p:has(iframe)) {
-    max-width: 40rem !important;
+    max-width: var(--line-width) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: calc(100% - var(--file-margins) * 2);
@@ -156,7 +153,7 @@ body {
     max-width: var(--map-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-pre:has(.block-language-leaflet)) {
-    max-width: 40rem !important;
+    max-width: var(--line-width) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: calc(100% - var(--file-margins) * 2);
@@ -180,7 +177,7 @@ body {
     max-width: var(--chart-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-pre:has(.block-language-chart)) {
-    max-width: 40rem !important;
+    max-width: var(--line-width) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: calc(100% - var(--file-margins) * 2);
