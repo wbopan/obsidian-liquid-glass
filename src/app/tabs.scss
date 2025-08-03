@@ -108,11 +108,11 @@ body.tabs-underline .workspace .mod-root {
     gap: 0;
   }
   .workspace-tab-header.is-active {
-    border-bottom: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--background-modifier-border-focus);
     padding-top: 1px;
   }
   .workspace-tab-header:not(.is-active):hover {
-    border-bottom: 2px solid var(--background-modifier-border-hover);
+    border-bottom: 2px solid var(--background-modifier-border);
     padding-top: 1px;
 
     .workspace-tab-header-inner {

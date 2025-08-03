@@ -6,6 +6,12 @@ body.layout-cards:not(.is-mobile) {
   .workspace.is-left-sidedock-open .workspace-split.mod-root .workspace-tab-header-container-inner {
     padding-left: 24px;
   }
+  &.tabs-underline .workspace.is-left-sidedock-open .workspace-split.mod-root .workspace-tab-header-container-inner {
+    padding-left: 16px;
+  }
+  &.tabs-floating .workspace.is-left-sidedock-open .workspace-split.mod-root .workspace-tab-header-container-inner {
+    padding-left: 8px;
+  }
 
   .workspace-split.mod-root .workspace-tabs .workspace-tab-container {
     border-radius: var(--radius-l);
