@@ -191,6 +191,20 @@
               }
             }
           }
+          // Remove conflicts where all values are identical
+          for (const key in conflicts) {
+            const vals = conflicts[key];
+            if (vals.every((v) => v === vals[0])) {
+              newPrefs[key] = vals[0];
+              delete conflicts[key];
+            }
+          }
+          // Deduplicate conflict values
+          for (const key in conflicts) {
+            const vals = conflicts[key];
+            // Only keep unique values
+            conflicts[key] = Array.from(new Set(vals));
+          }
           return { newPrefs, unsupported, themeBases, conflicts };
         }
 
@@ -214,19 +228,36 @@
           unsupportedDiv.innerHTML = html;
         }
 
-        function renderConflicts(conflicts, prefs) {
+        async function getBaselineLabels() {
+          if (getBaselineLabels.cache) return getBaselineLabels.cache;
+          const res = await fetch("mapping-baseline.json");
+          if (!res.ok) throw new Error(`Status: ${res.status}`);
+          const labels = await res.json();
+          getBaselineLabels.cache = labels;
+          return labels;
+        }
+
+        async function renderConflicts(conflicts, prefs) {
           if (!Object.keys(conflicts).length) return (conflictDiv.innerHTML = "");
           let html = `<h2>Conflicts</h2>`;
+          const labels = await getBaselineLabels().catch(() => ({}));
           for (const key in conflicts) {
             const strippedKey = key.replace(/^baseline-style@@/, "");
+            // Use only the part before @@light/@@dark for label lookup
+            const labelKey = strippedKey.replace(/@@(light|dark)$/, "");
             const themeType = strippedKey.includes("@@light") ? "Light Theme" : strippedKey.includes("@@dark") ? "Dark Theme" : "";
-            const displayKey = strippedKey.replace(/@@(light|dark)$/, "");
+            // Use label from mapping-baseline.json if available
+            const displayKey = labels[labelKey] || labelKey;
             html += `<div class="conflict-item"><div class="conflict-key">${displayKey}</div>`;
             if (themeType) html += `<div class="conflict-theme">${themeType}</div>`;
             html += `<div class="conflict-actions">`;
             conflicts[key].forEach((val, idx) => {
+              // Try to get a label for the value if available
+              let valueLabel = val;
+              // If labels for values are present, use them (optional, fallback to value)
+              if (labels && labels[val]) valueLabel = labels[val];
               const isColor = /^#[0-9A-Fa-f]{6}$/.test(val);
-              html += `<label data-conflict-key="${key}" data-conflict-value="${val}" class="conflict-label${idx === 0 ? " selected" : ""}">${val}`;
+              html += `<label data-conflict-key="${key}" data-conflict-value="${val}" class="conflict-label${idx === 0 ? " selected" : ""}">${valueLabel}`;
               if (isColor) html += `<span class="color-preview" style="background-color: ${val};"></span>`;
               html += `</label>`;
             });
@@ -259,10 +290,10 @@
           downloadLink.href = "data:text/json;charset=utf-8," + encodeURIComponent(str);
         }
 
-        function showResults(prefs, unsupported, themeBases, conflicts) {
+        async function showResults(prefs, unsupported, themeBases, conflicts) {
           updateOutput(prefs);
           renderUnsupported(unsupported, themeBases);
-          renderConflicts(conflicts, prefs);
+          await renderConflicts(conflicts, prefs);
         }
 
         copyBtn.onclick = () => {
