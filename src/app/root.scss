@@ -1,9 +1,9 @@
 body,
 body.theme-light,
 body.theme-dark {
-  --font-interface-theme: "Inter";
-  --font-text-theme: "Inter";
-  --font-print-theme: "Inter";
+  --font-interface-theme: "Inter4";
+  --font-text-theme: "Inter4";
+  --font-print-theme: "Inter4";
 
   --titlebar-background: transparent;
   --titlebar-background-focused: transparent;
@@ -24,6 +24,13 @@ body.theme-dark {
   --anim-duration-fast: calc(160ms * var(--anim-speed-modifier));
   --anim-duration-moderate: calc(320ms * var(--anim-speed-modifier));
   --anim-duration-slow: calc(640ms * var(--anim-speed-modifier));
+
+  --icon-stroke-modifier: 1;
+  --icon-xs-stroke-width: calc(2px * var(--icon-stroke-modifier));
+  --icon-s-stroke-width: calc(2px * var(--icon-stroke-modifier));
+  --icon-m-stroke-width: calc(1.75px * var(--icon-stroke-modifier));
+  --icon-l-stroke-width: calc(1.75px * var(--icon-stroke-modifier));
+  --icon-xl-stroke-width: calc(1.25px * var(--icon-stroke-modifier));
 
   background-color: var(--background-secondary);
 }

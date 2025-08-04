@@ -19,7 +19,7 @@ body.is-mobile {
   background-color: transparent;
 }
 .sidebar-toggle-button {
-  height: unset;
+  height: fit-content;
   display: block;
 }
 .sidebar-toggle-button .clickable-icon {
@@ -200,7 +200,7 @@ body:not(.compact-tabs-off) .workspace .mod-sidedock {
 }
 
 // Side panels: Tab names
-body.tab-names-on {
+body.tab-names-all {
   --sidebar-tab-text-display: flex;
 }
 body.tab-names-single .workspace-tab-header:only-child {

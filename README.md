@@ -15,7 +15,8 @@ Baseline provides a [Style Settings Migration Tool](https://aaaaalexis.github.io
 - [Minimal](https://github.com/kepano/obsidian-minimal/) by kepano
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/) by AnubisNekhet
 - [Things 2](https://github.com/colineckert/obsidian-things/) by colineckert
-- [Border](https://github.com/Akifyss/obsidian-border/) by colineckert
+- [Border](https://github.com/Akifyss/obsidian-border/) by Akifyss
+- [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum/) by jdanielmourao
 - ...with more to come.
 
 ## Overview

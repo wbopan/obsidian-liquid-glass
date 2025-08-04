@@ -67,11 +67,11 @@ body.nav-item-strong {
 }
 
 // Desktop sidedock
-body:not(.is-mobile) .mod-sidedock {
-  > .workspace-leaf-resize-handle:not(:hover) {
-    border-color: transparent;
-  }
+body:not(.layout-classic, .layout-border, .contrast-light-tonal, .contrast-dark-tonal) .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
+  border-color: transparent;
+}
 
+body:not(.is-mobile) .mod-sidedock {
   .workspace-tab-container {
     position: relative;
   }
@@ -122,7 +122,7 @@ body:not(.is-mobile) .mod-sidedock {
 }
 
 // Hide vault switcher
-body:not(.is-mobile, .hide-vault-switcher-off) .mod-sidedock.workspace-split.mod-left-split {
+body:not(.is-mobile, .hide-vault-switcher-off) .mod-sidedock.mod-left-split {
   .workspace-sidedock-vault-profile {
     position: absolute;
     right: 0;
@@ -167,7 +167,7 @@ body:not(.is-mobile, .hide-vault-switcher-off) .mod-sidedock.workspace-split.mod
 body.hide-help .workspace-drawer-vault-actions .clickable-icon:first-child {
   display: none;
 }
-body.large-new-note .workspace-split.mod-sidedock .workspace-leaf-content[data-type="file-explorer"] {
+body.large-new-note .mod-sidedock .workspace-leaf-content[data-type="file-explorer"] {
   .nav-header:hover {
     padding-top: 8px;
     padding-bottom: 8px;

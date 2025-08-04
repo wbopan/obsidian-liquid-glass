@@ -334,7 +334,7 @@
       "name": "Black mobile background"
     },
     "floating-button-off": { "newId": "mode-switcher-off" },
-    "active-line": { "newId": "active-line-on" },
+    "active-line-style": { "newId": "active-line-style" },
     "fancy-code": { "newId": "code-line-numbers" },
     "fancy-highlight": {
       "unsupported": true,
@@ -505,7 +505,7 @@
     },
     "ctp-custom-crust": { "newId": "background-secondary-alt" },
     "anp-active-line": {
-      "newId": "active-line-on",
+      "newId": "active-line-style",
       "valueMapping": {
         "__fallback": false,
         "anp-no-highlight": false,
@@ -1980,7 +1980,7 @@
   },
   "Editor": {
     "__name": "Border (Editor)",
-    "line-hover-indicator": { "newId": "active-line-on" },
+    "line-hover-indicator": { "newId": "active-line-style" },
     "focus-indicator-list-level": {
       "unsupported": true,
       "category": "Focus indicator",
@@ -2051,11 +2051,7 @@
       "category": "Headings",
       "name": "Inline title text color"
     },
-    "h1-divider-on": {
-      "unsupported": true,
-      "category": "Headings",
-      "name": "Enable H1 divider"
-    },
+    "h1-divider-on": { "newId": "h1-l" },
     "h1-text-transform": { "newId": "h1-transform" },
     "h1-accent-color": { "newId": "h1-color" },
     "h1-color-select": {
@@ -2063,11 +2059,7 @@
       "category": "Headings",
       "name": "H1 text color"
     },
-    "h2-divider-on": {
-      "unsupported": true,
-      "category": "Headings",
-      "name": "Enable H2 divider"
-    },
+    "h2-divider-on": { "newId": "h3-l" },
     "h2-text-transform": { "newId": "h2-transform" },
     "h2-accent-color": { "newId": "h2-color" },
     "h2-color-select": {
@@ -2075,11 +2067,7 @@
       "category": "Headings",
       "name": "H2 text color"
     },
-    "h3-divider-on": {
-      "unsupported": true,
-      "category": "Headings",
-      "name": "Enable H3 divider"
-    },
+    "h3-divider-on": { "newId": "h3-l" },
     "h3-text-transform": { "newId": "h3-transform" },
     "h3-accent-color": { "newId": "h3-color" },
     "h3-color-select": {
@@ -2087,11 +2075,7 @@
       "category": "Headings",
       "name": "H3 text color"
     },
-    "h4-divider-on": {
-      "unsupported": true,
-      "category": "Headings",
-      "name": "Enable H4 divider"
-    },
+    "h4-divider-on": { "newId": "h4-l" },
     "h4-text-transform": { "newId": "h4-transform" },
     "h4-accent-color": { "newId": "h4-color" },
     "h4-color-select": {
@@ -2099,11 +2083,7 @@
       "category": "Headings",
       "name": "H4 text color"
     },
-    "h5-divider-on": {
-      "unsupported": true,
-      "category": "Headings",
-      "name": "Enable H5 divider"
-    },
+    "h5-divider-on": { "newId": "h5-l" },
     "h5-text-transform": { "newId": "h5-transform" },
     "h5-accent-color": { "newId": "h5-color" },
     "h5-color-select": {
@@ -2111,11 +2091,7 @@
       "category": "Headings",
       "name": "H5 text color"
     },
-    "h6-divider-on": {
-      "unsupported": true,
-      "category": "Headings",
-      "name": "Enable H6 divider"
-    },
+    "h6-divider-on": { "newId": "h6-l" },
     "h6-text-transform": { "newId": "h6-transform" },
     "h6-accent-color": { "newId": "h6-color" },
     "h6-color-select": {
@@ -2437,6 +2413,437 @@
       "unsupported": true,
       "category": "Checklist",
       "name": "Colorful checkbox"
+    }
+  },
+  "sanctum": {
+    "__name": "Sanctum",
+    "light-mode-contrast-mode": {
+      "newId": "background-contrast-light",
+      "valueMapping": {
+        "__fallback": "contrast-light-tonal",
+        "sanctum-default-light": "contrast-light-tonal",
+        "sanctum-contrast-light": "contrast-light",
+        "sanctum-white": "contrast-light-white"
+      }
+    },
+    "dark-mode-contrast-mode": {
+      "newId": "background-contrast-dark",
+      "valueMapping": {
+        "__fallback": "contrast-dark-tonal",
+        "sanctum-default-light": "contrast-dark-tonal",
+        "sanctum-contrast-light": "contrast-dark",
+        "sanctum-white": "contrast-dark-black"
+      }
+    },
+    "color-accent-rgb-l": {
+      "unsupported": true,
+      "name": "Accent color light mode"
+    },
+    "color-accent-rgb-d": {
+      "unsupported": true,
+      "name": "Accent color dark mode"
+    },
+    "font-editor-theme": {
+      "unsupported": true,
+      "name": "Editor font"
+    },
+    "file-line-width": { "newId": "line-width" },
+    "active-line-accent": {
+      "newId": "active-line-style",
+      "valueMapping": {
+        "__fallback": "active-line-off",
+        "transparent": "active-line-off",
+        "var(--background-hover)": "active-line-style-side",
+        "rgba(var(--color-accent-rgb), .3)": "active-line-style-background"
+      }
+    },
+    "aside-counter": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Toggle aside counter"
+    },
+    "aside-border": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Toggle aside borders"
+    },
+    "aside-border-color": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Aside border color"
+    },
+    "aside-text-color": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Aside text color"
+    },
+    "aside-background": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Aside background color"
+    },
+    "aside-background-hover": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Aside background hover color"
+    },
+    "blockquote-marker": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Toggle blockquote short divider"
+    },
+    "blockquote-border": {
+      "unsupported": true,
+      "category": "Blockquotes",
+      "name": "Toggle blockquote horizontal dividers"
+    },
+    "callout-border-width": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout border width"
+    },
+    "callout-border-opacity": {
+      "unsupported": true,
+      "category": "Callouts",
+      "name": "Callout border color opacity"
+    },
+    "code-lines": { "newId": "code-line-numbers" },
+    "code-label": {
+      "unsupported": true,
+      "category": "Code",
+      "name": "Toggle code block labels"
+    },
+    "code-border": {
+      "unsupported": true,
+      "category": "Code",
+      "name": "Code borders"
+    },
+    "code-normal-inline": { "newId": "code-normal" },
+    "syntax-highlighting": {
+      "unsupported": true,
+      "category": "Code",
+      "name": "Syntax Highlighting color scheme"
+    },
+    "clean-embeds": { "newId": "embed-strict" },
+    "embed-border-color": {
+      "unsupported": true,
+      "category": "Embeds / Transclusions",
+      "name": "Embed border color"
+    },
+    "embed-border-width": {
+      "unsupported": true,
+      "category": "Embeds / Transclusions",
+      "name": "Embed left border width"
+    },
+    "highlight": {
+      "unsupported": true,
+      "category": "Emphasis",
+      "name": "Highlight background color"
+    },
+    "hide-vault-title": {
+      "newId": "hide-vault-switcher",
+      "valueMapping": {
+        "__fallback": "hide-vault-switcher-default",
+        "true": "hide-vault-switcher-default",
+        "false": "hide-vault-switcher-off"
+      }
+    },
+    "wrap-nav-titles": {
+      "newId": "nav-item-white-space",
+      "valueMapping": {
+        "__fallback": "pre",
+        "true": "none",
+        "false": "pre"
+      }
+    },
+    "heading-outline": {
+      "unsupported": true,
+      "category": "Headings",
+      "name": "Heading outline"
+    },
+    "h1-line": { "newId": "h1-l" },
+    "h1-variant": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "small-caps": "small-caps",
+        "all-small-caps": "all-small-caps",
+        "petite-caps": "small-caps",
+        "all-petite-caps": "all-small-caps",
+        "titling-caps": "normal"
+      }
+    },
+    "h1-style": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "italic": "italic",
+        "oblique": "italic"
+      }
+    },
+    "h2-line": { "newId": "h2-l" },
+    "h2-variant": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "small-caps": "small-caps",
+        "all-small-caps": "all-small-caps",
+        "petite-caps": "small-caps",
+        "all-petite-caps": "all-small-caps",
+        "titling-caps": "normal"
+      }
+    },
+    "h2-style": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "italic": "italic",
+        "oblique": "italic"
+      }
+    },
+    "h3-line": { "newId": "h3-l" },
+    "h3-variant": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "small-caps": "small-caps",
+        "all-small-caps": "all-small-caps",
+        "petite-caps": "small-caps",
+        "all-petite-caps": "all-small-caps",
+        "titling-caps": "normal"
+      }
+    },
+    "h3-style": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "italic": "italic",
+        "oblique": "italic"
+      }
+    },
+    "h4-line": { "newId": "h4-l" },
+    "h4-variant": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "small-caps": "small-caps",
+        "all-small-caps": "all-small-caps",
+        "petite-caps": "small-caps",
+        "all-petite-caps": "all-small-caps",
+        "titling-caps": "normal"
+      }
+    },
+    "h4-style": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "italic": "italic",
+        "oblique": "italic"
+      }
+    },
+    "h5-line": { "newId": "h5-l" },
+    "h5-variant": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "small-caps": "small-caps",
+        "all-small-caps": "all-small-caps",
+        "petite-caps": "small-caps",
+        "all-petite-caps": "all-small-caps",
+        "titling-caps": "normal"
+      }
+    },
+    "h5-style": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "italic": "italic",
+        "oblique": "italic"
+      }
+    },
+    "h6-line": { "newId": "h6-l" },
+    "h6-variant": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "small-caps": "small-caps",
+        "all-small-caps": "all-small-caps",
+        "petite-caps": "small-caps",
+        "all-petite-caps": "all-small-caps",
+        "titling-caps": "normal"
+      }
+    },
+    "h6-style": {
+      "valueMapping": {
+        "__fallback": "normal",
+        "normal": "normal",
+        "italic": "italic",
+        "oblique": "italic"
+      }
+    },
+    "indentation-guide-active": {
+      "unsupported": true,
+      "category": "Indentation guides",
+      "name": "Indentation guide active color"
+    },
+    "link-decoration-hover": {
+      "unsupported": true,
+      "category": "Internal links",
+      "name": "Internal link decoration (Hover)"
+    },
+    "link-style": {
+      "unsupported": true,
+      "category": "Internal links",
+      "name": "Internal link style"
+    },
+    "link-text-transform": {
+      "unsupported": true,
+      "category": "Internal links",
+      "name": "Internal link text transform"
+    },
+    "link-external-decoration-hover": {
+      "unsupported": true,
+      "category": "Internal links",
+      "name": "Internal link decoration (Hover)"
+    },
+    "link-external-style": {
+      "unsupported": true,
+      "category": "Internal links",
+      "name": "Internal link style"
+    },
+    "checkbox-color-rgb": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Checkbox color"
+    },
+    "checklist-done-decoration": {
+      "newId": "strike-lists-off",
+      "valueMapping": {
+        "__fallback": false,
+        "line-through": false,
+        "none": true
+      }
+    },
+    "checklist-done-color": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Completed task text color"
+    },
+    "checklist-done-strike-color": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Completed task text strike color"
+    },
+    "list-indent": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Nested list indentation"
+    },
+    "odd-marker": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Odd numbered list marker style"
+    },
+    "even-marker": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Even numbered list marker style"
+    },
+    "step-list": {
+      "unsupported": true,
+      "category": "Lists & Tasks",
+      "name": "Ordered list marker style"
+    },
+    "table-cell-border": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Cell borders"
+    },
+    "table-row-border": { "newId": "row-lines" },
+    "table-column-border": { "newId": "col-lines" },
+    "table-alternate-row": { "newId": "row-alt" },
+    "table-alternate-column": { "newId": "col-alt" },
+    "table-hover-row": {
+      "newId": "row-hover",
+      "valueMapping": {
+        "__fallback": false,
+        "false": true,
+        "true": false
+      }
+    },
+    "table-hover-highlight-color": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Active row highlight color"
+    },
+    "table-single-rows": { "newId": "table-no-wrap" },
+    "table-sticky-headers": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Sticky headers"
+    },
+    "table-sticky-height": {
+      "unsupported": true,
+      "category": "Tables",
+      "name": "Sticky header table max height"
+    },
+    "table-tabular-figures": { "newId": "table-tabular" },
+    "table-nums": { "newId": "table-numbers" },
+    "tag-color-hover": {
+      "unsupported": true,
+      "category": "Tags",
+      "name": "Tag text color (Hover)"
+    },
+    "tag-decoration": {
+      "unsupported": true,
+      "category": "Tags",
+      "name": "Tag text decoration"
+    },
+    "tag-decoration-hover": {
+      "unsupported": true,
+      "category": "Tags",
+      "name": "Tag text decoration (Hover)"
+    },
+    "sticky-view-actions": {
+      "unsupported": true,
+      "category": "Tab title bar",
+      "name": "Disable floating tab title bar buttons"
+    },
+    "nav-folder-indicators": {
+      "unsupported": true,
+      "category": "Navigation Items",
+      "name": "Replace folder icons with regular chevron/arrows"
+    },
+    "colorful-active-nav": { "newId": "accented-interface" },
+    "stendig": {
+      "unsupported": true,
+      "category": "Plugins",
+      "name": "Stendig-like layout"
+    },
+    "calendar-flip": {
+      "unsupported": true,
+      "category": "Plugins",
+      "name": "Flip calendar Month + Year title"
+    },
+    "calendar-dot": {
+      "unsupported": true,
+      "category": "Plugins",
+      "name": "Calendar dot color"
+    },
+    "calendar-dot-hover": {
+      "unsupported": true,
+      "category": "Plugins",
+      "name": "Calendar dot color on hover"
+    },
+    "wrap-kanban-lanes": {
+      "unsupported": true,
+      "category": "Plugins",
+      "name": "Wrap kanban lanes"
+    },
+    "no-sanctum-icons": {
+      "unsupported": true,
+      "category": "Advanced Settings",
+      "name": "Disable custom icons"
     }
   }
 }
