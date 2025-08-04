@@ -51,7 +51,7 @@ body {
       flex-direction: column;
       margin: 0;
       padding: var(--cards-padding);
-      border-radius: var(--radius-m);
+      border-radius: var(--radius-s);
       overflow: hidden;
       transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
       max-width: var(--cards-max-width);
@@ -143,7 +143,7 @@ body {
       background-color: var(--background-secondary);
       box-shadow: var(--shadow-s);
       padding: 4px;
-      border-radius: var(--radius-m);
+      border-radius: var(--radius-s);
       flex-direction: column;
       margin-top: 24px;
       width: 100%;
@@ -160,7 +160,7 @@ body {
     thead > tr > th {
       display: block;
       padding: 6px 8px;
-      border-radius: var(--radius-m);
+      border-radius: var(--radius-s);
       font-weight: 400;
       color: var(--text-normal);
       font-size: var(--font-ui-small);
@@ -190,7 +190,7 @@ body {
 
     > li {
       background-color: var(--cards-background);
-      border-radius: var(--radius-m);
+      border-radius: var(--radius-s);
       border: var(--table-border-width) solid var(--background-modifier-border);
       overflow: hidden;
       padding: 8px;

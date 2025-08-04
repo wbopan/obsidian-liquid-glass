@@ -1,3 +1,4 @@
+@use "app/style-settings.scss";
 @use "app/root.scss";
 @use "app/fonts.scss";
 @use "app/input.scss";
@@ -20,7 +21,6 @@
 @use "features/compact-actions.scss";
 @use "features/image-zoom.scss";
 @use "features/labeled-nav.scss";
-@use "features/style-settings.scss";
 @use "features/cards.scss";
 @use "features/helpers-tables.scss";
 @use "features/image-filters.scss";

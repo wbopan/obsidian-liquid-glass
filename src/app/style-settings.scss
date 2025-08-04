@@ -1,3 +1,4 @@
+/*!
 /* @settings
 
 name: Baseline
@@ -206,6 +207,33 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: interactive-hover
+		title: Highlighted interactive background
+		description: Used when hovering over buttons, dropdowns, and filled elements
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-modifier-hover
+		title: Highlighted background
+		description: Used when hovering over buttons, dividers, and outlined elements
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: background-modifier-active-hover
+		title: Active highlighted background 
+		description: Used when clicking buttons and outlined elements
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: background-modifier-border
 		title: Border color
 		type: variable-themed-color
@@ -383,7 +411,7 @@ settings:
 	-
 		id: text-faint
 		title: Faint text color
-		description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
+		description: Tertiary text such as input placeholders, empty checkboxes, and disabled statuses
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -403,6 +431,342 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+	-
+		id: interface
+		title: Interface
+		type: heading
+		level: 1
+		collapsed: true
+	-
+		id: layout-style
+		title: Layout style
+		type: class-select
+		allowEmpty: false
+		default: layout-baseline
+		options:
+			-
+				label: Baseline
+				value: layout-baseline
+			-
+				label: Cards
+				value: layout-cards
+			-
+				label: Border
+				value: layout-border
+	-
+		id: compact-status-bar-off
+		title: Disable compact status bar
+		type: class-toggle
+		default: false
+	-
+		id: animation
+		title: Animation
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: anim-motion-baseline
+		title: Animation personality profile
+		type: variable-select
+		default: cubic-bezier(0.1, 0, 0.1, 1.25)
+		options:
+			-
+				label: Playful
+				value: cubic-bezier(0.1, 0, 0.1, 1.25)
+			-
+				label: Refined
+				value: cubic-bezier(0.32, 0.72, 0, 1)
+	-
+		id: anim-speed-modifier
+		title: Animation speed modifier
+		type: variable-number-slider
+		default: 1
+		min: 0
+		max: 2
+		step: 0.1
+	-
+		id: radius
+		title: Corner radius
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: input-radius
+		title: Input radius
+		type: variable-text
+		description: Radius for buttons, text inpurs and dropdowns, accepts valid CSS border-radius value
+		default: var(--radius-s)
+	-
+		id: radius-s-custom
+		title: Small radius
+		type: variable-number-slider
+		description: Background color for buttons and dropdowns
+		default: 8
+		min: 0
+		max: 16
+		step: 1
+		format: px
+	-
+		id: radius-m-custom
+		title: Medium radius
+		type: variable-number-slider
+		default: 12
+		min: 0
+		max: 24
+		step: 1
+		format: px
+	-
+		id: radius-l-custom
+		title: Large radius
+		type: variable-number-slider
+		default: 16
+		min: 0
+		max: 32
+		step: 1
+		format: px
+	-
+		id: radius-xl-custom
+		title: Extra large radius
+		type: variable-number-slider
+		default: 24
+		min: 0
+		max: 48
+		step: 1
+		format: px
+	-
+		id: tabs
+		title: Tabs
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: header-height
+		title: Tab bar height
+		type: variable-text
+		default: 52px
+	-
+		id: tabs-style
+		title: Tab style
+		type: class-select
+		allowEmpty: false
+		default: tabs-default
+		options:
+			-
+				label: Baseline
+				value: tabs-default
+			-
+				label: Floating
+				value: tabs-floating
+			-
+				label: Underline
+				value: tabs-underline
+	-
+		id: tab-stacks
+		title: Tab stacks
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: tab-stacked-pane-width
+		title: Stacked width
+		type: variable-number
+		description: Width of a stacked tab in pixels
+		default: 700
+		format: px
+	-
+		id: tab-stacked-header-width
+		title: Spine width
+		type: variable-number
+		description: Width of the spine in pixels
+		default: 40
+		format: px
+	-
+		id: tab-stacked-spine-orientation
+		title: Spine text orientation
+		type: class-select
+		default: tab-stack-top
+		options:
+			-
+				label: Top
+				value: tab-stack-top
+			-
+				label: Top flipped
+				value: tab-stack-top-flipped
+			-
+				label: Bottom
+				value: tab-stack-bottom
+			-
+				label: Bottom flipped
+				value: tab-stack-bottom-flipped
+			-
+				label: Center
+				value: tab-stack-center
+			-
+				label: Center flipped
+				value: tab-stack-center-flipped
+	-
+		id: tab-stacked-spine-order
+		title: Spine element order
+		type: variable-select
+		default: row
+		options:
+			-
+				label: Default
+				value: row
+			-
+				label: Reversed
+				value: row-reverse
+	-
+		id: sidebars
+		title: Sidebars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: labeled-nav-off
+		title: Disable text labels for primary navigation
+		description: Turns off text labels on navigation items in the left sidebar 
+		type: class-toggle
+	-
+		id: large-new-note
+		title: Large new note button
+		description: Adds text label and background on new note button in the left sidebar
+		type: class-toggle
+	-
+		id: rainbow-folders
+		title: Rainbow folders
+		description: Adds colored indicator on the left side of folder
+		type: class-toggle
+	-
+		id: hide-help
+		title: Hide help button
+		type: class-toggle
+		default: false
+	-
+		id: hide-vault-switcher
+		title: Hide vault switcher
+		type: class-select
+		allowEmpty: false
+		default: hide-vault-switcher-default
+		options:
+			-
+				label: Always
+				value: hide-vault-switcher-default
+			-
+				label: Never
+				value: hide-vault-switcher-off
+	-
+		id: nav-item-active-style
+		title: Active file style
+		type: class-select
+		allowEmpty: false
+		default: nav-item-baseline
+		options:
+			-
+				label: Baseline
+				value: nav-item-baseline
+			-
+				label: Subtle
+				value: nav-item-subtle
+			-
+				label: Strong
+				value: nav-item-strong
+	-
+		id: nav-item-white-space
+		title: Trim file names in sidebars
+		type: variable-select
+		allowEmpty: false
+		default: pre
+		options:
+			-
+				label: Trim
+				value: pre
+			-
+				label: No Trim
+				value: none
+	-
+		id: sidebar-compact-actions
+		title: Compact panel actions
+		type: class-select
+		allowEmpty: false
+		default: compact-actions-default
+		options:
+			-
+				label: Enabled
+				value: compact-actions-default
+			-
+				label: Disabled
+				value: compact-actions-off
+	-
+		id: sidebar-compact-tabs
+		title: Compact tabs bars
+		type: class-select
+		allowEmpty: false
+		default: compact-tabs-default
+		options:
+			-
+				label: Non-top panels
+				value: compact-tabs-default
+			-
+				label: Disabled
+				value: compact-tabs-off
+	-
+		id: sidebar-tabs-names
+		title: Tab names
+		type: class-select
+		allowEmpty: false
+		default: tab-names-off
+		options:
+			-
+				label: Hidden
+				value: tab-names-off
+			-
+				label: Visible
+				value: tab-names-on
+			-
+				label: Single tab
+				value: tab-names-single
+	-
+		id: obsidian-frame
+		title: Obsidian frame
+		type: heading
+		level: 2
+		collapsed: true
+    - 
+        id: obsidian-frame-info
+		description: Obsidian frame must be set in **Appearance** settings
+        type: info-text
+		markdown: true
+	-
+		id: window-title-off
+		title: Hide window frame title
+		description: Hide title in the custom title bar
+		type: class-toggle
+	-
+		id: titlebar-text-color-focused
+		title: Frame title color (focused)
+		description: Requires custom title bar
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-color
+		title: Frame title color (inactive)
+		description: Requires custom title bar
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-weight
+		title: Frame title font weight
+		description: Requires custom title bar
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
 	-
 		id: editor
 		title: Editor
@@ -425,15 +789,19 @@ settings:
 		id: mode-switcher-off
 		title: Disable quick mode switcher
 		type: class-toggle
-		description: Turns off mobile mode switcher quick access
+		description: Turns off mobile editor mode switcher quick access
 		default: false
 	-
 		id: tab-title-bar
 		title: Tab title bar
-		description: Tab title bar must be turned on in Appearance settings
 		type: heading
 		level: 2
 		collapsed: true
+    - 
+        id: tab-title-bar-info
+		description: Tab title bar must be turned on in **Appearance** settings
+        type: info-text
+		markdown: true
 	-
 		id: file-header-visibility
 		title: Tab title visibility
@@ -479,10 +847,14 @@ settings:
 	-
 		id: inline-title
 		title: Inline title
-		description: Inline titles must be turned on in Appearance settings
 		type: heading
 		level: 2
 		collapsed: true
+    - 
+        id: inline-title-info
+		description: Inline titles must be turned on in **Appearance** settings
+        type: info-text
+		markdown: true
 	-
 		id: inline-title-font
 		title: Inline title font
@@ -1896,251 +2268,6 @@ settings:
 				label: Circle
 				value: 100px
 	-
-		id: layout
-		title: Layout
-		type: heading
-		level: 1
-		collapsed: true
-
-	-
-		id: layout-style
-		title: Layout style
-		type: class-select
-		allowEmpty: false
-		default: layout-baseline
-		options:
-			-
-				label: Baseline
-				value: layout-baseline
-			-
-				label: Cards
-				value: layout-cards
-			-
-				label: Border
-				value: layout-border
-	-
-		id: compact-status-bar-off
-		title: Disable compact status bar
-		type: class-toggle
-		default: false
-	-
-		id: tabs
-		title: Tabs
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: header-height
-		title: Tab bar height
-		type: variable-text
-		default: 52px
-	-
-		id: tabs-style
-		title: Tab style
-		type: class-select
-		allowEmpty: false
-		default: tabs-default
-		options:
-			-
-				label: Baseline
-				value: tabs-default
-			-
-				label: Floating
-				value: tabs-floating
-			-
-				label: Underline
-				value: tabs-underline
-	-
-		id: tab-stacks
-		title: Tab stacks
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: tab-stacked-pane-width
-		title: Stacked width
-		type: variable-number
-		description: Width of a stacked tab in pixels
-		default: 700
-		format: px
-	-
-		id: tab-stacked-header-width
-		title: Spine width
-		type: variable-number
-		description: Width of the spine in pixels
-		default: 40
-		format: px
-	-
-		id: tab-stacked-spine-orientation
-		title: Spine text orientation
-		type: class-select
-		default: tab-stack-top
-		options:
-			-
-				label: Top
-				value: tab-stack-top
-			-
-				label: Top flipped
-				value: tab-stack-top-flipped
-			-
-				label: Bottom
-				value: tab-stack-bottom
-			-
-				label: Bottom flipped
-				value: tab-stack-bottom-flipped
-			-
-				label: Center
-				value: tab-stack-center
-			-
-				label: Center flipped
-				value: tab-stack-center-flipped
-	-
-		id: tab-stacked-spine-order
-		title: Spine element order
-		type: variable-select
-		default: row
-		options:
-			-
-				label: Default
-				value: row
-			-
-				label: Reversed
-				value: row-reverse
-	-
-		id: sidebars
-		title: Sidebars
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: labeled-nav-off
-		title: Disable text labels for primary navigation
-		description: Turns off text labels on navigation items in the left sidebar 
-		type: class-toggle
-	-
-		id: large-new-note
-		title: Large new note button
-		description: Adds text label and background on new note button in the left sidebar
-		type: class-toggle
-	-
-		id: rainbow-folders
-		title: Rainbow folders
-		description: Adds colored indicator on the left side of folder
-		type: class-toggle
-	-
-		id: hide-help
-		title: Hide help button
-		type: class-toggle
-		default: false
-	-
-		id: nav-item-active-style
-		title: Active file style
-		type: class-select
-		allowEmpty: false
-		default: nav-item-baseline
-		options:
-			-
-				label: Baseline
-				value: nav-item-baseline
-			-
-				label: Subtle
-				value: nav-item-subtle
-			-
-				label: Strong
-				value: nav-item-strong
-	-
-		id: nav-item-white-space
-		title: Trim file names in sidebars
-		type: variable-select
-		allowEmpty: false
-		default: pre
-		options:
-			-
-				label: Trim
-				value: pre
-			-
-				label: Full
-				value: none
-	-
-		id: sidebar-tabs-names
-		title: Tab names
-		type: class-select
-		allowEmpty: false
-		default: tab-names-off
-		options:
-			-
-				label: Hidden
-				value: tab-names-off
-			-
-				label: Visible
-				value: tab-names-on
-			-
-				label: Single tab
-				value: tab-names-single
-	-
-		id: sidebar-compact-actions
-		title: Compact panel actions
-		type: class-select
-		allowEmpty: false
-		default: compact-actions-default
-		options:
-			-
-				label: Enabled
-				value: compact-actions-default
-			-
-				label: Disabled
-				value: compact-actions-off
-	-
-		id: sidebar-compact-tabs
-		title: Compact tabs bars
-		type: class-select
-		allowEmpty: false
-		default: compact-tabs-default
-		options:
-			-
-				label: Non-top panels
-				value: compact-tabs-default
-			-
-				label: Disabled
-				value: compact-tabs-off
-	-
-		id: obsidian-frame
-		title: Obsidian frame
-		type: heading
-		description: Obsidian frame must be set in Appearance settings
-		level: 2
-		collapsed: true
-	-
-		id: window-title-off
-		title: Hide window frame title
-		description: Hide title in the custom title bar
-		type: class-toggle
-	-
-		id: titlebar-text-color-focused
-		title: Frame title color (focused)
-		description: Requires custom title bar
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: titlebar-text-color
-		title: Frame title color (inactive)
-		description: Requires custom title bar
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: titlebar-text-weight
-		title: Frame title font weight
-		description: Requires custom title bar
-		type: variable-number-slider
-		default: 600
-		min: 100
-		max: 900
-		step: 100
-	-
 		id: integrations
 		title: Integrations
 		type: heading
@@ -2196,9 +2323,12 @@ settings:
 		id: graphs
 		title: Graphs
 		type: heading
-		description: Requires closing and reopening graph panes or restarting Obsidian to apply changes
 		level: 2
 		collapsed: true
+    - 
+        id: graphs-info
+		description: Requires closing and reopening graph panes or restarting Obsidian to apply changes
+        type: info-text
 	-
 		id: graph-line
 		title: Line color

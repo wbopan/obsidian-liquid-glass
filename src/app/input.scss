@@ -2,10 +2,14 @@ body {
   --input-height: 32px;
 
   --input-radius: var(--radius-s);
-  --radius-s: 8px;
-  --radius-m: 8px;
-  --radius-l: 16px;
-  --radius-xl: 24px;
+  --radius-s: var(--radius-s-custom);
+  --radius-m: var(--radius-m-custom);
+  --radius-l: var(--radius-l-custom);
+  --radius-xl: var(--radius-xl-custom);
+  --radius-s-custom: 8px;
+  --radius-m-custom: 12px;
+  --radius-l-custom: 16px;
+  --radius-xl-custom: 24px;
   --button-radius: 100vw;
   --checkbox-radius: 4px;
 }
@@ -36,8 +40,10 @@ button:not(.clickable-icon) {
 }
 
 // Toggle
-.checkbox-container {
+body:not(.accented-interface) .checkbox-container {
   --interactive-accent: var(--color-green);
+}
+.checkbox-container {
   box-shadow: none;
 }
 .checkbox-container:after {

@@ -308,10 +308,7 @@
       "unsupported": true,
       "name": "Hide setting descriptions"
     },
-    "animations": {
-      "unsupported": true,
-      "name": "Animation speed"
-    },
+    "animations": { "newId": "anim-speed-modifier" },
     "cursor": {
       "unsupported": true,
       "name": "Cursor style"
@@ -484,11 +481,7 @@
       "category": "Color Overrides",
       "name": "Subtext 1"
     },
-    "ctp-custom-overlay2": {
-      "unsupported": true,
-      "category": "Color Overrides",
-      "name": "Overlay 2"
-    },
+    "ctp-custom-overlay2": { "newId": "text-muted" },
     "ctp-custom-overlay1": {
       "unsupported": true,
       "category": "Color Overrides",
@@ -504,16 +497,8 @@
       "category": "Color Overrides",
       "name": "Surface 2"
     },
-    "ctp-custom-surface1": {
-      "unsupported": true,
-      "category": "Color Overrides",
-      "name": "Surface 1"
-    },
-    "ctp-custom-surface0": {
-      "unsupported": true,
-      "category": "Color Overrides",
-      "name": "Surface 0"
-    },
+    "ctp-custom-surface1": { "newId": "interactive-hover" },
+    "ctp-custom-surface0": { "newId": "interactive-normal" },
     "ctp-custom-base": { "newId": "background-primary" },
     "ctp-custom-mantle": {
       "newId": ["background-primary-alt", "background-secondary"]
@@ -1232,9 +1217,12 @@
     },
     "tab-title-bar-autohide": { "newId": "focus-view" },
     "vault-profile-autohide": {
-      "unsupported": true,
-      "category": "Auto Hide",
-      "name": "Auto hide vault profile"
+      "newId": "hide-vault-switcher-default",
+      "valueMapping": {
+        "__fallback": "hide-vault-switcher-default",
+        "true": "hide-vault-switcher-default",
+        "false": "hide-vault-switcher-off"
+      }
     },
     "CTA-BTN-enable": { "newId": "large-new-note" },
     "file-names-untrim": {
@@ -1305,11 +1293,6 @@
       "unsupported": true,
       "category": "Animation",
       "name": "Remove additional added animation"
-    },
-    "anim-speed": {
-      "unsupported": true,
-      "category": "Animation",
-      "name": "Animation speed"
     },
     "setting-item-title-icon-remove": {
       "unsupported": true,
@@ -1392,11 +1375,7 @@
         "mod-left-split-background-secondary-light": "contrast-light"
       }
     },
-    "background-mod-left-split-light": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Left sidepane background color"
-    },
+    "background-mod-left-split-light": { "newId": "background-secondary" },
     "background-mod-left-CSS-light": {
       "unsupported": true,
       "category": "Background",
@@ -1420,11 +1399,7 @@
         "mod-right-split-background-secondary-light": "contrast-light"
       }
     },
-    "background-mod-right-split-light": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Right sidepane background color"
-    },
+    "background-mod-right-split-light": { "newId": "background-secondary" },
     "background-mod-right-CSS-light": {
       "unsupported": true,
       "category": "Background",
@@ -1449,11 +1424,7 @@
         "mod-root-split-background-transparent-light": "contrast-light-tonal"
       }
     },
-    "background-mod-root-split-light": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Middle pane background color"
-    },
+    "background-mod-root-split-light": { "newId": "background-primary" },
     "background-mod-root-CSS-light": {
       "unsupported": true,
       "category": "Background",
@@ -1474,11 +1445,7 @@
       "background-underlying-primary-light": "contrast-light-white",
       "background-underlying-secondary-light": "contrast-light"
     },
-    "background-underlying-light": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Underlying background background color"
-    },
+    "background-underlying-light": { "newId": "background-secondary" },
     "background-underlying-CSS-light": {
       "unsupported": true,
       "category": "Background",
@@ -1509,16 +1476,6 @@
       "category": "Background",
       "name": "Translucent workspace background"
     },
-    "background-modifier-hover": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Background modifier hover"
-    },
-    "background-modifier-active-hover": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Background modifier active hover"
-    },
     "text-accent": {
       "unsupported": true,
       "category": "Text & icon color",
@@ -1538,16 +1495,6 @@
       "unsupported": true,
       "category": "Text & icon color",
       "name": "Text on accent inverted"
-    },
-    "interactive-normal": {
-      "unsupported": true,
-      "category": "Interactive color",
-      "name": "Interactive normal"
-    },
-    "interactive-hover": {
-      "unsupported": true,
-      "category": "Interactive color",
-      "name": "Interactive hover"
     },
     "interactive-accent": {
       "unsupported": true,
@@ -1613,9 +1560,12 @@
       }
     },
     "color-activated-file-light": {
-      "unsupported": true,
-      "category": "Active states",
-      "name": "Activated file color"
+      "newId": "nav-item-active-style",
+      "valueMapping": {
+        "__fallback": "nav-item-baseline",
+        "activated-file-accent-light": "nav-item-strong",
+        "activated-file-tab-style-light": "nav-item-subtle"
+      }
     },
     "border-radius-activated-file-light": {
       "unsupported": true,
@@ -1632,11 +1582,7 @@
       "category": "Active states",
       "name": "Activated file shadow"
     },
-    "input-radius-light": {
-      "unsupported": true,
-      "category": "UI Controls",
-      "name": "Input radius"
-    },
+    "input-radius-light": { "newId": "input-radius" },
     "input-shadow-light": {
       "unsupported": true,
       "category": "UI Controls",
@@ -1763,11 +1709,7 @@
         "mod-left-split-background-secondary-dark": "contrast-dark"
       }
     },
-    "background-mod-left-split-dark": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Left sidepane background color"
-    },
+    "background-mod-left-split-dark": { "newId": "background-secondary" },
     "background-mod-left-CSS-dark": {
       "unsupported": true,
       "category": "Background",
@@ -1791,11 +1733,7 @@
         "mod-right-split-background-secondary-dark": "contrast-dark"
       }
     },
-    "background-mod-right-split-dark": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Right sidepane background color"
-    },
+    "background-mod-right-split-dark": { "newId": "background-secondary" },
     "background-mod-right-CSS-dark": {
       "unsupported": true,
       "category": "Background",
@@ -1820,11 +1758,7 @@
         "mod-root-split-background-transparent-dark": "contrast-dark-tonal"
       }
     },
-    "background-mod-root-split-dark": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Middle pane background color"
-    },
+    "background-mod-root-split-dark": { "newId": "background-primary" },
     "background-mod-root-CSS-dark": {
       "unsupported": true,
       "category": "Background",
@@ -1845,11 +1779,7 @@
       "background-underlying-primary-dark": "contrast-dark-white",
       "background-underlying-secondary-dark": "contrast-dark"
     },
-    "background-underlying-dark": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Underlying background background color"
-    },
+    "background-underlying-dark": { "newId": "background-secondary" },
     "background-underlying-CSS-dark": {
       "unsupported": true,
       "category": "Background",
@@ -1880,16 +1810,6 @@
       "category": "Background",
       "name": "Workspace background translucent"
     },
-    "background-modifier-hover": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Background modifier hover"
-    },
-    "background-modifier-active-hover": {
-      "unsupported": true,
-      "category": "Background",
-      "name": "Background modifier active hover"
-    },
     "text-accent": {
       "unsupported": true,
       "category": "Text & icon color",
@@ -1909,16 +1829,6 @@
       "unsupported": true,
       "category": "Text & icon color",
       "name": "Text on accent inverted"
-    },
-    "interactive-normal": {
-      "unsupported": true,
-      "category": "Interactive color",
-      "name": "Interactive normal"
-    },
-    "interactive-hover": {
-      "unsupported": true,
-      "category": "Interactive color",
-      "name": "Interactive hover"
     },
     "interactive-accent": {
       "unsupported": true,
@@ -1984,9 +1894,12 @@
       }
     },
     "color-activated-file-dark": {
-      "unsupported": true,
-      "category": "Active states",
-      "name": "Activated file color"
+      "newId": "nav-item-active-style",
+      "valueMapping": {
+        "__fallback": "nav-item-baseline",
+        "activated-file-accent-light": "nav-item-strong",
+        "activated-file-tab-style-light": "nav-item-subtle"
+      }
     },
     "border-radius-activated-file-dark": {
       "unsupported": true,
@@ -2003,11 +1916,7 @@
       "category": "Active states",
       "name": "Activated file shadow"
     },
-    "input-radius-dark": {
-      "unsupported": true,
-      "category": "UI Controls",
-      "name": "Input radius"
-    },
+    "input-radius-dark": { "newId": "input-radius" },
     "input-shadow-dark": {
       "unsupported": true,
       "category": "UI Controls",

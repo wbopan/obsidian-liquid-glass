@@ -303,7 +303,7 @@
   "nav-item-strong": "Strong",
   "nav-item-white-space": "Trim file names in sidebars",
   "pre": "Trim",
-  "none": "Full",
+  "none": "No Trim",
   "sidebar-tabs-names": "Tab names",
   "tab-names-off": "Hidden",
   "tab-names-on": "Visible",

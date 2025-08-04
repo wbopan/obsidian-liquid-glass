@@ -1,7 +1,7 @@
 body {
   --header-height: 48px;
 
-  --tab-curve: 12px;
+  --tab-curve: calc(var(--radius-s) + 4px);
   --tab-outline-width: 0px;
   --tab-radius-active: var(--tab-radius) var(--tab-radius) 0 0;
 
@@ -37,7 +37,7 @@ body.is-mobile {
     padding-left: 0;
   }
   .workspace-tab-header-container-inner {
-    padding: 0 8px 0 16px;
+    padding: 0 8px 0 calc(var(--radius-s) + 8px);
     margin: 0;
     gap: 8px;
   }
@@ -101,7 +101,6 @@ body.tabs-floating .workspace .mod-root {
 // Editor panel: Underline
 body.tabs-underline .workspace .mod-root {
   --tab-background-active: transparent;
-  --tab-curve: 12px;
 
   .workspace-tab-header-container-inner {
     padding: 0 0 0 8px;

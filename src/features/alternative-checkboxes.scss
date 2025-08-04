@@ -10,6 +10,12 @@ input[type="checkbox"]:checked::after,
   inset-inline-start: 0;
   -webkit-mask-position: 50% 50%;
   -webkit-mask-size: 100% 100%;
+  transition: var(--anim-duration-slow) var(--anim-motion-baseline);
+
+  @starting-style {
+    transform: scale(0.5);
+    opacity: 0;
+  }
 }
 
 li[data-task],
