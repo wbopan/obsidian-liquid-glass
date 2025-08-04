@@ -1,4 +1,3 @@
-@use "app/style-settings.scss";
 @use "app/root.scss";
 @use "app/fonts.scss";
 @use "app/input.scss";
@@ -9,6 +8,7 @@
 @use "app/status-bar.scss";
 @use "app/empty-state.scss";
 @use "app/mobile.scss";
+@use "app/style-settings.scss";
 
 @use "editor/editor.scss";
 @use "editor/blockquote.scss";
