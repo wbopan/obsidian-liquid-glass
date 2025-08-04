@@ -52,26 +52,16 @@ body {
     border-radius: 0 !important;
   }
   tbody tr:first-child > td {
-    border-top-width: 0;
+    border-block-start-width: 0;
   }
   tbody tr > td:last-child {
-    border-right-width: 0;
+    border-inline-end-width: 0;
   }
   tbody tr > td:first-child {
-    border-left-width: 0;
+    border-inline-start-width: 0;
   }
   tbody tr:last-child > td {
-    border-bottom-width: 0;
-  }
-
-  [dir="rtl"] {
-    tbody > tr > td:first-child {
-      border-right: none !important;
-      border-left: var(--table-border-width) solid var(--table-border-color) !important;
-    }
-    tbody > tr > td:last-child {
-      border-left: none !important;
-    }
+    border-block-end-width: 0;
   }
 }
 .table-wide,
