@@ -102,6 +102,10 @@ body:not(.is-mobile) .mod-sidedock {
     padding-bottom: 8px;
   }
 
+  .workspace-leaf-content > .nav-files-container {
+    padding-bottom: 16px;
+  }
+
   // Panel actions style
   .nav-header {
     display: flex;
