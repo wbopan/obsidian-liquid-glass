@@ -2,7 +2,6 @@ body {
   --modal-background: var(--background-secondary);
   --modal-border-color: var(--background-modifier-border-hover);
 
-  --prompt-border-color: var(--divider-color);
   --prompt-input-height: 64px;
 }
 
@@ -164,7 +163,7 @@ body.is-phone .suggestion-container {
   .prompt-input:focus,
   .prompt-input:focus-visible {
     background-color: transparent;
-    border-bottom-color: var(--prompt-border-color);
+    border-bottom-color: var(--divider-color);
   }
 
   .prompt-results {

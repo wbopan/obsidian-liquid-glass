@@ -7,6 +7,14 @@
   --color-cyan: #91d7e3;
   --color-blue: #8aadf4;
   --color-purple: #b7bdf8;
+  --color-pink-rgb: 245, 189, 230;
+  --color-red-rgb: 237, 135, 150;
+  --color-orange-rgb: 245, 169, 127;
+  --color-yellow-rgb: 238, 212, 159;
+  --color-green-rgb: 166, 218, 149;
+  --color-cyan-rgb: 145, 215, 227;
+  --color-blue-rgb: 138, 173, 244;
+  --color-purple-rgb: 183, 189, 248;
   --color-base-100: #c5cff5;
   --color-base-70: #a1aacb;
   --color-base-60: #8f97b7;
@@ -19,6 +27,11 @@
   --color-base-10: #1e2030;
   --color-base-00: #181926;
   --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-60);
+  --text-faint: var(--color-base-40);
   --background-secondary: var(--color-base-10);
   --background-secondary-alt: var(--color-base-20);
+  --background-modifier-border: var(--color-base-25);
+  --background-modifier-border-hover: var(--color-base-30);
+  --background-modifier-border-focus: var(--color-base-35);
 }
