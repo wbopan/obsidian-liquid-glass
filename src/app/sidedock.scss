@@ -102,10 +102,6 @@ body:not(.is-mobile) .mod-sidedock {
     padding-bottom: 8px;
   }
 
-  .workspace-leaf-content > .nav-files-container {
-    padding-bottom: 16px;
-  }
-
   // Panel actions style
   .nav-header {
     display: flex;
@@ -128,6 +124,7 @@ body:not(.is-mobile) .mod-sidedock {
 // Hide vault switcher
 body:not(.is-mobile, .hide-vault-switcher-off) .mod-sidedock.mod-left-split {
   .workspace-sidedock-vault-profile {
+    --tab-outline-width: 0px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -164,6 +161,11 @@ body:not(.is-mobile, .hide-vault-switcher-off) .mod-sidedock.mod-left-split {
     filter: blur(4px);
     pointer-events: none;
     transform: translateY(16px);
+  }
+
+  .workspace-leaf-content > .node-insert-event,
+  .workspace-leaf-content > .view-content {
+    padding-bottom: 48px;
   }
 }
 

@@ -1,10 +1,22 @@
 body.layout-classic:not(.is-mobile) {
   --tab-outline-width: var(--border-width);
 
-  &:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container,
-  &:is(.tabs-floating, .tabs-underline) .mod-root .workspace-tab-header-container-inner,
-  .workspace-sidedock-vault-profile {
-    --tab-outline-width: 0px;
+  &:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
+    .workspace-tab-header-container {
+      border-bottom: none;
+    }
+    .workspace-tab-header-container-inner {
+      overflow: visible;
+      position: relative;
+      padding-top: 8px;
+    }
+    .sidebar-toggle-button::after {
+      height: var(--tab-outline-width);
+      background-color: var(--tab-outline-color);
+      content: "";
+      position: absolute;
+      inset: auto -100vw -8px;
+    }
   }
   &:not(.tabs-floating, .tabs-underline) .mod-root .workspace-tab-header-container-inner {
     padding-top: 1px;
@@ -18,7 +30,18 @@ body.layout-classic:not(.is-mobile) {
     }
   }
 
+  &:not(.labeled-nav-off) .mod-sidedock.mod-left-split {
+    .workspace-leaf-content > .nav-header,
+    .workspace-leaf-content > .view-content > div:not(.nav-buttons-container):not(.graph-controls) {
+      padding-top: 0;
+      padding-bottom: 8px;
+    }
+  }
+
   .mod-sidedock {
+    > .workspace-leaf-resize-handle {
+      height: calc(100% - var(--header-height));
+    }
     .workspace-leaf-content > .nav-header,
     .workspace-leaf-content > .view-content > div:not(.nav-buttons-container):not(.graph-controls) {
       padding-top: 8px;
