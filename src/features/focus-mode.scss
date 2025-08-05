@@ -1,4 +1,4 @@
-body.focus-view:not(.is-popout-window) .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root {
+body:is(.focus-view-tabs, .focus-view-all):not(.is-popout-window) .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root {
   .workspace-tab-header-container,
   .workspace-tab-header-container-inner,
   .workspace-tab-header-spacer {
@@ -14,9 +14,17 @@ body.focus-view:not(.is-popout-window) .workspace:not(.is-left-sidedock-open):no
     background-color: var(--background-primary);
   }
   .workspace-tab-container .view-header {
+    margin-left: var(--frame-left-space);
+    margin-right: var(--frame-right-space);
+  }
+}
+
+body.focus-view-all:not(.is-popout-window) .workspace:not(.is-left-sidedock-open):not(.is-right-sidedock-open) .mod-root {
+  .workspace-tab-container .view-header {
     position: absolute;
     left: var(--frame-left-space);
     right: var(--frame-right-space);
+    margin: 0;
     background-color: transparent;
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 

@@ -840,9 +840,19 @@ settings:
 	-
 		id: focus-view
 		title: Focus view
-		description: Hide tabs and tab title bar when both sidebars are closed — hover over the top to display
-		type: class-toggle
-		default: false
+		description: Hide tabs and tab title bar when sidebars are collapsed, hover over the top to reveal
+		type: class-select
+		default: focus-view-off
+		options:
+			-
+				label: Disabled
+				value: focus-view-off
+			-
+				label: Only hide tabs
+				value: focus-view-tabs
+			-
+				label: Hide all
+				value: focus-view-all
 	-
 		id: mode-switcher-off
 		title: Disable quick mode switcher
