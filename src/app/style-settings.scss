@@ -456,13 +456,37 @@ settings:
 				label: Border
 				value: layout-border
 	-
+		id: density-modifier
+		title: Layout density
+		type: variable-select
+		allowEmpty: false
+		default: "1"
+		options:
+			-
+				label: Relaxed
+				value: 1.25
+			-
+				label: Balanced
+				value: 1
+			-
+				label: Compact
+				value: 0.75
+	-
 		id: icon-stroke-modifier
-		title: Icon stroke width modifier
-		type: variable-number-slider
-		default: 1
-		min: 0.5
-		max: 1
-		step: 0.05
+		title: Icon thickness
+		type: variable-select
+		allowEmpty: false
+		default: "1"
+		options:
+			-
+				label: Regular
+				value: 1
+			-
+				label: Light
+				value: 0.75
+			-
+				label: Thin
+				value: 0.5
 	-
 		id: indentation-guide-width
 		title: Indentation guides
@@ -529,7 +553,6 @@ settings:
 		title: Input radius
 		type: variable-text
 		description: Radius for buttons, text inpurs and dropdowns, accepts valid CSS border-radius value
-		default: var(--radius-s)
 	-
 		id: radius-s-custom
 		title: Small radius

@@ -153,7 +153,7 @@ body.tabs-underline .workspace .mod-root {
     -webkit-app-region: no-drag;
     padding: 0 8px;
     margin: 0;
-    gap: 8px;
+    gap: calc(8px * var(--density-modifier));
   }
 
   .sidebar-toggle-button {

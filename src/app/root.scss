@@ -31,6 +31,8 @@ body.theme-dark {
   --icon-m-stroke-width: calc(1.75px * var(--icon-stroke-modifier));
   --icon-l-stroke-width: calc(1.75px * var(--icon-stroke-modifier));
   --icon-xl-stroke-width: calc(1.25px * var(--icon-stroke-modifier));
+
+  --density-modifier: 1;
 }
 
 .theme-light {

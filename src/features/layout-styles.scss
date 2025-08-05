@@ -74,6 +74,10 @@ body.layout-cards:not(.is-mobile) {
 
   // Side panels
   .mod-sidedock {
+    & .workspace-leaf-resize-handle:not(:hover) {
+      border-color: transparent;
+    }
+
     .workspace-tabs {
       overflow: visible;
     }
@@ -144,8 +148,7 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
     }
   }
 
-  .mod-sidedock.mod-left-split,
-  .mod-sidedock.mod-right-split {
+  .mod-sidedock {
     .workspace-tabs .workspace-leaf {
       background-color: var(--background-primary) !important;
     }
@@ -153,7 +156,7 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
       background-color: var(--background-primary) !important;
     }
     .workspace-leaf-resize-handle {
-      border-color: var(--background-modifier-hover) !important;
+      border-color: var(--background-modifier-hover);
     }
     > .workspace-leaf-resize-handle {
       top: var(--header-height);

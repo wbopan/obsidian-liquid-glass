@@ -10,7 +10,7 @@ body:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
   .workspace-tab-header-container-inner {
     flex-direction: column;
     width: 100%;
-    gap: 4px;
+    gap: calc(4px * var(--density-modifier));
   }
   .workspace-tab-header {
     padding: 8px;
