@@ -1066,16 +1066,16 @@
       "name": "Stacked tabs pane width multiplier"
     },
     "anp-status-bar-select": {
-      "newId": "compact-status-bar-off",
+      "newId": "status-bar-style",
       "valueMapping": {
-        "__fallback": false,
-        "none": false,
-        "anp-floating-status-bar": false,
-        "anp-fixed-status-bar": true
+        "__fallback": "status-bar-compact",
+        "none": "status-bar-default",
+        "anp-floating-status-bar": "status-bar-compact",
+        "anp-fixed-status-bar": "status-bar-full"
       }
     },
     "anp-alt-tab-style": {
-      "newId": "compact-status-bar-off",
+      "newId": "tabs-style",
       "valueMapping": {
         "__fallback": "tabs-default",
         "anp-default-tab": "tabs-default",
@@ -1195,11 +1195,11 @@
     "__name": "Border (Components)",
     "tab-autohide": { "newId": "focus-view" },
     "status-bar-autohide": {
-      "newId": "compact-status-bar-off",
+      "newId": "status-bar-style",
       "valueMapping": {
-        "__fallback": false,
-        "true": false,
-        "false": true
+        "__fallback": "status-bar-compact",
+        "true": "status-bar-compact",
+        "false": "status-bar-default"
       }
     },
     "Ribbon-autohide": {
@@ -2682,9 +2682,12 @@
       }
     },
     "indentation-guide-active": {
-      "unsupported": true,
-      "category": "Indentation guides",
-      "name": "Indentation guide active color"
+      "newId": "indentation-guide-width",
+      "valueMapping": {
+        "__fallback": "0px",
+        "true": "1px",
+        "false": "0px"
+      }
     },
     "link-decoration-hover": {
       "unsupported": true,

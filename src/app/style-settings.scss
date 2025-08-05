@@ -464,10 +464,34 @@ settings:
 		max: 1
 		step: 0.05
 	-
-		id: compact-status-bar-off
-		title: Disable compact status bar
-		type: class-toggle
-		default: false
+		id: indentation-guide-width
+		title: Indentation guides
+		type: variable-select
+		allowEmpty: false
+		default: 0px
+		options:
+			-
+				label: Hidden
+				value: 0px
+			-
+				label: Always
+				value: 1px
+	-
+		id: status-bar-style
+		title: Status bar style
+		type: class-select
+		allowEmpty: false
+		default: status-bar-compact
+		options:
+			-
+				label: Compact
+				value: status-bar-compact
+			-
+				label: Normal
+				value: status-bar-default
+			-
+				label: Full width
+				value: status-bar-full
 	-
 		id: animation
 		title: Animation

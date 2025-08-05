@@ -362,6 +362,9 @@ body.strike-lists-off {
   --checklist-done-decoration: none;
   --checklist-done-color: var(--text-normal);
 }
+.task-list-item {
+  --indentation-guide-reading-indent: -1.05em;
+}
 
 // PDF Viewer
 body.pdf-seamless {

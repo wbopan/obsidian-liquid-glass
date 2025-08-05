@@ -1,4 +1,4 @@
-body:not(.compact-status-bar-off) .status-bar {
+body:not(.status-bar-default, .status-bar-full) .status-bar {
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   border: none;
   transform-origin: bottom right;
@@ -6,7 +6,7 @@ body:not(.compact-status-bar-off) .status-bar {
   min-height: 8px;
   height: calc-size(auto, size);
 }
-body:not(.compact-status-bar-off) .status-bar::before {
+body:not(.status-bar-default, .status-bar-full) .status-bar::before {
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   content: "";
   position: absolute;
@@ -18,10 +18,16 @@ body:not(.compact-status-bar-off) .status-bar::before {
   pointer-events: none;
   background: radial-gradient(farthest-side at right bottom, var(--background-primary), rgba(var(--mono-rgb-0), 0));
 }
-body:not(.compact-status-bar-off) .status-bar:not(:hover) {
+body:not(.status-bar-default, .status-bar-full) .status-bar:not(:hover) {
   transform: scale(0.8);
   opacity: 0.5;
 }
-body:not(.compact-status-bar-off) .status-bar:not(:hover)::before {
+body:not(.status-bar-default, .status-bar-full) .status-bar:not(:hover)::before {
   opacity: 0;
+}
+
+body.status-bar-full {
+  --status-bar-position: relative;
+  --status-bar-border-width: 0;
+  --status-bar-radius: 0;
 }
