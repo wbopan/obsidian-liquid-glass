@@ -31,8 +31,6 @@ body.theme-dark {
   --icon-m-stroke-width: calc(1.75px * var(--icon-stroke-modifier));
   --icon-l-stroke-width: calc(1.75px * var(--icon-stroke-modifier));
   --icon-xl-stroke-width: calc(1.25px * var(--icon-stroke-modifier));
-
-  background-color: var(--background-secondary);
 }
 
 .theme-light {
@@ -42,6 +40,10 @@ body.theme-dark {
 .theme-dark {
   --color-base-80: #c0c0c0;
   --color-base-90: #cdcdcd;
+}
+
+.is-translucent {
+  --divider-color: var(--background-modifier-border) !important;
 }
 
 body:not(.accented-interface) {

@@ -118,7 +118,8 @@ body.layout-cards:not(.is-mobile) {
   }
 }
 
-body.layout-border:not(.is-mobile) {
+body.layout-border:not(.is-mobile),
+body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
   &:not(.status-bar-full) .workspace-split {
     padding-bottom: 8px;
   }
@@ -143,12 +144,13 @@ body.layout-border:not(.is-mobile) {
     }
   }
 
-  .mod-sidedock {
+  .mod-sidedock.mod-left-split,
+  .mod-sidedock.mod-right-split {
     .workspace-tabs .workspace-leaf {
-      background-color: var(--background-primary);
+      background-color: var(--background-primary) !important;
     }
     .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-      background-color: var(--background-primary);
+      background-color: var(--background-primary) !important;
     }
     .workspace-leaf-resize-handle {
       border-color: var(--background-modifier-hover) !important;

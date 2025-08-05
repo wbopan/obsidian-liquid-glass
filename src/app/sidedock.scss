@@ -67,7 +67,7 @@ body.nav-item-strong {
 }
 
 // Desktop sidedock
-body:not(.layout-classic, .layout-border, .contrast-light-tonal, .contrast-dark-tonal) .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
+body:not(.layout-classic, .layout-border, .contrast-light-tonal, .contrast-dark-tonal) .mod-sidedock .workspace-leaf-resize-handle:not(:hover) {
   border-color: transparent;
 }
 
