@@ -60,6 +60,29 @@
     }
   }
 
+  .cm-table-widget[dir="rtl"],
+  .el-table[dir="rtl"],
+  div[dir="rtl"] {
+    tbody > tr > td:first-child,
+    tbody > tr > td:first-child .table-cell-wrapper {
+      border-inline-end: var(--table-border-width) solid var(--table-border-color);
+    }
+    tbody > tr > td:last-child,
+    tbody > tr > td:last-child .table-cell-wrapper {
+      border-right: none;
+    }
+    tbody > tr:first-child > td:last-child,
+    tbody > tr:first-child > td:last-child .table-cell-wrapper {
+      border-start-end-radius: 0;
+      border-start-start-radius: var(--radius-s);
+    }
+    tbody > tr:last-child > td:last-child,
+    tbody > tr:last-child > td:last-child .table-cell-wrapper {
+      border-end-end-radius: 0;
+      border-end-start-radius: var(--radius-s);
+    }
+  }
+
   .cm-html-embed th,
   .markdown-rendered th,
   .cm-html-embed td,
