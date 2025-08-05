@@ -59,6 +59,7 @@ With a clean, modern foundation and endless customization possibilities, Baselin
 
 - **kepano - [Minimal](https://github.com/kepano/obsidian-minimal)**: Cards, color schemes, image grids, image filters, table helpers
 - **AnubisNekhet - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/)**: Color schemes
+- **Warren2060 - [ChillJinshuSong](https://github.com/Warren2060/ChillJinshuSong)**: Font for extended language support
 
 ## Licensing
 
