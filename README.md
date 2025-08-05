@@ -10,7 +10,7 @@ Baseline sets a new standard for your Obsidian vault experience — sleek, famil
 
 ## Coming from other themes?
 
-Baseline provides a [Style Settings Migration Tool](https://aaaaalexis.github.io/obsidian-baseline/), allowing you to seamlessly copy your settings from other themes. For now, the following themes are supported:
+Baseline is designed to be a drop-in replacement for your favorite themes. To make your transition seamless, use [Style Settings Migration Tool](https://aaaaalexis.github.io/obsidian-baseline/) to import your settings from following supported themes:
 
 - [Minimal](https://github.com/kepano/obsidian-minimal/) by kepano
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/) by AnubisNekhet
@@ -21,7 +21,7 @@ Baseline provides a [Style Settings Migration Tool](https://aaaaalexis.github.io
 
 ## Overview
 
-- **Beautifully yours** — Customize your experience to your heart's content with [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
+- **Beautifully yours** — Customize your experience to your heart's content with [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
 
   ![Screenshot of Baseline theme for Obsidian in 6 different color schemes.](img/colors.png)
 
@@ -51,9 +51,9 @@ However, if you prefer to customize your own experience, Baseline provides exten
 
 ### Less _and_ more
 
-As software design continues to evolve, Obsidian's interface is starting to show its age. Many highly customizable themes stick to Obsidian's default style, while more opinionated ones compromise on customizability.
+As software design evolves, Obsidian’s interface is beginning to show its age. Many customizable themes stick too closely to the default look, while more opinionated themes often sacrifice flexibility; or to be blunt, simply don’t look good.
 
-This simple and modern customizable theme fills the gap, with tools designed to make your transition seamless. **Baseline** strives to become the baseline for everyone's Obsidian experience moving forward.
+With a clean, modern foundation and endless customization possibilities, Baseline aims to become the starting point, **the baseline for everyone's Obsidian experience**.
 
 ## Credits
 
