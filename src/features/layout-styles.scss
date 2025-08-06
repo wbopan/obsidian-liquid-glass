@@ -32,8 +32,9 @@ body.layout-classic:not(.is-mobile) {
     }
   }
   .mod-sidedock {
-    > .workspace-leaf-resize-handle {
+    & > .workspace-leaf-resize-handle {
       height: calc(100% - var(--header-height));
+      border-color: var(--background-modifier-hover);
     }
     .workspace-leaf-content > .nav-header,
     .workspace-leaf-content > .view-content > div:not(.nav-buttons-container):not(.graph-controls) {
