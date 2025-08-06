@@ -59,13 +59,13 @@
   .view-header-title-container.webviewer-address-container {
     padding: 0;
   }
-  body:not(.is-mobile) .view-header:not(.view-header-always-show) .view-header-title-container:not(:hover) {
+  body:not(.is-mobile) .view-header-title-container:not(:hover) {
     opacity: 0;
   }
-  body.view-header-title-hidden .view-header-title-container {
+  body:not(.is-mobile).view-header-title-hidden .view-header-title-container {
     visibility: hidden;
   }
-  body.view-header-title-visible .view-header-title-container {
+  body:not(.is-mobile).view-header-title-visible .view-header-title-container {
     opacity: 1;
   }
   body.is-mobile .view-actions {
