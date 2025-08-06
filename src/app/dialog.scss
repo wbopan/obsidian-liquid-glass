@@ -67,13 +67,14 @@ body:not(.is-phone) .modal-bg {
 // Menu & suggestion
 .menu,
 .suggestion-container {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+  padding: 0;
+
   @starting-style {
     opacity: 0;
     filter: blur(4px);
     transform: translateY(-8px);
   }
-  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
-  padding: 0;
 
   .menu-scroll,
   .suggestion {
@@ -281,5 +282,18 @@ body.is-phone .modal.mod-sidebar-layout {
     line-height: normal;
     border-radius: var(--button-radius);
     padding: 4px 8px;
+    height: fit-content;
+  }
+  .community-item-downloads {
+    display: flex;
+  }
+}
+body.is-phone .modal.mod-sidebar-layout.mod-community-modal {
+  .community-modal-controls .setting-item {
+    margin-right: unset;
+    flex: 1;
+  }
+  .community-item .flair {
+    margin-left: 4px;
   }
 }
