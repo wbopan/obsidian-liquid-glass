@@ -77,7 +77,7 @@
   "active-line-style-side": "Side indicator",
   "active-line-style-block": "Block background",
   "active-line-style-background": "Line background",
-  "active-line-color-default": "None",
+  "active-line-color-default": "Monochrome",
   "active-line-color-accent": "Accent color",
   "file-header-visibility": "Tab title visibility",
   "view-header-title-hover": "Hover only",
