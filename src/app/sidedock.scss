@@ -174,14 +174,9 @@ body.hide-help .workspace-drawer-vault-actions .clickable-icon:first-child {
   display: none;
 }
 body.large-new-note .mod-sidedock .workspace-leaf-content[data-type="file-explorer"] {
-  .nav-header:hover {
-    padding-top: 8px;
-    padding-bottom: 8px;
-
-    .nav-action-button:first-child {
-      flex: 1;
-      box-shadow: 0 0 0 1px var(--background-modifier-border);
-    }
+  .nav-header .nav-action-button:first-child {
+    flex: 1;
+    box-shadow: inset 0 0 0 1px var(--background-modifier-border);
   }
 
   .nav-header .nav-action-button:first-child::after {
