@@ -460,6 +460,13 @@ settings:
 		level: 1
 		collapsed: true
 	-
+		id: interface-font
+		title: Interface font
+		type: info-text
+		level: 1
+		markdown: true
+		description: Base font for all of Obsidian can be set in **Appearance** settings
+	-
 		id: layout-style
 		title: Layout style
 		type: class-select
@@ -480,36 +487,29 @@ settings:
 				value: layout-border
 	-
 		id: density-modifier
-		title: Layout density
-		type: variable-select
-		allowEmpty: false
-		default: "1"
-		options:
-			-
-				label: Relaxed
-				value: 1.25
-			-
-				label: Balanced
-				value: 1
-			-
-				label: Compact
-				value: 0.75
+		title: Density
+		type: variable-number-slider
+		default: 1
+		min: 0.75
+		max: 1.25
+		step: 0.25
+	-
+		id: radius-modifier
+		title: Roundness
+		type: variable-number-slider
+		default: 1
+		min: 0.5
+		max: 2
+		step: 0.25
 	-
 		id: icon-stroke-modifier
 		title: Icon thickness
-		type: variable-select
-		allowEmpty: false
-		default: "1"
+		type: variable-number-slider
+		default: 1
 		options:
-			-
-				label: Regular
-				value: 1
-			-
-				label: Light
-				value: 0.75
-			-
-				label: Thin
-				value: 0.5
+		min: 0.5
+		max: 1
+		step: 0.25
 	-
 		id: indentation-guide-width
 		title: Indentation guides
@@ -559,60 +559,12 @@ settings:
 				value: cubic-bezier(0.32, 0.72, 0, 1)
 	-
 		id: anim-speed-modifier
-		title: Animation speed modifier
+		title: Animation speed
 		type: variable-number-slider
 		default: 1
 		min: 0
 		max: 2
 		step: 0.1
-	-
-		id: radius
-		title: Corner radius
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: input-radius
-		title: Input radius
-		type: variable-text
-		description: Radius for buttons, text inpurs and dropdowns, accepts valid CSS border-radius value
-	-
-		id: radius-s-custom
-		title: Small radius
-		type: variable-number-slider
-		description: Background color for buttons and dropdowns
-		default: 8
-		min: 0
-		max: 16
-		step: 1
-		format: px
-	-
-		id: radius-m-custom
-		title: Medium radius
-		type: variable-number-slider
-		default: 12
-		min: 0
-		max: 24
-		step: 1
-		format: px
-	-
-		id: radius-l-custom
-		title: Large radius
-		type: variable-number-slider
-		default: 16
-		min: 0
-		max: 32
-		step: 1
-		format: px
-	-
-		id: radius-xl-custom
-		title: Extra large radius
-		type: variable-number-slider
-		default: 24
-		min: 0
-		max: 48
-		step: 1
-		format: px
 	-
 		id: tabs
 		title: Tabs
@@ -854,6 +806,13 @@ settings:
 		level: 1
 		collapsed: true
 	-
+		id: editor-font
+		title: Editor font
+		type: info-text
+		level: 1
+		markdown: true
+		description: Font for reading and editing view can be set in **Appearance** settings
+	-
 		id: focus-view
 		title: Focus view
 		description: Hide tabs and tab title bar when sidebars are collapsed, hover over the top to reveal
@@ -944,7 +903,7 @@ settings:
 		title: Tab title font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '13px'
 	-
 		id: file-header-font-weight
 		title: Tab title font weight
@@ -981,13 +940,13 @@ settings:
 		title: Inline title font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	-
 		id: inline-title-size
 		title: Inline title font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1.802em'
 	-
 		id: inline-title-weight
 		title: Inline title font weight
@@ -1010,16 +969,16 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: colorful-headings
-		title: Colorful headings
-		description: Headings use a different color for each size
-		type: class-toggle
-	-
 		id: heading-spacing
 		title: Heading spacing
 		description: Space between paragraphs and headings in reading mode
 		type: variable-text
 		default: 2em
+	-
+		id: colorful-headings
+		title: Colorful headings
+		description: Headings use a different color for each size
+		type: class-toggle
 	-
 		id: level-1-headings
 		title: Level 1 Headings
@@ -1031,13 +990,13 @@ settings:
 		title: H1 font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	-
 		id: h1-size
 		title: H1 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1.802em'
 	-
 		id: h1-weight
 		title: H1 font weight
@@ -1118,13 +1077,13 @@ settings:
 		title: H2 font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	-
 		id: h2-size
 		title: H2 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1.602em'
 	-
 		id: h2-weight
 		title: H2 font weight
@@ -1205,13 +1164,13 @@ settings:
 		title: H3 font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	-
 		id: h3-size
 		title: H3 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1.424em;'
 	-
 		id: h3-weight
 		title: H3 font weight
@@ -1292,13 +1251,13 @@ settings:
 		title: H4 font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	-
 		id: h4-size
 		title: H4 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1.266em'
 	-
 		id: h4-weight
 		title: H4 font weight
@@ -1379,13 +1338,13 @@ settings:
 		title: H5 font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	- 
 		id: h5-size
 		title: H5 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1.125em'
 	-
 		id: h5-weight
 		title: H5 font weight
@@ -1466,13 +1425,13 @@ settings:
 		title: H6 font
 		description: Name of the font as it appears on your system
 		type: variable-text
-		default: ''
+		default: 'InstrumentSerif'
 	-
 		id: h6-size
 		title: H6 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '1em'
 	-
 		id: h6-weight
 		title: H6 font weight
@@ -1802,7 +1761,7 @@ settings:
 		title: Code font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: '0.8em'
 	-
 		id: code-line-numbers
 		title: Code line numbers
@@ -2129,6 +2088,12 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: p-spacing
+		title: Paragraph spacing
+		description: Space between paragraphs in reading mode
+		type: variable-text
+		default: 1.75rem
+	-
 		id: bold-modifier
 		title: Bold text weight modifier
 		type: variable-number-slider
@@ -2136,12 +2101,6 @@ settings:
 		min: 100
 		max: 500
 		step: 100
-	-
-		id: p-spacing
-		title: Paragraph spacing
-		description: Space between paragraphs in reading mode
-		type: variable-text
-		default: 1.75rem
 	-
 		id: pdf
 		title: PDFs

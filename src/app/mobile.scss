@@ -1,8 +1,8 @@
 body.is-mobile {
-  --radius-s: var(--radius-s-custom);
-  --radius-m: calc(var(--radius-m-custom) + 4px);
-  --radius-l: calc(var(--radius-l-custom) + 8px);
-  --radius-xl: calc(var(--radius-xl-custom) + 8px);
+  --radius-s: calc(8px * var(--radius-modifier));
+  --radius-m: calc(16px * var(--radius-modifier));
+  --radius-l: calc(24px * var(--radius-modifier));
+  --radius-xl: calc(32px * var(--radius-modifier));
   --mobile-sidebar-width: 100%;
 
   --tab-switcher-menubar-background: var(--background-secondary);

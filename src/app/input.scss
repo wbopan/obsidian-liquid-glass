@@ -1,16 +1,13 @@
 body {
   --input-height: 32px;
 
+  --radius-modifier: 1;
   --input-radius: var(--radius-s);
-  --radius-s: var(--radius-s-custom);
-  --radius-m: var(--radius-m-custom);
-  --radius-l: var(--radius-l-custom);
-  --radius-xl: var(--radius-xl-custom);
-  --radius-s-custom: 8px;
-  --radius-m-custom: 12px;
-  --radius-l-custom: 16px;
-  --radius-xl-custom: 24px;
   --button-radius: 100vw;
+  --radius-s: calc(8px * var(--radius-modifier));
+  --radius-m: calc(12px * var(--radius-modifier));
+  --radius-l: calc(16px * var(--radius-modifier));
+  --radius-xl: calc(24px * var(--radius-modifier));
   --checkbox-radius: 4px;
 }
 
