@@ -39,7 +39,6 @@ body.is-phone {
   }
 
   // Mode Switcher
-
   .mod-root .view-header {
     z-index: 3;
   }
@@ -72,5 +71,10 @@ body.is-phone {
   // Tab switcher
   .mobile-tab-switcher-menubar {
     border-top: none;
+  }
+
+  // Bottom bar
+  .mobile-navbar-tabs-action {
+    font-family: "Inter";
   }
 }
