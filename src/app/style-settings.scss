@@ -406,22 +406,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: text-selection
-		title: Selected text background
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: text-highlight-bg
-		title: Highlighted text background
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: text-muted
 		title: Muted text color
 		description: Secondary text such as sidebar note titles and table headings
@@ -450,6 +434,22 @@ settings:
 		id: bold-color
 		title: Bold text color
 		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-selection
+		title: Selected text background
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text-highlight-bg
+		title: Highlighted text background
+		type: variable-themed-color
+		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
@@ -874,7 +874,7 @@ settings:
 				label: None
 				value: active-line-off
 			-
-				label: Side indicator
+				label: Indicator
 				value: active-line-side
 			-
 				label: Block background
