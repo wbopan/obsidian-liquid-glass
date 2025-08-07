@@ -72,21 +72,6 @@ body:not(.is-mobile) .mod-sidedock {
     border-color: transparent;
   }
 
-  .workspace-tab-container {
-    position: relative;
-  }
-  .workspace-leaf:not([style*="display: none"]) {
-    animation: workspaceLeafIn var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
-  }
-  .workspace-leaf[style*="display: none"] {
-    position: absolute;
-    inset: 0;
-    display: flex !important;
-    pointer-events: none;
-    animation: workspaceLeafOut var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
-    z-index: 1;
-  }
-
   // Sidedock padding
   .workspace-leaf-content > .node-insert-event,
   .workspace-leaf-content > .view-content,
@@ -118,6 +103,24 @@ body:not(.is-mobile) .mod-sidedock {
   }
   .nav-action-button svg {
     margin: unset;
+  }
+}
+
+// Animation
+body:not(.performance-mode) {
+  .workspace-tab-container {
+    position: relative;
+  }
+  .workspace-leaf:not([style*="display: none"]) {
+    animation: workspaceLeafIn var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
+  }
+  .workspace-leaf[style*="display: none"] {
+    position: absolute;
+    inset: 0;
+    display: flex !important;
+    pointer-events: none;
+    animation: workspaceLeafOut var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
+    z-index: 1;
   }
 }
 
