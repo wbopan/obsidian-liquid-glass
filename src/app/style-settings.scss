@@ -1530,26 +1530,31 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+    - 
+        id: block-width-info
+		description: Readable line length must be set in Obsidian **Editor** settings
+        type: info-text
+		markdown: true
 	-
 		id: line-width
 		title: Normal line width
 		description: Number of characters per line
-		type: variable-text
-		default: '40'
+		type: variable-number
+		default: 40
 		format: rem
 	-
 		id: line-width-wide
 		title: Wide line width
 		description: Number of characters per line for wide elements
-		type: variable-text
-		default: '50'
+		type: variable-number
+		default: 50
 		format: rem
 	-
 		id: max-width
 		title: Maximum line width %
 		description: Number of characters per line
-		type: variable-text
-		default: '90'
+		type: variable-number
+		default: 90
 		format: '%'
 	-
 		id: chart-width
