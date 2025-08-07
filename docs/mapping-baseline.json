@@ -82,7 +82,7 @@
   "file-header-visibility": "Tab title visibility",
   "view-header-title-hover": "Hover only",
   "view-header-title-hidden": "Hidden",
-  "view-header-title-visible": "Visible",
+  "view-header-title-always": "Visible",
   "file-header-font-size": "Tab title font size",
   "file-header-font-weight": "Tab title font weight",
   "file-header-justify": "Tab title alignment",

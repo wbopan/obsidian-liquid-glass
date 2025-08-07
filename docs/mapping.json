@@ -266,7 +266,7 @@
         "__fallback": "view-header-title-hover",
         "minimal-tab-title-hover": "view-header-title-hover",
         "minimal-tab-title-hidden": "view-header-title-hidden",
-        "minimal-tab-title-visible": "view-header-title-visible"
+        "minimal-tab-title-visible": "view-header-title-always"
       }
     },
     "title-color": {

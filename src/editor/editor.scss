@@ -65,7 +65,7 @@
   body:not(.is-mobile).view-header-title-hidden .view-header-title-container {
     visibility: hidden;
   }
-  body:not(.is-mobile).view-header-title-visible .view-header-title-container {
+  body:not(.is-mobile).view-header-title-always .view-header-title-container {
     opacity: 1;
   }
   body.is-mobile .view-actions {
