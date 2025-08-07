@@ -1243,7 +1243,14 @@
       "category": "File Explorer",
       "name": "Remove custom icon"
     },
-    "colorful-folder": { "newId": "rainbow-folders" },
+    "colorful-folder": {
+      "newId": "colorful-folders",
+      "valueMapping": {
+        "__fallback": "colorful-folders-off",
+        "true": "colorful-folders-subtle",
+        "false": "colorful-folders-off"
+      }
+    },
     "outline-enhanced": {
       "unsupported": true,
       "category": "Outline Panel",

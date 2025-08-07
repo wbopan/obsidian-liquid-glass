@@ -670,10 +670,28 @@ settings:
 		description: Adds text label and background on new note button in the left sidebar
 		type: class-toggle
 	-
-		id: rainbow-folders
-		title: Rainbow folders
-		description: Adds colored indicator on the left side of folder
-		type: class-toggle
+		id: colorful-folders
+		title: Colorful folders
+		description: Adds colored indicator on folders
+		type: class-select
+		allowEmpty: false
+		default: colorful-folders-off
+		options:
+			-
+				label: None
+				value: colorful-folders-off
+			-
+				label: Indicator
+				value: colorful-folders-side
+			-
+				label: Subtle
+				value: colorful-folders-subtle
+			-
+				label: Strong
+				value: colorful-folders-strong
+			-
+				label: Monochrome
+				value: colorful-folders-mono
 	-
 		id: hide-help
 		title: Hide help button
