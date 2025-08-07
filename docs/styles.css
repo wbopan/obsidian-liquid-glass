@@ -172,6 +172,11 @@ button {
 .panel-actions {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+.supported-themes {
+  color: var(--text-faint);
+  font-size: 0.85rem;
 }
 .clear-btn {
   color: var(--color-red);
@@ -267,7 +272,12 @@ h2 {
   background-color: var(--background-primary);
   padding: 40px 40px 0;
   overflow: hidden;
-  pointer-events: none;
+  user-select: none;
+
+  &,
+  * {
+    cursor: not-allowed;
+  }
 }
 .setting {
   display: flex;
