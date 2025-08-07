@@ -122,11 +122,21 @@ body:not(.performance-mode) .mod-sidedock {
     inset: 0;
     display: flex !important;
     pointer-events: none;
+    user-select: none;
     animation: workspaceLeafOut var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
     z-index: 1;
 
     * {
       pointer-events: none;
+      user-select: none;
+    }
+
+    input,
+    textarea,
+    button,
+    select,
+    .dropdown {
+      display: none;
     }
   }
 }
