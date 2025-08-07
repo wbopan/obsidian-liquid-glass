@@ -65,6 +65,15 @@ body.layout-cards:not(.is-mobile) {
     right: 8px;
   }
 
+  // Side panels
+  &.show-ribbon .mod-sidedock.mod-left-split {
+    .mod-top-left-space .workspace-tab-header-container {
+      padding-left: 0;
+    }
+    .workspace-tabs .workspace-tab-container {
+      margin-left: 0;
+    }
+  }
   &:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
     .workspace-tab-header-container-inner {
       padding: 8px;
@@ -73,7 +82,6 @@ body.layout-cards:not(.is-mobile) {
     }
   }
 
-  // Side panels
   .mod-sidedock {
     & .workspace-leaf-resize-handle:not(:hover) {
       border-color: transparent;
@@ -134,6 +142,14 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
   }
 
   // Side panels
+  &.show-ribbon .mod-sidedock.mod-left-split {
+    .mod-top-left-space .workspace-tab-header-container {
+      padding-left: 0;
+    }
+    .workspace-tabs .workspace-tab-container {
+      margin-left: 0;
+    }
+  }
   &:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
     .workspace-tab-header-container {
       margin-right: -8px;
@@ -147,7 +163,7 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
     .sidebar-toggle-button {
       margin-right: 8px;
     }
-    &.workspace-tabs .workspace-leaf {
+    &.workspace-tabs .workspace-tab-container {
       border-top-left-radius: 0;
     }
   }
@@ -188,13 +204,13 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
   }
 
   .mod-sidedock.mod-left-split {
-    .workspace-tabs .workspace-leaf {
+    .workspace-tabs .workspace-tab-container {
       margin-left: 8px;
     }
-    .workspace-tabs.mod-top .workspace-leaf {
+    .workspace-tabs.mod-top .workspace-tab-container {
       border-top-left-radius: var(--radius-l);
     }
-    .workspace-tabs:last-child .workspace-leaf {
+    .workspace-tabs:last-child .workspace-tab-container {
       border-bottom-left-radius: var(--radius-l);
     }
     .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
@@ -206,13 +222,13 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
   }
 
   .mod-sidedock.mod-right-split {
-    .workspace-tabs .workspace-leaf {
+    .workspace-tabs .workspace-tab-container {
       margin-right: 8px;
     }
-    .workspace-tabs.mod-top .workspace-leaf {
+    .workspace-tabs.mod-top .workspace-tab-container {
       border-top-right-radius: var(--radius-l);
     }
-    .workspace-tabs:last-child .workspace-leaf {
+    .workspace-tabs:last-child .workspace-tab-container {
       border-bottom-right-radius: var(--radius-l);
     }
     .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
