@@ -9,12 +9,12 @@
     --h1-weight: 600;
     --h6-weight: 400;
 
-    --h1-font: var(--font-text-override), "InstrumentSerif";
-    --h2-font: var(--font-text-override), "InstrumentSerif";
-    --h3-font: var(--font-text-override), "InstrumentSerif";
-    --h4-font: var(--font-text-override), "InstrumentSerif";
-    --h5-font: var(--font-text-override), "InstrumentSerif";
-    --h6-font: var(--font-text-override), "InstrumentSerif";
+    --h1-font: var(--font-text-override), "InstrumentSerif", serif;
+    --h2-font: var(--font-text-override), "InstrumentSerif", serif;
+    --h3-font: var(--font-text-override), "InstrumentSerif", serif;
+    --h4-font: var(--font-text-override), "InstrumentSerif", serif;
+    --h5-font: var(--font-text-override), "InstrumentSerif", serif;
+    --h6-font: var(--font-text-override), "InstrumentSerif", serif;
 
     --code-border-width: 1px;
     --code-size: var(--font-smallest);
