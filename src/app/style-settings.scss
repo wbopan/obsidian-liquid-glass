@@ -1001,7 +1001,18 @@ settings:
 		id: colorful-headings
 		title: Colorful headings
 		description: Headings use a different color for each size
-		type: class-toggle
+		type: class-select
+		default: colorful-headings-off
+		options:
+			-
+				label: Disabled
+				value: colorful-headings-off
+			-
+				label: Indicator
+				value: colorful-headings-side
+			-
+				label: Full color
+				value: colorful-headings-full
 	-
 		id: level-1-headings
 		title: Level 1 Headings
