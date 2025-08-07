@@ -1225,14 +1225,7 @@
       }
     },
     "CTA-BTN-enable": { "newId": "large-new-note" },
-    "file-names-untrim": {
-      "newId": "nav-item-white-space",
-      "valueMapping": {
-        "__fallback": "pre",
-        "true": "none",
-        "false": "pre"
-      }
-    },
+    "file-name-untrim": { "newId": "full-item-name" },
     "folder-font-bold": {
       "unsupported": true,
       "category": "File Explorer",
@@ -2556,11 +2549,11 @@
       }
     },
     "wrap-nav-titles": {
-      "newId": "nav-item-white-space",
+      "newId": "full-item-name",
       "valueMapping": {
-        "__fallback": "pre",
-        "true": "none",
-        "false": "pre"
+        "__fallback": "false",
+        "true": "false",
+        "false": "true"
       }
     },
     "heading-outline": {

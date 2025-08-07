@@ -515,19 +515,6 @@ settings:
 		max: 1
 		step: 0.25
 	-
-		id: indentation-guide-width
-		title: Indentation guides
-		type: variable-select
-		allowEmpty: false
-		default: 0px
-		options:
-			-
-				label: Hidden
-				value: 0px
-			-
-				label: Always
-				value: 1px
-	-
 		id: status-bar-style
 		title: Status bar style
 		type: class-select
@@ -544,16 +531,16 @@ settings:
 				label: Full width
 				value: status-bar-full
 	-
+		id: performance-mode
+		title: Performance mode
+		description: Turns off high performance impact animations to improve performance
+		type: class-toggle
+	-
 		id: animation
 		title: Animation
 		type: heading
 		level: 2
 		collapsed: true
-	-
-		id: performance-mode
-		title: Performance mode
-		description: Turns off high performance impact animations to improve performance
-		type: class-toggle
 	-
 		id: anim-motion-baseline
 		title: Animation personality profile
@@ -684,24 +671,6 @@ settings:
 		description: Adds text label and background on new note button in the left sidebar
 		type: class-toggle
 	-
-		id: hide-help
-		title: Hide help button
-		type: class-toggle
-		default: false
-	-
-		id: hide-vault-switcher
-		title: Hide vault switcher
-		type: class-select
-		allowEmpty: false
-		default: hide-vault-switcher-default
-		options:
-			-
-				label: Always
-				value: hide-vault-switcher-default
-			-
-				label: Never
-				value: hide-vault-switcher-off
-	-
 		id: colorful-folders
 		title: Colorful folders
 		description: Adds colored indicator on folders
@@ -741,18 +710,68 @@ settings:
 				label: Strong
 				value: nav-item-strong
 	-
-		id: nav-item-white-space
-		title: Trim file names in sidebars
+		id: nav-item-size
+		title: Item name size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: ''
+	-
+		id: full-item-name
+		title: Full item name
+		description: Display long file name without trimming
+		type: class-toggle
+		default: false
+	-
+		id: hide-help
+		title: Hide help button
+		type: class-toggle
+		default: false
+	-
+		id: hide-vault-switcher-off
+		title: Always show vault switcher
+		type: class-toggle
+		default: false
+	-
+		id: indentation-guide
+		title: Indentation guides
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: indentation-guide-width
+		title: Indentation guides thickness
 		type: variable-select
 		allowEmpty: false
-		default: pre
+		default: 0px
 		options:
 			-
-				label: Trim
-				value: pre
+				label: Hidden
+				value: 0px
 			-
-				label: No Trim
-				value: none
+				label: Thin
+				value: 1px
+			-
+				label: Medium
+				value: 2px
+			-
+				label: Thick
+				value: 4px
+	-
+		id: indentation-guide-color
+		title: Indentation guides color
+		type: variable-select
+		allowEmpty: false
+		default: rgba(var(--mono-rgb-100), 0.12)
+		options:
+			-
+				label: Subtle
+				value: rgba(var(--mono-rgb-100), 0.12)
+			-
+				label: Strong
+				value: var(--text-faint)
+			-
+				label: Full width
+				value: var(--color-accent)
 	-
 		id: obsidian-frame
 		title: Obsidian frame
@@ -898,7 +917,7 @@ settings:
 		title: Tab title font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '13px'
+		default: ''
 	-
 		id: file-header-font-weight
 		title: Tab title font weight
@@ -941,7 +960,7 @@ settings:
 		title: Inline title font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1.802em'
+		default: 1.802em
 	-
 		id: inline-title-weight
 		title: Inline title font weight
@@ -1002,7 +1021,7 @@ settings:
 		title: H1 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1.802em'
+		default: 1.802em
 	-
 		id: h1-weight
 		title: H1 font weight
@@ -1089,7 +1108,7 @@ settings:
 		title: H2 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1.602em'
+		default: 1.602em
 	-
 		id: h2-weight
 		title: H2 font weight
@@ -1176,7 +1195,7 @@ settings:
 		title: H3 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1.424em;'
+		default: 1.424em
 	-
 		id: h3-weight
 		title: H3 font weight
@@ -1263,7 +1282,7 @@ settings:
 		title: H4 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1.266em'
+		default: 1.266em
 	-
 		id: h4-weight
 		title: H4 font weight
@@ -1350,7 +1369,7 @@ settings:
 		title: H5 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1.125em'
+		default: 1.125em
 	-
 		id: h5-weight
 		title: H5 font weight
@@ -1437,7 +1456,7 @@ settings:
 		title: H6 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '1em'
+		default: 1em
 	-
 		id: h6-weight
 		title: H6 font weight
@@ -1681,7 +1700,7 @@ settings:
 		title: Blockquote font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
+		default: 1em
 	-
 		id: blockquote-font-style
 		title: Blockquote font style
@@ -1721,11 +1740,17 @@ settings:
 		id: callout-radius
 		title: Callout Radius
 		type: variable-number-slider
-		default: 4
+		default: 8
 		min: 0
 		max: 16
 		step: 1
 		format: px
+	-
+		id: callout-size
+		title: Callout font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 1em
 	-
 		id: callout-blend-mode
 		title: Color blending
@@ -1772,7 +1797,7 @@ settings:
 		title: Code font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: '0.8em'
+		default: ''
 	-
 		id: code-line-numbers
 		title: Code line numbers
@@ -1987,13 +2012,13 @@ settings:
 		collapsed: true
     -
         id: list-spacing
-        title: List Spacing
+        title: List spacing
         type: variable-number
         default: 0.075
         format: em
     -
         id: list-marker-color
-        title: Unordered list bullet color
+        title: List bullet color
         type: variable-themed-color
         default-light: '#'
         default-dark: '#'

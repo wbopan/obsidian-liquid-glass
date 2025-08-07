@@ -50,6 +50,9 @@ body.nav-item-strong {
   --nav-item-background-active: var(--interactive-accent);
   --nav-item-color-active: var(--text-on-accent);
 }
+body.full-item-name {
+  --nav-item-white-space: none;
+}
 .tree-item-self,
 .tree-item-inner {
   transition: font-weight var(--anim-duration-superfast);
