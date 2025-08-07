@@ -199,14 +199,6 @@ body:not(.compact-tabs-off) .workspace .mod-sidedock {
   }
 }
 
-// Side panels: Tab names
-body.tab-names-all {
-  --sidebar-tab-text-display: flex;
-}
-body.tab-names-single .workspace-tab-header:only-child {
-  --sidebar-tab-text-display: flex;
-}
-
 // Side panels: Platforms
 
 body .mod-sidedock .workspace-tabs.mod-top-right-space .workspace-tab-header-container {

@@ -10,7 +10,7 @@ settings:
 		type: info-text
 		level: 1
 		markdown: true
-		description: Easily migrate your settings with [Style Settings migration tool](https://aaaaalexis.github.io/obsidian-baseline/). Currently supporting **Minimal**, **AnuPpuccin**, **Border**, **Sanctum**, and **Things 2**.
+		description: Easily migrate your settings with [Style Settings migration tool](https://aaaaalexis.github.io/obsidian-baseline/). Currently supporting **Minimal**, **AnuPpuccin**, **Border**, **Sanctum**, and **Things 2**
 	-
 		id: missing-font
 		title: Extended language support
@@ -22,12 +22,12 @@ settings:
 		type: info-text
 		level: 1
 		markdown: true
-		description: If your headings appear with missing characters, [download the extended font here](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css) and install it as a CSS snippet.
-		description.zh-TW: 如果標題出現字型缺漏，[請點此下載擴充字型](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css)，並安裝為 CSS 片段。
-		description.zh: 如果标题出现字体缺失，[请点击此处下载扩展字体](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font-cn.css)，并安装为 CSS 代码片段。
-		description.jp: 見出しに文字化けやフォントの欠落がある場合は、[こちらから拡張フォントをダウンロード](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font-jp.css)し、CSSスニペットとしてインストールしてください。
+		description: If your headings appear with missing characters, [download the extended font](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css) and install it as a CSS snippet
+		description.zh-TW: 如果標題出現字型缺漏，[請點此下載擴充字型](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css)，並安裝為 CSS 片段
+		description.zh: 如果标题出现字体缺失，[请点击此处下载扩展字体](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font-cn.css)，并安装为 CSS 代码片段
+		description.jp: 見出しに文字化けやフォントの欠落がある場合は、[こちらから拡張フォントをダウンロード](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font-jp.css)し、CSSスニペットとしてインストールしてください
 		description.kr: 제목에 글자가 제대로 표시되지 않는 경우, [여기에서 확장 폰트를 다운로드](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css)하고 CSS 스니펫으로 설치해 주세요.
-		description.ru: Если в заголовках не отображаются некоторые символы, [скачайте расширенный шрифт здесь](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css) и установите его в виде CSS-фрагмента.
+		description.ru: Если в заголовках не отображаются некоторые символы, [скачайте расширенный шрифт здесь](https://raw.githubusercontent.com/aaaaalexis/obsidian-baseline/refs/heads/main/snippets/baseline-extension-font.css) и установите его в виде CSS-фрагмента
 	-
 		id: colors
 		title: Colors
@@ -396,6 +396,12 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+    - 
+        id: text-palette-info
+		title: Heading text color
+		description: Find headings customization in **Editor** section
+        type: info-text
+		markdown: true
 	-
 		id: text-normal
 		title: Normal text color
@@ -665,10 +671,38 @@ settings:
 		description: Turns off text labels on navigation items in the left sidebar 
 		type: class-toggle
 	-
+		id: compact-actions-off
+		title: Disable compact panel actions
+		description: Turns off auto hiding panel actions
+		type: class-toggle
+	-
+		id: compact-tabs-off
+		title: Disable compact tabs bars
+		description: Turns off auto hiding tabs for non-top panels
+		type: class-toggle
+	-
 		id: large-new-note
 		title: Large new note button
 		description: Adds text label and background on new note button in the left sidebar
 		type: class-toggle
+	-
+		id: hide-help
+		title: Hide help button
+		type: class-toggle
+		default: false
+	-
+		id: hide-vault-switcher
+		title: Hide vault switcher
+		type: class-select
+		allowEmpty: false
+		default: hide-vault-switcher-default
+		options:
+			-
+				label: Always
+				value: hide-vault-switcher-default
+			-
+				label: Never
+				value: hide-vault-switcher-off
 	-
 		id: colorful-folders
 		title: Colorful folders
@@ -692,24 +726,6 @@ settings:
 			-
 				label: Monochrome
 				value: colorful-folders-mono
-	-
-		id: hide-help
-		title: Hide help button
-		type: class-toggle
-		default: false
-	-
-		id: hide-vault-switcher
-		title: Hide vault switcher
-		type: class-select
-		allowEmpty: false
-		default: hide-vault-switcher-default
-		options:
-			-
-				label: Always
-				value: hide-vault-switcher-default
-			-
-				label: Never
-				value: hide-vault-switcher-off
 	-
 		id: nav-item-active-style
 		title: Active file style
@@ -739,48 +755,6 @@ settings:
 			-
 				label: No Trim
 				value: none
-	-
-		id: sidebar-compact-actions
-		title: Compact panel actions
-		type: class-select
-		allowEmpty: false
-		default: compact-actions-default
-		options:
-			-
-				label: Enabled
-				value: compact-actions-default
-			-
-				label: Disabled
-				value: compact-actions-off
-	-
-		id: sidebar-compact-tabs
-		title: Compact tabs bars
-		type: class-select
-		allowEmpty: false
-		default: compact-tabs-default
-		options:
-			-
-				label: Non-top panels
-				value: compact-tabs-default
-			-
-				label: Disabled
-				value: compact-tabs-off
-	-
-		id: sidebar-tabs-names
-		title: Tab names
-		type: class-select
-		allowEmpty: false
-		default: tab-names-off
-		options:
-			-
-				label: Hidden
-				value: tab-names-off
-			-
-				label: Visible
-				value: tab-names-all
-			-
-				label: Single tab
-				value: tab-names-single
 	-
 		id: obsidian-frame
 		title: Obsidian frame
