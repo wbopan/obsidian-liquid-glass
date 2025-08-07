@@ -2453,8 +2453,8 @@
       "valueMapping": {
         "__fallback": "active-line-off",
         "transparent": "active-line-off",
-        "var(--background-hover)": "active-line-style-side",
-        "rgba(var(--color-accent-rgb), .3)": "active-line-style-background"
+        "var(--background-hover)": "active-line-side",
+        "rgba(var(--color-accent-rgb), .3)": "active-line-background"
       }
     },
     "aside-counter": {
