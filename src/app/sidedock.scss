@@ -93,6 +93,9 @@ body:not(.is-mobile) .mod-sidedock {
     justify-content: center;
     flex-direction: column;
   }
+  .nav-header .nav-buttons-container {
+    flex-wrap: nowrap;
+  }
   .nav-header .search-input-container {
     margin: 8px 0;
   }
