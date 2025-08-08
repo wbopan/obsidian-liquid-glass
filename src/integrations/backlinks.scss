@@ -1,8 +1,9 @@
-.backlink-pane button.search-result-file-match-replace-button {
-  position: relative;
-  bottom: 0;
-  margin-top: var(--size-2-3);
-  inset-inline-end: 0;
-  padding: var(--size-2-2) var(--size-2-3);
-  color: var(--text-muted);
+.backlink-pane {
+  .search-result-file-match:not(:hover) .search-result-file-match-replace-button {
+    display: none;
+  }
+
+  .search-result-file-match-replace-button {
+    padding: 4px 8px;
+  }
 }
