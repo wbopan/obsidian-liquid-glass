@@ -60,7 +60,12 @@ https://github.com/sainnhe/everforest
   --text-on-accent: var(--background-primary);
   --text-on-accent-inverted: var(--background-primary);
 }
-.theme-dark.everforest-dark {
+.theme-dark.everforest-dark,
+.theme-light.everforest-light.contrast-light-vivid .titlebar,
+.theme-light.everforest-light.contrast-light-vivid .status-bar,
+.theme-light.everforest-light.contrast-light-vivid .mod-sidedock,
+.theme-light.everforest-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.everforest-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --color-red-rgb: 230, 126, 128;
   --color-orange-rgb: 230, 152, 117;
   --color-yellow-rgb: 219, 188, 127;

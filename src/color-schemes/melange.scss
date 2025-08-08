@@ -40,7 +40,12 @@
   --text-on-accent: var(--background-primary);
   --text-on-accent-inverted: var(--background-primary);
 }
-.theme-dark.melange-dark {
+.theme-dark.melange-dark,
+.theme-light.melange-light.contrast-light-vivid .titlebar,
+.theme-light.melange-light.contrast-light-vivid .status-bar,
+.theme-light.melange-light.contrast-light-vivid .mod-sidedock,
+.theme-light.melange-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.melange-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --interactive-normal: #292522;
   --background-primary: #292522;
   --background-secondary: #34302c;

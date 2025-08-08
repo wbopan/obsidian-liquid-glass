@@ -2422,9 +2422,9 @@
       "newId": "background-contrast-dark",
       "valueMapping": {
         "__fallback": "contrast-dark-tonal",
-        "sanctum-default-light": "contrast-dark-tonal",
-        "sanctum-contrast-light": "contrast-dark",
-        "sanctum-white": "contrast-dark-black"
+        "sanctum-default-dark": "contrast-dark-tonal",
+        "sanctum-contrast-dark": "contrast-dark",
+        "sanctum-black": "contrast-dark-black"
       }
     },
     "color-accent-rgb-l": {

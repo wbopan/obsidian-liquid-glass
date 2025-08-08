@@ -29,7 +29,12 @@
   --background-modifier-border: rgba(0, 0, 0, 0.05);
 }
 
-.theme-dark.macos-dark {
+.theme-dark.macos-dark,
+.theme-light.macos-light.contrast-light-vivid .titlebar,
+.theme-light.macos-light.contrast-light-vivid .status-bar,
+.theme-light.macos-light.contrast-light-vivid .mod-sidedock,
+.theme-light.macos-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.macos-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --color-red-rgb: 255, 69, 58;
   --color-red: #ff453a;
   --color-orange-rgb: 255, 159, 10;

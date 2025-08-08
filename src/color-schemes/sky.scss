@@ -25,7 +25,12 @@
   --accent-s: 71%;
   --accent-l: 52%;
 }
-.theme-dark.notion-dark {
+.theme-dark.notion-dark,
+.theme-light.notion-light.contrast-light-vivid .titlebar,
+.theme-light.notion-light.contrast-light-vivid .status-bar,
+.theme-light.notion-light.contrast-light-vivid .mod-sidedock,
+.theme-light.notion-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.notion-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: #2f3437;
   --background-secondary: #373c3f;
   --interactive-normal: #4b5053;

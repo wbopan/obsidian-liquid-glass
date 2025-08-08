@@ -50,7 +50,12 @@ https://github.com/ayu-theme/ayu-colors
   --text-on-accent: var(--background-primary);
   --text-on-accent-inverted: var(--background-primary);
 }
-.theme-dark.ayu-dark {
+.theme-dark.ayu-dark,
+.theme-light.ayu-light.contrast-light-vivid .titlebar,
+.theme-light.ayu-light.contrast-light-vivid .status-bar,
+.theme-light.ayu-light.contrast-light-vivid .mod-sidedock,
+.theme-light.ayu-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.ayu-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --color-red-rgb: 255, 102, 102;
   --color-orange-rgb: 250, 173, 102;
   --color-yellow-rgb: 255, 209, 55;
@@ -78,8 +83,8 @@ https://github.com/ayu-theme/ayu-colors
   --background-modifier-border-focus: #333c4a;
 
   --text-normal: #cccac2;
-  --text-muted: #707a8c;
-  --text-faint: #495063;
+  --text-muted: #a0a9b9;
+  --text-faint: #6f768a;
 
   --text-selection: rgba(64, 159, 255, 0.25);
 }

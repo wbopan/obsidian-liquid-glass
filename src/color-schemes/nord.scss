@@ -48,7 +48,13 @@ https://github.com/nordtheme/nord
   --text-highlight-bg: rgba(208, 135, 112, 0.35);
 }
 
-.theme-dark.nord-dark {
+.theme-dark.nord-dark,
+.theme-dark.nord-dark,
+.theme-light.nord-light.contrast-light-vivid .titlebar,
+.theme-light.nord-light.contrast-light-vivid .status-bar,
+.theme-light.nord-light.contrast-light-vivid .mod-sidedock,
+.theme-light.nord-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.nord-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: #2e3440;
   --background-secondary: #3b4252;
   --interactive-normal: rgba(135, 152, 190, 0.15);
