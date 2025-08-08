@@ -53,6 +53,10 @@ body.nav-item-strong {
 body.full-item-name {
   --nav-item-white-space: none;
 }
+.nav-file-title,
+.nav-folder-title {
+  padding-inline-end: 8px;
+}
 .tree-item-self,
 .tree-item-inner {
   transition: font-weight var(--anim-duration-superfast);
