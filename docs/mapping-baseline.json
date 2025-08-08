@@ -324,7 +324,7 @@
   "tab-stacked-spine-order": "Spine element order",
   "row": "Default",
   "row-reverse": "Reversed",
-  "labeled-nav-off": "Disable text labels for primary navigation",
+  "stacked-nav-off": "Disable text labels for primary navigation",
   "large-new-note": "Large new note button",
   "colorful-folders": "Cololful folders",
   "colorful-folders-side": "Indicator",

@@ -1,4 +1,4 @@
-body:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
+body:not(.stacked-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
   --sidebar-tab-text-display: flex;
 
   .workspace-tab-header-container {
@@ -36,6 +36,14 @@ body:not(.labeled-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
   }
 }
 
-body.labeled-nav-off .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
+body.stacked-nav-off .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
   padding-left: var(--frame-left-space);
+}
+
+// Side panels: Tab names
+body.tab-names-all {
+  --sidebar-tab-text-display: flex;
+}
+body.tab-names-single .workspace-tab-header:only-child {
+  --sidebar-tab-text-display: flex;
 }

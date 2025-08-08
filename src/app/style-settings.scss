@@ -651,9 +651,25 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: labeled-nav-off
-		title: Disable text labels for primary navigation
-		description: Turns off text labels on navigation items in the left sidebar 
+		id: labeled-tabs
+		title: Tab labels
+		type: class-select
+		allowEmpty: false
+		default: labeled-tabs-off
+		options:
+			-
+				label: Hidden
+				value: labeled-tabs-off
+			-
+				label: Visible
+				value: labeled-tabs-all
+			-
+				label: Single tab
+				value: labeled-tabs-single
+	-
+		id: stacked-nav-off
+		title: Disable large primary navigation
+		description: Turns off vertically stacked tabs in the left sidebar 
 		type: class-toggle
 	-
 		id: compact-actions-off
