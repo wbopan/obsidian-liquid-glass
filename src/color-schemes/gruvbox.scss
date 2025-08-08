@@ -4,8 +4,14 @@ MIT License
 https://github.com/morhetz/gruvbox
 */
 
-.theme-dark.gruvbox-dark,
-.theme-light.gruvbox-light {
+.theme-light.gruvbox-light.color-scheme-accent,
+.theme-dark.gruvbox-dark.color-scheme-accent {
+  --accent-h: 24;
+  --accent-s: 88%;
+  --accent-l: 45%;
+}
+.theme-light.gruvbox-light,
+.theme-dark.gruvbox-dark {
   --color-red-rgb: 204, 36, 29;
   --color-orange-rgb: 214, 93, 14;
   --color-yellow-rgb: 215, 153, 33;
@@ -41,7 +47,6 @@ https://github.com/morhetz/gruvbox
   --text-selection: rgba(192, 165, 125, 0.3);
   --text-highlight-bg: rgba(215, 153, 33, 0.4);
 }
-
 .theme-light.gruvbox-light.contrast-light-tonal {
   --background-secondary: #fcf2c7;
 }
@@ -49,6 +54,7 @@ https://github.com/morhetz/gruvbox
   --interactive-normal: #faf5d7;
   --background-modifier-border: #f2e6bd;
 }
+
 .theme-dark.gruvbox-dark {
   --background-primary: #282828;
   --background-secondary: #1e2021;

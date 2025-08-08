@@ -1,5 +1,10 @@
 /* Sky color scheme, inspired by Notion */
 
+.theme-light.notion-light.color-scheme-accent {
+  --accent-h: 197;
+  --accent-s: 71%;
+  --accent-l: 52%;
+}
 .theme-light.notion-light {
   --background-secondary: #f7f6f4;
   --interactive-normal: #e8e7e4;
@@ -13,6 +18,12 @@
   --text-faint: #aaa9a5;
 
   --text-selection: rgba(131, 201, 229, 0.3);
+}
+
+.theme-dark.notion-dark.color-scheme-accent {
+  --accent-h: 197;
+  --accent-s: 71%;
+  --accent-l: 52%;
 }
 .theme-dark.notion-dark {
   --background-primary: #2f3437;

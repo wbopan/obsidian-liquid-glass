@@ -5,6 +5,11 @@ Copyright (c) Konstantin Pschera <me@kons.ch> (kons.ch)
 https://github.com/ayu-theme/ayu-colors
 */
 
+.theme-light.ayu-light.color-scheme-accent {
+  --accent-h: 36;
+  --accent-s: 100%;
+  --accent-l: 50%;
+}
 .theme-light.ayu-light {
   --color-red-rgb: 230, 80, 80;
   --color-orange-rgb: 250, 141, 62;
@@ -23,8 +28,28 @@ https://github.com/ayu-theme/ayu-colors
   --color-blue: #399ee6;
   --color-purple: #a37acc;
   --color-pink: #ff7383;
+
+  --background-primary: #fff;
+  --background-secondary: #f8f9fa;
+  --interactive-normal: rgba(209, 218, 224, 0.5);
+
+  --background-modifier-border: #e6eaed;
+
+  --text-normal: #5c6165;
+  --text-muted: #8a9199;
+  --text-faint: #aaaeb0;
+
+  --text-selection: rgba(3, 91, 214, 0.15);
 }
 
+.theme-dark.ayu-dark.color-scheme-accent {
+  --accent-h: 35;
+  --accent-s: 100%;
+  --accent-l: 60%;
+
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
+}
 .theme-dark.ayu-dark {
   --color-red-rgb: 255, 102, 102;
   --color-orange-rgb: 250, 173, 102;
@@ -43,22 +68,7 @@ https://github.com/ayu-theme/ayu-colors
   --color-blue: #73d0ff;
   --color-purple: #dfbfff;
   --color-pink: #f27983;
-}
 
-.theme-light.ayu-light {
-  --background-primary: #fff;
-  --background-secondary: #f8f9fa;
-  --interactive-normal: rgba(209, 218, 224, 0.5);
-
-  --background-modifier-border: #e6eaed;
-
-  --text-normal: #5c6165;
-  --text-muted: #8a9199;
-  --text-faint: #aaaeb0;
-
-  --text-selection: rgba(3, 91, 214, 0.15);
-}
-.theme-dark.ayu-dark {
   --background-primary: #232937;
   --background-secondary: #1e2431;
   --interactive-normal: rgba(51, 61, 80, 0.5);

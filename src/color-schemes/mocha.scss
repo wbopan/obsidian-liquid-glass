@@ -1,3 +1,11 @@
+.theme-dark.mocha-dark.color-scheme-accent {
+  --accent-h: 10;
+  --accent-s: 56%;
+  --accent-l: 91%;
+
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
+}
 .theme-dark.mocha-dark {
   --color-pink: #f5c2e7;
   --color-red: #f38ba8;
@@ -15,6 +23,7 @@
   --color-cyan-rgb: 137, 220, 235;
   --color-blue-rgb: 135, 176, 249;
   --color-purple-rgb: 180, 190, 254;
+
   --color-base-100: #c6d0f5;
   --color-base-70: #a1a8c9;
   --color-base-60: #8e95b3;

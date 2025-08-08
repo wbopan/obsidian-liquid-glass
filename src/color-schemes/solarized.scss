@@ -5,8 +5,15 @@ Copyright (c) 2011 Ethan Schoonover
 https://ethanschoonover.com/solarized/
 */
 
-.theme-dark.solarized-dark,
-.theme-light.solarized-light {
+.theme-light.solarized-light.color-scheme-accent,
+.theme-dark.solarized-dark.color-scheme-accent {
+  --accent-h: 205;
+  --accent-s: 70%;
+  --accent-l: 48%;
+}
+
+.theme-light.solarized-light,
+.theme-dark.solarized-dark {
   --color-red-rgb: 220, 50, 47;
   --color-orange-rgb: 203, 77, 22;
   --color-yellow-rgb: 181, 137, 0;
@@ -46,6 +53,7 @@ https://ethanschoonover.com/solarized/
 .theme-light.solarized-light.contrast-light-tonal {
   --background-secondary: #fdf6e3;
 }
+
 .theme-dark.solarized-dark {
   --background-primary: #002b36;
   --background-secondary: #073642;

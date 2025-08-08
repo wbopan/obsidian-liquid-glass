@@ -1,31 +1,8 @@
-.theme-dark.melange-dark {
-  --interactive-normal: #292522;
-  --background-primary: #292522;
-  --background-secondary: #34302c;
-  --background-modifier-border: #403a36;
-  --background-modifier-border-hover: #635851;
-  --background-modifier-border-focus: #7e7469;
-  --text-faint: #867462;
-  --text-muted: #c1a78e;
-  --text-normal: #ece1d7;
-  --color-blue: #7f91b2;
-  --color-cyan: #7b9695;
-  --color-green: #78997a;
-  --color-purple: #b380b0;
-  --color-pink: #c070ae;
-  --color-red: #bd8183;
-  --color-orange: #e49b5d;
-  --color-yellow: #d2be73;
-  --color-blue-rgb: 127, 145, 178;
-  --color-cyan-rgb: 123, 150, 149;
-  --color-green-rgb: 120, 153, 122;
-  --color-purple-rgb: 179, 128, 176;
-  --color-pink-rgb: 192, 112, 174;
-  --color-red-rgb: 189, 129, 131;
-  --color-orange-rgb: 228, 155, 93;
-  --color-yellow-rgb: 210, 190, 115;
+.theme-light.melange-light.color-scheme-accent {
+  --accent-h: 29;
+  --accent-s: 100%;
+  --accent-l: 37%;
 }
-
 .theme-light.melange-light {
   --interactive-normal: #f0ecea;
   --background-primary: #f0ecea;
@@ -36,6 +13,7 @@
   --text-faint: #a98a78;
   --text-muted: #7d6658;
   --text-normal: #54433a;
+
   --color-blue: #7892bd;
   --color-cyan: #739797;
   --color-green: #6e9b72;
@@ -52,4 +30,41 @@
   --color-red-rgb: 199, 123, 139;
   --color-orange-rgb: 188, 92, 0;
   --color-yellow-rgb: 189, 162, 64;
+}
+
+.theme-dark.melange-dark.color-scheme-accent {
+  --accent-h: 28;
+  --accent-s: 71%;
+  --accent-l: 63%;
+
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
+}
+.theme-dark.melange-dark {
+  --interactive-normal: #292522;
+  --background-primary: #292522;
+  --background-secondary: #34302c;
+  --background-modifier-border: #403a36;
+  --background-modifier-border-hover: #635851;
+  --background-modifier-border-focus: #7e7469;
+  --text-faint: #867462;
+  --text-muted: #c1a78e;
+  --text-normal: #ece1d7;
+
+  --color-blue: #7f91b2;
+  --color-cyan: #7b9695;
+  --color-green: #78997a;
+  --color-purple: #b380b0;
+  --color-pink: #c070ae;
+  --color-red: #bd8183;
+  --color-orange: #e49b5d;
+  --color-yellow: #d2be73;
+  --color-blue-rgb: 127, 145, 178;
+  --color-cyan-rgb: 123, 150, 149;
+  --color-green-rgb: 120, 153, 122;
+  --color-purple-rgb: 179, 128, 176;
+  --color-pink-rgb: 192, 112, 174;
+  --color-red-rgb: 189, 129, 131;
+  --color-orange-rgb: 228, 155, 93;
+  --color-yellow-rgb: 210, 190, 115;
 }

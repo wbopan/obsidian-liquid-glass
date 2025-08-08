@@ -73,6 +73,9 @@ settings:
 				label: macOS
 				value: macos-light
 			-
+				label: Melange
+				value: melange-light
+			-
 				label: Nord
 				value: nord-light
 			-
@@ -87,9 +90,6 @@ settings:
 			-
 				label: Things
 				value: things-light
-			-
-				label: Melange
-				value: melange-light
 	-
 		id: background-contrast-light
 		title: Light mode background contrast
@@ -126,6 +126,9 @@ settings:
 				label: Catppuccin
 				value: catppuccin-dark
 			-
+				label: Dracula
+				value: dracula-dark
+			-
 				label: Everforest
 				value: everforest-dark
 			-
@@ -144,6 +147,9 @@ settings:
 				label: macOS
 				value: macos-dark
 			-
+				label: Melange
+				value: melange-dark
+			-
 				label: Mocha
 				value: mocha-dark
 			-
@@ -161,9 +167,6 @@ settings:
 			-
 				label: Things
 				value: things-dark
-			-
-				label: Melange
-				value: melange-dark
 	-
 		id: background-contrast-dark
 		title: Dark mode background contrast
@@ -180,6 +183,12 @@ settings:
 			-
 				label: Black
 				value: contrast-dark-black
+	-
+		id: color-scheme-accent
+		title: Color scheme accent
+		description: Override accent color with color scheme predefined color 
+		type: class-toggle
+		default: false
 	-
 		id: base-palette
 		title: Base colors

@@ -1,3 +1,8 @@
+.theme-light.latte-light.color-scheme-accent {
+  --accent-h: 11;
+  --accent-s: 58%;
+  --accent-l: 69%;
+}
 .theme-light.latte-light {
   --color-pink: #ec83d0;
   --color-red: #d20f39;
@@ -15,6 +20,7 @@
   --color-cyan-rgb: 4, 165, 229;
   --color-blue-rgb: 42, 110, 245;
   --color-purple-rgb: 114, 135, 253;
+
   --color-base-100: #4c4f69;
   --color-base-70: #6c6f85;
   --color-base-60: #7c7f93;

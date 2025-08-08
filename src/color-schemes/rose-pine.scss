@@ -5,6 +5,11 @@ Copyright (c) 2023 Rosé Pine
 https://github.com/rose-pine/rose-pine-theme
 */
 
+.theme-light.rose-pine-light.color-scheme-accent {
+  --accent-h: 3;
+  --accent-s: 53%;
+  --accent-l: 67%;
+}
 .theme-light.rose-pine-light {
   --color-red-rgb: 180, 99, 122;
   --color-orange-rgb: 215, 130, 125;
@@ -23,8 +28,30 @@ https://github.com/rose-pine/rose-pine-theme
   --color-blue: #56949f;
   --color-purple: #907aa9;
   --color-pink: #907aa9;
+
+  --background-primary: #fffaf3;
+  --background-secondary: #faf4ed;
+  --interactive-normal: rgba(233, 223, 218, 0.5);
+
+  --background-modifier-border: #eae3e1;
+  --background-modifier-border-hover: #dfdad9;
+  --background-modifier-border-focus: #cecacd;
+
+  --text-normal: #575279;
+  --text-muted: #797593;
+  --text-faint: #9893a5;
+
+  --text-selection: rgba(191, 180, 181, 0.35);
 }
 
+.theme-dark.rose-pine-dark.color-scheme-accent {
+  --accent-h: 2;
+  --accent-s: 55%;
+  --accent-l: 83%;
+
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
+}
 .theme-dark.rose-pine-dark {
   --color-red-rgb: 234, 111, 146;
   --color-orange-rgb: 233, 155, 151;
@@ -43,24 +70,7 @@ https://github.com/rose-pine/rose-pine-theme
   --color-blue: #9ccfd8;
   --color-purple: #c4a7e7;
   --color-pink: #c4a7e7;
-}
 
-.theme-light.rose-pine-light {
-  --background-primary: #fffaf3;
-  --background-secondary: #faf4ed;
-  --interactive-normal: rgba(233, 223, 218, 0.5);
-
-  --background-modifier-border: #eae3e1;
-  --background-modifier-border-hover: #dfdad9;
-  --background-modifier-border-focus: #cecacd;
-
-  --text-normal: #575279;
-  --text-muted: #797593;
-  --text-faint: #9893a5;
-
-  --text-selection: rgba(191, 180, 181, 0.35);
-}
-.theme-dark.rose-pine-dark {
   --background-primary: #1f1d2e;
   --background-secondary: #191724;
   --interactive-normal: rgba(68, 66, 86, 0.5);

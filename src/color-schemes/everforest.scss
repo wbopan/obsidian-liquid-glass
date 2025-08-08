@@ -5,6 +5,11 @@ Copyright (c) 2019 sainnhe
 https://github.com/sainnhe/everforest
 */
 
+.theme-light.everforest-light.color-scheme-accent {
+  --accent-h: 83;
+  --accent-s: 36%;
+  --accent-l: 53%;
+}
 .theme-light.everforest-light {
   --color-red-rgb: 248, 85, 82;
   --color-orange-rgb: 245, 125, 38;
@@ -23,6 +28,37 @@ https://github.com/sainnhe/everforest
   --color-blue: #3795c5;
   --color-purple: #df69ba;
   --color-pink: #df69ba;
+
+  --background-primary: #fdf6e3;
+  --background-secondary: #efebd4;
+  --interactive-normal: rgba(226, 222, 198, 0.5);
+
+  --background-modifier-border: #e0dcc7;
+  --background-modifier-border-hover: #bec5b2;
+  --background-modifier-border-focus: #bec5b2;
+
+  --text-normal: #5c6a72;
+  --text-muted: #829181;
+  --text-faint: #a6b0a0;
+
+  --text-selection: rgba(198, 214, 152, 0.4);
+  --text-highlight-bg: rgba(222, 179, 51, 0.3);
+}
+.theme-light.everforest-light.contrast-light-tonal {
+  --background-secondary: #fdf6e3;
+}
+.theme-light.everforest-light.contrast-light-white {
+  --interactive-normal: #f3efda;
+  --background-modifier-border: #edead5;
+}
+
+.theme-dark.everforest-dark.color-scheme-accent {
+  --accent-h: 81;
+  --accent-s: 34%;
+  --accent-l: 63%;
+
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
 }
 .theme-dark.everforest-dark {
   --color-red-rgb: 230, 126, 128;
@@ -42,33 +78,7 @@ https://github.com/sainnhe/everforest
   --color-blue: #7fbbb3;
   --color-purple: #d699b6;
   --color-pink: #d699b6;
-}
 
-.theme-light.everforest-light {
-  --background-primary: #fdf6e3;
-  --background-secondary: #efebd4;
-  --interactive-normal: rgba(226, 222, 198, 0.5);
-
-  --background-modifier-border: #e0dcc7;
-  --background-modifier-border-hover: #bec5b2;
-  --background-modifier-border-focus: #bec5b2;
-
-  --text-normal: #5c6a72;
-  --text-muted: #829181;
-  --text-faint: #a6b0a0;
-
-  --text-selection: rgba(198, 214, 152, 0.4);
-  --text-highlight-bg: rgba(222, 179, 51, 0.3);
-}
-
-.theme-light.everforest-light.contrast-light-tonal {
-  --background-secondary: #fdf6e3;
-}
-.theme-light.everforest-light.contrast-light-white {
-  --interactive-normal: #f3efda;
-  --background-modifier-border: #edead5;
-}
-.theme-dark.everforest-dark {
   --background-primary: #2d353b;
   --background-secondary: #232a2e;
   --interactive-normal: rgba(71, 82, 88, 0.5);

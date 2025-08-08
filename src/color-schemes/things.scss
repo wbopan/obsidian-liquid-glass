@@ -1,5 +1,15 @@
 /* Things */
 
+.theme-light.things-light.color-scheme-accent {
+  --accent-h: 215;
+  --accent-s: 76%;
+  --accent-l: 43%;
+}
+.theme-dark.things-dark.color-scheme-accent {
+  --accent-h: 215;
+  --accent-s: 91%;
+  --accent-l: 64%;
+}
 .theme-dark.things-dark,
 .theme-light.things-light {
   --color-red-rgb: 255, 48, 108;
@@ -18,7 +28,6 @@
   --color-purple: #b051de;
   --color-pink: #ff2e55;
 }
-
 .theme-light.things-light {
   --color-blue-rgb: 27, 97, 194;
   --color-blue: #1b61c2;
@@ -49,6 +58,7 @@
 .theme-light.things-light.contrast-light-white {
   --interactive-normal: #f5f6f8;
 }
+
 .theme-dark.things-dark {
   --background-primary: #24262a;
   --background-secondary: #202225;
@@ -66,7 +76,6 @@
 
   --text-selection: rgba(40, 119, 236, 0.35);
 }
-
 .theme-dark.things-dark.contrast-dark-black {
   --interactive-normal: #24262a;
   --divider-color: #24262a;

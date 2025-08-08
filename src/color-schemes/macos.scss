@@ -1,5 +1,10 @@
 /* macOS */
-
+.theme-light.macos-light.color-scheme-accent,
+.theme-dark.macos-dark.color-scheme-accent {
+  --accent-h: 219;
+  --accent-s: 92%;
+  --accent-l: 58%;
+}
 .theme-light.macos-light {
   --color-red-rgb: 255, 59, 48;
   --color-red: #ff3b30;
@@ -17,7 +22,13 @@
   --color-purple: #af52de;
   --color-pink-rgb: 255, 45, 85;
   --color-pink: #ff2d55;
+
+  --background-primary: #fff;
+  --background-secondary: #ededec;
+
+  --background-modifier-border: rgba(0, 0, 0, 0.05);
 }
+
 .theme-dark.macos-dark {
   --color-red-rgb: 255, 69, 58;
   --color-red: #ff453a;
@@ -35,37 +46,11 @@
   --color-purple: #bf5af2;
   --color-pink-rgb: 255, 55, 95;
   --color-pink: #ff375f;
-}
 
-.theme-light.macos-light {
-  --background-primary: #fff;
-  --background-secondary: #fbfbfb;
-  --interactive-normal: #ededed;
-
-  --background-modifier-border: rgba(0, 0, 0, 0.05);
-
-  --text-normal: #262626;
-  --text-muted: #7e7e7e;
-  --text-faint: #b0b0b0;
-}
-.theme-light.macos-light.contrast-light-tonal {
-  --background-primary: #fafafa;
-  --background-secondary: #fafafa;
-}
-.theme-dark.macos-dark {
   --background-primary: #1e1e1e;
   --background-secondary: #1a1a1a;
-  --interactive-normal: #2e2e2e;
 
   --background-modifier-border: rgba(255, 255, 255, 0.05);
-  --background-modifier-border-hover: #515151;
-  --background-modifier-border-focus: #595959;
-
-  --text-normal: #dcdcdc;
-  --text-muted: #8c8c8c;
-  --text-faint: #686868;
-
-  --text-selection: rgba(98, 169, 252, 0.5);
 }
 .theme-dark.macos-dark.contrast-dark-black {
   --divider-color: #1e1e1e;

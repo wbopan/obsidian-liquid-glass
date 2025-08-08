@@ -1,3 +1,11 @@
+.theme-dark.frappe-dark.color-scheme-accent {
+  --accent-h: 10;
+  --accent-s: 57%;
+  --accent-l: 88%;
+
+  --text-on-accent: var(--background-primary);
+  --text-on-accent-inverted: var(--background-primary);
+}
 .theme-dark.frappe-dark {
   --color-pink: #f4b8e4;
   --color-red: #e78284;
@@ -15,6 +23,7 @@
   --color-cyan-rgb: 153, 209, 219;
   --color-blue-rgb: 140, 170, 238;
   --color-purple-rgb: 186, 187, 241;
+
   --color-base-100: #c6ceef;
   --color-base-70: #a5acc9;
   --color-base-60: #949bb7;
