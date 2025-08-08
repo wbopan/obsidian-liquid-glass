@@ -1,0 +1,30 @@
+/* Admin */
+
+.theme-light.admin-light.color-scheme-accent,
+.theme-dark.admin-dark.color-scheme-accent {
+  --accent-h: 206;
+  --accent-s: 82%;
+  --accent-l: 63%;
+}
+
+.theme-light.admin-light {
+  --background-secondary: #f3f5f7;
+
+  --text-normal: #2e2e2e;
+}
+
+.theme-dark.admin-dark,
+.theme-light.admin-light.contrast-light-vivid .titlebar,
+.theme-light.admin-light.contrast-light-vivid .status-bar,
+.theme-light.admin-light.contrast-light-vivid .mod-sidedock,
+.theme-light.admin-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.admin-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
+  --background-primary: #23282e;
+  --background-primary-alt: #1c2128;
+  --background-secondary: #171b21;
+  --background-modifier-hover: #2d343e;
+
+  --text-normal: #ffffff;
+  --text-muted: #b3b3b3;
+  --text-faint: #909090;
+}
