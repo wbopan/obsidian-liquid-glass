@@ -270,6 +270,18 @@
     }
   }
 
+  body.theme-dark .workspace-leaf-content[data-type="markdown"] {
+    video,
+    img:not(.emoji),
+    .image-embed:not(.canvas-node-content),
+    iframe.external-embed {
+      transition: var(--anim-duration-moderate);
+      &:not(:hover) {
+        opacity: var(--media-muted, 1);
+      }
+    }
+  }
+
   // Tags
   body.unstyled-tags {
     --tag-background: transparent;
@@ -296,5 +308,11 @@
   }
   body.theme-dark.pdf-invert-dark .pdf-container .pdfViewer .page {
     filter: invert(1) hue-rotate(180deg) contrast(0.75);
+  }
+  .pdf-container .pdfViewer .page {
+    transition: var(--anim-duration-moderate);
+    &:not(:hover) {
+      opacity: var(--pdf-muted, 1);
+    }
   }
 }

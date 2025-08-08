@@ -83,11 +83,7 @@
       "category": "Icons",
       "name": "Icon opacity (Inactive)"
     },
-    "image-muted": {
-      "unsupported": true,
-      "category": "Images",
-      "name": "Image opacity in dark mode"
-    },
+    "image-muted": { "nedId": "media-muted" },
     "image-radius": { "newId": "media-radius" },
     "image-blend-light": {
       "unsupported": true,
@@ -163,11 +159,7 @@
       "category": "PDFs",
       "name": "Blend PDFs in light mode"
     },
-    "pdf-dark-opacity": {
-      "unsupported": true,
-      "category": "PDFs",
-      "name": "PDF opacity in dark mode"
-    },
+    "pdf-dark-opacity": { "newId": "pdf-muted" },
     "progress-complete": {
       "unsupported": true,
       "category": "Progress bars",

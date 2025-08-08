@@ -2108,6 +2108,15 @@ settings:
 		step: 1
 		format: px
 	-
+		id: media-muted
+		title: Media opacity in dark mode
+		description: Level of fading for media in dark mode. Hover over media to display at full brightness.
+		type: variable-number-slider
+		default: 1
+		min: 0.2
+		max: 1
+		step: 0.1
+	-
 		id: full-width-media-off
 		title: Disable maximized media
 		description: Turns off images and videos fill the width of the line
@@ -2157,6 +2166,15 @@ settings:
 			-
 				label: Shadows
 				value: pdf-shadows
+	-
+		id: pdf-muted
+		title: PDF opacity in dark mode
+		description: Level of fading for PDF pages in dark mode. Hover over a page to display at full brightness.
+		type: variable-number-slider
+		default: 1
+		min: 0.2
+		max: 1
+		step: 0.1
 	-
 		id: pdf-invert-dark
 		title: Invert PDFs in dark mode
