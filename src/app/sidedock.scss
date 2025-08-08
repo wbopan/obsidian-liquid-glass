@@ -1,5 +1,5 @@
 body {
-  --nav-item-padding: calc(8px * var(--density-modifier)) 32px;
+  --nav-item-padding: calc(8px * var(--density-modifier)) 8px calc(8px * var(--density-modifier)) 24px;
   --nav-item-children-margin-start: 19px;
   --indentation-guide-width: 0px;
 
@@ -52,10 +52,6 @@ body.nav-item-strong {
 }
 body.full-item-name {
   --nav-item-white-space: none;
-}
-.nav-file-title,
-.nav-folder-title {
-  padding-inline-end: 8px;
 }
 .tree-item-self,
 .tree-item-inner {
