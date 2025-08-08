@@ -289,9 +289,16 @@ body.is-phone .modal.mod-sidebar-layout {
   }
 }
 body.is-phone .modal.mod-sidebar-layout.mod-community-modal {
+  .community-modal-controls {
+    padding: 16px;
+    background-color: var(--background-secondary);
+  }
   .community-modal-controls .setting-item {
     margin-right: unset;
-    flex: 1;
+    width: 100%;
+  }
+  .community-modal-controls .setting-item .setting-item-control {
+    margin-top: 0;
   }
   .community-item .flair {
     margin-left: 4px;
