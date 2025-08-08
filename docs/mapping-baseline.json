@@ -192,6 +192,7 @@
   "callouts-style": "Callout style",
   "callouts-default": "Filled",
   "callouts-tactile": "Tactile",
+  "callouts-padded": "Padded",
   "callouts-outlined": "Outlined",
   "callout-radius": "Callout Radius",
   "callout-blend-mode": "Color blending",
