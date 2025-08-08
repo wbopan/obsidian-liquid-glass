@@ -29,7 +29,7 @@ select,
 
 button:not(.clickable-icon) {
   padding: 16px;
-  display: flex;
+  display: inline-flex;
 }
 
 .clickable-icon {
