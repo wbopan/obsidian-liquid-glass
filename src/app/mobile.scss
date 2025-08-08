@@ -17,20 +17,6 @@ body.is-mobile {
 body.is-phone {
   --mobile-sidebar-radius: 0;
 
-  // Animation
-  &:not(.performance-mode) {
-    .app-container:has(> .horizontal-main-container > .workspace > .workspace-drawer:not([style*="display: none;"])),
-    .app-container:has(~ .menu),
-    .app-container:has(~ .mod-dim) {
-      .mod-root {
-        transform: scale(0.95);
-      }
-      .mobile-navbar {
-        transform: translateY(80px);
-      }
-    }
-  }
-
   // Editor panel
   .mod-root {
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
