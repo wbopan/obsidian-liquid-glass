@@ -70,7 +70,7 @@ body.full-item-name {
 }
 
 // Desktop sidedock
-body:not(:is(.is-mobile, .theme-light:is(.contrast-light-tonal, .contrast-light-white), .theme-dark:is(.contrast-dark-tonal, .contrast-dark-black))) .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
+body:not(.is-mobile, .theme-light:is(.contrast-light-tonal, .contrast-light-white), .theme-dark:is(.contrast-dark-tonal, .contrast-dark-black)) .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
   border-color: transparent;
 }
 body:not(.is-mobile) .mod-sidedock {

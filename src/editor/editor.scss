@@ -42,6 +42,7 @@
     border-radius: var(--radius-s);
   }
 
+  // Tab title bar
   .view-header {
     padding: 0 8px;
     flex-shrink: 0;
@@ -56,14 +57,11 @@
   .view-header-title-container.webviewer-address-container {
     padding: 0;
   }
-  body:not(.is-mobile) .view-header-title-container:not(:hover) {
+  body:not(.is-mobile, .view-header-title-always) .view-header-title-container:not(:hover) {
     opacity: 0;
   }
   body:not(.is-mobile).view-header-title-hidden .view-header-title-container {
     visibility: hidden;
-  }
-  body:not(.is-mobile).view-header-title-always .view-header-title-container {
-    opacity: 1;
   }
   body.is-mobile .view-actions {
     padding: 0;
