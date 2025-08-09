@@ -42,6 +42,7 @@ body.layout-classic:not(.is-mobile) {
     }
   }
 
+  // Editor panel
   &:not(.tabs-floating, .tabs-underline) .mod-root .workspace-tab-header-container-inner {
     padding-top: 1px;
     margin-bottom: -1px;
@@ -257,6 +258,44 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
     .workspace-tab-container {
       border-top-right-radius: var(--radius-l);
       border-bottom-right-radius: var(--radius-l);
+    }
+  }
+}
+
+body.layout-frame:not(.is-mobile) {
+  .workspace {
+    padding: 4px;
+    background-color: var(--background-secondary);
+  }
+  .workspace-split {
+    margin: 4px;
+    height: unset;
+    background-color: var(--background-primary);
+    border-radius: var(--radius-s);
+    overflow: hidden;
+  }
+  .workspace-tabs .workspace-leaf {
+    background-color: transparent;
+  }
+
+  // Side panels
+  .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+    right: -6px;
+  }
+  .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    left: -6px;
+  }
+
+  // Editor panel
+  &:not(.tabs-floating, .tabs-underline) .mod-root .workspace-tab-header-container-inner {
+    padding-top: 1px;
+    margin-bottom: -1px;
+  }
+  .mod-root {
+    --tab-outline-width: var(--border-width);
+
+    .workspace-tabs .workspace-tab-container {
+      border-radius: 0;
     }
   }
 }

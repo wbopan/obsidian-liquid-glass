@@ -295,6 +295,7 @@
   "layout-classic": "Classic",
   "layout-cards": "Cards",
   "layout-border": "Border",
+  "layout-frame": "Frame",
   "density-modifier": "Layout density",
   "icon-stroke-modifier": "Icon thickness",
   "indentation-guide-width": "Indentation guides style",
