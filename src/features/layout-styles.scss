@@ -1,6 +1,10 @@
 body.layout-classic:not(.is-mobile) {
   --tab-outline-width: var(--border-width);
 
+  &.contrast-light-vivid .mod-root {
+    --tab-outline-width: 0;
+  }
+
   &.status-bar-full {
     --status-bar-border-width: 1px 0 0 0;
   }
@@ -67,11 +71,13 @@ body.layout-cards:not(.is-mobile) {
 
   // Side panels
   &.show-ribbon .mod-sidedock.mod-left-split {
-    .mod-top-left-space .workspace-tab-header-container {
-      padding-left: 0;
-    }
     .workspace-tabs .workspace-tab-container {
       margin-left: 0;
+    }
+  }
+  &.show-ribbon:not(.stacked-nav-off) {
+    .mod-top-left-space .workspace-tab-header-container {
+      padding-left: 0;
     }
   }
   &:not(.stacked-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
@@ -143,11 +149,13 @@ body.layout-border.is-translucent:not(.is-fullscreen):not(.is-mobile) {
 
   // Side panels
   &.show-ribbon .mod-sidedock.mod-left-split {
-    .mod-top-left-space .workspace-tab-header-container {
-      padding-left: 0;
-    }
     .workspace-tabs .workspace-tab-container {
       margin-left: 0;
+    }
+  }
+  &.show-ribbon:not(.stacked-nav-off) {
+    .mod-top-left-space .workspace-tab-header-container {
+      padding-left: 0;
     }
   }
   &:not(.stacked-nav-off) .mod-sidedock.mod-left-split .mod-top-left-space {
@@ -267,6 +275,7 @@ body.layout-frame:not(.is-mobile) {
     padding: 4px;
     background-color: var(--background-secondary);
   }
+  .workspace-ribbon,
   .workspace-split {
     margin: 4px;
     height: unset;
@@ -278,7 +287,16 @@ body.layout-frame:not(.is-mobile) {
     background-color: transparent;
   }
 
+  // Ribbon
+  &.mod-macos .workspace-ribbon {
+    --ribbon-width: calc(var(--header-height) + 28px);
+  }
+
   // Side panels
+  &.show-ribbon.stacked-nav-off .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
+    padding-left: 0;
+  }
+
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
     right: -6px;
   }
@@ -287,13 +305,13 @@ body.layout-frame:not(.is-mobile) {
   }
 
   // Editor panel
-  &:not(.tabs-floating, .tabs-underline) .mod-root .workspace-tab-header-container-inner {
+  &:not(.tabs-floating, .tabs-underline, .contrast-light-vivid) .mod-root .workspace-tab-header-container-inner {
+    --tab-outline-width: var(--border-width);
+
     padding-top: 1px;
     margin-bottom: -1px;
   }
   .mod-root {
-    --tab-outline-width: var(--border-width);
-
     .workspace-tabs .workspace-tab-container {
       border-radius: 0;
     }
