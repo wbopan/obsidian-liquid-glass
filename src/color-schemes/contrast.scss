@@ -23,10 +23,10 @@ body.theme-light.contrast-light-vivid {
   .mod-root .workspace-tab-header-container {
     background-color: var(--background-secondary);
   }
-  .workspace-tab-header-container::before {
+  .mod-root .workspace-tab-header-container::before {
     content: "";
     position: absolute;
-    inset: -100vw;
+    inset: calc(-100vh + 72px) 0;
     background: var(--background-secondary);
     pointer-events: none;
   }
