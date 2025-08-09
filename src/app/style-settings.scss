@@ -700,6 +700,10 @@ settings:
 		description: Adds text label and background on new note button in the left sidebar
 		type: class-toggle
 	-
+		id: bold-folders
+		title: Bold folders name
+		type: class-toggle
+	-
 		id: colorful-folders
 		title: Colorful folders
 		description: Adds colored indicator on folders

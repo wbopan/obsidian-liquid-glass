@@ -58,6 +58,10 @@ body.full-item-name {
   transition: font-weight var(--anim-duration-superfast);
   align-items: center;
 }
+body.bold-folders .nav-folder-title {
+  --nav-item-weight: calc(var(--font-weight) + var(--bold-modifier));
+  --nav-item-weight-hover: calc(var(--font-weight) + var(--bold-modifier));
+}
 
 // Ribbon
 .workspace-ribbon.mod-left {
