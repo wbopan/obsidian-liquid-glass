@@ -4,7 +4,7 @@ body {
 
   --nav-item-weight-active: calc(var(--font-weight) + var(--bold-modifier));
 
-  --ribbon-width: 52px;
+  --ribbon-width: var(--header-height);
   --ribbon-background-collapsed: var(--ribbon-background);
 }
 
@@ -73,7 +73,7 @@ body.bold-folders .nav-folder-title {
 }
 
 // Desktop sidedock
-body:not(.is-mobile, .theme-light:is(.contrast-light-tonal, .contrast-light-white), .theme-dark:is(.contrast-dark-tonal, .contrast-dark-black)) .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
+body:not(.is-mobile, .theme-light:is(.contrast-light-tonal, .contrast-light-white), .theme-dark:is(.contrast-dark-tonal, .contrast-dark-black), .layout-classic) .mod-sidedock > .workspace-leaf-resize-handle:not(:hover) {
   border-color: transparent;
 }
 body:not(.is-mobile) .mod-sidedock {
