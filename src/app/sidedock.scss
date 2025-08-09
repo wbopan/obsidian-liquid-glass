@@ -115,6 +115,37 @@ body:not(.is-mobile) .mod-sidedock {
   }
 }
 
+// Animation
+body .mod-sidedock {
+  .workspace-tab-container {
+    position: relative;
+  }
+  .workspace-leaf:not([style*="display: none"]) {
+    animation: workspaceLeafIn var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
+  }
+  .workspace-leaf[style*="display: none"] {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    user-select: none;
+    animation: workspaceLeafOut var(--anim-duration-moderate) var(--anim-motion-baseline) forwards;
+    z-index: 1;
+
+    * {
+      pointer-events: none;
+      user-select: none;
+    }
+
+    input,
+    textarea,
+    button,
+    select,
+    .dropdown {
+      display: none;
+    }
+  }
+}
+
 // Hide vault switcher
 body:not(.is-mobile, .hide-vault-switcher-off) .mod-sidedock.mod-left-split {
   .workspace-sidedock-vault-profile {
