@@ -1569,6 +1569,53 @@ settings:
 		description: Adds a border below the heading
 		default: false
 	-
+		id: properties
+		title: Properties
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: metadata-style
+		title: Properties style
+		type: class-select
+		allowEmpty: false
+		default: metadata-default
+		options:
+			-
+				label: Default
+				value: metadata-default
+			-
+				label: Block
+				value: metadata-block
+	-
+		id: metadata-heading-off
+		title: Hide properties heading
+		description: Hide "Properties" heading above properties
+		type: class-toggle
+		default: false
+	-
+		id: metadata-add-property-off
+		title: Hide "Add property" button
+		description: Hide "Add property" button below properties
+		type: class-toggle
+		default: false
+	-
+		id: metadata-icons-off
+		title: Hide property icons
+		description: Hide icons next to property names
+		type: class-toggle
+		default: false
+	-
+		id: metadata-label-width
+		title: Property name width
+		description: Width for the name of the property
+		type: variable-number-slider
+		default: 9
+		format: em
+		min: 4
+		max: 20
+		step: 0.5
+	-
 		id: blockwidth
 		title: Block width
 		type: heading
@@ -2227,53 +2274,6 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id: properties
-		title: Properties
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: metadata-style
-		title: Properties style
-		type: class-select
-		allowEmpty: false
-		default: metadata-default
-		options:
-			-
-				label: Default
-				value: metadata-default
-			-
-				label: Block
-				value: metadata-block
-	-
-		id: metadata-heading-off
-		title: Hide properties heading
-		description: Hide "Properties" heading above properties
-		type: class-toggle
-		default: false
-	-
-		id: metadata-add-property-off
-		title: Hide "Add property" button
-		description: Hide "Add property" button below properties
-		type: class-toggle
-		default: false
-	-
-		id: metadata-icons-off
-		title: Hide property icons
-		description: Hide icons next to property names
-		type: class-toggle
-		default: false
-	-
-		id: metadata-label-width
-		title: Property name width
-		description: Width for the name of the property
-		type: variable-number-slider
-		default: 9
-		format: em
-		min: 4
-		max: 20
-		step: 0.5
-	-
 		id: tables
 		title: Tables
 		type: heading
@@ -2600,4 +2600,66 @@ settings:
   &::after {
     border-radius: var(--button-radius);
   }
+}
+
+// Credits
+body .style-settings-container .setting-item[data-id] .setting-item-control::before {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  margin-inline-end: 4px;
+  max-width: 10em;
+}
+
+body.ayu-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.ayu-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Konstantin Pschera (k15a)";
+}
+body.admin-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.admin-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before,
+body.metadata-block .style-settings-container .setting-item[data-id="metadata-style"] .setting-item-control::before {
+  content: "Author: Bradley Wyatt (bwya77)";
+}
+body.catppuccin-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.catppuccin-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Catppuccin";
+}
+body.dracula-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.dracula-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Dracula";
+}
+body.everforest-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.everforest-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Sainnhe Park (sainnhe)";
+}
+body.flexoki-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.flexoki-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before,
+body.notion-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.notion-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Steph Ango (kepano)";
+}
+body.gruvbox-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.gruvbox-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Pavel Pertsev (morhetz)";
+}
+body.frappe-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before,
+body.latte-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.macchiato-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before,
+body.mocha-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: AnubisNekhet";
+}
+body.melange-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.melange-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Sergio A. Vargas (savq)";
+}
+body.nord-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.nord-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Sven Greb (svengreb)";
+}
+body.rose-pine-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.rose-pine-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Rose Pine";
+}
+body.solarized-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.solarized-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Ethan Schoonover (altercation)";
 }
