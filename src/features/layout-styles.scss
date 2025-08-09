@@ -299,3 +299,44 @@ body.layout-frame:not(.is-mobile) {
     }
   }
 }
+
+body.layout-cupertino:not(.is-mobile) {
+  // Editor panel
+  &:not(.tabs-floating, .tabs-underline, .contrast-light-vivid) .mod-root .workspace-tab-header-container-inner {
+    --tab-outline-width: var(--border-width);
+
+    padding-top: 1px;
+    margin-bottom: -1px;
+
+    .workspace-tab-container {
+      outline: var(--border-width) solid var(--background-modifier-border);
+    }
+  }
+
+  &.theme-light .mod-root .workspace-tab-container {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 24px 48px, rgba(0, 0, 0, 0.02) 0px 4px 16px;
+  }
+  &.theme-dark .mod-root .workspace-tab-container {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 24px 48px, rgba(0, 0, 0, 0.12) 0px 4px 16px;
+  }
+
+  &:not(.status-bar-full) .mod-root .workspace-tab-container {
+    margin-bottom: 8px;
+  }
+
+  .mod-root {
+    z-index: 1;
+
+    .workspace-tabs,
+    .workspace-tab-container {
+      overflow: visible;
+    }
+
+    .workspace-tab-container {
+      overflow: visible;
+    }
+    .workspace-leaf {
+      border-radius: var(--radius-s);
+    }
+  }
+}
