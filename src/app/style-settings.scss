@@ -2233,6 +2233,19 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: metadata-style
+		title: Properties style
+		type: class-select
+		allowEmpty: false
+		default: metadata-default
+		options:
+			-
+				label: Default
+				value: metadata-default
+			-
+				label: Block
+				value: metadata-block
+	-
 		id: metadata-heading-off
 		title: Hide properties heading
 		description: Hide "Properties" heading above properties
