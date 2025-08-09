@@ -288,7 +288,11 @@ body.layout-frame:not(.is-mobile) {
     background-color: var(--background-primary);
     border-radius: var(--radius-s);
     overflow: hidden;
-    border: var(--border-width) solid #424242;
+    border: var(--border-width) solid var(--background-modifier-border);
+  }
+  &.theme-light.contrast-light-vivid .workspace-ribbon,
+  &.theme-light.contrast-light-vivid .workspace-split {
+    border-color: #424242;
   }
   .workspace-tabs .workspace-leaf {
     background-color: transparent;
@@ -338,6 +342,9 @@ body.layout-frame:not(.is-mobile) {
   }
   &.theme-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
     background-color: var(--background-primary);
+  }
+  .mod-root .workspace-tabs .workspace-tab-container {
+    border-radius: 0;
   }
 }
 
