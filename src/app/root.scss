@@ -71,3 +71,7 @@ body:not(.accented-interface) {
 body.window-title-off .titlebar-text {
   display: none;
 }
+
+.app-container {
+  align-items: center;
+}
