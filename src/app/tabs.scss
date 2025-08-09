@@ -89,6 +89,9 @@ body.tabs-floating .workspace .mod-root {
   --tab-radius-active: var(--tab-radius);
   --tab-curve: 0;
 
+  .workspace-tab-header-container {
+    gap: 8px;
+  }
   .workspace-tab-header-container-inner {
     padding: 0 0 8px 8px;
     gap: 4px;
