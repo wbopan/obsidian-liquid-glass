@@ -275,6 +275,12 @@ body.layout-frame:not(.is-mobile) {
     padding: 4px;
     background-color: var(--background-secondary);
   }
+  .workspace::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--background-secondary);
+  }
   .workspace-ribbon,
   .workspace-split {
     margin: 4px;
@@ -282,14 +288,31 @@ body.layout-frame:not(.is-mobile) {
     background-color: var(--background-primary);
     border-radius: var(--radius-s);
     overflow: hidden;
+    border: var(--border-width) solid #424242;
   }
   .workspace-tabs .workspace-leaf {
     background-color: transparent;
   }
 
+  // Windows & Linux
+  &.is-frameless.is-hidden-frameless .titlebar {
+    height: var(--header-height);
+    top: 8px;
+    right: 8px;
+
+    .titlebar-button-container.mod-right {
+      border-top-right-radius: var(--radius-s);
+      overflow: hidden;
+    }
+  }
+
   // Ribbon
   &.mod-macos .workspace-ribbon {
     --ribbon-width: calc(var(--header-height) + 28px);
+  }
+  &:is(.mod-windows, .mod-linux) .workspace-ribbon .sidebar-toggle-button {
+    top: 8px;
+    left: 8px;
   }
 
   // Side panels
@@ -305,27 +328,28 @@ body.layout-frame:not(.is-mobile) {
   }
 
   // Editor panel
-  &:not(.tabs-floating, .tabs-underline, .contrast-light-vivid) .mod-root .workspace-tab-header-container-inner {
+  &:not(.tabs-floating, .tabs-underline, .contrast-light-vivid) .mod-root {
     --tab-outline-width: var(--border-width);
 
-    padding-top: 1px;
-    margin-bottom: -1px;
-  }
-  .mod-root {
-    .workspace-tabs .workspace-tab-container {
-      border-radius: 0;
+    .workspace-tab-header-container-inner {
+      padding-top: 1px;
+      margin-bottom: -1px;
     }
+  }
+  &.theme-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
+    background-color: var(--background-primary);
   }
 }
 
 body.layout-cupertino:not(.is-mobile) {
   // Editor panel
-  &:not(.tabs-floating, .tabs-underline, .contrast-light-vivid) .mod-root .workspace-tab-header-container-inner {
-    --tab-outline-width: var(--border-width);
+  &:not(.tabs-floating, .tabs-underline, .contrast-light-vivid) .mod-root {
+    .workspace-tab-header-container-inner {
+      --tab-outline-width: var(--border-width);
 
-    padding-top: 1px;
-    margin-bottom: -1px;
-
+      padding-top: 1px;
+      margin-bottom: -1px;
+    }
     .workspace-tab-container {
       outline: var(--border-width) solid var(--background-modifier-border);
     }

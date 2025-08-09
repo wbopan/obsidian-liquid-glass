@@ -43,8 +43,20 @@ body.theme-light.contrast-light-vivid {
       --text-on-accent-inverted: var(--color-base-10);
     }
   }
+
+  &:not(.nav-item-subtle, .nav-item-strong) .mod-sidedock {
+    --nav-item-background-hover: transparent;
+    --nav-item-background-active: transparent;
+    --nav-item-weight-hover: var(--font-medium);
+  }
+  &.nav-item-strong .mod-sidedock {
+    --nav-item-background-active: var(--interactive-accent);
+    --nav-item-color-active: var(--text-on-accent);
+  }
+
   .titlebar,
   .status-bar,
+  .workspace::before,
   .mod-sidedock,
   .mod-root .workspace-tab-header-container::before,
   .mod-root .workspace-tab-header-container > div:not(.workspace-tab-header-container-inner) {
@@ -112,12 +124,9 @@ body.theme-light.contrast-light-vivid {
     --tab-divider-color: var(--background-modifier-border-hover);
     --tab-outline-color: var(--divider-color);
     --titlebar-background: var(--background-secondary);
-    --titlebar-background-focused: var(--background-secondary);
     --titlebar-border-color: var(--background-modifier-border);
     --titlebar-text-color: var(--text-muted);
     --titlebar-text-color-focused: var(--text-normal);
-    --vault-profile-display: flex;
-    --vault-profile-actions-display: flex;
     --vault-profile-font-size: var(--font-ui-small);
     --vault-profile-font-weight: var(--font-medium);
     --vault-profile-color: var(--text-normal);
@@ -126,11 +135,9 @@ body.theme-light.contrast-light-vivid {
     --background-primary-alt: var(--color-base-10);
     --background-secondary: var(--color-base-20);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
-    --background-modifier-active-hover: hsla(258, 88%, 66%, 0.15);
     --background-modifier-border: var(--color-base-30);
     --background-modifier-border-hover: var(--color-base-35);
     --background-modifier-border-focus: var(--color-base-40);
-    --background-modifier-message: rgba(0, 0, 0, 0.9);
     --background-modifier-form-field: var(--color-base-00);
     --text-normal: var(--color-base-100);
     --text-muted: var(--color-base-70);
