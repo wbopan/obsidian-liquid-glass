@@ -26,8 +26,9 @@ body.theme-light.contrast-light-vivid {
   .workspace-tab-header-container::before {
     content: "";
     position: absolute;
-    inset: -48px;
+    inset: -100vw;
     background: var(--background-secondary);
+    pointer-events: none;
   }
 
   &:not(.accented-interface) {
