@@ -3,23 +3,6 @@
 
 /* Invert  */
 
-.theme-dark {
-  img[src$="#invert"],
-  div[src$="#invert"] img,
-  span[src$="#invert"] img {
-    filter: invert(1) hue-rotate(180deg);
-    mix-blend-mode: screen;
-  }
-  img[src$="#blend"],
-  div[src$="#blend"] img,
-  span[src$="#blend"] img {
-    mix-blend-mode: screen;
-  }
-  .img-blend {
-    mix-blend-mode: screen;
-  }
-}
-
 .theme-light {
   img[src$="#blend"],
   div[src$="#blend"] img,
@@ -33,6 +16,28 @@
   }
   .img-blend {
     mix-blend-mode: multiply;
+  }
+}
+
+.theme-dark {
+  div[src$="#invert"],
+  div[src$="#blend"] {
+    background-color: var(--background-primary);
+  }
+
+  img[src$="#invert"],
+  div[src$="#invert"] img,
+  span[src$="#invert"] img {
+    filter: invert(1) hue-rotate(180deg);
+    mix-blend-mode: screen;
+  }
+  img[src$="#blend"],
+  div[src$="#blend"] img,
+  span[src$="#blend"] img {
+    mix-blend-mode: screen;
+  }
+  .img-blend {
+    mix-blend-mode: screen;
   }
 }
 
