@@ -93,6 +93,9 @@ settings:
 			-
 				label: Things
 				value: things-light
+			-
+				label: Tiniri
+				value: tiniri-light
 	-
 		id: background-contrast-light
 		title: Light mode background contrast
@@ -176,6 +179,9 @@ settings:
 			-
 				label: Things
 				value: things-dark
+			-
+				label: Tiniri
+				value: tiniri-dark
 	-
 		id: background-contrast-dark
 		title: Dark mode background contrast
@@ -2671,6 +2677,10 @@ body.rose-pine-dark .style-settings-container .setting-item[data-id="color-schem
 body.solarized-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
 body.solarized-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
   content: "Author: Ethan Schoonover (altercation)";
+}
+body.tiniri-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.tiniri-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
+  content: "Author: Vlad Gerasimov (vladstudio)";
 }
 body.layout-border .style-settings-container .setting-item[data-id="layout-style"] .setting-item-control::before {
   content: "Author: Border by Akifyss";
