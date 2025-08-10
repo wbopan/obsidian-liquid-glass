@@ -2,6 +2,9 @@
   .metadata-properties-heading {
     width: 100%;
   }
+  .metadata-property-key-input {
+    border-bottom: none !important;
+  }
 
   // Side panels
   .workspace > .workspace-split:not(.mod-root) .metadata-container .metadata-properties {

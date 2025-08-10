@@ -4,7 +4,6 @@
 @use "app/tabs.scss";
 @use "app/sidedock.scss";
 @use "app/dialog.scss";
-@use "app/settings.scss";
 @use "app/status-bar.scss";
 @use "app/empty-state.scss";
 @use "app/mobile.scss";
@@ -44,6 +43,7 @@
 @use "color-schemes/latte.scss";
 @use "color-schemes/macos.scss";
 @use "color-schemes/macchiato.scss";
+@use "color-schemes/melange.scss";
 @use "color-schemes/mocha.scss";
 @use "color-schemes/nord.scss";
 @use "color-schemes/rose-pine.scss";
