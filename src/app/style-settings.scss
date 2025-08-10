@@ -551,6 +551,19 @@ settings:
 		max: 1
 		step: 0.25
 	-
+		id: input-style
+		title: Element style
+		type: class-select
+		allowEmpty: false
+		default: button-baseline
+		options:
+			-
+				label: Baseline
+				value: input-baseline
+			-
+				label: Elevated
+				value: input-elevated
+	-
 		id: status-bar-style
 		title: Status bar style
 		type: class-select
@@ -2679,6 +2692,11 @@ body.nord-dark .style-settings-container .setting-item[data-id="color-scheme-dar
 body.rose-pine-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
 body.rose-pine-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
   content: "Author: Rose Pine";
+}
+body.sanctum-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
+body.sanctum-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before,
+body.input-elevated .style-settings-container .setting-item[data-id="button-style"] .setting-item-control::before {
+  content: "Author: José Daniel Mourão (jdanielmourao)";
 }
 body.solarized-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,
 body.solarized-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
