@@ -916,6 +916,39 @@ settings:
 		description: Turns off mobile editor mode switcher quick access
 		default: false
 	-
+		id: spacing
+		title: Spacing
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: heading-spacing
+		title: Heading spacing
+		description: Space between paragraphs and headings in reading mode
+		type: variable-text
+		default: 2em
+	-
+		id: p-spacing
+		title: Paragraph spacing
+		description: Space between paragraphs in reading mode
+		type: variable-text
+		default: 1.75rem
+	-
+		id: consistent-spacing
+		title: Consistent spacing
+		description: Use consistent spacing in reading and editing views. May impact performance (Experimental)
+		type: class-toggle
+		default: false
+	-
+		id: consistent-spacing-modifier
+		title: Consistent spacing modifier
+		description: Lower value is tighter spacing, relative to paragraph spacing
+		type: variable-number-slider
+		default: 0
+		min: 0
+		max: 1
+		step: 0.25
+	-
 		id: active-line
 		title: Active line
 		type: heading
@@ -1055,12 +1088,6 @@ settings:
 		description: Replace all headings font at once in **Appearance** settings - **Text font**
         type: info-text
 		markdown: true
-	-
-		id: heading-spacing
-		title: Heading spacing
-		description: Space between paragraphs and headings in reading mode
-		type: variable-text
-		default: 2em
 	-
 		id: colorful-headings
 		title: Colorful headings
@@ -2259,12 +2286,6 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: p-spacing
-		title: Paragraph spacing
-		description: Space between paragraphs in reading mode
-		type: variable-text
-		default: 1.75rem
-	-
 		id: bold-modifier
 		title: Bold text weight modifier
 		type: variable-number-slider
@@ -2641,7 +2662,7 @@ body .style-settings-container .setting-item[data-id] .setting-item-control::bef
   font-size: var(--font-ui-smaller);
   color: var(--text-faint);
   margin-inline-end: 4px;
-  max-width: 10em;
+  max-width: 12em;
 }
 
 body.ayu-light .style-settings-container .setting-item[data-id="color-scheme-light"] .setting-item-control::before,

@@ -42,6 +42,34 @@
     border-radius: var(--radius-s);
   }
 
+  // Consistent editor spacing
+  .consistent-spacing {
+    --heading-spacing: var(--p-spacing);
+    --p-spacing-empty: var(--list-spacing);
+    --h1-line-height: var(--line-height-normal);
+    --h2-line-height: var(--line-height-normal);
+    --h3-line-height: var(--line-height-normal);
+    --h4-line-height: var(--line-height-normal);
+    --consistent-spacing-modifier: 1;
+
+    .HyperMD-header.cm-line {
+      padding: 0;
+    }
+    .cm-line:not(:has(> br:only-child)) + .hr.cm-line,
+    .hr.cm-line + .cm-line:not(:has(> br:only-child)) {
+      padding-top: calc(var(--p-spacing) - 10px) !important;
+    }
+
+    .markdown-rendered div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :is(h1, h2, h3, h4, h5, h6),
+    .markdown-rendered div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6, .el-p):has(+ :is(.el-ul, .el-ol)) > * {
+      margin-block-end: calc(var(--p-spacing) * var(--consistent-spacing-modifier));
+    }
+    .markdown-rendered div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) + div[class*="el-"] > *:not(hr),
+    .markdown-rendered div[class*="el-p"] + :is(.el-ul, .el-ol) > * {
+      margin-block-start: calc(var(--p-spacing) * var(--consistent-spacing-modifier));
+    }
+  }
+
   // Tab title bar
   .view-header {
     padding: 0 8px;
