@@ -2280,20 +2280,6 @@ settings:
 		description: Turns off click + hold to zoom images
 		type: class-toggle
 	-
-		id: paragraphs
-		title: Paragraphs
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: bold-modifier
-		title: Bold text weight modifier
-		type: variable-number-slider
-		default: 300
-		min: 100
-		max: 500
-		step: 100
-	-
 		id: pdf
 		title: PDFs
 		type: heading
