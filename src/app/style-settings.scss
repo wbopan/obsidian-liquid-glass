@@ -2672,6 +2672,9 @@ body.solarized-light .style-settings-container .setting-item[data-id="color-sche
 body.solarized-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
   content: "Author: Ethan Schoonover (altercation)";
 }
+body.layout-border .style-settings-container .setting-item[data-id="layout-style"] .setting-item-control::before {
+  content: "Author: Border by Akifyss";
+}
 body.layout-frame .style-settings-container .setting-item[data-id="layout-style"] .setting-item-control::before {
-  content: "Author: Iridium from kyffa";
+  content: "Author: Iridium by kyffa";
 }
