@@ -9,20 +9,11 @@ https://tiniri.vlad.studio/
   --accent-h: 3;
   --accent-l: 54;
   --accent-s: 70;
-}
-.theme-light.tiniri-light {
-  --background-primary: #fdfcfc;
-  --background-primary-alt: #fdfcfc;
-  --background-secondary: #f7f3f0;
-  --background-secondary-alt: #f7f3f0;
-  --background-modifier-border: #33323118;
+
   --interactive-normal: #f7f3f0;
   --interactive-hover: #ede9e1;
   --interactive-accent: #538a8a;
   --interactive-accent-hover: #5c9e9e;
-  --text-normal: #333231;
-  --text-muted: #807974;
-  --text-faint: #80797499;
   --text-on-accent: #fdfcfc;
   --text-on-accent-inverted: #333231;
 
@@ -33,6 +24,17 @@ https://tiniri.vlad.studio/
   --text-accent-hover: #cc645e;
   --text-selection: #dae5e2;
   --text-highlight-bg: #fab48588;
+}
+.theme-light.tiniri-light {
+  --background-primary: #fdfcfc;
+  --background-primary-alt: #fdfcfc;
+  --background-secondary: #f7f3f0;
+  --background-secondary-alt: #f7f3f0;
+  --background-modifier-border: #33323118;
+
+  --text-normal: #333231;
+  --text-muted: #807974;
+  --text-faint: #80797499;
 
   --color-red: #ad514c;
   --color-orange: #d28450;
@@ -56,20 +58,11 @@ https://tiniri.vlad.studio/
   --accent-h: 0;
   --accent-l: 50;
   --accent-s: 77;
-}
-.theme-dark.tiniri-dark {
-  --background-primary: #1f2122;
-  --background-primary-alt: #1f2122;
-  --background-secondary: #1b1d1e;
-  --background-secondary-alt: #1b1d1e;
-  --background-modifier-border: #0003;
+
   --interactive-normal: #353a42;
   --interactive-hover: #3f444d;
   --interactive-accent: #314f52;
   --interactive-accent-hover: #39595c;
-  --text-normal: #dbd3ca;
-  --text-muted: #938a80;
-  --text-faint: #938a8099;
   --text-on-accent: #dbd3ca;
   --text-on-accent-inverted: #1f2122;
 
@@ -80,6 +73,17 @@ https://tiniri.vlad.studio/
   --text-accent-hover: #e07575;
   --text-selection: #353a42;
   --text-highlight-bg: #ad514c44;
+}
+.theme-dark.tiniri-dark {
+  --background-primary: #1f2122;
+  --background-primary-alt: #1f2122;
+  --background-secondary: #1b1d1e;
+  --background-secondary-alt: #1b1d1e;
+  --background-modifier-border: #0003;
+
+  --text-normal: #dbd3ca;
+  --text-muted: #938a80;
+  --text-faint: #938a8099;
 
   --color-red: #ad514c;
   --color-orange: #f5a571;
