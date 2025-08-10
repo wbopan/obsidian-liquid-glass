@@ -51,7 +51,7 @@ button:not(.clickable-icon) {
 .input-elevated {
   textarea,
   input:is([type="text"], [type="search"], [type="email"], [type="password"], [type="number"]):not(:focus) {
-    border-bottom: 1px solid var(--text-muted);
+    border-bottom: 1px solid var(--text-faint);
 
     &:hover {
       background-color: var(--interactive-hover);
