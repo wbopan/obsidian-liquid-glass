@@ -8,7 +8,7 @@ Baseline sets a new standard for your Obsidian vault experience — sleek, famil
 
 <a href="https://www.buymeacoffee.com/sevenaxis" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-And don’t forget to [support the amazing creators](#credits) who helped shape Baseline.
+And don’t forget to [support the amazing creators](#credits) whose work helped shape Baseline.
 
 ## Coming from other themes?
 
@@ -53,9 +53,11 @@ However, if you prefer to customize your own experience, Baseline provides exten
 
 ### Less _and_ more
 
-As software design evolves, Obsidian’s interface is beginning to show its age. Many customizable themes stick too closely to the default look, while more opinionated themes often sacrifice flexibility; or to be blunt, simply don’t look good.
+Baseline delivers a clean, modern, and polished foundation right out of the box, with endless customization options to let you tailor Obsidian to your heart's content. Every option is thoughtfully designed to ensure Baseline stays both simple and beautiful.
 
-With a clean, modern foundation and endless customization possibilities, Baseline aims to become the starting point, **the baseline for everyone's Obsidian experience**, and for the community going forward.
+### A love letter to the community
+
+Baseline aspires to stand among the community’s leading themes, alongside Minimal, AnuPpuccin, ITS, and others. Shaped by the community, Baseline gives back through a rich collection of innovations: polished interface, compact elements, hover sidebars, with more to come. With a fully reimagined Obsidian interface, Baseline aims to be more than just a theme, but a fresh starting point, a new baseline for the community going forward.
 
 ## Credits
 
