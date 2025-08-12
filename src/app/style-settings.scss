@@ -799,20 +799,20 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id: indentation-guide
+		id: nav-indentation-guide
 		title: Indentation guides
 		type: heading
 		level: 2
 		collapsed: true
 	-
-		id: indentation-guide-width
+		id: nav-indentation-guide-width
 		title: Indentation guides thickness
 		type: variable-select
 		allowEmpty: false
 		default: 0px
 		options:
 			-
-				label: Hidden
+				label: None
 				value: 0px
 			-
 				label: Thin
@@ -822,9 +822,9 @@ settings:
 				value: 2px
 			-
 				label: Thick
-				value: 4px
+				value: 3px
 	-
-		id: indentation-guide-color
+		id: nav-indentation-guide-color
 		title: Indentation guides color
 		type: variable-select
 		allowEmpty: false
@@ -837,7 +837,7 @@ settings:
 				label: Strong
 				value: var(--text-faint)
 			-
-				label: Full width
+				label: Accent color
 				value: var(--color-accent)
 	-
 		id: obsidian-frame
@@ -948,6 +948,47 @@ settings:
 		min: 0
 		max: 1
 		step: 0.25
+	-
+		id: indentation-guide
+		title: Indentation guides
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: indentation-guide-width
+		title: Indentation guides thickness
+		type: variable-select
+		allowEmpty: false
+		default: 0px
+		options:
+			-
+				label: None
+				value: 0px
+			-
+				label: Thin
+				value: 1px
+			-
+				label: Medium
+				value: 2px
+			-
+				label: Thick
+				value: 3px
+	-
+		id: indentation-guide-color
+		title: Indentation guides color
+		type: variable-select
+		allowEmpty: false
+		default: rgba(var(--mono-rgb-100), 0.12)
+		options:
+			-
+				label: Subtle
+				value: rgba(var(--mono-rgb-100), 0.12)
+			-
+				label: Strong
+				value: var(--text-faint)
+			-
+				label: Accent color
+				value: var(--color-accent)
 	-
 		id: active-line
 		title: Active line
