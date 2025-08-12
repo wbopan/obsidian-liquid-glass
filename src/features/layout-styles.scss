@@ -287,7 +287,6 @@ body.layout-frame:not(.is-mobile) {
     height: unset;
     background-color: var(--background-primary);
     border-radius: var(--radius-s);
-    overflow: hidden;
     border: var(--border-width) solid var(--background-modifier-border);
   }
   &.theme-light.contrast-light-vivid .workspace-ribbon,
@@ -342,6 +341,9 @@ body.layout-frame:not(.is-mobile) {
   }
   &.theme-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
     background-color: var(--background-primary);
+  }
+  .mod-root {
+    overflow: hidden;
   }
   .mod-root .workspace-tabs .workspace-tab-container {
     border-radius: 0;
