@@ -2079,11 +2079,27 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: embed-blocks
+		id: embeds
 		title: Embeds
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: embed-style
+		title: Embed style
+		type: class-select
+		allowEmpty: false
+		default: embed-side
+		options:
+			-
+				label: Clean
+				value: embed-strict
+			-
+				label: Indicator
+				value: embed-side
+			-
+				label: Block background
+				value: embed-block
 	-
 		id: embed-strict
 		title: Use strict embed style globally

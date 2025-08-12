@@ -181,6 +181,17 @@
     --embed-border-start: none;
     --embed-padding: 0;
   }
+  .embed-block {
+    --embed-background: var(--background-primary-alt);
+    --embed-border-start: none;
+    --embed-padding: 16px;
+
+    .internal-embed,
+    .markdown-embed,
+    .inline-embed {
+      border-radius: var(--media-radius);
+    }
+  }
   .embed-hide-title .embed-title {
     display: none;
   }
@@ -189,13 +200,11 @@
     max-height: var(--embed-max-height);
     overflow: scroll;
   }
-
   iframe.external-embed {
     width: -webkit-fill-available;
     aspect-ratio: 16/9;
     height: auto;
   }
-
   .block-language-chart {
     width: 100% !important;
   }

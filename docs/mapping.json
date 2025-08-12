@@ -63,6 +63,14 @@
       "category": "Dataview",
       "name": "Dataview maximum column width"
     },
+    "embed-strict": {
+      "newId": "embed-style",
+      "valueMapping": {
+        "__fallback": "embed-side",
+        "true": "embed-strict",
+        "false": "embed-side"
+      }
+    },
     "embed-underline": {
       "unsupported": true,
       "category": "Embedded",
@@ -2313,7 +2321,14 @@
       "category": "Callouts",
       "name": "Callout content radius"
     },
-    "seamless-embeds": { "newId": "embed-strict" },
+    "seamless-embeds": {
+      "newId": "embed-style",
+      "valueMapping": {
+        "__fallback": "embed-side",
+        "true": "embed-strict",
+        "false": "embed-side"
+      }
+    },
     "embed-background": {
       "unsupported": true,
       "category": "Embeds",
@@ -2516,11 +2531,13 @@
       "category": "Code",
       "name": "Syntax Highlighting color scheme"
     },
-    "clean-embeds": { "newId": "embed-strict" },
-    "embed-border-color": {
-      "unsupported": true,
-      "category": "Embeds / Transclusions",
-      "name": "Embed border color"
+    "clean-embeds": {
+      "newId": "embed-style",
+      "valueMapping": {
+        "__fallback": "embed-side",
+        "true": "embed-strict",
+        "false": "embed-side"
+      }
     },
     "embed-border-width": {
       "unsupported": true,
