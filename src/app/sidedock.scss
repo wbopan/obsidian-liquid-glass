@@ -219,17 +219,15 @@ body.is-mobile .workspace-drawer {
   }
   .workspace-drawer-active-tab-header {
     padding-inline-start: 0;
+    padding-inline-end: 0;
     background-color: transparent;
     margin: 0 20px;
   }
-  .workspace-drawer-active-tab-header select {
-    width: auto;
-  }
-  .workspace-drawer-active-tab-title {
-    flex-grow: 0;
-  }
   .workspace-drawer-active-tab-chevron {
     margin-inline-start: 0;
+  }
+  .workspace-drawer-active-tab-header select {
+    width: 100%;
   }
 }
 
