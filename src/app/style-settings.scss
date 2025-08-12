@@ -1816,26 +1816,18 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: blockquote-color
-		title: Blockquote text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: blockquote-background-color
-		title: Blockquote background color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: blockquote-border-color
-		title: Blockquote border color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
+		id: blockquote-style
+		title: Blockquote style
+		type: class-select
+		allowEmpty: false
+		default: blockquote-default
+		options:
+			-
+				label: Baseline
+				value: blockquote-baseline
+			-
+				label: Edge
+				value: blockquote-edge
 	-
 		id: blockquote-border-thickness
 		title: Blockquote border thickness
@@ -1864,6 +1856,27 @@ settings:
 			-
 				label: Italic
 				value: italic
+	-
+		id: blockquote-color
+		title: Blockquote text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-background-color
+		title: Blockquote background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-border-color
+		title: Blockquote border color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: callouts
 		title: Callouts
