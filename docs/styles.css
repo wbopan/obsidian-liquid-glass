@@ -113,9 +113,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 16px;
+  gap: 8px;
 }
-.panels-container p {
+p {
   width: 100%;
   margin: 0;
   font-size: 0.85rem;
@@ -127,7 +127,7 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 .output-panel textarea {
   background-color: var(--background-primary-alt);
@@ -198,6 +198,12 @@ h2 {
   font-family: "Instrument Serif", sans-serif;
   letter-spacing: -0.015em;
 }
+.warning-container:empty,
+.conflict-container:empty,
+.unsupported-container:empty {
+  display: none;
+}
+.warning-container:not(:empty),
 .conflict-container:not(:empty),
 .unsupported-container:not(:empty) {
   display: flex;
@@ -219,18 +225,22 @@ h2 {
 .conflict-key {
   margin-bottom: 8px;
 }
+.warning-description,
 .conflict-theme,
 .unsupported-category-name {
   margin-bottom: 8px;
   color: var(--text-faint);
   font-size: 0.85rem;
 }
+.warning-list,
 .unsupported-list {
   margin: 0;
 }
+.warning-item:not(:last-child),
 .unsupported-item:not(:last-child) {
   margin-bottom: 8px;
 }
+.warning-item::marker,
 .unsupported-item::marker {
   color: var(--text-faint);
 }

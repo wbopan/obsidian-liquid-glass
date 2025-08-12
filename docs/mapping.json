@@ -152,11 +152,6 @@
         "false": true
       }
     },
-    "list-spacing": {
-      "unsupported": true,
-      "category": "Lists and tasks",
-      "name": "List item spacing"
-    },
     "list-indent": {
       "unsupported": true,
       "category": "Lists and tasks",
