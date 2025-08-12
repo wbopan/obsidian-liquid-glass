@@ -636,6 +636,37 @@ settings:
 				label: Underline
 				value: tabs-underline
 	-
+		id: labeled-tabs
+		title: Tab labels
+		type: class-select
+		allowEmpty: false
+		default: labeled-tabs-off
+		options:
+			-
+				label: Hidden
+				value: labeled-tabs-off
+			-
+				label: Visible
+				value: labeled-tabs-all
+			-
+				label: Single tab
+				value: labeled-tabs-single
+	-
+		id: stacked-nav-off
+		title: Disable large primary navigation
+		description: Turns off vertically stacked tabs in the left sidebar 
+		type: class-toggle
+	-
+		id: compact-actions-off
+		title: Disable compact panel actions
+		description: Turns off auto hiding panel actions
+		type: class-toggle
+	-
+		id: compact-tabs-off
+		title: Disable compact tabs bars
+		description: Turns off auto hiding tabs for non-top panels
+		type: class-toggle
+	-
 		id: tab-stacks
 		title: Tab stacks
 		type: heading
@@ -698,41 +729,32 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: labeled-tabs
-		title: Tab labels
+		id: nav-item-active-style
+		title: Active file style
 		type: class-select
 		allowEmpty: false
-		default: labeled-tabs-off
+		default: nav-item-baseline
 		options:
 			-
-				label: Hidden
-				value: labeled-tabs-off
+				label: Baseline
+				value: nav-item-baseline
 			-
-				label: Visible
-				value: labeled-tabs-all
+				label: Subtle
+				value: nav-item-subtle
 			-
-				label: Single tab
-				value: labeled-tabs-single
-	-
-		id: stacked-nav-off
-		title: Disable large primary navigation
-		description: Turns off vertically stacked tabs in the left sidebar 
-		type: class-toggle
-	-
-		id: compact-actions-off
-		title: Disable compact panel actions
-		description: Turns off auto hiding panel actions
-		type: class-toggle
-	-
-		id: compact-tabs-off
-		title: Disable compact tabs bars
-		description: Turns off auto hiding tabs for non-top panels
-		type: class-toggle
+				label: Strong
+				value: nav-item-strong
 	-
 		id: large-new-note
 		title: Large new note button
 		description: Adds text label and background on new note button in the left sidebar
 		type: class-toggle
+	-
+		id: full-item-name
+		title: Full item name
+		description: Display long file name without trimming
+		type: class-toggle
+		default: false
 	-
 		id: bold-folders
 		title: Bold folders name
@@ -761,33 +783,11 @@ settings:
 				label: Monochrome
 				value: colorful-folders-mono
 	-
-		id: nav-item-active-style
-		title: Active file style
-		type: class-select
-		allowEmpty: false
-		default: nav-item-baseline
-		options:
-			-
-				label: Baseline
-				value: nav-item-baseline
-			-
-				label: Subtle
-				value: nav-item-subtle
-			-
-				label: Strong
-				value: nav-item-strong
-	-
 		id: nav-item-size
 		title: Item name size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: ''
-	-
-		id: full-item-name
-		title: Full item name
-		description: Display long file name without trimming
-		type: class-toggle
-		default: false
+		default: 13px
 	-
 		id: hide-help
 		title: Hide help button
@@ -916,6 +916,43 @@ settings:
 		description: Turns off mobile editor mode switcher quick access
 		default: false
 	-
+		id: active-line
+		title: Active line
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-style
+		title: Highlight active line style
+		description: Adds an indicator to current line in editor
+		type: class-select
+		default: active-line-off
+		options:
+			-
+				label: None
+				value: active-line-off
+			-
+				label: Indicator
+				value: active-line-side
+			-
+				label: Block background
+				value: active-line-block
+			-
+				label: Line background
+				value: active-line-background
+	-
+		id: active-line-color
+		title: Highlight active line color
+		type: class-select
+		default: active-line-color-default
+		options:
+			-
+				label: Monochrome
+				value: active-line-color-default
+			-
+				label: Accent color
+				value: active-line-color-accent
+	-
 		id: spacing
 		title: Spacing
 		type: heading
@@ -989,43 +1026,6 @@ settings:
 			-
 				label: Accent color
 				value: var(--color-accent)
-	-
-		id: active-line
-		title: Active line
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: active-line-style
-		title: Highlight active line style
-		description: Adds an indicator to current line in editor
-		type: class-select
-		default: active-line-off
-		options:
-			-
-				label: None
-				value: active-line-off
-			-
-				label: Indicator
-				value: active-line-side
-			-
-				label: Block background
-				value: active-line-block
-			-
-				label: Line background
-				value: active-line-background
-	-
-		id: active-line-color
-		title: Highlight active line color
-		type: class-select
-		default: active-line-color-default
-		options:
-			-
-				label: Monochrome
-				value: active-line-color-default
-			-
-				label: Accent color
-				value: active-line-color-accent
 	-
 		id: tab-title-bar
 		title: Tab title bar
