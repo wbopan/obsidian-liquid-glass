@@ -107,7 +107,7 @@
     border-radius: var(--input-radius);
     content: "";
   }
-  body.active-line-block .markdown-source-view .cm-active::after {
+  body.active-line-block .markdown-source-view .cm-active:not(.cm-gutterElement)::after {
     position: absolute;
     inset: -2px -4px;
     background: var(--background-secondary);
@@ -115,7 +115,7 @@
     z-index: -1;
     border-radius: var(--radius-s);
   }
-  body.active-line-background .markdown-source-view .cm-active::after {
+  body.active-line-background .markdown-source-view .cm-active:not(.cm-gutterElement)::after {
     position: absolute;
     inset: -2px -100%;
     background: var(--background-secondary);
@@ -125,7 +125,7 @@
   body.active-line-color-accent.active-line-side .markdown-source-view .cm-active:not(:has(.cm-fold-indicator):hover)::after {
     border-color: var(--color-accent);
   }
-  bodyactive-line-color-accent:is(.active-line-block, .active-line-background) .markdown-source-view .cm-active::after {
+  body.active-line-color-accent:is(.active-line-block, .active-line-background) .markdown-source-view .cm-active::after {
     background-color: var(--background-modifier-active-hover);
   }
 
