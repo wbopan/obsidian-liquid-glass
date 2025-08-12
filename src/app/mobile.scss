@@ -14,6 +14,14 @@ body.is-mobile {
   background-color: var(--background-secondary);
 }
 
+body.is-mobile.theme-dark {
+  --color-base-00: #1e1e1e;
+  --color-base-10: #242424;
+  --color-base-20: #262626;
+  --search-result-background: var(--background-primary);
+  --background-modifier-form-field: var(--color-base-25);
+}
+
 body.is-phone {
   --mobile-sidebar-radius: 0;
 
