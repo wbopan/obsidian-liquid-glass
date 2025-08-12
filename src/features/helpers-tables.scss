@@ -1,6 +1,13 @@
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
+.table-small {
+  --table-text-size: var(--font-smaller);
+}
+.table-tiny {
+  --table-text-size: var(--font-smallest);
+}
+
 .row-hover {
   --table-row-background-hover: var(--background-modifier-hover);
   --table-row-alt-background-hover: var(--background-modifier-hover);
