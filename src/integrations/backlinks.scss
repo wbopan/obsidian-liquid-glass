@@ -1,4 +1,4 @@
-.backlink-pane {
+body:not(.is-mobile) .backlink-pane {
   .search-result-file-match:not(:hover) .search-result-file-match-replace-button {
     display: none;
   }
