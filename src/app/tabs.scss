@@ -18,9 +18,11 @@ body.is-mobile {
   padding-top: 8px;
   background-color: transparent;
 }
-.sidebar-toggle-button {
+body:not(.stacked-nav-off) .mod-left-split .workspace-tabs.mod-top-left-space .sidebar-toggle-button {
   height: fit-content;
-  display: block;
+}
+.sidebar-toggle-button {
+  height: 100%;
 }
 .sidebar-toggle-button .clickable-icon {
   width: fit-content;
@@ -151,12 +153,14 @@ body.tabs-underline .workspace .mod-root {
     padding-left: 0;
     padding-bottom: 8px;
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+    align-items: center;
   }
   .workspace-tab-header-container-inner {
     -webkit-app-region: no-drag;
     padding: 0 8px;
     margin: 0;
     gap: calc(8px * var(--density-modifier));
+    height: 100%;
   }
 
   .sidebar-toggle-button {
@@ -167,7 +171,6 @@ body.tabs-underline .workspace .mod-root {
   .workspace-tab-header {
     --icon-color: var(--text-faint);
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
-    height: calc-size(auto, size);
     line-height: normal;
   }
   .workspace-tab-header.is-active {
