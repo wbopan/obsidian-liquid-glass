@@ -1,6 +1,7 @@
 body.colorful-folders-side {
-  --collapse-icon-color: var(--text-normal);
-
+  .nav-files-container {
+    --collapse-icon-color: var(--text-normal);
+  }
   .nav-files-container > div > .nav-folder {
     position: relative;
   }
@@ -42,8 +43,9 @@ body.colorful-folders-side {
 }
 
 body.colorful-folders-subtle {
-  --collapse-icon-color: var(--text-normal);
-
+  .nav-files-container {
+    --collapse-icon-color: var(--text-normal);
+  }
   .nav-files-container > div > .nav-folder {
     border-radius: var(--radius-s);
     --nav-item-color-hover: var(--nav-item-color);
@@ -85,8 +87,9 @@ body.colorful-folders-subtle {
 }
 
 body.colorful-folders-strong {
-  --collapse-icon-color: var(--text-normal);
-
+  .nav-files-container {
+    --collapse-icon-color: var(--text-normal);
+  }
   .nav-files-container > div > .nav-folder {
     border-radius: var(--radius-s);
     --nav-item-color: white;
@@ -121,8 +124,9 @@ body.colorful-folders-strong {
 }
 
 body.colorful-folders-mono {
-  --collapse-icon-color: var(--text-normal);
-
+  .nav-files-container {
+    --collapse-icon-color: var(--text-normal);
+  }
   .nav-files-container > div > .nav-folder {
     border-radius: var(--radius-s);
     --nav-item-color: var(--text-normal);
