@@ -1005,43 +1005,6 @@ settings:
 		description: Turns off mobile editor mode switcher quick access
 		default: false
 	-
-		id: active-line
-		title: Active line
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: active-line-style
-		title: Highlight active line style
-		description: Adds an indicator to current line in editor
-		type: class-select
-		default: active-line-off
-		options:
-			-
-				label: None
-				value: active-line-off
-			-
-				label: Indicator
-				value: active-line-side
-			-
-				label: Block background
-				value: active-line-block
-			-
-				label: Line background
-				value: active-line-background
-	-
-		id: active-line-color
-		title: Highlight active line color
-		type: class-select
-		default: active-line-color-default
-		options:
-			-
-				label: Monochrome
-				value: active-line-color-default
-			-
-				label: Accent color
-				value: active-line-color-accent
-	-
 		id: spacing
 		title: Spacing
 		type: heading
@@ -1206,6 +1169,43 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+	-
+		id: active-line
+		title: Active line
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-style
+		title: Highlight active line style
+		description: Adds an indicator to current line in editor
+		type: class-select
+		default: active-line-off
+		options:
+			-
+				label: None
+				value: active-line-off
+			-
+				label: Indicator
+				value: active-line-side
+			-
+				label: Block background
+				value: active-line-block
+			-
+				label: Line background
+				value: active-line-background
+	-
+		id: active-line-color
+		title: Highlight active line color
+		type: class-select
+		default: active-line-color-default
+		options:
+			-
+				label: Monochrome
+				value: active-line-color-default
+			-
+				label: Accent color
+				value: active-line-color-accent
 	-
 		id: headings
 		title: Headings
