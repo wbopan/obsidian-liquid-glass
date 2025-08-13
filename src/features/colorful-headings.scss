@@ -2,27 +2,27 @@
 .colorful-headings-full {
   .markdown-rendered h1::before,
   .HyperMD-header-1::before {
-    background-color: var(--color-red);
+    background-color: var(--colorful-headings-h1-color, var(--color-red));
   }
   .markdown-rendered h2::before,
   .HyperMD-header-2::before {
-    background-color: var(--color-orange);
+    background-color: var(--colorful-headings-h2-color, var(--color-orange));
   }
   .markdown-rendered h3::before,
   .HyperMD-header-3::before {
-    background-color: var(--color-yellow);
+    background-color: var(--colorful-headings-h3-color, var(--color-yellow));
   }
   .markdown-rendered h4::before,
   .HyperMD-header-4::before {
-    background-color: var(--color-green);
+    background-color: var(--colorful-headings-h4-color, var(--color-green));
   }
   .markdown-rendered h5::before,
   .HyperMD-header-5::before {
-    background-color: var(--color-blue);
+    background-color: var(--colorful-headings-h5-color, var(--color-blue));
   }
   .markdown-rendered h6::before,
   .HyperMD-header-6::before {
-    background-color: var(--color-purple);
+    background-color: var(--colorful-headings-h6-color, var(--color-purple));
   }
 
   .markdown-rendered h1,
@@ -70,7 +70,7 @@
     }
   }
   .collapse-indicator.heading-collapse-indicator {
-    margin-left: -48px;
+  margin-left: -48px;
   }
   .collapse-indicator {
     margin-left: -32px;
@@ -81,10 +81,10 @@
 }
 
 .colorful-headings-full {
-  --h1-color: color-mix(in srgb, var(--color-red) 75%, var(--color-base-100));
-  --h2-color: color-mix(in srgb, var(--color-orange) 75%, var(--color-base-100));
-  --h3-color: color-mix(in srgb, var(--color-yellow) 75%, var(--color-base-100));
-  --h4-color: color-mix(in srgb, var(--color-green) 75%, var(--color-base-100));
-  --h5-color: color-mix(in srgb, var(--color-blue) 75%, var(--color-base-100));
-  --h6-color: color-mix(in srgb, var(--color-purple) 75%, var(--color-base-100));
+  --h1-color: color-mix(in srgb, var(--colorful-headings-h1-color, var(--color-red)) 75%, var(--color-base-100));
+  --h2-color: color-mix(in srgb, var(--colorful-headings-h2-color, var(--color-orange)) 75%, var(--color-base-100));
+  --h3-color: color-mix(in srgb, var(--colorful-headings-h3-color, var(--color-yellow)) 75%, var(--color-base-100));
+  --h4-color: color-mix(in srgb, var(--colorful-headings-h4-color, var(--color-green)) 75%, var(--color-base-100));
+  --h5-color: color-mix(in srgb, var(--colorful-headings-h5-color, var(--color-blue)) 75%, var(--color-base-100));
+  --h6-color: color-mix(in srgb, var(--colorful-headings-h6-color, var(--color-purple)) 75%, var(--color-base-100));
 }

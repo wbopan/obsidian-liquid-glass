@@ -1132,6 +1132,12 @@ settings:
 	-
 		id: colorful-headings
 		title: Colorful headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: colorful-headings-style
+		title: Colorful headings
 		description: Headings use a different color for each size
 		type: class-select
 		default: colorful-headings-off
@@ -1145,6 +1151,48 @@ settings:
 			-
 				label: Full color
 				value: colorful-headings-full
+	-
+		id: colorful-headings-h1-color
+		title: H1 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: colorful-headings-h2-color
+		title: H2 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: colorful-headings-h3-color
+		title: H3 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: colorful-headings-h4-color
+		title: H4 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: colorful-headings-h5-color
+		title: H5 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: colorful-headings-h6-color
+		title: H6 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: level-1-headings
 		title: Level 1 Headings
