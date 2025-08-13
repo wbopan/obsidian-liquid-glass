@@ -171,6 +171,7 @@ body.tabs-underline .workspace .mod-root {
   .workspace-tab-header {
     --icon-color: var(--text-faint);
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+    height: calc-size(auto, size);
     line-height: normal;
   }
   .workspace-tab-header.is-active {
