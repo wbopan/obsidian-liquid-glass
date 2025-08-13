@@ -48,13 +48,13 @@ body.status-bar-cupertino .status-bar {
   --status-bar-border-width: var(--border-width);
   right: unset;
   justify-content: center;
-  transition: var(--anim-duration-fast) var(--anim-motion-baseline);
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   border-radius: 100vw;
   max-width: 100%;
   min-height: unset;
 
   > div {
-    transition: var(--anim-duration-fast) var(--anim-motion-baseline);
+    transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   }
   &:not(:hover) {
     bottom: 2px;
