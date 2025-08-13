@@ -64,7 +64,13 @@ https://github.com/jdanielmourao/obsidian-sanctum/
   --accent-s: 22%;
   --accent-l: 49%;
 }
-.theme-dark.sanctum-dark {
+.theme-dark.sanctum-dark,
+.theme-light.sanctum-light.contrast-light-vivid .titlebar,
+.theme-light.sanctum-light.contrast-light-vivid .status-bar,
+.theme-light.sanctum-light.contrast-light-vivid .workspace::before,
+.theme-light.sanctum-light.contrast-light-vivid .mod-sidedock,
+.theme-light.sanctum-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
+.theme-light.sanctum-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: rgb(var(--gray-100));
   --background-primary-alt: rgb(var(--gray-90));
   --background-secondary: rgb(var(--gray-90));
