@@ -70,6 +70,7 @@ body.bold-folders .nav-folder-title {
 }
 .workspace-ribbon .sidebar-toggle-button {
   display: flex;
+  height: var(--header-height);
 }
 
 // Desktop sidedock
