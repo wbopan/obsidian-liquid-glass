@@ -488,6 +488,92 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: code-palette
+		title: Code colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: code-comment
+		title: "Syntax: comments"
+		description: Syntax highlighting for comments
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-function
+		title: "Syntax: functions"
+		description: Syntax highlighting for functions
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-keyword
+		title: "Syntax: keywords"
+		description: Syntax highlighting for keywords
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-important
+		title: "Syntax: important"
+		description: Syntax highlighting for important text
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-operator
+		title: "Syntax: operators"
+		description: Syntax highlighting for operators
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-property
+		title: "Syntax: properties"
+		description: Syntax highlighting for properties
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-punctuation
+		title: "Syntax: punctuation"
+		description: Syntax highlighting for punctuation
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-string
+		title: "Syntax: strings"
+		description: Syntax highlighting for strings
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-tag
+		title: "Syntax: tags"
+		description: Syntax highlighting for tags
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: code-value
+		title: "Syntax: values"
+		description: Syntax highlighting for values
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: interface
 		title: Interface
 		type: heading
@@ -2077,92 +2163,6 @@ settings:
 		id: code-normal
 		title: Code text color
 		description: Color of code when syntax highlighting is not present
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: syntax-highlighting
-		title: Syntax highlighting
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: code-comment
-		title: "Syntax: comments"
-		description: Syntax highlighting for comments
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-function
-		title: "Syntax: functions"
-		description: Syntax highlighting for functions
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-keyword
-		title: "Syntax: keywords"
-		description: Syntax highlighting for keywords
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-important
-		title: "Syntax: important"
-		description: Syntax highlighting for important text
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-operator
-		title: "Syntax: operators"
-		description: Syntax highlighting for operators
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-property
-		title: "Syntax: properties"
-		description: Syntax highlighting for properties
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-punctuation
-		title: "Syntax: punctuation"
-		description: Syntax highlighting for punctuation
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-string
-		title: "Syntax: strings"
-		description: Syntax highlighting for strings
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-tag
-		title: "Syntax: tags"
-		description: Syntax highlighting for tags
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: code-value
-		title: "Syntax: values"
-		description: Syntax highlighting for values
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
