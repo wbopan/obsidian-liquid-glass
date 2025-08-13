@@ -47,27 +47,6 @@ button:not(.clickable-icon) {
   padding: 8px;
 }
 
-// Style Settings: Elevated
-.input-elevated {
-  textarea,
-  input:is([type="text"], [type="search"], [type="email"], [type="password"], [type="number"]):not(:focus) {
-    border-bottom: 1px solid var(--text-faint);
-
-    &:hover {
-      background-color: var(--interactive-hover);
-    }
-  }
-}
-
-.theme-light.input-elevated {
-  --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12), 0px 0.5px 0.4px hsl(0deg 5% 59% / 0.47), 0px 0.8px 0.7px -1px hsl(0deg 5% 59% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 5% 59% / 0.32), 0px 4.5px 4px -3px hsl(0deg 5% 59% / 0.25), 0.1px 9.4px 8.4px -4.1px hsl(0deg 5% 59% / 0.18);
-  --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17), 0px 0.5px 0.5px hsl(0deg 5% 59% / 0.47), 0px 0.9px 0.8px -1px hsl(0deg 5% 59% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 5% 59% / 0.33), 0px 4.5px 4.1px -3px hsl(0deg 5% 59% / 0.26), 0.1px 9.4px 8.5px -4px hsl(0deg 5% 59% / 0.19);
-}
-.theme-dark.input-elevated {
-  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09), 0px 0.5px 0.4px hsl(0deg 0% 1% / 0.47), 0px 0.8px 0.7px -1px hsl(0deg 0% 1% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 0% 1% / 0.32), 0px 4.5px 4px -3px hsl(0deg 0% 1% / 0.25), 0.1px 9.4px 8.4px -4.1px hsl(0deg 0% 1% / 0.18);
-  --input-shadow-hover: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09), 0px 0.5px 0.5px hsl(0deg 0% 1% / 0.47), 0px 0.9px 0.8px -1px hsl(0deg 0% 1% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 0% 1% / 0.33), 0px 4.5px 4.1px -3px hsl(0deg 0% 1% / 0.26), 0.1px 9.4px 8.5px -4px hsl(0deg 0% 1% / 0.19);
-}
-
 // Toggle
 body:not(.accented-interface) .checkbox-container {
   --interactive-accent: var(--color-green);
@@ -82,4 +61,129 @@ body:not(.accented-interface) .checkbox-container {
 // Slider
 input[type="range"]::-webkit-slider-thumb {
   box-shadow: none;
+}
+
+// Style Settings: Elevated
+body.input-elevated {
+  &.theme-light {
+    --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12), 0px 0.5px 0.4px hsl(0deg 5% 59% / 0.47), 0px 0.8px 0.7px -1px hsl(0deg 5% 59% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 5% 59% / 0.32), 0px 4.5px 4px -3px hsl(0deg 5% 59% / 0.25), 0.1px 9.4px 8.4px -4.1px hsl(0deg 5% 59% / 0.18);
+    --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17), 0px 0.5px 0.5px hsl(0deg 5% 59% / 0.47), 0px 0.9px 0.8px -1px hsl(0deg 5% 59% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 5% 59% / 0.33), 0px 4.5px 4.1px -3px hsl(0deg 5% 59% / 0.26), 0.1px 9.4px 8.5px -4px hsl(0deg 5% 59% / 0.19);
+  }
+  &.theme-dark {
+    --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09), 0px 0.5px 0.4px hsl(0deg 0% 1% / 0.47), 0px 0.8px 0.7px -1px hsl(0deg 0% 1% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 0% 1% / 0.32), 0px 4.5px 4px -3px hsl(0deg 0% 1% / 0.25), 0.1px 9.4px 8.4px -4.1px hsl(0deg 0% 1% / 0.18);
+    --input-shadow-hover: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09), 0px 0.5px 0.5px hsl(0deg 0% 1% / 0.47), 0px 0.9px 0.8px -1px hsl(0deg 0% 1% / 0.4), 0px 1.9px 1.7px -2px hsl(0deg 0% 1% / 0.33), 0px 4.5px 4.1px -3px hsl(0deg 0% 1% / 0.26), 0.1px 9.4px 8.5px -4px hsl(0deg 0% 1% / 0.19);
+  }
+
+  textarea,
+  input:is([type="text"], [type="search"], [type="email"], [type="password"], [type="number"]):not(:focus) {
+    border-bottom: 1px solid var(--text-faint);
+
+    &:hover {
+      background-color: var(--interactive-hover);
+    }
+  }
+}
+
+// Style Settings: Cupertino
+body.input-cupertino {
+  &.theme-light {
+    --shadow-base: inset 1px 1px 2px rgba(255, 255, 255, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.5), inset 0 4px 16px rgba(255, 255, 255, 0.025);
+    --shadow-xs: var(--shadow-base), inset 0 -8px 48px rgba(0, 0, 0, 0.02), 0 1px 8px rgba(0, 0, 0, 0.025), 0 4px 48px rgba(0, 0, 0, 0.095);
+    --input-shadow: none;
+  }
+  &.theme-dark {
+    --shadow-base: inset 1px 1.5px 1px -1px rgba(255, 255, 255, 0.2), inset -1px -1.5px 1px -1px rgba(255, 255, 255, 0.15), inset 0 4px 16px rgba(255, 255, 255, 0.025);
+    --shadow-xs: inset 0 8px 64px rgba(255, 255, 255, 0.125), var(--shadow-base);
+    --input-shadow: none;
+  }
+
+  --input-radius: var(--radius-s);
+  --button-radius: var(--input-radius);
+
+  --slider-thumb-border-width: 0;
+  --slider-thumb-height: 18px;
+  --slider-thumb-width: 28px;
+  --slider-thumb-radius: var(--toggle-thumb-radius);
+  --slider-track-height: 6px;
+  --slider-track-background: var(--background-modifier-border-hover);
+
+  --toggle-border-width: 1.5px;
+  --toggle-s-border-width: var(--toggle-border-width);
+  --toggle-s-thumb-height: var(--toggle-thumb-height);
+  --toggle-s-thumb-width: var(--toggle-thumb-width);
+  --toggle-s-width: var(--toggle-width);
+  --toggle-thumb-height: 13px;
+  --toggle-thumb-width: 21px;
+  --toggle-width: 36px;
+
+  &:not(.is-mobile) {
+    --input-height: 24px;
+  }
+
+  &.is-mobile {
+    --slider-thumb-height: 25px;
+    --slider-thumb-y: -10px;
+    --slider-thumb-width: 38px;
+
+    --toggle-border-width: 2px;
+    --toggle-thumb-height: 25px;
+    --toggle-thumb-width: 38px;
+    --toggle-width: 68px;
+  }
+
+  // Button
+  button:not(.clickable-icon) {
+    padding: 4px 12px;
+  }
+
+  // Slider
+  input[type="range"]::-webkit-slider-thumb {
+    transition: var(--anim-duration-moderate);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.075), 0 1px 16px rgba(0, 0, 0, 0.05);
+
+    &:active {
+      scale: 1.5;
+      backdrop-filter: brightness(1.025);
+      box-shadow: inset 1px 1px 2px -2px rgba(var(--mono-rgb-100), 1), inset -1px -1px 2px -2px rgba(var(--mono-rgb-100), 1), var(--shadow-xs);
+      background-color: transparent;
+    }
+  }
+
+  // Toggle
+  .checkbox-container {
+    &,
+    &::after {
+      transition: var(--anim-duration-moderate);
+    }
+
+    &:active:after {
+      transform-origin: center;
+      scale: 1.5;
+      backdrop-filter: brightness(1.025);
+      box-shadow: inset 1px 1px 2px -2px rgba(var(--mono-rgb-100), 1), inset -1px -1px 2px -2px rgba(var(--mono-rgb-100), 1), var(--shadow-xs);
+      background-color: transparent;
+    }
+
+    &.is-enabled:active:after {
+      transform-origin: center right;
+    }
+  }
+
+  // Search bar fix
+  .search-input-container {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+
+    &:before {
+      top: unset !important;
+      inset-inline-start: 6px;
+      height: var(--icon-s);
+      width: var(--icon-s);
+    }
+
+    input {
+      padding-inline-start: var(--input-height) !important;
+    }
+  }
 }
