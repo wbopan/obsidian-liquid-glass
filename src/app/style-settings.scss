@@ -971,17 +971,17 @@ settings:
 		type: variable-text
 		default: 1.75rem
 	-
-		id: consistent-spacing
-		title: Consistent spacing
-		description: Use consistent spacing in reading and editing views. May impact performance (Experimental)
+		id: readable-spacing
+		title: Readable spacing
+		description: Use readable spacing in reading and editing views. May impact performance (Experimental)
 		type: class-toggle
 		default: false
 	-
-		id: consistent-spacing-modifier
-		title: Consistent spacing modifier
-		description: Lower value is tighter spacing, relative to paragraph spacing
+		id: readable-spacing-modifier
+		title: Readable spacing modifier
+		description: Lower value is tighter spacing after headings, relative to paragraph spacing
 		type: variable-number-slider
-		default: 0
+		default: 0.25
 		min: 0
 		max: 1
 		step: 0.25
