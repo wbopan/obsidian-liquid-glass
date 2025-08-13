@@ -15,6 +15,16 @@
 
     --code-border-width: 1px;
     --code-size: var(--font-smallest);
+    --code-normal: var(--text-muted);
+    --code-comment: var(--text-faint);
+    --code-function: var(--color-orange);
+    --code-important: var(--color-orange);
+    --code-keyword: var(--color-red);
+    --code-property: var(--color-blue);
+    --code-punctuation: var(--text-muted);
+    --code-string: var(--color-cyan);
+    --code-tag: var(--color-red);
+    --code-value: var(--color-purple);
 
     --embed-border-start: 2px solid var(--color-base-50);
     --embed-padding: 0 0 0 16px;
