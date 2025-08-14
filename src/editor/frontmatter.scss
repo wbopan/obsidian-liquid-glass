@@ -5,6 +5,10 @@
   .metadata-property-key-input {
     border-bottom: none !important;
   }
+  .multi-select-pill {
+    line-height: normal;
+    padding: 2px 0;
+  }
 
   // Side panels
   .workspace > .workspace-split:not(.mod-root) .metadata-container .metadata-properties {
