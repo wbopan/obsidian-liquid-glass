@@ -226,6 +226,9 @@ body.is-phone .prompt {
   .setting-item {
     padding: calc(16px * var(--density-modifier)) 0;
   }
+  .setting-item-name {
+    font-weight: var(--font-medium);
+  }
 }
 
 body:not(.is-phone) .vertical-tab-nav-item.is-active {
