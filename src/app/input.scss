@@ -38,7 +38,7 @@ select,
   transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
 }
 
-button:not(.clickable-icon) {
+button:not(.clickable-icon, .ant-switch) {
   padding: 16px;
   display: inline-flex;
 }
@@ -139,7 +139,7 @@ body.input-cupertino {
   }
 
   // Button
-  button:not(.clickable-icon) {
+  button:not(.clickable-icon, .ant-switch) {
     padding: 4px 12px;
   }
 
