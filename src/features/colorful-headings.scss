@@ -1,90 +1,92 @@
-.colorful-headings-side,
-.colorful-headings-full {
-  .markdown-rendered h1::before,
-  .HyperMD-header-1::before {
-    background-color: var(--colorful-headings-h1-color, var(--color-red));
-  }
-  .markdown-rendered h2::before,
-  .HyperMD-header-2::before {
-    background-color: var(--colorful-headings-h2-color, var(--color-orange));
-  }
-  .markdown-rendered h3::before,
-  .HyperMD-header-3::before {
-    background-color: var(--colorful-headings-h3-color, var(--color-yellow));
-  }
-  .markdown-rendered h4::before,
-  .HyperMD-header-4::before {
-    background-color: var(--colorful-headings-h4-color, var(--color-green));
-  }
-  .markdown-rendered h5::before,
-  .HyperMD-header-5::before {
-    background-color: var(--colorful-headings-h5-color, var(--color-blue));
-  }
-  .markdown-rendered h6::before,
-  .HyperMD-header-6::before {
-    background-color: var(--colorful-headings-h6-color, var(--color-purple));
-  }
-
-  .markdown-rendered h1,
-  .markdown-rendered h2,
-  .markdown-rendered h3,
-  .markdown-rendered h4,
-  .markdown-rendered h5,
-  .markdown-rendered h6,
-  .HyperMD-header-1,
-  .HyperMD-header-2,
-  .HyperMD-header-3,
-  .HyperMD-header-4,
-  .HyperMD-header-5,
-  .HyperMD-header-6 {
-    position: relative;
-    padding-inline-start: var(--font-ui-smaller);
-
-    &::before {
-      display: inline-flex;
-      border-radius: var(--radius-s);
-      width: 4px;
-      height: calc(100% - 6px);
-      content: "";
-      bottom: 4px;
-      position: absolute;
-      inset-inline-start: 0;
-      transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+@media screen, print {
+  .colorful-headings-side,
+  .colorful-headings-full {
+    .markdown-rendered h1::before,
+    .HyperMD-header-1::before {
+      background-color: var(--colorful-headings-h1-color, var(--color-red));
+    }
+    .markdown-rendered h2::before,
+    .HyperMD-header-2::before {
+      background-color: var(--colorful-headings-h2-color, var(--color-orange));
+    }
+    .markdown-rendered h3::before,
+    .HyperMD-header-3::before {
+      background-color: var(--colorful-headings-h3-color, var(--color-yellow));
+    }
+    .markdown-rendered h4::before,
+    .HyperMD-header-4::before {
+      background-color: var(--colorful-headings-h4-color, var(--color-green));
+    }
+    .markdown-rendered h5::before,
+    .HyperMD-header-5::before {
+      background-color: var(--colorful-headings-h5-color, var(--color-blue));
+    }
+    .markdown-rendered h6::before,
+    .HyperMD-header-6::before {
+      background-color: var(--colorful-headings-h6-color, var(--color-purple));
     }
 
-    &.cm-line .cm-header {
+    .markdown-rendered h1,
+    .markdown-rendered h2,
+    .markdown-rendered h3,
+    .markdown-rendered h4,
+    .markdown-rendered h5,
+    .markdown-rendered h6,
+    .HyperMD-header-1,
+    .HyperMD-header-2,
+    .HyperMD-header-3,
+    .HyperMD-header-4,
+    .HyperMD-header-5,
+    .HyperMD-header-6 {
+      position: relative;
       padding-inline-start: var(--font-ui-smaller);
-      box-decoration-break: clone;
-    }
-    &.cm-line.cm-active {
+
       &::before {
-        inset-inline-start: -16px;
+        display: inline-flex;
+        border-radius: var(--radius-s);
+        width: 4px;
+        height: calc(100% - 6px);
+        content: "";
+        bottom: 4px;
+        position: absolute;
+        inset-inline-start: 0;
+        transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
       }
 
-      .cm-header {
-        padding-inline-start: 0;
+      &.cm-line .cm-header {
+        padding-inline-start: var(--font-ui-smaller);
+        box-decoration-break: clone;
+      }
+      &.cm-line.cm-active {
+        &::before {
+          inset-inline-start: -16px;
+        }
+
+        .cm-header {
+          padding-inline-start: 0;
+        }
+      }
+      &.cm-line::before {
+        height: calc(100% - 6px - var(--p-spacing));
       }
     }
-    &.cm-line::before {
-      height: calc(100% - 6px - var(--p-spacing));
+    .collapse-indicator.heading-collapse-indicator {
+      margin-left: -48px;
+    }
+    .collapse-indicator {
+      margin-left: -32px;
+    }
+    .cm-fold-indicator .collapse-indicator {
+      left: 0;
     }
   }
-  .collapse-indicator.heading-collapse-indicator {
-  margin-left: -48px;
-  }
-  .collapse-indicator {
-    margin-left: -32px;
-  }
-  .cm-fold-indicator .collapse-indicator {
-    left: 0;
-  }
-}
 
-.colorful-headings-full {
-  --h1-color: color-mix(in srgb, var(--colorful-headings-h1-color, var(--color-red)) 75%, var(--color-base-100));
-  --h2-color: color-mix(in srgb, var(--colorful-headings-h2-color, var(--color-orange)) 75%, var(--color-base-100));
-  --h3-color: color-mix(in srgb, var(--colorful-headings-h3-color, var(--color-yellow)) 75%, var(--color-base-100));
-  --h4-color: color-mix(in srgb, var(--colorful-headings-h4-color, var(--color-green)) 75%, var(--color-base-100));
-  --h5-color: color-mix(in srgb, var(--colorful-headings-h5-color, var(--color-blue)) 75%, var(--color-base-100));
-  --h6-color: color-mix(in srgb, var(--colorful-headings-h6-color, var(--color-purple)) 75%, var(--color-base-100));
+  .colorful-headings-full {
+    --h1-color: color-mix(in srgb, var(--colorful-headings-h1-color, var(--color-red)) 75%, var(--color-base-100));
+    --h2-color: color-mix(in srgb, var(--colorful-headings-h2-color, var(--color-orange)) 75%, var(--color-base-100));
+    --h3-color: color-mix(in srgb, var(--colorful-headings-h3-color, var(--color-yellow)) 75%, var(--color-base-100));
+    --h4-color: color-mix(in srgb, var(--colorful-headings-h4-color, var(--color-green)) 75%, var(--color-base-100));
+    --h5-color: color-mix(in srgb, var(--colorful-headings-h5-color, var(--color-blue)) 75%, var(--color-base-100));
+    --h6-color: color-mix(in srgb, var(--colorful-headings-h6-color, var(--color-purple)) 75%, var(--color-base-100));
+  }
 }
