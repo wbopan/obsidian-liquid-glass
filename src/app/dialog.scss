@@ -196,17 +196,27 @@ body.is-phone .prompt {
 .modal.mod-sidebar-layout {
   .vertical-tab-header {
     border-inline-end: none;
-  }
-  .vertical-tab-header {
     background-color: unset;
+    position: relative;
   }
   .horizontal-tab-nav-item,
   .vertical-tab-nav-item,
   .vertical-tab-header-group-title {
     padding: calc(8px * var(--density-modifier)) 16px;
   }
+  .vertical-tab-nav-item {
+    transition: font-weight var(--anim-duration-superfast);
+  }
+  .vertical-tab-nav-item:hover:not(.is-active) {
+    font-weight: var(--nav-item-weight-hover);
+    background-color: var(--nav-item-background-hover);
+  }
   .vertical-tab-nav-item.is-active {
     font-weight: var(--nav-item-weight-active);
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--nav-item-background-active);
+    color: var(--nav-item-color-active);
   }
   .horizontal-tab-content,
   .vertical-tab-content {
@@ -216,6 +226,13 @@ body.is-phone .prompt {
   .setting-item {
     padding: calc(16px * var(--density-modifier)) 0;
   }
+}
+
+body:not(.is-phone) .vertical-tab-nav-item.is-active {
+  --background-modifier-hover: var(--interactive-accent);
+  --icon-color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
 }
 
 body.is-phone .modal.mod-sidebar-layout {
