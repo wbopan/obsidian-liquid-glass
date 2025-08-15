@@ -597,6 +597,9 @@ settings:
 				label: Baseline
 				value: layout-baseline
 			-
+				label: Cupertino
+				value: layout-cupertino
+			-
 				label: Classic
 				value: layout-classic
 			-
@@ -608,9 +611,6 @@ settings:
 			-
 				label: Frame
 				value: layout-frame
-			-
-				label: Cupertino
-				value: layout-cupertino
 	-
 		id: input-style
 		title: Element style
@@ -621,6 +621,9 @@ settings:
 			-
 				label: Baseline
 				value: input-baseline
+			-
+				label: Cupertino
+				value: input-cupertino
 			-
 				label: Elevated
 				value: input-elevated
