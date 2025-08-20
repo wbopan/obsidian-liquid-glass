@@ -1,0 +1,27 @@
+.bases-toolbar-menu-container {
+  --bases-property-menu-item-radius: calc(var(--radius-m) - 4px);
+}
+
+// Menu
+.text-icon-button {
+  border-radius: var(--clickable-icon-radius);
+}
+
+.menu {
+  .bases-toolbar-menu-form {
+    padding: 0;
+  }
+}
+
+.menu.mod-filters {
+  padding: 4px;
+
+  .query-toolbar-section-header {
+    padding: 8px;
+  }
+}
+
+// Bases
+.bases-cards-label {
+  color: var(--text-faint);
+}
