@@ -29,6 +29,10 @@
   body.metadata-heading-off .metadata-properties-heading {
     display: none;
   }
+  body.metadata-heading-off .hover-popover .metadata-container {
+    display: none;
+  }
+
   body.metadata-add-property-off .metadata-add-button {
     display: none;
   }
