@@ -9,17 +9,10 @@ body {
   --radius-xl: calc(24px * var(--radius-modifier));
   --checkbox-radius: 4px;
 
-  // Return 0 if modifier < 1; return 1 if modifier >= 1
-  --radius-modifier-check: max(0, min(1, 1 - (1 - var(--radius-modifier)) * 9999));
+  /* 0 when <1, 1 when >=1 */
+  --radius-modifier-check: clamp(0, (var(--radius-modifier) - 1) * 10000 + 1, 1);
 
-  // Calculation for modifier < 1
-  --button-radius-sharp: calc(8px * var(--radius-modifier));
-
-  // Calculation for modifier >= 1
-  --button-radius-round: calc(16px * var(--radius-modifier));
-
-  // If --radius-modifier-checkis = 0, use --button-radius-sharp; if --radius-modifier-check = 1, use --button-radius-round
-  --button-radius: calc(var(--button-radius-sharp) * (1 - var(--radius-modifier-check)) + var(--button-radius-round) * var(--radius-modifier-check));
+  --button-radius: calc((8px * var(--radius-modifier)) * (1 - var(--radius-modifier-check)) + 100vw * var(--radius-modifier-check));
 }
 
 body.theme-light {
