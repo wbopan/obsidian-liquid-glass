@@ -34,7 +34,7 @@ body:not(.stacked-nav-off) .mod-left-split .workspace-tabs.mod-top-left-space .s
 }
 
 // Editor panel
-.workspace .mod-root {
+body:not(.is-phone) .workspace .mod-root {
   .workspace-tab-header-container {
     padding-left: 0;
   }
@@ -87,7 +87,7 @@ body:not(.stacked-nav-off) .mod-left-split .workspace-tabs.mod-top-left-space .s
 }
 
 // Editor panel: Floating
-body.tabs-floating .workspace .mod-root {
+body:not(.is-phone).tabs-floating .workspace .mod-root {
   --tab-radius-active: var(--tab-radius);
   --tab-curve: 0;
 
@@ -104,7 +104,7 @@ body.tabs-floating .workspace .mod-root {
 }
 
 // Editor panel: Underline
-body.tabs-underline .workspace .mod-root {
+body:not(.is-phone).tabs-underline .workspace .mod-root {
   --tab-background-active: transparent;
 
   .workspace-tab-header-container-inner {
