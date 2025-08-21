@@ -41,14 +41,16 @@ body.is-mobile {
 body:not(.nav-item-subtle, .nav-item-strong) {
   --nav-item-background-hover: transparent;
   --nav-item-background-active: transparent;
-  --nav-item-weight-hover: var(--font-medium);
+
+  &:not(.is-mobile) {
+    --nav-item-weight-hover: var(--font-medium);
+  }
 
   &.accented-interface {
     --nav-item-color-active: var(--text-accent);
   }
 
-  .nav-files-container .tree-item-self.is-active::before,
-  .vertical-tab-nav-item.is-active::before {
+  .nav-files-container .tree-item-self.is-active::before {
     content: "";
     position: absolute;
     margin-left: -12px;

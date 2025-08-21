@@ -204,6 +204,20 @@ body.is-phone .prompt {
   .vertical-tab-header-group-title {
     padding: calc(8px * var(--density-modifier)) 16px;
   }
+  .horizontal-tab-content,
+  .vertical-tab-content {
+    background-color: transparent;
+  }
+
+  .setting-item {
+    padding: calc(16px * var(--density-modifier)) 0;
+  }
+  .setting-item-name {
+    font-weight: var(--font-medium);
+  }
+}
+
+body:not(.is-mobile) .modal.mod-sidebar-layout {
   .vertical-tab-nav-item {
     transition: font-weight var(--anim-duration-superfast);
   }
@@ -218,24 +232,15 @@ body.is-phone .prompt {
     background-color: var(--nav-item-background-active);
     color: var(--nav-item-color-active);
   }
-  .horizontal-tab-content,
-  .vertical-tab-content {
-    background-color: transparent;
+  .vertical-tab-nav-item.is-active::before {
+    content: "";
+    position: absolute;
+    margin-left: -12px;
+    width: 4px;
+    height: 4px;
+    border-radius: var(--button-radius);
+    background-color: var(--nav-item-color-active);
   }
-
-  .setting-item {
-    padding: calc(16px * var(--density-modifier)) 0;
-  }
-  .setting-item-name {
-    font-weight: var(--font-medium);
-  }
-}
-
-body:not(.is-phone) .vertical-tab-nav-item.is-active {
-  --background-modifier-hover: var(--interactive-accent);
-  --icon-color: var(--text-on-accent);
-  background-color: var(--interactive-accent);
-  color: var(--text-on-accent);
 }
 
 body.is-phone .modal.mod-sidebar-layout {
