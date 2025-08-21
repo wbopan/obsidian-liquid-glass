@@ -25,3 +25,19 @@
 .bases-cards-label {
   color: var(--text-faint);
 }
+
+.bases-table-container.mod-multiline .bases-table-cell {
+  align-items: var(--bases-table-align-items, start);
+}
+
+.bases-table-cell > * {
+  text-overflow: ellipsis;
+  overflow: auto;
+}
+
+body.bases-row-alt .bases-tbody .bases-tr:nth-child(odd) {
+  background-color: var(--background-secondary);
+}
+body.bases-col-alt .bases-tbody .bases-tr > .bases-td:nth-child(2n + 2) {
+  background-color: var(--background-secondary);
+}

@@ -2783,7 +2783,7 @@
       "category": "Tables",
       "name": "Active row highlight color"
     },
-    "table-single-rows": { "newId": "table-no-wrap" },
+    "table-single-rows": { "newId": "table-nowrap" },
     "table-sticky-headers": {
       "unsupported": true,
       "category": "Tables",
