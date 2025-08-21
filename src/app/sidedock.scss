@@ -29,6 +29,14 @@ body.is-mobile {
   }
 }
 
+.sidebar-toggle-icon-inner {
+  transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
+}
+
+.sidebar-toggle-button .clickable-icon:hover .sidebar-toggle-icon-inner {
+  width: 24%;
+}
+
 // File navigation
 body:not(.nav-item-subtle, .nav-item-strong) {
   --nav-item-background-hover: transparent;
