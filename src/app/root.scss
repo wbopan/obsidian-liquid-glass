@@ -80,19 +80,6 @@ body.theme-dark {
   --color-pink: #ff375f;
 }
 
-* {
-  -electron-corner-smoothing: 60%;
-}
-
-body:not(.is-mobile) .app-container {
-  align-items: center;
-  background: var(--background-secondary);
-}
-
-.is-translucent {
-  --divider-color: var(--background-modifier-border) !important;
-}
-
 @media (prefers-color-scheme: light) {
   body.theme-dark {
     --workspace-background-translucent: var(--background-secondary);
@@ -104,6 +91,15 @@ body:not(.is-mobile) .app-container {
   }
 }
 
+body.is-translucent {
+  --divider-color: var(--background-modifier-border) !important;
+}
+
+body:not(.is-mobile) .app-container {
+  align-items: center;
+  background: var(--background-secondary);
+}
+
 body:not(.accented-interface) {
   --interactive-accent: rgb(var(--mono-rgb-100));
   --interactive-accent-hover: rgba(var(--mono-rgb-100), 0.8);
@@ -113,4 +109,12 @@ body:not(.accented-interface) {
 
 body.window-title-off .titlebar-text {
   display: none;
+}
+
+* {
+  -electron-corner-smoothing: 60%;
+}
+
+body.is-frameless:not(.is-hidden-frameless, .is-fullscreen) .titlebar {
+  background-color: var(--background-secondary);
 }
