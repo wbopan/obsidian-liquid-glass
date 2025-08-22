@@ -80,6 +80,10 @@ body.theme-dark {
   --color-pink: #ff375f;
 }
 
+* {
+  -electron-corner-smoothing: 60%;
+}
+
 body:not(.is-mobile) .app-container {
   align-items: center;
   background: var(--background-secondary);
