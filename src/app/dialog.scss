@@ -155,14 +155,15 @@ body.is-phone .suggestion-container {
 
   .prompt-input {
     border-radius: var(--radius-m);
+    border: var(--input-border-width) solid var(--background-modifier-border) !important;
+    padding-left: 16px;
   }
 
   .prompt-input,
   .prompt-input:hover,
   .prompt-input:focus,
   .prompt-input:focus-visible {
-    background: var(--background-primary);
-    border-bottom-width: 0;
+    background: var(--background-primary) !important;
   }
 
   .prompt-results {
@@ -222,6 +223,7 @@ body.is-phone {
   }
   .setting-item-name {
     font-weight: var(--font-medium);
+    overflow: visible;
   }
 }
 
