@@ -1,0 +1,78 @@
+body:not(.is-mobile).hover-sidedock {
+  &:not(.stacked-nav-off) .mod-sidedock.mod-left-split.is-sidedock-collapsed .mod-top-left-space .workspace-tab-header-container {
+    padding-top: var(--header-height);
+  }
+
+  .mod-sidedock .workspace-tab-header-container {
+    -webkit-app-region: no-drag !important;
+  }
+
+  .mod-sidedock.is-sidedock-collapsed {
+    z-index: var(--layer-sidedock);
+    transition: var(--anim-duration-moderate);
+
+    &:not([style*="overflow: hidden;"]) {
+      display: flex !important;
+      position: absolute;
+      transition-delay: var(--hover-sidedock-delay, var(--anim-duration-fast));
+      height: -webkit-fill-available;
+      width: var(--hover-sidedock-width, 320px) !important;
+      opacity: 0;
+      background-color: transparent;
+      filter: blur(4px);
+
+      &:hover {
+        opacity: 1;
+        transform: none;
+        filter: none;
+
+        ~ .mod-root .workspace-tab-header-container,
+        ~ .mod-root .workspace-tab-header-container-inner,
+        &:has(~ .mod-root .workspace-tab-header-container),
+        &:has(~ .mod-root .workspace-tab-header-container-inner) {
+          -webkit-app-region: no-drag;
+        }
+
+        div {
+          pointer-events: revert-layer;
+        }
+      }
+
+      div {
+        visibility: visible !important;
+        pointer-events: none;
+        -webkit-app-region: no-drag !important;
+      }
+      .workspace-leaf {
+        background-color: transparent;
+      }
+      > .workspace-leaf-resize-handle {
+        display: none;
+      }
+    }
+
+    &::before {
+      inset: -100% 0;
+      width: 200%;
+      content: "";
+      position: absolute;
+      background: linear-gradient(to right, var(--background-primary), transparent);
+      pointer-events: none;
+    }
+
+    &.mod-left-split:not(:hover) {
+      transform: translateX(calc(-1 * var(--hover-sidedock-trigger-size, 300px))) scale(0.95);
+    }
+    &.mod-right-split:not(:hover) {
+      transform: translateX(var(--hover-sidedock-trigger-size, 300px)) scale(0.95);
+    }
+
+    &.mod-right-split {
+      right: 0;
+    }
+    &.mod-right-split::before {
+      left: unset;
+      background: linear-gradient(to left, var(--background-primary), transparent);
+    }
+  }
+}

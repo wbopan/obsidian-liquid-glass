@@ -894,6 +894,48 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: hover-sidebars
+		title: Hover sidebars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: hover-sidedock
+		title: Hover over edge to reveal sidebars
+		description: When sidebars are collapsed, hover over window edge to reveal
+		type: class-toggle
+		default: false
+	-
+		id: hover-sidedock-trigger-size
+		title: Hover sidebars trigger size
+		type: variable-select
+		description: Width of the detection area for revealing hover sidebars
+		default: 300px
+		options:
+			-
+				label: Small
+				value: 310px
+			-
+				label: Medium
+				value: 300px
+			-
+				label: Large
+				value: 280px
+	-
+		id: hover-sidedock-width
+		title: Hover sidebars width
+		type: variable-number
+		description: Width of the hover sidebars in pixels
+		default: 320
+		format: px
+	-
+		id: hover-sidedock-delay
+		title: Hover sidebars delay
+		type: variable-number
+		description: Delay before showing hover sidebars in milliseconds
+		default: 160
+		format: ms
+	-
 		id: nav-indentation-guide
 		title: Indentation guides
 		type: heading
@@ -2442,7 +2484,7 @@ settings:
 	-
 		id: media-muted
 		title: Media opacity in dark mode
-		description: Level of fading for media in dark mode. Hover over media to display at full brightness.
+		description: Level of fading for media in dark mode. Hover over media to display at full brightness
 		type: variable-number-slider
 		default: 1
 		min: 0.2
@@ -2481,7 +2523,7 @@ settings:
 	-
 		id: pdf-muted
 		title: PDF opacity in dark mode
-		description: Level of fading for PDF pages in dark mode. Hover over a page to display at full brightness.
+		description: Level of fading for PDF pages in dark mode. Hover over a page to display at full brightness
 		type: variable-number-slider
 		default: 1
 		min: 0.2
