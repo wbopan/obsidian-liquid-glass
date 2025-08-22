@@ -5,18 +5,6 @@ body {
   --prompt-input-height: 64px;
 }
 
-body.is-mobile {
-  --interactive-normal: var(--background-primary);
-
-  --input-border-width: 1px;
-}
-
-body.is-tablet {
-  --interactive-normal: var(--background-primary);
-
-  --input-border-width: var(--divider-width);
-}
-
 body.is-phone {
   --prompt-input-height: 64px;
 }
