@@ -333,6 +333,8 @@ body.input-material {
     &:focus {
       box-shadow: inset 0 -2px var(--color-accent);
       border-color: transparent;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 
