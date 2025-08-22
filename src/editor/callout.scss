@@ -125,14 +125,21 @@
     }
 
     .callout-title {
-      position: absolute;
-      top: -10px;
+      transform: translateY(-1.75rem);
+      width: fit-content;
       padding: 0 8px;
       background-color: var(--background-primary);
+      max-width: 90%;
     }
 
     .callout-content {
       margin-left: 0 !important;
+      overflow: visible;
+    }
+
+    p:first-child,
+    .callout-content > *:first-child {
+      margin-top: -1rem;
     }
 
     .markdown-source-view .cm-embed-block.cm-callout {
