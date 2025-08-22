@@ -64,12 +64,16 @@
 }
 
 .table-numbers {
-  --table-numbers-padding-right: 0.5em;
-
   table:not(.calendar) {
     counter-reset: section;
     > thead > tr > th:first-child {
       white-space: nowrap;
+      &::before {
+        content: " ";
+        padding-right: 0.5em;
+        display: inline-block;
+        min-width: 2em;
+      }
       .table-cell-wrapper,
       .cm-s-obsidian {
         display: inline-block;
@@ -83,10 +87,15 @@
         counter-increment: section;
         content: counter(section) " ";
         text-align: center;
-        padding-right: var(--table-numbers-padding-right);
+        padding-right: 0.5em;
         display: inline-block;
+        min-width: 2em;
         color: var(--text-faint);
         font-variant-numeric: tabular-nums;
+      }
+      .cm-s-obsidian {
+        display: inline-block;
+        min-width: 10px;
       }
     }
   }

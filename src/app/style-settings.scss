@@ -1138,6 +1138,138 @@ settings:
 				label: Left
 				value: left
 	-
+		id: blockwidth
+		title: Block width
+		type: heading
+		level: 2
+		collapsed: true
+    - 
+        id: block-width-info
+		description: Readable line length must be set in Obsidian **Editor** settings
+        type: info-text
+		markdown: true
+	-
+		id: line-width
+		title: Normal line width
+		description: Number of characters per line
+		type: variable-number
+		default: 40
+		format: rem
+	-
+		id: line-width-wide
+		title: Wide line width
+		description: Number of characters per line for wide elements
+		type: variable-number
+		default: 50
+		format: rem
+	-
+		id: max-width
+		title: Maximum line width %
+		description: Number of characters per line
+		type: variable-number
+		default: 90
+		format: '%'
+	-
+		id: chart-width
+		title: Chart width
+		description: Default width for chart blocks
+		type: class-select
+		allowEmpty: false
+		default: chart-default-width
+		options:
+			-
+				label: Default
+				value: chart-default-width
+			-
+				label: Wide line width
+				value: chart-wide
+			-
+				label: Maximum line width
+				value: chart-max
+			-
+				label: 100% pane width
+				value: chart-100
+	-
+		id: iframe-width
+		title: Iframe width
+		description: Default width for iframe blocks
+		type: class-select
+		allowEmpty: false
+		default: iframe-default-width
+		options:
+			-
+				label: Default
+				value: iframe-default-width
+			-
+				label: Wide line width
+				value: iframe-wide
+			-
+				label: Maximum line width
+				value: iframe-max
+			-
+				label: 100% pane width
+				value: iframe-100
+	-
+		id: image-width
+		title: Image width
+		description: Default width for image blocks
+		type: class-select
+		allowEmpty: false
+		default: image-default-width
+		options:
+			-
+				label: Default
+				value: image-default-width
+			-
+				label: Wide line width
+				value: image-wide
+			-
+				label: Maximum line width
+				value: image-max
+			-
+				label: 100% pane width
+				value: image-100
+	-
+		id: map-width
+		title: Map width
+		description: Default width for map blocks
+		type: class-select
+		allowEmpty: false
+		default: map-default-width
+		options:
+			-
+				label: Default
+				value: map-default-width
+			-
+				label: Wide line width
+				value: map-wide
+			-
+				label: Maximum line width
+				value: map-max
+			-
+				label: 100% pane width
+				value: map-100
+	-
+		id: table-width
+		title: Table width
+		description: Default width for table blocks
+		type: class-select
+		allowEmpty: false
+		default: table-default-width
+		options:
+			-
+				label: Default
+				value: table-default-width
+			-
+				label: Wide line width
+				value: table-wide
+			-
+				label: Maximum line width
+				value: table-max
+			-
+				label: 100% pane width
+				value: table-100
+	-
 		id: inline-title
 		title: Inline title
 		type: heading
@@ -1892,6 +2024,12 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: bases-table-numbers
+		title: Row numbers
+		description: Display row numbers in Bases table
+		type: class-toggle
+		default: false
+	-
 		id: bases-table-align-items
 		title: Table vertical alignment
 		type: variable-select
@@ -1907,139 +2045,6 @@ settings:
 			-
 				label: Bottom
 				value: end
-	-
-		id: blockwidth
-		title: Block width
-		type: heading
-		level: 2
-		collapsed: true
-    - 
-        id: block-width-info
-		description: Readable line length must be set in Obsidian **Editor** settings
-        type: info-text
-		markdown: true
-	-
-		id: line-width
-		title: Normal line width
-		description: Number of characters per line
-		type: variable-number
-		default: 40
-		format: rem
-	-
-		id: line-width-wide
-		title: Wide line width
-		description: Number of characters per line for wide elements
-		type: variable-number
-		default: 50
-		format: rem
-	-
-		id: max-width
-		title: Maximum line width %
-		description: Number of characters per line
-		type: variable-number
-		default: 90
-		format: '%'
-	-
-		id: chart-width
-		title: Chart width
-		description: Default width for chart blocks
-		type: class-select
-		allowEmpty: false
-		default: chart-default-width
-		options:
-			-
-				label: Default
-				value: chart-default-width
-			-
-				label: Wide line width
-				value: chart-wide
-			-
-				label: Maximum line width
-				value: chart-max
-			-
-				label: 100% pane width
-				value: chart-100
-	-
-		id: iframe-width
-		title: Iframe width
-		description: Default width for iframe blocks
-		type: class-select
-		allowEmpty: false
-		default: iframe-default-width
-		options:
-			-
-				label: Default
-				value: iframe-default-width
-			-
-				label: Wide line width
-				value: iframe-wide
-			-
-				label: Maximum line width
-				value: iframe-max
-			-
-				label: 100% pane width
-				value: iframe-100
-	-
-		id: image-width
-		title: Image width
-		description: Default width for image blocks
-		type: class-select
-		allowEmpty: false
-		default: image-default-width
-		options:
-			-
-				label: Default
-				value: image-default-width
-			-
-				label: Wide line width
-				value: image-wide
-			-
-				label: Maximum line width
-				value: image-max
-			-
-				label: 100% pane width
-				value: image-100
-	-
-		id: map-width
-		title: Map width
-		description: Default width for map blocks
-		type: class-select
-		allowEmpty: false
-		default: map-default-width
-		options:
-			-
-				label: Default
-				value: map-default-width
-			-
-				label: Wide line width
-				value: map-wide
-			-
-				label: Maximum line width
-				value: map-max
-			-
-				label: 100% pane width
-				value: map-100
-	-
-		id: table-width
-		title: Table width
-		description: Default width for table blocks
-		type: class-select
-		allowEmpty: false
-		default: table-default-width
-		options:
-			-
-				label: Default
-				value: table-default-width
-			-
-				label: Wide line width
-				value: table-wide
-			-
-				label: Maximum line width
-				value: table-max
-			-
-				label: 100% pane width
-				value: table-100
-
 	-
 		id: blockquotes
 		title: Blockquotes
