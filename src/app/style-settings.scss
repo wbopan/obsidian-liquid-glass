@@ -2041,8 +2041,8 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: bases-table-header-icon-display
-		title: Table header icons
+		id: bases-toolbar-label-display
+		title: Toolbar text label
 		type: variable-select
 		allowEmpty: false
 		default: flex
@@ -2071,6 +2071,19 @@ settings:
 		description: Display row numbers in Bases table
 		type: class-toggle
 		default: false
+	-
+		id: bases-table-header-icon-display
+		title: Table header icons
+		type: variable-select
+		allowEmpty: false
+		default: flex
+		options:
+			-
+				label: Visible
+				value: flex
+			-
+				label: Hidden
+				value: none
 	-
 		id: bases-table-align-items
 		title: Table vertical alignment
