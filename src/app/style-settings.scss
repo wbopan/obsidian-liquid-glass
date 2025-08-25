@@ -977,14 +977,19 @@ settings:
 				label: Accent color
 				value: var(--color-accent)
 	-
-		id: obsidian-frame
-		title: Obsidian frame
+		id: window-frame
+		title: Window frame
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: colorful-frame
+		title: Colorful frame
+		description: Adds accent color background on tab bar
+		type: class-toggle
     - 
         id: obsidian-frame-info
-		description: Obsidian frame must be set in **Appearance** settings
+		description: Following settings requires Obsidian frame to be set in **Appearance** settings
         type: info-text
 		markdown: true
 	-

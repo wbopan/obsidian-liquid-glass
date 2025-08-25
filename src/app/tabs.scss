@@ -187,6 +187,10 @@ body:not(.is-phone).tabs-underline .workspace .mod-root {
   .workspace-tab-header-inner-title {
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   }
+
+  .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--icon-color-focused);
+  }
 }
 
 // Side panels: Compact tabs
