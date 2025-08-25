@@ -9,6 +9,10 @@ body {
 }
 
 // Menu
+.query-toolbar-menu {
+  transition: none;
+}
+
 .text-icon-button {
   border-radius: var(--clickable-icon-radius);
 }
