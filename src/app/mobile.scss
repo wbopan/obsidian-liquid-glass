@@ -22,6 +22,11 @@ body.is-mobile.theme-dark {
   --background-modifier-form-field: var(--color-base-25);
 }
 
+body.is-tablet.theme-dark {
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+}
+
 body.is-phone {
   --mobile-sidebar-radius: 0;
 
