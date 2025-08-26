@@ -9,7 +9,8 @@ body {
 .img-wide,
 .iframe-wide,
 .map-wide,
-.chart-wide {
+.chart-wide,
+.bases-wide {
   --file-line-width: var(--line-width-wide);
 }
 .max,
@@ -17,7 +18,8 @@ body {
 .img-max,
 .iframe-max,
 .map-max,
-.chart-max {
+.chart-max,
+.bases-max {
   --file-line-width: var(--max-width);
 
   &.markdown-preview-view,
@@ -29,7 +31,8 @@ body {
 .img-100,
 .iframe-100,
 .map-100,
-.chart-100 {
+.chart-100,
+.bases-100 {
   --file-line-width: 100%;
 
   &.markdown-preview-view,
@@ -48,20 +51,22 @@ body {
 .table-100 {
   --table-line-width: 100%;
 
-  tbody > tr > td {
-    border-radius: 0 !important;
-  }
-  tbody tr:first-child > td {
-    border-block-start-width: 0;
-  }
-  tbody tr > td:last-child {
-    border-inline-end-width: 0;
-  }
-  tbody tr > td:first-child {
-    border-inline-start-width: 0;
-  }
-  tbody tr:last-child > td {
-    border-block-end-width: 0;
+  .markdown-preview-sizer {
+    tbody > tr > td {
+      border-radius: 0 !important;
+    }
+    tbody tr:first-child > td {
+      border-block-start-width: 0;
+    }
+    tbody tr > td:last-child {
+      border-inline-end-width: 0;
+    }
+    tbody tr > td:first-child {
+      border-inline-start-width: 0;
+    }
+    tbody tr:last-child > td {
+      border-block-end-width: 0;
+    }
   }
 }
 .table-wide,
@@ -69,6 +74,7 @@ body {
 .table-100 {
   .markdown-preview-sizer > div.el-table:is(.el-table)[dir] {
     max-width: var(--table-line-width) !important;
+    width: var(--table-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-table) {
     max-width: var(--line-width) !important;
@@ -93,6 +99,7 @@ body {
 .img-100 {
   .markdown-preview-sizer > div.el-p:has(img[src]):is(.el-p:has(img[src])) {
     max-width: var(--img-line-width) !important;
+    width: var(--img-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-p:has(img)) {
     max-width: var(--line-width) !important;
@@ -117,6 +124,7 @@ body {
 .iframe-100 {
   .markdown-preview-sizer > div.el-p:has(iframe[src]):is(.el-p:has(iframe[src])) {
     max-width: var(--iframe-line-width) !important;
+    width: var(--iframe-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-p:has(iframe)) {
     max-width: var(--line-width) !important;
@@ -141,6 +149,7 @@ body {
 .map-100 {
   .markdown-preview-sizer > div.el-pre:has(.block-language-leaflet[style]):is(.el-pre:has(.block-language-leaflet[style])) {
     max-width: var(--map-line-width) !important;
+    width: var(--map-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-pre:has(.block-language-leaflet)) {
     max-width: var(--line-width) !important;
@@ -165,6 +174,7 @@ body {
 .chart-100 {
   .markdown-preview-sizer > div.el-pre:has(.block-language-chart[style]):is(.el-pre:has(.block-language-chart[style])) {
     max-width: var(--chart-line-width) !important;
+    width: var(--chart-line-width) !important;
   }
   .markdown-preview-sizer > div:not(.el-pre:has(.block-language-chart)) {
     max-width: var(--line-width) !important;
@@ -174,10 +184,42 @@ body {
   }
 }
 
+// Bases
+.bases-wide {
+  --bases-line-width: var(--line-width-wide);
+}
+.bases-max {
+  --bases-line-width: var(--max-width);
+}
+.bases-100 {
+  --bases-line-width: 100%;
+
+  .markdown-preview-sizer .bases-embed .bases-view .bases-tbody {
+    border: none;
+    border-radius: 0;
+  }
+}
+.bases-wide,
+.bases-max,
+.bases-100 {
+  .markdown-preview-sizer > div.el-p:has(.bases-view):is(.el-p:has(.bases-view)) {
+    max-width: var(--bases-line-width) !important;
+    width: var(--bases-line-width) !important;
+  }
+  .markdown-preview-sizer > div:not(.el-p:has(.bases-view)) {
+    max-width: var(--line-width) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: calc(100% - var(--file-margins) * 2);
+  }
+}
+
 // Fix content centering
-.markdown-preview-sizer > div,
-.cm-content {
+.markdown-preview-sizer > div {
   margin: 0 auto;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+  max-width: var(--line-width);
 }
 
 // Fix image width

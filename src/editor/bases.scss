@@ -108,5 +108,6 @@ body.bases-col-alt .bases-tbody .bases-tr > .bases-td:nth-child(2n + 2) {
   .bases-tbody {
     border: var(--bases-embed-border-width) solid var(--bases-embed-border-color);
     border-radius: var(--bases-embed-border-radius);
+    overflow: hidden;
   }
 }
