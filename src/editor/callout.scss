@@ -4,11 +4,8 @@
     --callout-padding: 16px;
     --callout-size: var(--font-text-size);
   }
-  .workspace-leaf-content:not([data-type="empty"]) .callout-content {
-    margin-left: calc(var(--icon-size) + 8px);
-  }
 
-  .callout {
+  div[class="callout"] {
     font-size: var(--callout-size);
 
     p:first-child,
@@ -42,6 +39,10 @@
     .callout-fold {
       padding-inline-end: 0;
     }
+
+    .callout-content {
+      margin-left: calc(var(--icon-size) + 8px);
+    }
   }
 
   .callout:not([data-callout]) {
@@ -55,39 +56,32 @@
   }
 
   // Callout: Tactile
-  body.callouts-tactile .callout {
+  body.callouts-tactile div[class="callout"] {
     box-shadow: var(--shadow-tactile);
     background: linear-gradient(rgba(var(--callout-color), 0.1), rgba(var(--callout-color), 0.2));
   }
 
   // Callout: Padded
-  body.callouts-padded.theme-light .callout {
+  body.callouts-padded.theme-light div[class="callout"] {
     background-color: rgba(var(--callout-color), 0.2);
 
     .callout-content {
       --callout-content-background: color-mix(in srgb, rgb(var(--callout-color)) 10%, var(--background-primary));
     }
   }
-  body.callouts-padded.theme-dark .callout {
+  body.callouts-padded.theme-dark div[class="callout"] {
     background-color: rgba(var(--callout-color), 0.3);
 
     .callout-content {
       --callout-content-background: color-mix(in srgb, rgb(var(--callout-color)) 15%, var(--background-primary));
     }
   }
-  body.callouts-padded {
+  body.callouts-padded div[class="callout"] {
     --callout-border-width: 0;
     --callout-padding: 4px;
     --callout-content-padding: 16px;
 
-    .callout {
-      position: relative;
-
-      p:first-child,
-      .callout-content > *:first-child {
-        margin-top: 0;
-      }
-    }
+    position: relative;
 
     .callout-icon {
       width: 56px;
@@ -112,34 +106,39 @@
       margin-left: 0 !important;
       background: var(--callout-content-background);
     }
+
+    p:first-child,
+    .callout-content > *:first-child {
+      margin-top: 0;
+    }
   }
 
   // Callout: Outlined
   body.callouts-outlined {
-    --callout-border-width: 2px;
+    div[class="callout"] {
+      --callout-border-width: 2px;
 
-    .callout {
       background-color: transparent;
       position: relative;
       overflow: visible;
-    }
 
-    .callout-title {
-      transform: translateY(-1.75rem);
-      width: fit-content;
-      padding: 0 8px;
-      background-color: var(--background-primary);
-      max-width: 90%;
-    }
+      .callout-title {
+        transform: translateY(-1.75rem);
+        width: fit-content;
+        padding: 0 8px;
+        background-color: var(--background-primary);
+        max-width: 90%;
+      }
 
-    .callout-content {
-      margin-left: 0 !important;
-      overflow: visible;
-    }
+      .callout-content {
+        margin-left: 0 !important;
+        overflow: visible;
+      }
 
-    p:first-child,
-    .callout-content > *:first-child {
-      margin-top: -1rem;
+      p:first-child,
+      .callout-content > *:first-child {
+        margin-top: -1rem;
+      }
     }
 
     .markdown-source-view .cm-embed-block.cm-callout {
