@@ -227,22 +227,24 @@ body.is-phone {
   }
 }
 
-body:not(.is-mobile) .modal.mod-sidebar-layout {
-  .vertical-tab-nav-item {
-    transition: font-weight var(--anim-duration-superfast);
+body:not(.is-mobile) {
+  .modal.mod-sidebar-layout {
+    .vertical-tab-nav-item:not(:hover) {
+      transition: font-weight var(--anim-duration-superfast);
+    }
+    .vertical-tab-nav-item:hover:not(.is-active) {
+      font-weight: var(--nav-item-weight-hover);
+      background-color: var(--nav-item-background-hover);
+    }
+    .vertical-tab-nav-item.is-active {
+      font-weight: var(--nav-item-weight-active);
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--nav-item-background-active);
+      color: var(--nav-item-color-active);
+    }
   }
-  .vertical-tab-nav-item:hover:not(.is-active) {
-    font-weight: var(--nav-item-weight-hover);
-    background-color: var(--nav-item-background-hover);
-  }
-  .vertical-tab-nav-item.is-active {
-    font-weight: var(--nav-item-weight-active);
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--nav-item-background-active);
-    color: var(--nav-item-color-active);
-  }
-  .vertical-tab-nav-item.is-active::before {
+  &:not(.nav-item-subtle, .nav-item-strong) .modal.mod-sidebar-layout .vertical-tab-nav-item.is-active::before {
     content: "";
     position: absolute;
     margin-left: -12px;

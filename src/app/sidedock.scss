@@ -70,14 +70,18 @@ body.nav-item-strong {
 body.full-item-name {
   --nav-item-white-space: none;
 }
-.tree-item-self,
-.tree-item-inner {
-  transition: font-weight var(--anim-duration-superfast);
-  align-items: center;
-}
 body.bold-folders .nav-folder-title {
   --nav-item-weight: calc(var(--font-weight) + var(--bold-modifier));
   --nav-item-weight-hover: calc(var(--font-weight) + var(--bold-modifier));
+}
+
+.tree-item-self,
+.tree-item-inner {
+  align-items: center;
+
+  &:not(:hover) {
+    transition: font-weight var(--anim-duration-superfast);
+  }
 }
 
 // Ribbon
