@@ -1,37 +1,33 @@
 @media screen, print {
   .colorful-headings-side,
-  .colorful-headings-full {
+  .colorful-headings-full,
+  .colorful-headings-block {
     .markdown-rendered h1::before,
     .HyperMD-header-1::before {
-      background-color: var(--colorful-headings-h1-color, var(--color-red));
+      background-color: rgb(var(--colorful-headings-h1-color, var(--color-red-rgb)));
     }
     .markdown-rendered h2::before,
     .HyperMD-header-2::before {
-      background-color: var(--colorful-headings-h2-color, var(--color-orange));
+      background-color: rgb(var(--colorful-headings-h2-color, var(--color-orange-rgb)));
     }
     .markdown-rendered h3::before,
     .HyperMD-header-3::before {
-      background-color: var(--colorful-headings-h3-color, var(--color-yellow));
+      background-color: rgb(var(--colorful-headings-h3-color, var(--color-yellow-rgb)));
     }
     .markdown-rendered h4::before,
     .HyperMD-header-4::before {
-      background-color: var(--colorful-headings-h4-color, var(--color-green));
+      background-color: rgb(var(--colorful-headings-h4-color, var(--color-green-rgb)));
     }
     .markdown-rendered h5::before,
     .HyperMD-header-5::before {
-      background-color: var(--colorful-headings-h5-color, var(--color-blue));
+      background-color: rgb(var(--colorful-headings-h5-color, var(--color-blue-rgb)));
     }
     .markdown-rendered h6::before,
     .HyperMD-header-6::before {
-      background-color: var(--colorful-headings-h6-color, var(--color-purple));
+      background-color: rgb(var(--colorful-headings-h6-color, var(--color-purple-rgb)));
     }
 
-    .markdown-rendered h1,
-    .markdown-rendered h2,
-    .markdown-rendered h3,
-    .markdown-rendered h4,
-    .markdown-rendered h5,
-    .markdown-rendered h6,
+    .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
     .HyperMD-header-1,
     .HyperMD-header-2,
     .HyperMD-header-3,
@@ -42,6 +38,7 @@
       padding-inline-start: var(--font-ui-smaller);
 
       &::before {
+        pointer-events: none;
         display: inline-flex;
         border-radius: var(--radius-s);
         width: 4px;
@@ -78,17 +75,73 @@
     .cm-fold-indicator .collapse-indicator {
       left: 0;
     }
+
+    .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:has(br:only-child):not(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6)::before {
+      height: calc(100% - 6px);
+    }
   }
 
-  .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:has(br:only-child):not(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6)::before {
-    height: calc(100% - 6px);
+  .colorful-headings-full,
+  .colorful-headings-block {
+    --inline-title-color: inherit;
+    --h1-color: color-mix(in srgb, rgb(var(--colorful-headings-h1-color, var(--color-red-rgb))) 75%, var(--color-base-100));
+    --h2-color: color-mix(in srgb, rgb(var(--colorful-headings-h2-color, var(--color-orange-rgb))) 75%, var(--color-base-100));
+    --h3-color: color-mix(in srgb, rgb(var(--colorful-headings-h3-color, var(--color-yellow-rgb))) 75%, var(--color-base-100));
+    --h4-color: color-mix(in srgb, rgb(var(--colorful-headings-h4-color, var(--color-green-rgb))) 75%, var(--color-base-100));
+    --h5-color: color-mix(in srgb, rgb(var(--colorful-headings-h5-color, var(--color-blue-rgb))) 75%, var(--color-base-100));
+    --h6-color: color-mix(in srgb, rgb(var(--colorful-headings-h6-color, var(--color-purple-rgb))) 75%, var(--color-base-100));
   }
-  .colorful-headings-full {
-    --h1-color: color-mix(in srgb, var(--colorful-headings-h1-color, var(--color-red)) 75%, var(--color-base-100));
-    --h2-color: color-mix(in srgb, var(--colorful-headings-h2-color, var(--color-orange)) 75%, var(--color-base-100));
-    --h3-color: color-mix(in srgb, var(--colorful-headings-h3-color, var(--color-yellow)) 75%, var(--color-base-100));
-    --h4-color: color-mix(in srgb, var(--colorful-headings-h4-color, var(--color-green)) 75%, var(--color-base-100));
-    --h5-color: color-mix(in srgb, var(--colorful-headings-h5-color, var(--color-blue)) 75%, var(--color-base-100));
-    --h6-color: color-mix(in srgb, var(--colorful-headings-h6-color, var(--color-purple)) 75%, var(--color-base-100));
+
+  .colorful-headings-block {
+    .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+    .HyperMD-header-1,
+    .HyperMD-header-2,
+    .HyperMD-header-3,
+    .HyperMD-header-4,
+    .HyperMD-header-5,
+    .HyperMD-header-6 {
+      padding-inline-start: 0.2em;
+
+      &::before {
+        width: 100%;
+      }
+      &.cm-line .cm-header {
+        padding-inline-start: 0.2em;
+      }
+      &.cm-line.cm-active {
+        &::before {
+          inset-inline-start: 0;
+        }
+
+        .cm-header {
+          padding-inline-start: 0.2em;
+        }
+      }
+    }
+
+    .markdown-rendered h1::before,
+    .HyperMD-header-1::before {
+      background-color: rgba(var(--colorful-headings-h1-color, var(--color-red-rgb)), 0.1);
+    }
+    .markdown-rendered h2::before,
+    .HyperMD-header-2::before {
+      background-color: rgba(var(--colorful-headings-h2-color, var(--color-orange-rgb)), 0.1);
+    }
+    .markdown-rendered h3::before,
+    .HyperMD-header-3::before {
+      background-color: rgba(var(--colorful-headings-h3-color, var(--color-yellow-rgb)), 0.1);
+    }
+    .markdown-rendered h4::before,
+    .HyperMD-header-4::before {
+      background-color: rgba(var(--colorful-headings-h4-color, var(--color-green-rgb)), 0.1);
+    }
+    .markdown-rendered h5::before,
+    .HyperMD-header-5::before {
+      background-color: rgba(var(--colorful-headings-h5-color, var(--color-blue-rgb)), 0.1);
+    }
+    .markdown-rendered h6::before,
+    .HyperMD-header-6::before {
+      background-color: rgba(var(--colorful-headings-h6-color, var(--color-purple-rgb)), 0.1);
+    }
   }
 }

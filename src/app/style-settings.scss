@@ -1425,46 +1425,49 @@ settings:
 			-
 				label: Full color
 				value: colorful-headings-full
+			-
+				label: Block background
+				value: colorful-headings-block
 	-
 		id: colorful-headings-h1-color
 		title: H1 color
 		type: variable-themed-color
-		format: hex
+		format: rgb-values
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: colorful-headings-h2-color
 		title: H2 color
 		type: variable-themed-color
-		format: hex
+		format: rgb-values
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: colorful-headings-h3-color
 		title: H3 color
 		type: variable-themed-color
-		format: hex
+		format: rgb-values
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: colorful-headings-h4-color
 		title: H4 color
 		type: variable-themed-color
-		format: hex
+		format: rgb-values
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: colorful-headings-h5-color
 		title: H5 color
 		type: variable-themed-color
-		format: hex
+		format: rgb-values
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: colorful-headings-h6-color
 		title: H6 color
 		type: variable-themed-color
-		format: hex
+		format: rgb-values
 		default-light: '#'
 		default-dark: '#'
 	-
