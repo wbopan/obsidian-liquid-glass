@@ -148,7 +148,8 @@ body.is-phone .suggestion-container {
 .prompt {
   background-color: var(--background-secondary);
 
-  .prompt-input-container {
+  .prompt-input-container,
+  .omnisearch-input-container {
     margin: 8px 8px 0;
     border-bottom-width: 0;
   }
