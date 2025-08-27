@@ -52,7 +52,9 @@
         inset-inline-start: 0;
         transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
       }
-
+      &.cm-line::before {
+        height: calc(100% - 6px - var(--p-spacing));
+      }
       &.cm-line .cm-header {
         padding-inline-start: var(--font-ui-smaller);
         box-decoration-break: clone;
@@ -66,9 +68,6 @@
           padding-inline-start: 0;
         }
       }
-      &.cm-line::before {
-        height: calc(100% - 6px - var(--p-spacing));
-      }
     }
     .collapse-indicator.heading-collapse-indicator {
       margin-left: -48px;
@@ -81,7 +80,7 @@
     }
   }
 
-  .cm-line:not(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6)::before {
+  .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:has(br:only-child):not(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) + .cm-line:is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6)::before {
     height: calc(100% - 6px);
   }
   .colorful-headings-full {
