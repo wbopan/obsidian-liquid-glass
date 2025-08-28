@@ -103,9 +103,8 @@ body:not(.is-mobile, .theme-light:is(.contrast-light-tonal, .contrast-light-whit
 body:not(.is-mobile) .mod-sidedock {
   // Sidedock padding
   .workspace-leaf-content > .node-insert-event,
-  .workspace-leaf-content > .view-content,
-  .workspace-leaf-content > .nav-header {
-    padding: 0 16px;
+  .workspace-leaf-content > .view-content {
+    padding: 2px 16px 0;
 
     > div:not(.nav-buttons-container) {
       padding: 0;
@@ -113,7 +112,7 @@ body:not(.is-mobile) .mod-sidedock {
   }
 
   .workspace-leaf-content > .nav-header {
-    padding-bottom: 8px;
+    padding: 0 16px 8px;
   }
 
   // Panel actions style
