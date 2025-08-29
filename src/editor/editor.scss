@@ -360,7 +360,8 @@
     filter: invert(1) hue-rotate(180deg) contrast(0.75);
   }
   .pdf-container .pdfViewer .page {
-    transition: var(--anim-duration-moderate);
+    transition-duration: var(--anim-duration-moderate);
+    transition-property: filter, opacity;
     &:not(:hover) {
       opacity: var(--pdf-muted, 1);
     }
