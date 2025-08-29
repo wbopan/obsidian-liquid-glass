@@ -1,0 +1,40 @@
+// Omnisearch https://github.com/scambier/obsidian-omnisearch
+@media only screen and (max-width: 600px) {
+  .omnisearch-input-container__buttons {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .omnisearch-input-container__buttons {
+    margin-inline-end: 0;
+  }
+  .omnisearch-input-container__buttons button {
+    height: var(--prompt-input-height);
+  }
+}
+.omnisearch-input-field {
+  width: 100%;
+}
+.omnisearch-input-container__buttons button {
+  box-shadow: none;
+  border: var(--input-border-width) solid var(--background-modifier-border);
+}
+body:not(.is-mobile) .omnisearch-input-container__buttons {
+  display: none;
+}
+
+// Notebook Navigator https://github.com/johansan/notebook-navigator
+body:not(.is-mobile) .view-content.notebook-navigator {
+  background-color: var(--background-secondary);
+  padding: 0 !important;
+  .nn-list-pane {
+    margin-right: 8px;
+    border-radius: var(--radius-s);
+  }
+  .nn-nav-spacer {
+    height: 64px !important;
+  }
+  .nn-virtual-container {
+    margin-bottom: 48px;
+  }
+}
