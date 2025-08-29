@@ -5,7 +5,7 @@
     --callout-size: var(--font-text-size);
   }
 
-  div[class="callout"] {
+  .callout:not([data-callout="note-toolbar"]) {
     font-size: var(--callout-size);
 
     p:first-child,
@@ -15,7 +15,7 @@
 
     p:last-child,
     .callout-content > *:last-child {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
 
     pre {
@@ -57,27 +57,27 @@
   }
 
   // Callout: Tactile
-  body.callouts-tactile div[class="callout"] {
+  body.callouts-tactile .callout:not([data-callout="note-toolbar"]) {
     box-shadow: var(--shadow-tactile);
     background: linear-gradient(rgba(var(--callout-color), 0.1), rgba(var(--callout-color), 0.2));
   }
 
   // Callout: Padded
-  body.callouts-padded.theme-light div[class="callout"] {
+  body.callouts-padded.theme-light .callout:not([data-callout="note-toolbar"]) {
     background-color: rgba(var(--callout-color), 0.2);
 
     .callout-content {
       --callout-content-background: color-mix(in srgb, rgb(var(--callout-color)) 10%, var(--background-primary));
     }
   }
-  body.callouts-padded.theme-dark div[class="callout"] {
+  body.callouts-padded.theme-dark .callout:not([data-callout="note-toolbar"]) {
     background-color: rgba(var(--callout-color), 0.3);
 
     .callout-content {
       --callout-content-background: color-mix(in srgb, rgb(var(--callout-color)) 15%, var(--background-primary));
     }
   }
-  body.callouts-padded div[class="callout"] {
+  body.callouts-padded .callout:not([data-callout="note-toolbar"]) {
     --callout-border-width: 0;
     --callout-padding: 4px;
     --callout-content-padding: 16px;
@@ -116,7 +116,7 @@
 
   // Callout: Outlined
   body.callouts-outlined {
-    div[class="callout"] {
+    .callout:not([data-callout="note-toolbar"]) {
       --callout-border-width: 2px;
 
       background-color: transparent;
