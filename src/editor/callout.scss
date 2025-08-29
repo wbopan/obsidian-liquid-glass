@@ -34,6 +34,7 @@
 
     .callout-title-inner {
       --p-spacing: 0;
+      color: color-mix(in srgb, rgb(var(--callout-color)), var(--text-normal) 15%);
     }
 
     .callout-fold {
