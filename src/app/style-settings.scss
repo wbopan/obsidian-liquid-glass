@@ -1023,6 +1023,36 @@ settings:
 		max: 900
 		step: 100
 	-
+		id: mobile
+		title: Mobile
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: mobile-left-sidebar-width
+		title: Left sidebar width
+		description: Accepts valid CSS units
+		type: variable-text
+		default: '500px'
+	-
+		id: mobile-right-sidebar-width
+		title: Right sidebar width
+		description: Accepts valid CSS units
+		type: variable-text
+		default: '500px'
+	-
+		id: mobile-left-sidebar-width-pinned
+		title: Left sidebar width (pinned)
+		description: Accepts valid CSS units
+		type: variable-text
+		default: '320px'
+	-
+		id: mobile-right-sidebar-width-pinned
+		title: Right sidebar width (pinned)
+		description: Accepts valid CSS units
+		type: variable-text
+		default: '320px'
+	-
 		id: editor
 		title: Editor
 		type: heading
@@ -1078,7 +1108,7 @@ settings:
 	-
 		id: readable-spacing
 		title: Readable spacing
-		description: Use readable spacing in reading and editing views. May impact performance (Experimental)
+		description: Use readable spacing in reading and editing views
 		type: class-toggle
 		default: false
 	-
