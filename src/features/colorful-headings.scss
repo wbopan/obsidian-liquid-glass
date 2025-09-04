@@ -51,7 +51,7 @@
       &.cm-line::before {
         height: calc(100% - 6px - var(--p-spacing));
       }
-      &.cm-line .cm-header {
+      &.cm-line .cm-header:not(.cm-inline-code) {
         padding-inline-start: var(--font-ui-smaller);
         box-decoration-break: clone;
       }
@@ -60,7 +60,7 @@
           inset-inline-start: -16px;
         }
 
-        .cm-header {
+        .cm-header:not(.cm-inline-code) {
           padding-inline-start: 0;
         }
       }
