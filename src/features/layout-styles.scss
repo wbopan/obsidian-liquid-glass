@@ -323,10 +323,6 @@ body.layout-frame:not(.is-mobile) {
   &.mod-macos .workspace-ribbon {
     --ribbon-width: calc(var(--header-height) + 28px);
   }
-  &:is(.mod-windows, .mod-linux) .workspace-ribbon .sidebar-toggle-button {
-    top: 8px;
-    left: 8px;
-  }
 
   // Side panels
   &.show-ribbon.stacked-nav-off .mod-sidedock.mod-left-split .mod-top-left-space .workspace-tab-header-container {
