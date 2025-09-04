@@ -840,21 +840,6 @@ settings:
 				label: Strong
 				value: nav-item-strong
 	-
-		id: large-new-note
-		title: Large new note button
-		description: Adds text label and background on new note button in the left sidebar
-		type: class-toggle
-	-
-		id: full-item-name
-		title: Full item name
-		description: Display long file name without trimming
-		type: class-toggle
-		default: false
-	-
-		id: bold-folders
-		title: Bold folders name
-		type: class-toggle
-	-
 		id: colorful-folders
 		title: Colorful folders
 		description: Adds colored indicator on folders
@@ -884,13 +869,28 @@ settings:
 		type: variable-text
 		default: 13px
 	-
-		id: hide-help
-		title: Hide help button
+		id: large-new-note
+		title: Large new note button
+		description: Adds text label and background on new note button in the left sidebar
+		type: class-toggle
+	-
+		id: full-item-name
+		title: Full item name
+		description: Display long file name without trimming
 		type: class-toggle
 		default: false
 	-
+		id: bold-folders
+		title: Bold folders name
+		type: class-toggle
+	-
 		id: hide-vault-switcher-off
 		title: Always show vault switcher
+		type: class-toggle
+		default: false
+	-
+		id: hide-help
+		title: Hide help button
 		type: class-toggle
 		default: false
 	-
@@ -901,13 +901,13 @@ settings:
 		collapsed: true
 	-
 		id: hover-sidedock
-		title: Hover over edge to reveal sidebars
+		title: Hover sidebars
 		description: When sidebars are collapsed, hover over window edge to reveal
 		type: class-toggle
 		default: false
 	-
-		id: hover-sidedock-trigger-size
-		title: Hover sidebars trigger size
+		id: hover-sidedock-trigger-area
+		title: Hover sidebars trigger area
 		type: variable-select
 		description: Width of the detection area for revealing hover sidebars
 		default: 300px
@@ -1353,44 +1353,6 @@ settings:
 				label: 100% pane width
 				value: table-100
 	-
-		id: inline-title
-		title: Inline title
-		type: heading
-		level: 2
-		collapsed: true
-    - 
-        id: inline-title-info
-		description: Inline titles must be turned on in **Appearance** settings
-        type: info-text
-		markdown: true
-	-
-		id: inline-title-font
-		title: Inline title font
-		description: Name of the font as it appears on your system
-		type: variable-text
-		default: 'InstrumentSerif'
-	-
-		id: inline-title-size
-		title: Inline title font size
-		description: Accepts any CSS font-size value
-		type: variable-text
-		default: 1.802em
-	-
-		id: inline-title-weight
-		title: Inline title font weight
-		type: variable-number-slider
-		default: 400
-		min: 100
-		max: 900
-		step: 100
-	-
-		id: inline-title-color
-		title: Inline title text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: active-line
 		title: Active line
 		type: heading
@@ -1427,6 +1389,44 @@ settings:
 			-
 				label: Accent color
 				value: active-line-color-accent
+	-
+		id: inline-title
+		title: Inline title
+		type: heading
+		level: 2
+		collapsed: true
+    - 
+        id: inline-title-info
+		description: Inline title must be turned on in **Appearance** settings
+        type: info-text
+		markdown: true
+	-
+		id: inline-title-font
+		title: Inline title font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: 'InstrumentSerif'
+	-
+		id: inline-title-size
+		title: Inline title font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 1.802em
+	-
+		id: inline-title-weight
+		title: Inline title font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: inline-title-color
+		title: Inline title text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: headings
 		title: Headings
@@ -2155,7 +2155,7 @@ settings:
 		title: Blockquote style
 		type: class-select
 		allowEmpty: false
-		default: blockquote-default
+		default: blockquote-baseline
 		options:
 			-
 				label: Baseline
@@ -2253,20 +2253,6 @@ settings:
 		type: variable-text
 		default: 1em
 	-
-		id: callout-blend-mode
-		title: Color blending
-		description: Blend the color of nested callouts
-		type: variable-select
-		allowEmpty: false
-		default: var(--highlight-mix-blend-mode)
-		options:
-			-
-				label: On
-				value: var(--highlight-mix-blend-mode)
-			-
-				label: Off
-				value: normal
-	-
 		id: canvas
 		title: Canvas
 		type: heading
@@ -2349,12 +2335,6 @@ settings:
 			-
 				label: Block background
 				value: embed-block
-	-
-		id: embed-strict
-		title: Use strict embed style globally
-		description: Embeds appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
-		type: class-toggle
-		default: false
 	-
 		id: embed-hide-title
 		title: Hide embed titles
@@ -2996,4 +2976,15 @@ body.layout-border .style-settings-container .setting-item[data-id="layout-style
 }
 body.layout-frame .style-settings-container .setting-item[data-id="layout-style"] .setting-item-control::before {
   content: "Author: Iridium by kyffa";
+}
+
+// Disabling input
+body:not(.hover-sidedock) .style-settings-container .setting-item[data-id="hover-sidedock"] ~ .setting-item,
+body:not(.readable-spacing) .style-settings-container .setting-item[data-id="readable-spacing"] ~ .setting-item,
+body.view-header-title-hidden .style-settings-container .setting-item[data-id="file-header-visibility"] ~ .setting-item,
+body.block-width-off .style-settings-container .setting-item[data-id="block-width-off"] ~ .setting-item,
+body.colorful-headings-off .style-settings-container .setting-item[data-id="colorful-headings-style"] ~ .setting-item,
+body.unstyled-tags .style-settings-container .setting-item[data-id="unstyled-tags"] ~ .setting-item {
+  opacity: 0.4;
+  pointer-events: none;
 }
