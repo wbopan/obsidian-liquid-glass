@@ -1220,6 +1220,12 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: block-width-off
+		title: Disable block width
+		description: Turns off block width customization
+		type: class-toggle
+		default: false
     - 
         id: block-width-info
 		description: Readable line length must be set in Obsidian **Editor** settings

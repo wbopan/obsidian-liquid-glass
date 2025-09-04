@@ -176,6 +176,7 @@
   "bases-table-numbers": "Row numbers",
   "bases-table-header-icon-display": "Table header icons",
   "bases-table-align-items": "Table vertical alignment",
+  "block-width-off": "Disable block width",
   "line-width": "Normal line width",
   "line-width-wide": "Wide line width",
   "max-width": "Maximum line width %",
