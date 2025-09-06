@@ -1,15 +1,12 @@
 // Omnisearch https://github.com/scambier/obsidian-omnisearch
 @media only screen and (max-width: 600px) {
   .omnisearch-input-container__buttons {
-    padding: 0;
+    padding: 0 8px;
   }
 }
 @media only screen and (min-width: 600px) {
   .omnisearch-input-container__buttons {
-    margin-inline-end: 0;
-  }
-  .omnisearch-input-container__buttons button {
-    height: var(--prompt-input-height);
+    margin-inline-end: 4px;
   }
 }
 .omnisearch-input-field {
