@@ -1,13 +1,13 @@
 @media screen, print {
+  body.is-phone .metadata-container {
+    --metadata-divider-width: 0;
+  }
+
   .metadata-properties-heading {
     width: 100%;
   }
   .metadata-property-key-input {
     border-bottom: none !important;
-  }
-  .multi-select-pill {
-    line-height: normal;
-    padding: 2px 0;
   }
 
   // Side panels
