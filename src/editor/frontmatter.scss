@@ -1,8 +1,14 @@
 @media screen, print {
-  body.is-phone .metadata-container {
-    --metadata-divider-width: 0;
+  body {
+    --metadata-label-width: calc(9em * var(--metadata-label-width-multiplier, 1));
+  }
+  body.is-phone {
+    --metadata-label-width: calc(7.5em * var(--metadata-label-width-multiplier, 1));
   }
 
+  .metadata-container {
+    --metadata-divider-width: 0 !important;
+  }
   .metadata-properties-heading {
     width: 100%;
   }

@@ -173,7 +173,6 @@
       "category": "Properties",
       "name": "Property row lines"
     },
-    "metadata-label-width-multiplier": { "newId": "metadata-label-width" },
     "sidebar-tabs-style": {
       "unsupported": true,
       "category": "Sidebars",
