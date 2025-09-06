@@ -39,6 +39,7 @@
 
 .theme-light.things-light {
   --background-primary: white;
+  --background-primary-alt: #f5f6f8;
   --background-secondary: #f5f6f8;
   --interactive-normal: rgba(162, 177, 187, 0.25);
 
@@ -68,6 +69,7 @@
 .theme-light.things-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
 .theme-light.things-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: #24262a;
+  --background-primary-alt: #202225;
   --background-secondary: #202225;
   --interactive-normal: #3d3f41;
 

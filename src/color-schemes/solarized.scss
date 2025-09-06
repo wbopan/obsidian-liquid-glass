@@ -35,6 +35,7 @@ https://ethanschoonover.com/solarized/
 
 .theme-light.solarized-light {
   --background-primary: #fdf6e3;
+  --background-primary-alt: #eee8d5;
   --background-secondary: #eee8d5;
   --interactive-normal: rgba(0, 0, 0, 0.062);
 
@@ -63,6 +64,7 @@ https://ethanschoonover.com/solarized/
 .theme-light.solarized-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
 .theme-light.solarized-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: #002b36;
+  --background-primary-alt: #073642;
   --background-secondary: #073642;
   --interactive-normal: rgba(255, 255, 255, 0.062);
 

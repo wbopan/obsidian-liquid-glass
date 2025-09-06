@@ -6,6 +6,7 @@
   --accent-l: 52%;
 }
 .theme-light.notion-light {
+  --background-primary-alt: #f7f6f4;
   --background-secondary: #f7f6f4;
   --interactive-normal: #e8e7e4;
 
@@ -34,6 +35,7 @@
 .theme-light.notion-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
 .theme-light.notion-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: #2f3437;
+  --background-primary-alt: #373c3f;
   --background-secondary: #373c3f;
   --interactive-normal: #4b5053;
 

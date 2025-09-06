@@ -33,6 +33,7 @@ https://github.com/morhetz/gruvbox
 
 .theme-light.gruvbox-light {
   --background-primary: #fcf2c7;
+  --background-primary-alt: #f2e6bd;
   --background-secondary: #f2e6bd;
   --interactive-normal: #ebd9b3;
 
@@ -64,6 +65,7 @@ https://github.com/morhetz/gruvbox
 .theme-light.gruvbox-light.contrast-light-vivid .mod-root .workspace-tab-header-container,
 .theme-light.gruvbox-light.contrast-light-vivid .mod-root .workspace-tab-header-container::before {
   --background-primary: #282828;
+  --background-primary-alt: #1e2021;
   --background-secondary: #1e2021;
   --interactive-normal: #3d3836;
   --interactive-normal: rgba(62, 57, 55, 0.5);
