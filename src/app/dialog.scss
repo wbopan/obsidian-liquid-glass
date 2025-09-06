@@ -212,7 +212,7 @@ body.is-phone {
 body:not(.is-mobile) {
   .modal.mod-sidebar-layout {
     .vertical-tab-nav-item:not(:hover) {
-      transition: font-weight var(--anim-duration-superfast);
+      transition: var(--anim-duration-moderate), font-weight 0s;
     }
     .vertical-tab-nav-item:hover:not(.is-active) {
       font-weight: var(--nav-item-weight-hover);

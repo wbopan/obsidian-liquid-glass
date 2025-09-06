@@ -89,10 +89,9 @@ body.bold-folders .nav-folder-title {
 .tree-item-self,
 .tree-item-inner {
   align-items: center;
-
-  &:not(:hover) {
-    transition: font-weight var(--anim-duration-superfast);
-  }
+}
+.tree-item-self:not(:hover) .tree-item-inner {
+  transition: var(--anim-duration-moderate), font-weight 0s;
 }
 
 // Ribbon
