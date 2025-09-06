@@ -325,6 +325,7 @@
   "layout-border": "Border",
   "layout-frame": "Frame",
   "layout-cupertino": "Cupertino",
+  "layout-macos": "macOS",
   "input-style": "Element style",
   "input-baseline": "Baseline",
   "input-cupertino": "Cupertino",

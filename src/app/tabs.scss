@@ -88,6 +88,7 @@ body:not(.is-phone) .workspace .mod-root {
 
 // Editor panel: Floating
 body:not(.is-phone).tabs-floating .workspace .mod-root {
+  --tab-background-active: var(--background-modifier-hover);
   --tab-radius-active: var(--tab-radius);
   --tab-curve: 0;
 
