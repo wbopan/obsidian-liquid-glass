@@ -1,0 +1,12 @@
+.workspace-leaf-content[data-type="webviewer"] {
+  .view-header {
+    gap: 0;
+  }
+  .view-header-left,
+  .view-actions {
+    flex: 0;
+  }
+  .webviewer-content {
+    border-top: none;
+  }
+}
