@@ -51,6 +51,10 @@
     --metadata-border-width: var(--border-width);
     --metadata-padding: 12px 16px;
 
+    &.is-phone .metadata-container {
+      --metadata-padding: 8px 12px;
+    }
+
     .metadata-container {
       border-radius: var(--radius-s);
     }
