@@ -1445,12 +1445,6 @@ settings:
 	-
 		id: colorful-headings
 		title: Colorful headings
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: colorful-headings-style
-		title: Colorful headings
 		description: Headings use a different color for each size
 		type: class-select
 		default: colorful-headings-off
@@ -1459,62 +1453,27 @@ settings:
 				label: Disabled
 				value: colorful-headings-off
 			-
-				label: Subtle
-				value: colorful-headings-subtle
-			-
 				label: Indicator
 				value: colorful-headings-side
 			-
-				label: Full color
+				label: Indicator & Text
 				value: colorful-headings-full
-	-
-		id: colorful-headings-h1-color
-		title: H1 color
-		type: variable-themed-color
-		format: rgb-values
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: colorful-headings-h2-color
-		title: H2 color
-		type: variable-themed-color
-		format: rgb-values
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: colorful-headings-h3-color
-		title: H3 color
-		type: variable-themed-color
-		format: rgb-values
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: colorful-headings-h4-color
-		title: H4 color
-		type: variable-themed-color
-		format: rgb-values
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: colorful-headings-h5-color
-		title: H5 color
-		type: variable-themed-color
-		format: rgb-values
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: colorful-headings-h6-color
-		title: H6 color
-		type: variable-themed-color
-		format: rgb-values
-		default-light: '#'
-		default-dark: '#'
+			-
+				label: Background & Text
+				value: colorful-headings-block
 	-
 		id: level-1-headings
 		title: Level 1 Headings
 		type: heading
 		level: 3
 		collapsed: true
+	-
+		id: h1-color
+		title: H1 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: h1-font
 		title: H1 font
@@ -1535,13 +1494,6 @@ settings:
 		min: 100
 		max: 900
 		step: 100
-	-
-		id: h1-color
-		title: H1 text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: h1-variant
 		title: H1 font variant
@@ -1603,6 +1555,13 @@ settings:
 		level: 3
 		collapsed: true
 	-
+		id: h2-color
+		title: H2 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: h2-font
 		title: H2 font
 		description: Name of the font as it appears on your system
@@ -1622,13 +1581,6 @@ settings:
 		min: 100
 		max: 900
 		step: 100
-	-
-		id: h2-color
-		title: H2 text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: h2-variant
 		title: H2 font variant
@@ -1690,6 +1642,13 @@ settings:
 		level: 3
 		collapsed: true
 	-
+		id: h3-color
+		title: H3 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: h3-font
 		title: H3 font
 		description: Name of the font as it appears on your system
@@ -1709,13 +1668,6 @@ settings:
 		min: 100
 		max: 900
 		step: 100
-	-
-		id: h3-color
-		title: H3 text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: h3-variant
 		title: H3 font variant
@@ -1777,6 +1729,13 @@ settings:
 		level: 3
 		collapsed: true
 	-
+		id: h4-color
+		title: H4 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: h4-font
 		title: H4 font
 		description: Name of the font as it appears on your system
@@ -1796,13 +1755,6 @@ settings:
 		min: 100
 		max: 900
 		step: 100
-	-
-		id: h4-color
-		title: H4 text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: h4-variant
 		title: H4 font variant
@@ -1864,6 +1816,13 @@ settings:
 		level: 3
 		collapsed: true
 	-
+		id: h5-color
+		title: H5 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: h5-font
 		title: H5 font
 		description: Name of the font as it appears on your system
@@ -1883,13 +1842,6 @@ settings:
 		min: 100
 		max: 900
 		step: 100
-	-
-		id: h5-color
-		title: H5 text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: h5-variant
 		title: H5 font variant
@@ -1951,6 +1903,13 @@ settings:
 		level: 3
 		collapsed: true
 	-
+		id: h6-color
+		title: H6 color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: h6-font
 		title: H6 font
 		description: Name of the font as it appears on your system
@@ -1970,13 +1929,6 @@ settings:
 		min: 100
 		max: 900
 		step: 100
-	-
-		id: h6-color
-		title: H6 text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	-
 		id: h6-variant
 		title: H6 font variant
