@@ -5,6 +5,7 @@ body {
   --nav-item-weight-active: calc(var(--font-weight) + var(--bold-modifier));
 
   --ribbon-width: var(--header-height);
+  --ribbon-background: transparent;
   --ribbon-background-collapsed: var(--ribbon-background);
 }
 
@@ -100,6 +101,7 @@ body.bold-folders .nav-folder-title {
   margin-top: 0;
   padding-top: var(--header-height);
   border-right: none;
+  z-index: 11;
 }
 .workspace-ribbon .sidebar-toggle-button {
   display: flex;

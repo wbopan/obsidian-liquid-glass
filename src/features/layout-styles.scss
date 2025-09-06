@@ -449,6 +449,7 @@ body.layout-macos:not(.is-mobile) {
     display: flex !important;
     margin: 8px 0 8px 8px;
     height: -webkit-fill-available;
+    overflow: hidden;
 
     .workspace-tab-header-container {
       gap: 16px;
