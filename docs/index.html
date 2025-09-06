@@ -23,24 +23,25 @@
     </script>
   </head>
   <body>
-    <div class="title-container">
+    <div class="header">
       <h1>Baseline for Obsidian</h1>
       <a href="https://github.com/aaaaalexis/obsidian-baseline">View Baseline on GitHub</a>
     </div>
-    <p>Welcome to Baseline! Choose a start point for your Obsidian journey.</p>
-    <div class="panels-container">
-      <a href="migration" class="link-panel">
-        <button>
-          <i data-lucide="archive-restore"></i>
-          <h2>Migrating from other theme</h2>
-        </button>
-      </a>
-      <a href="preset" class="link-panel">
-        <button>
-          <i data-lucide="sparkles"></i>
-          <h2>Start from a preset</h2>
-        </button>
-      </a>
+    <div class="content">
+      <div class="panels-container">
+        <a href="migration" class="link-panel">
+          <button>
+            <i data-lucide="share"></i>
+            <h2>Migrate from other themes</h2>
+          </button>
+        </a>
+        <a href="preset" class="link-panel">
+          <button disabled style="cursor: not-allowed">
+            <i data-lucide="sparkles"></i>
+            <h2>Browse presets</h2>
+          </button>
+        </a>
+      </div>
     </div>
 
     <script src="https://unpkg.com/lucide@latest"></script>

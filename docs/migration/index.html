@@ -23,45 +23,48 @@
     </script>
   </head>
   <body>
-    <div class="title-container">
-      <h1>Baseline for Obsidian - Style Settings Migration Tool</h1>
+    <div class="header">
+      <h1>
+        <a href=".."><i data-lucide="chevron-left"></i>Baseline for Obsidian</a> <span>/</span> Style Settings Migration Tool
+      </h1>
       <a href="https://github.com/aaaaalexis/obsidian-baseline">View Baseline on GitHub</a>
     </div>
-    <div class="setting-container" title="Export your existing style settings, then paste here to migrate to Baseline-compatible settings.">
-      <div class="setting">
-        <div class="setting-sidebar">
-          <div class="sidebar-section">
-            <div class="sidebar-title">Community plugins</div>
-            <div class="sidebar-link is-active">Style Settings</div>
-          </div>
-        </div>
-        <div class="setting-content">
-          <div class="setting-header">
-            <div class="setting-search">
-              <i data-lucide="search"></i>
-              Search Style Settings...
-            </div>
-            <div class="setting-actions">
-              <button>Import</button>
-              <button>Export</button>
+    <div class="content">
+      <div class="setting-container" title="Export your existing style settings, then paste here to migrate to Baseline-compatible settings.">
+        <div class="setting">
+          <div class="setting-sidebar">
+            <div class="sidebar-section">
+              <div class="sidebar-title">Community plugins</div>
+              <div class="sidebar-link is-active">Style Settings</div>
             </div>
           </div>
-          <div class="setting-list">
-            <div class="setting-item">
-              <i data-lucide="chevron-right"></i>
-              <div class="setting-item-name">Theme</div>
-              <div class="setting-item-actions"><i data-lucide="rotate-ccw"></i><i data-lucide="cloud-download"></i></div>
+          <div class="setting-content">
+            <div class="setting-header">
+              <div class="setting-search">
+                <i data-lucide="search"></i>
+                Search Style Settings...
+              </div>
+              <div class="setting-actions">
+                <button>Import</button>
+                <button>Export</button>
+              </div>
+            </div>
+            <div class="setting-list">
+              <div class="setting-item">
+                <i data-lucide="chevron-right"></i>
+                <div class="setting-item-name">Theme</div>
+                <div class="setting-item-actions"><i data-lucide="rotate-ccw"></i><i data-lucide="cloud-download"></i></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <p>Export your existing Style Settings, then paste here to migrate to Baseline-compatible settings.</p>
-    <div class="panels-container">
-      <div class="input-panel">
-        <textarea
-          class="prefs-input"
-          placeholder='{
+      <p>Export your existing Style Settings, then paste here to migrate to Baseline-compatible settings.</p>
+      <div class="panels-container">
+        <div class="input-panel">
+          <textarea
+            class="prefs-input"
+            placeholder='{
   "minimal-style@@bg1@@light": "#FFFFFF",
   "minimal-style@@tabs-style": "tabs-modern"
 }
@@ -73,20 +76,21 @@ Supported themes:
 - Border
 - Sanctum
 - Things 2'
-        ></textarea>
-        <div class="panel-actions">
-          <button class="clear-btn">Clear</button>
+          ></textarea>
+          <div class="panel-actions">
+            <button class="clear-btn">Clear</button>
+          </div>
+          <div class="warning-container"></div>
         </div>
-        <div class="warning-container"></div>
-      </div>
-      <div class="output-panel">
-        <textarea class="prefs-output" disabled readonly></textarea>
-        <div class="panel-actions">
-          <button class="copy-btn">Copy to Clipboard</button>
-          <a class="download-link" href="#" download="baseline-style-settings.json"><button class="download-btn">Download</button></a>
+        <div class="output-panel">
+          <textarea class="prefs-output" disabled readonly></textarea>
+          <div class="panel-actions">
+            <button class="copy-btn">Copy to Clipboard</button>
+            <a class="download-link" href="#" download="baseline-style-settings.json"><button class="download-btn">Download</button></a>
+          </div>
+          <div class="conflict-container"></div>
+          <div class="unsupported-container"></div>
         </div>
-        <div class="conflict-container"></div>
-        <div class="unsupported-container"></div>
       </div>
     </div>
 

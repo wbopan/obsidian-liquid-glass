@@ -104,6 +104,29 @@ h1 {
   letter-spacing: -0.015em;
   font-weight: normal;
 }
+h1 a {
+  color: var(--text-normal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+h1 a svg.lucide-chevron-left {
+  color: var(--text-faint);
+  position: absolute;
+  opacity: 0;
+  transition: 320ms cubic-bezier(0.1, 0, 0.1, 1.25);
+}
+h1 a:hover {
+  text-decoration: underline;
+}
+h1 a:hover svg.lucide-chevron-left {
+  opacity: 1;
+  transform: translateX(-1em);
+}
+h1 span {
+  color: var(--text-faint);
+}
+
 h2 {
   margin: 0;
   font-size: 1.602em;
@@ -120,16 +143,21 @@ p {
   color: var(--text-muted);
 }
 
-.title-container {
+.header {
   display: flex;
   align-items: center;
-  view-transition-name: header;
 }
-.title-container a {
+.header > a {
   color: var(--text-muted);
   font-size: 0.85rem;
   text-decoration: none;
   margin-left: auto;
+}
+.content {
+  view-transition-name: content;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .panels-container {
@@ -141,16 +169,6 @@ p {
 
 @view-transition {
   navigation: auto;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-  }
 }
 @keyframes workspaceLeafIn {
   from {
@@ -166,15 +184,9 @@ p {
     filter: blur(4px);
   }
 }
-::view-transition-old(root) {
+::view-transition-old(content) {
   animation: workspaceLeafOut 320ms cubic-bezier(0.1, 0, 0.1, 1.25) both;
 }
-::view-transition-new(root) {
+::view-transition-new(content) {
   animation: workspaceLeafIn 320ms cubic-bezier(0.1, 0, 0.1, 1.25) both;
-}
-::view-transition-old(header) {
-  animation: fadeOut 320ms;
-}
-::view-transition-new(header) {
-  animation: fadeIn 320ms;
 }
