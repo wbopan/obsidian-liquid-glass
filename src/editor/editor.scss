@@ -121,7 +121,7 @@
       border-radius: var(--radius-s);
     }
     .cm-line.cm-active:is(.HyperMD-callout, .HyperMD-codeblock-bg, .HyperMD-quote) {
-      background-color: var(--background-secondary-alt) !important;
+      background-color: var(--background-modifier-hover) !important;
     }
   }
   body.active-line-background .markdown-source-view {
@@ -133,7 +133,7 @@
       z-index: -2;
     }
     .cm-line.cm-active:is(.HyperMD-callout, .HyperMD-codeblock-bg, .HyperMD-quote) {
-      background-color: var(--background-secondary-alt) !important;
+      background-color: var(--background-modifier-hover) !important;
 
       &::after {
         inset: 0 -100%;
