@@ -88,13 +88,13 @@
   .view-actions {
     --icon-size: var(--icon-m);
   }
-  .view-header-title-container {
+  .view-header-title-container > div {
     transition: var(--anim-duration-moderate) var(--anim-motion-baseline);
   }
-  body:not(.is-mobile, .view-header-title-always) .view-header:not(.view-header-always-show) .view-header-title-container:not(:hover) {
-    opacity: 0;
+  body:not(.is-mobile, .view-header-title-always) .view-header:not(.view-header-always-show):not(:hover) .view-header-title-container > div:not(:focus-within) {
+    opacity: 0 !important;
   }
-  body:not(.is-mobile).view-header-title-hidden .view-header-title-container {
+  body:not(.is-mobile).view-header-title-hidden .view-header-title-container > div {
     visibility: hidden;
   }
   body.is-mobile .view-actions {
