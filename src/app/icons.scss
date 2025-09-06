@@ -43,7 +43,7 @@ svg.svg-icon {
 }
 
 .workspace-tab-header-tab-list .clickable-icon:is(:hover, .has-active-menu) svg.svg-icon {
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 
 .view-header-nav-buttons .clickable-icon:not([aria-disabled="true"]):first-child:hover svg.svg-icon {
