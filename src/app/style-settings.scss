@@ -1026,8 +1026,8 @@ settings:
 		max: 900
 		step: 100
 	-
-		id: mobile
-		title: Mobile
+		id: tablet
+		title: Tablet
 		type: heading
 		level: 2
 		collapsed: true
@@ -2938,7 +2938,6 @@ body:not(.hover-sidedock) .style-settings-container .setting-item[data-id="hover
 body:not(.readable-spacing) .style-settings-container .setting-item[data-id="readable-spacing"] ~ .setting-item,
 body.view-header-title-hidden .style-settings-container .setting-item[data-id="file-header-visibility"] ~ .setting-item,
 body.block-width-off .style-settings-container .setting-item[data-id="block-width-off"] ~ .setting-item,
-body.colorful-headings-off .style-settings-container .setting-item[data-id="colorful-headings-style"] ~ .setting-item,
 body.unstyled-tags .style-settings-container .setting-item[data-id="unstyled-tags"] ~ .setting-item {
   opacity: 0.4;
   pointer-events: none;
