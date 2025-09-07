@@ -587,34 +587,6 @@ settings:
 		markdown: true
 		description: Base font for all of Obsidian can be set in **Appearance** settings
 	-
-		id: layout-style
-		title: Layout style
-		type: class-select
-		allowEmpty: false
-		default: layout-baseline
-		options:
-			-
-				label: Baseline
-				value: layout-baseline
-			-
-				label: Cupertino
-				value: layout-cupertino
-			-
-				label: Classic
-				value: layout-classic
-			-
-				label: Cards
-				value: layout-cards
-			-
-				label: Border
-				value: layout-border
-			-
-				label: Frame
-				value: layout-frame
-			-
-				label: macOS
-				value: layout-macos
-	-
 		id: input-style
 		title: Element style
 		type: class-select
@@ -2925,12 +2897,7 @@ body.tiniri-light .style-settings-container .setting-item[data-id="color-scheme-
 body.tiniri-dark .style-settings-container .setting-item[data-id="color-scheme-dark"] .setting-item-control::before {
   content: "Author: Vlad Gerasimov (vladstudio)";
 }
-body.layout-border .style-settings-container .setting-item[data-id="layout-style"] .setting-item-control::before {
-  content: "Author: Border by Akifyss";
-}
-body.layout-frame .style-settings-container .setting-item[data-id="layout-style"] .setting-item-control::before {
-  content: "Author: Iridium by kyffa";
-}
+// Layout-specific attributions removed with layout styles
 
 // Disabling input
 body:not(.hover-sidedock) .style-settings-container .setting-item[data-id="hover-sidedock"] ~ .setting-item,

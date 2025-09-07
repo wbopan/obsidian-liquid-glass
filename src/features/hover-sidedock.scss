@@ -3,16 +3,6 @@ body:not(.is-mobile).hover-sidedock {
     padding-top: var(--header-height);
   }
 
-  &.layout-frame {
-    .mod-sidedock.mod-left-split.is-sidedock-collapsed:not([style*="overflow: hidden;"]) {
-      margin: -4px 0 0 -4px;
-      border: none;
-    }
-    .mod-sidedock.mod-right-split.is-sidedock-collapsed:not([style*="overflow: hidden;"]) {
-      margin: -4px -4px 0 0;
-      border: none;
-    }
-  }
 
   .mod-sidedock .workspace-tab-header-container {
     -webkit-app-region: no-drag !important;
