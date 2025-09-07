@@ -1,18 +1,18 @@
-![Screenshot of Baseline theme for Obsidian in 3 different colors, with large text "Baseline" on the left side of the image.](img/hero.png)
+![Screenshot of Liquid Glass theme for Obsidian in 3 different colors, with large text "Liquid Glass" on the left side of the image.](img/hero.png)
 
-### From the creator of [Cupertino](https://github.com/aaaaalexis/obsidian-cupertino/)
+### Forked from [Baseline](https://github.com/aaaaalexis/obsidian-baseline) by [Alexis C](https://github.com/aaaaalexis) — thank you!
 
-Baseline sets a new standard for your Obsidian vault experience — sleek, familiar, and effortlessly minimal, offering endless ways to make it yours.
+Liquid Glass sets a new standard for your Obsidian vault experience — sleek, familiar, and effortlessly minimal, offering endless ways to make it yours.
 
 [Support me and my work](https://www.buymeacoffee.com/sevenaxis) so I can keep providing regular updates and fixes. You’re also welcome to submit pull requests.
 
 <a href="https://www.buymeacoffee.com/sevenaxis" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-And don’t forget to [support the amazing creators](#credits) whose work helped shape Baseline.
+And don’t forget to [support the amazing creators](#credits) whose work helped shape Liquid Glass.
 
 ## Coming from other themes?
 
-Baseline is designed to be a drop-in replacement for your favorite themes. To make your transition seamless, use [Style Settings Migration Tool](https://aaaaalexis.github.io/obsidian-baseline/) to import your settings from following supported themes:
+Liquid Glass is designed to be a drop-in replacement for your favorite themes. To make your transition seamless, use [Style Settings Migration Tool](https://wbopan.github.io/obsidian-liquid-glass/migration/) to import your settings from following supported themes:
 
 - [Minimal](https://github.com/kepano/obsidian-minimal/) by kepano
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin/) by AnubisNekhet
@@ -25,21 +25,21 @@ Baseline is designed to be a drop-in replacement for your favorite themes. To ma
 
 - **Beautifully yours** — Customize your experience to your heart's content with [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
 
-  ![Screenshot of Baseline theme for Obsidian in 6 different color schemes.](img/colors.png)
+  ![Screenshot of Liquid Glass theme for Obsidian in 6 different color schemes.](img/colors.png)
 
 - **Minimal interface** — Clean, organized look and feel, with playful animations and effects.
 
-  ![Composite image of various interface elements from Baseline theme for Obsidian.](img/elements.png)
+  ![Composite image of various interface elements from Liquid Glass theme for Obsidian.](img/elements.png)
 
 - **Optimized for mobile** — Enhanced navigation, menus, editor, and more, with comfortable spacing for better usability.
 
-  ![Screenshots of Baseline theme for Obsidian on mobile, on the left is a screenshot of the file navigation, on the right is a screenshot of the text editor.](img/mobile.png)
+  ![Screenshots of Liquid Glass theme for Obsidian on mobile, on the left is a screenshot of the file navigation, on the right is a screenshot of the text editor.](img/mobile.png)
 
 ## Features
 
 ### Helper Class
 
-Baseline supports all helper classes (e.g. block width, cards, etc.) from [Minimal](https://github.com/kepano/obsidian-minimal).
+Liquid Glass supports all helper classes (e.g. block width, cards, etc.) from [Minimal](https://github.com/kepano/obsidian-minimal).
 
 Please refer to [minimal.guide](https://minimal.guide) for all available features.
 
@@ -47,21 +47,21 @@ Please refer to [minimal.guide](https://minimal.guide) for all available feature
 
 Selected features are enabled by default. [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is **_not_** required.
 
-However, if you prefer to customize your own experience, Baseline provides extensive customization options.
+However, if you prefer to customize your own experience, Liquid Glass provides extensive customization options.
 
 ## Philosophy
 
 ### Less _and_ more
 
-Baseline delivers a clean, modern, and polished foundation right out of the box, with endless customization options to let you tailor Obsidian to your heart's content. Every option is thoughtfully designed to ensure Baseline stays both simple and beautiful.
+Liquid Glass delivers a clean, modern, and polished foundation right out of the box, with endless customization options to let you tailor Obsidian to your heart's content. Every option is thoughtfully designed to ensure Liquid Glass stays both simple and beautiful.
 
 ### A love letter to the community
 
-Baseline aspires to stand among the community’s leading themes, alongside Minimal, AnuPpuccin, ITS, and others. Shaped by the community, Baseline gives back through a rich collection of innovations: polished interface, compact elements, hover sidebars, with more to come. With a fully reimagined Obsidian interface, Baseline aims to be more than just a theme, but a fresh starting point, a new baseline for the community going forward.
+Liquid Glass aspires to stand among the community’s leading themes, alongside Minimal, AnuPpuccin, ITS, and others. Shaped by the community, Liquid Glass gives back through a rich collection of innovations: polished interface, compact elements, hover sidebars, with more to come. With a fully reimagined Obsidian interface, Liquid Glass aims to be more than just a theme, but a fresh starting point.
 
 ## Credits
 
-Special thanks to the community for helping make Baseline a reality. Please support them as well!
+Special thanks to the community for helping make Liquid Glass a reality. Please support them as well!
 
 ### Community Themes
 
@@ -78,5 +78,5 @@ Special thanks to the community for helping make Baseline a reality. Please supp
 
 ## License
 
-Baseline is licensed under the [MIT license](LICENSE). You’re free to take any component of Baseline and build on top of it.
+Liquid Glass is licensed under the [MIT license](LICENSE). You’re free to take any component of Liquid Glass and build on top of it.
 Let’s make a better community by creating amazing themes for everyone!

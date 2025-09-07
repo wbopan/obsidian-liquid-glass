@@ -1,8 +1,7 @@
 {
-  "name": "Baseline",
-  "version": "1.3.4",
+  "name": "Liquid Glass",
+  "version": "0.1.0",
   "minAppVersion": "1.4.0",
-  "author": "Alexis C",
-  "authorUrl": "https://github.com/aaaaalexis",
-  "fundingUrl": "https://www.buymeacoffee.com/sevenaxis"
+  "author": "Wenbo Pan",
+  "authorUrl": "https://github.com/wbopan"
 }
